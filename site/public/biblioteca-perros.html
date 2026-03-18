@@ -2,7 +2,7 @@
 <html class="light" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Biblioteca | Vetis Digital</title>
+<title>Mundo Canino | Biblioteca Vetis Digital</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -13,10 +13,10 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#ec5b13", // Terracotta
+                        "primary": "#ec5b13",
                         "accent-gold": "#d4af37",
                         "deep-green": "#1a2e1a",
-                        "background-light": "#fdfcf9", // Cream/Off-white
+                        "background-light": "#fdfcf9",
                         "background-dark": "#120d0b",
                     },
                     fontFamily: {
@@ -39,7 +39,9 @@
 <header class="fixed top-0 w-full z-50 glass-nav border-b border-primary/10 transition-all duration-300">
 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 <div class="flex items-center gap-2">
+<a href="index.html">
 <img src="assets/logo-transparent.png" alt="Vetis Digital Logo" class="h-12 w-auto object-contain transition-transform hover:scale-105" style="mix-blend-mode: multiply;" />
+</a>
 </div>
 <nav class="hidden lg:flex items-center gap-8">
 <a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="index.html">Inicio</a>
@@ -68,74 +70,101 @@
 <a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="index.html">Inicio</a>
 <a class="text-2xl font-bold text-accent-gold transition-colors" href="biblioteca.html">Biblioteca</a>
 <a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="audioteca.html">Audioteca Gratis</a>
-<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="nosotros.html">Sobre Nosotros</a>
-<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="afiliados.html">Afiliados</a>
-<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="blog.html">Blog</a>
-<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="contacto.html">Contacto</a>
 <button class="bg-accent-gold text-deep-green px-12 py-4 rounded-full font-black text-xl hover:scale-105 transition-all shadow-xl shadow-accent-gold/20 mt-4 w-64 uppercase tracking-wider">
     Acceder
 </button>
 </div>
 
 <!-- Hero Section -->
-<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
+<section class="relative min-h-[40vh] flex items-center justify-center overflow-hidden pt-20">
 <div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-deep-green/60 dark:bg-slate-900/80 z-10 transition-colors"></div>
-<img class="w-full h-full object-cover object-center" data-alt="Tutor leyendo en su tablet junto a sus mascotas en un ambiente cálido y premium" src="assets/library-hero.png"/>
+<div class="absolute inset-0 bg-deep-green/70 z-10"></div>
+<img class="w-full h-full object-cover object-top" data-alt="Perro feliz corriendo en el campo" src="https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?q=80&w=2000&auto=format&fit=crop"/>
 </div>
-<div class="relative z-20 max-w-4xl mx-auto px-6 text-center space-y-8" data-aos="fade-up" data-aos-duration="1000">
-<span class="inline-block py-1.5 px-5 rounded-full bg-white/20 text-white border border-white/30 backdrop-blur-sm font-bold text-xs uppercase tracking-widest shadow-lg">El Conocimiento es Poder</span>
-<h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] text-white">
-    Nuestra <span class="italic text-accent-gold">Biblioteca</span>
+<div class="relative z-20 max-w-4xl mx-auto px-6 text-center space-y-4" data-aos="fade-up">
+<nav class="flex justify-center items-center gap-2 mb-4 text-white/60 text-xs uppercase tracking-widest font-bold">
+    <a href="biblioteca.html" class="hover:text-accent-gold transition-colors">Biblioteca</a>
+    <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+    <span class="text-white">Mundo Canino</span>
+</nav>
+<h1 class="text-5xl lg:text-7xl font-bold text-white tracking-tight">
+    Universo <span class="italic text-accent-gold">Canino</span>
 </h1>
-<p class="text-xl lg:text-2xl text-white/90 font-light leading-relaxed drop-shadow-md">
-    Descubre recursos premium en formato digital. Educación basada en ciencia, respeto y amor para transformar la vida con tu mascota.
+<p class="text-lg lg:text-xl text-white/80 font-light max-w-2xl mx-auto drop-shadow-sm">
+    La guía definitiva para entender, educar y nutrir la vida de tu mejor amigo.
 </p>
 </div>
 </section>
 
-<!-- Categorías -->
+<!-- Product List -->
 <section class="py-20 md:py-24 bg-background-light dark:bg-background-dark">
 <div class="max-w-7xl mx-auto px-6">
-<div class="text-center mb-16 space-y-4" data-aos="fade-up">
-<h2 class="text-4xl lg:text-5xl font-bold text-deep-green dark:text-white">Explora por <span class="italic text-accent-gold">Especie</span></h2>
-<div class="w-20 h-1 bg-deep-green mx-auto rounded-full"></div>
-<p class="text-slate-500 max-w-2xl mx-auto mt-4 text-lg">Catálogos especializados para entender a profundidad las necesidades de tu compañero de vida.</p>
-</div>
+<div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+    <!-- Product 1 -->
+    <div class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-deep-green/5 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+        <div class="aspect-[4/5] relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800&auto=format&fit=crop" alt="Perro comiendo comida natural" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute top-4 right-4 bg-accent-gold text-deep-green font-bold px-4 py-1.5 rounded-full text-xs shadow-lg uppercase tracking-wider">Top Ventas</div>
+        </div>
+        <div class="p-8 space-y-4">
+            <h3 class="text-2xl font-bold text-deep-green dark:text-white">Guía Definitiva: Nutrición BARF</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Aprende a preparar dietas naturales balanceadas que transformarán la salud física de tu perro.</p>
+            <div class="pt-4 flex items-center justify-between border-t border-slate-100">
+                <span class="text-2xl font-black text-deep-green dark:text-white">$27.00 <span class="text-xs font-normal text-slate-400 line-through">$45.00</span></span>
+                <button class="bg-deep-green text-accent-gold p-3 rounded-xl hover:bg-primary hover:text-white transition-all">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Product 2 -->
+    <div class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-deep-green/5 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+        <div class="aspect-[4/5] relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?q=80&w=800&auto=format&fit=crop" alt="Perro ansioso mirando por la ventana" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute top-4 right-4 bg-deep-green text-accent-gold font-bold px-4 py-1.5 rounded-full text-xs shadow-lg uppercase tracking-wider">Etología Profesional</div>
+        </div>
+        <div class="p-8 space-y-4">
+            <h3 class="text-2xl font-bold text-deep-green dark:text-white">Adiós Ansiedad por Separación</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Métodos probados para que tu perro se sienta seguro y tranquilo cuando te vas de casa.</p>
+            <div class="pt-4 flex items-center justify-between border-t border-slate-100">
+                <span class="text-2xl font-black text-deep-green dark:text-white">$34.00</span>
+                <button class="bg-deep-green text-accent-gold p-3 rounded-xl hover:bg-primary hover:text-white transition-all">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </button>
+            </div>
+        </div>
+    </div>
 
-<div class="grid md:grid-cols-2 gap-10">
-<!-- Categoría Perros -->
-<div class="group relative rounded-3xl overflow-hidden h-[500px] cursor-pointer shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-deep-green/5 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500" data-aos="fade-right" data-aos-delay="100" onclick="window.location.href='biblioteca-perros.html'">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Perro golden retriever sonriendo en el parque" src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=800&auto=format&fit=crop"/>
-<div class="absolute inset-0 bg-gradient-to-t from-deep-green via-deep-green/50 to-transparent flex flex-col justify-end p-10">
-<div class="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-6 border border-white/30 shadow-lg group-hover:-translate-y-2 group-hover:rotate-3 transition-transform duration-500">
-<span class="text-4xl leading-none">🐶</span>
+    <!-- Product 3 -->
+    <div class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-deep-green/5 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
+        <div class="aspect-[4/5] relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?q=80&w=800&auto=format&fit=crop" alt="Botiquín de primeros auxilios y perro" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute top-4 right-4 bg-primary text-white font-bold px-4 py-1.5 rounded-full text-xs shadow-lg uppercase tracking-wider">Imprescindible</div>
+        </div>
+        <div class="p-8 space-y-4">
+            <h3 class="text-2xl font-bold text-deep-green dark:text-white">Manual: Primeros Auxilios</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Saber qué hacer en los primeros 5 minutos de una emergencia puede salvar la vida de tu mascota.</p>
+            <div class="pt-4 flex items-center justify-between border-t border-slate-100">
+                <span class="text-2xl font-black text-deep-green dark:text-white">$19.00</span>
+                <button class="bg-deep-green text-accent-gold p-3 rounded-xl hover:bg-primary hover:text-white transition-all">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
-<h3 class="text-4xl font-bold text-white mb-3">Mundo <span class="text-accent-gold">Canino</span></h3>
+</div>
+</section>
 
-<p class="text-white/90 text-lg leading-relaxed mb-6 opacity-80 group-hover:opacity-100 transition-opacity">Guías de comportamiento, nutrición, adiestramiento positivo y cuidados específicos para perros de todas las edades.</p>
-<div>
-<div class="inline-flex py-3 px-6 bg-accent-gold text-deep-green rounded-xl font-bold uppercase tracking-widest text-sm items-center gap-2 group-hover:bg-white transition-all shadow-lg">Ver Colección <span class="material-symbols-outlined">arrow_forward</span></div>
-</div>
-</div>
-</div>
-
-<!-- Categoría Gatos -->
-<div class="group relative rounded-3xl overflow-hidden h-[500px] cursor-pointer shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-deep-green/5 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500" data-aos="fade-left" data-aos-delay="200" onclick="window.location.href='biblioteca-gatos.html'">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Precioso gato mirando a la cámara" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=800&auto=format&fit=crop"/>
-<div class="absolute inset-0 bg-gradient-to-t from-deep-green via-deep-green/50 to-transparent flex flex-col justify-end p-10">
-<div class="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-6 border border-white/30 shadow-lg group-hover:-translate-y-2 group-hover:rotate-3 transition-transform duration-500">
-<span class="text-4xl leading-none">🐱</span>
-</div>
-<h3 class="text-4xl font-bold text-white mb-3">Universo <span class="text-accent-gold">Felino</span></h3>
-
-<p class="text-white/90 text-lg leading-relaxed mb-6 opacity-80 group-hover:opacity-100 transition-opacity">Todo sobre la mente de tu gato: etología felina, enriquecimiento ambiental, nutrición carnívora y socialización.</p>
-<div>
-<div class="inline-flex py-3 px-6 bg-accent-gold text-deep-green rounded-xl font-bold uppercase tracking-widest text-sm items-center gap-2 group-hover:bg-white transition-all shadow-lg">Ver Colección <span class="material-symbols-outlined">arrow_forward</span></div>
-</div>
-</div>
-</div>
-</div>
+<!-- Related Sections -->
+<section class="py-16 bg-slate-50 dark:bg-slate-900/50">
+<div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-deep-green dark:text-white mb-8">¿Buscas algo para gatos?</h2>
+    <a href="biblioteca-gatos.html" class="inline-flex items-center gap-3 bg-white dark:bg-slate-800 px-8 py-4 rounded-2xl shadow-lg hover:bg-accent-gold hover:text-deep-green transition-all group">
+        <span class="material-symbols-outlined text-accent-gold group-hover:text-deep-green">cruelty_free</span>
+        <span class="font-bold">Ver Biblioteca Felina</span>
+    </a>
 </div>
 </section>
 
