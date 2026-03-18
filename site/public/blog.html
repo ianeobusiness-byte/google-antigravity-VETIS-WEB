@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13", // Terracotta
+                        "accent-green": "#1e3a1f", // Deep Forest Green
+                        "background-light": "#fdfcfb", // Cream/Off-white
+                        "background-dark": "#1a1412",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-800/50">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2 group cursor-pointer">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">pets</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-accent-green dark:text-slate-100">Vetis Digital</h1>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Biblioteca</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Audioteca</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Nosotros</a>
+<a class="text-sm font-bold text-primary border-b-2 border-primary pb-1" href="#">Blog</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Afiliados</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contacto</a>
+</nav>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-sm">
+                Suscribirse
+            </button>
+</div>
+</header>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="max-w-5xl mx-auto px-6 text-center mb-16">
+<span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">Nuestras Historias</span>
+<h2 class="text-5xl lg:text-6xl font-extrabold text-accent-green dark:text-slate-100 mb-6 leading-tight">
+                El Blog de Vetis Digital
+            </h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Artículos, consejos y reflexiones para mejorar la vida junto a tus perros y gatos. Descubre el bienestar desde una nueva perspectiva.
+            </p>
+</section>
+<!-- Featured Article -->
+<section class="max-w-7xl mx-auto px-6 mb-20">
+<div class="relative group cursor-pointer overflow-hidden rounded-3xl bg-slate-100 dark:bg-slate-900 aspect-[21/9] flex items-end">
+<img alt="Golden Retriever and tabby cat sitting together peacefully" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="HD photo of a golden retriever dog and a tabby cat sitting together" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADhRJKW14VaSbZIZqafeVv6RCPTU325KGbQYbXzXXVwduS0cmM1MoRBEz15y4XlFsEYRyrC-QqdVs2gpZF2JSSBRPOxzhL_ZaRn3SQlpw-7RLva15E9ck3AIyoC7UZypiAmthXnfyjgX57gwOr7d30ZxZVgucj231Gzu2S18UrNdoG-Y1aFeqf3GDxEIDcL5hT3mNfUCFQOcNiU8QDxWx0e6ihRMFOb_3_XQOn6lYnC9V_dWEkTCjwdmY0LGLND1gbvATtnMPwb1g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="relative p-8 lg:p-16 w-full lg:w-2/3">
+<span class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-md mb-4 uppercase tracking-wider">Artículo Destacado</span>
+<h3 class="text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
+                        Cómo entender el lenguaje corporal de tu mascota
+                    </h3>
+<p class="text-slate-200 text-lg mb-6 max-w-xl">
+                        Descubre los secretos detrás de cada gesto y mirada de tus compañeros fieles para fortalecer vuestro vínculo emocional.
+                    </p>
+<button class="flex items-center gap-2 text-white font-bold hover:gap-4 transition-all">
+<span>Seguir leyendo</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Article Grid -->
+<section class="max-w-7xl mx-auto px-6 mb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Article 1 -->
+<article class="group cursor-pointer">
+<div class="overflow-hidden rounded-2xl mb-6 aspect-[4/3]">
+<img alt="Puppy eating premium food from a bowl" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close up of a puppy eating premium dry food" src=""/>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Nutrición</span>
+<span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+<span class="text-slate-500 text-xs">15 Oct, 2023</span>
+</div>
+<h4 class="text-xl font-bold text-accent-green dark:text-white mb-3 group-hover:text-primary transition-colors">Nutrición premium para cachorros en crecimiento</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed line-clamp-2">
+                        Guía completa sobre alimentación balanceada y los nutrientes esenciales para los primeros meses de vida.
+                    </p>
+</article>
+<!-- Article 2 -->
+<article class="group cursor-pointer">
+<div class="overflow-hidden rounded-2xl mb-6 aspect-[4/3]">
+<img alt="Cat sleeping comfortably in a designer pet bed" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Beautiful ginger cat sleeping in a luxury bed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtHCl4cfYvtBCFthqcSQzKkcKCUNRB2ORI04p9ki006HNVdzQf6oznUBs_-DIo0SxSYWsg57HoI0fcpyPyTIRx-SVWPMC3SHdR0Q8FzhhcII3LOc4hWMPtMrm7oBfevMT6e_lctDCp9RA4MbMVpJdefIsCj5PWRHqZjmL0Yb3YIIG6hVNI1wC6w_TxJ8FQqRZJy2wqEYlPZmKLSP-2POwGlVA5EI6MZN5ZMaVawECIVUWGX-Jkcfhhhg9BC-Mgm1-IBgsRMizaGYg"/>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Bienestar</span>
+<span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+<span class="text-slate-500 text-xs">12 Oct, 2023</span>
+</div>
+<h4 class="text-xl font-bold text-accent-green dark:text-white mb-3 group-hover:text-primary transition-colors">El descanso ideal: Camas y entornos saludables</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed line-clamp-2">
+                        Cómo influye la calidad del espacio y el entorno en el comportamiento y humor de tus gatos y perros.
+                    </p>
+</article>
+<!-- Article 3 -->
+<article class="group cursor-pointer">
+<div class="overflow-hidden rounded-2xl mb-6 aspect-[4/3]">
+<img alt="Dog sitting next to a first aid kit" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Border Collie dog next to a medical first aid kit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEWim8i_YC9ZPJy1UO2gbtQSHWsFxVXS02NcfiZQj6r86U5idIYFM2Ea7-HMP1f2XXaaSTMIHOGc9amo_F2U4fWy7fMcEe5o1LryAJBGNTSl3deaXvPbbbalgKQoAusKnwhZ1w50zjb1dX0QgkMbFuptsXNCWf-88HMPQVOofAYYZi-TWq9JFoZsaoCUfTDU9MRvE_oHYzfe-0VFaqBMqz4m95jCOyee4JOfIwgWXNBIawlIFkXcHkUeb0Gv6WaamooHV3UFpUytA"/>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Salud</span>
+<span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+<span class="text-slate-500 text-xs">10 Oct, 2023</span>
+</div>
+<h4 class="text-xl font-bold text-accent-green dark:text-white mb-3 group-hover:text-primary transition-colors">Primeros auxilios esenciales en el hogar</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed line-clamp-2">
+                        Lo que todo tutor responsable debe tener preparado en su botiquín para emergencias comunes.
+                    </p>
+</article>
+</div>
+<div class="flex justify-center mt-16">
+<button class="px-10 py-4 border-2 border-accent-green dark:border-slate-700 text-accent-green dark:text-white font-bold rounded-full hover:bg-accent-green hover:text-white transition-all">
+                    Cargar más artículos
+                </button>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="max-w-7xl mx-auto px-6 mb-0">
+<div class="bg-primary/10 dark:bg-primary/5 rounded-t-[3rem] p-12 lg:p-20 flex flex-col items-center text-center border-x border-t border-primary/20">
+<div class="size-16 bg-primary rounded-2xl flex items-center justify-center text-white mb-8 shadow-xl shadow-primary/20">
+<span class="material-symbols-outlined text-3xl">mail</span>
+</div>
+<h3 class="text-3xl lg:text-4xl font-bold text-accent-green dark:text-white mb-4">Únete a nuestra comunidad</h3>
+<p class="text-slate-600 dark:text-slate-400 max-w-xl mb-10 text-lg">
+                    Recibe los mejores consejos veterinarios y curiosidades sobre tus mascotas directamente en tu bandeja de entrada.
+                </p>
+<form class="flex flex-col sm:flex-row gap-4 w-full max-w-lg">
+<input class="flex-1 px-6 py-4 rounded-full border-none ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-2 focus:ring-primary bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-all" placeholder="Tu correo electrónico" type="email"/>
+<button class="bg-accent-green hover:bg-accent-green/90 text-white px-10 py-4 rounded-full font-bold transition-all whitespace-nowrap" type="submit">
+                        Suscribirse ahora
+                    </button>
+</form>
+<p class="text-xs text-slate-500 mt-6 italic">Prometemos no enviar spam. Solo contenido de alta calidad.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-accent-green text-slate-300 py-16 lg:py-24 border-t border-white/10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8">
+<!-- Col 1 -->
+<div class="lg:col-span-2">
+<div class="flex items-center gap-2 mb-6 text-white">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">pets</span>
+</div>
+<h2 class="text-2xl font-bold tracking-tight">Vetis Digital</h2>
+</div>
+<p class="text-lg text-slate-400 max-w-sm leading-relaxed mb-8">
+                        Elevando el estándar de cuidado para tus mejores amigos a través de educación, tecnología y amor incondicional.
+                    </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="size-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white" href="#">
+<span class="material-symbols-outlined text-xl">star</span>
+</a>
+</div>
+</div>
+<!-- Col 2 -->
+<div>
+<h5 class="text-white font-bold mb-6 text-lg tracking-wide uppercase text-xs">Explorar</h5>
+<ul class="space-y-4">
+<li><a class="hover:text-primary transition-colors" href="#">Inicio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Biblioteca Digital</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Audioteca</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog de Expertos</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sobre Nosotros</a></li>
+</ul>
+</div>
+<!-- Col 3 -->
+<div>
+<h5 class="text-white font-bold mb-6 text-lg tracking-wide uppercase text-xs">Legal</h5>
+<ul class="space-y-4">
+<li><a class="hover:text-primary transition-colors" href="#">Términos de Servicio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookies</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Afiliados</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-slate-500">
+                    © 2024 Vetis Digital. Todos los derechos reservados.
+                </p>
+<div class="flex items-center gap-2 text-sm text-slate-500">
+<span class="material-symbols-outlined text-xs">location_on</span>
+<span>Hecho con amor para amantes de las mascotas.</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

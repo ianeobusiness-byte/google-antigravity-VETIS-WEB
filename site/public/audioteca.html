@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                        "brand-green": "#1a2e26",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .serif-title { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-md bg-background-light/80 dark:bg-background-dark/80 border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="text-primary size-8">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-brand-green dark:text-slate-100 text-xl font-black tracking-tight serif-title">VETIS DIGITAL</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Biblioteca</a>
+<a class="text-sm font-medium text-primary" href="#">Audioteca</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Nosotros</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Blog</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Afiliados</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contacto</a>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                    Acceso Premium
+                </button>
+</nav>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[716px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background-light via-background-light/80 to-transparent z-10 dark:from-background-dark dark:via-background-dark/80"></div>
+<img alt="Golden Retriever" class="w-full h-full object-cover object-center" data-alt="Golden Retriever sitting calmly in a studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHtp6T92wXOlF9Y3q1qHcOV_c-U6sYpAtoU9uK1SdFc08Aad8W2iwPUg5J486hMN8G3eaE7KbNVrreGvhWg9-aHGMtN0W9LCD-JWT4FjQpb3b9Mxc4fA3h7w6TPQZIpTQBavh12EIFojrOOKYvXB-Vcy9OgqLeCODPCXNXpoF3qqNIBudKa_nsIyw4J36cIpCBSJqrjhfJHQmvvRwGA6kzOtagFLDyd9ydyerzLobGUmm31cEI_4NdaRNlqWQmC6ZXyHewL3r4S6I"/>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto px-6 w-full">
+<div class="max-w-2xl">
+<span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-4">Exclusivo Vetis</span>
+<h1 class="text-5xl md:text-7xl font-bold serif-title text-brand-green dark:text-slate-100 leading-tight mb-6">
+                        El primer paso hacia una <span class="text-primary italic">mejor conexión.</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-lg leading-relaxed">
+                        Desbloquea una mini-serie de 3 audios gratuitos sobre el lenguaje canino y felino diseñado por expertos en comportamiento animal.
+                    </p>
+<!-- Lead Magnet Form -->
+<div class="flex flex-col sm:flex-row gap-3 p-2 bg-white dark:bg-slate-800 rounded-2xl shadow-xl max-w-xl border border-primary/5">
+<input class="flex-1 bg-transparent border-none focus:ring-0 px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 text-sm" placeholder="Coloca tu mail aquí y recibe los audios gratis" type="email"/>
+<button class="bg-primary text-white px-8 py-3 rounded-xl font-bold hover:scale-[1.02] transition-transform flex items-center justify-center gap-2">
+                            Quiero escucharlos
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Audio Catalog -->
+<section class="py-24 bg-white dark:bg-background-dark/50">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-end justify-between mb-16">
+<div class="max-w-xl">
+<h2 class="text-4xl font-bold serif-title text-brand-green dark:text-slate-100 mb-4">Explora nuestra Audioteca Premium</h2>
+<div class="h-1.5 w-24 bg-primary rounded-full"></div>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all" href="#">
+                        Ver todo el catálogo <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Audio Card 1 -->
+<div class="group relative flex gap-6 p-6 bg-background-light dark:bg-slate-800/50 rounded-2xl border border-transparent hover:border-primary/20 hover:shadow-2xl transition-all">
+<div class="relative w-40 h-40 shrink-0 rounded-xl overflow-hidden shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close up of a calm cat looking at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiitIcwn2ceiFE4ApYVI9ULDqNvX-JqwJKev1RrOectBkoSlnJa0ELWPlO8XdXCWooFMo7Z1dM5q55t3Z5uOSumls7VN28LUmAYACmC4r-lQ4H3WI4NOtjMRs3-aCJrVP1SlnT2swZAhJhZ-RYkNj2Zjdwn9I4TzQA0GRy3H5bahP0iBFA0UHxVM82j6HgLf_pqNX5zEXVG7YvVXLYmvhULCZdAOsShCLAN8CXPCkstX9MXP-rD1oscfnMpePZMCdBKwIyY22bvaU"/>
+<div class="absolute inset-0 bg-brand-green/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+</div>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Comportamiento Felino</span>
+<h3 class="text-xl font-bold text-brand-green dark:text-slate-100 mb-2">Secretos del Maullido: Vol. 1</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">Aprende a diferenciar los 12 tipos de vocalizaciones que tu gato utiliza para comunicarse.</p>
+<div class="flex items-center gap-4 text-xs font-semibold text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 14:20 min</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">headphones</span> Premium</span>
+</div>
+</div>
+</div>
+<!-- Audio Card 2 -->
+<div class="group relative flex gap-6 p-6 bg-background-light dark:bg-slate-800/50 rounded-2xl border border-transparent hover:border-primary/20 hover:shadow-2xl transition-all">
+<div class="relative w-40 h-40 shrink-0 rounded-xl overflow-hidden shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Happy dog playing in a park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU9TIgp-KBZTyJ6lDQrQJWNv0pFSNRD9McWQyQr-NtMFL5UkRv_kKUbLoxz3i8kymcfCA5zpf-1OiSndM7tVaFN3kcWdmC5Bmz2SYn82yM_KnlGIHyU-mGMMYX7jasVNkJlWwb203aq7lLaAPwNpJG8gqs9-ELKJJ8m0l1MnS4TkAE_C7bdO2_5v0CnKPnQCqyuk14rmO-gKmu2xJzk8Qz8UdwH6cr3mBkhHESuDtGN5jP2ziAUgbLC6C6FBe4xoSTeFuvLaQiars"/>
+<div class="absolute inset-0 bg-brand-green/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+</div>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Psicología Canina</span>
+<h3 class="text-xl font-bold text-brand-green dark:text-slate-100 mb-2">Ansiedad por Separación</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">Estrategias auditivas y de conducta para reducir el estrés de tu perro cuando estás fuera.</p>
+<div class="flex items-center gap-4 text-xs font-semibold text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 22:45 min</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">headphones</span> Premium</span>
+</div>
+</div>
+</div>
+<!-- Audio Card 3 -->
+<div class="group relative flex gap-6 p-6 bg-background-light dark:bg-slate-800/50 rounded-2xl border border-transparent hover:border-primary/20 hover:shadow-2xl transition-all">
+<div class="relative w-40 h-40 shrink-0 rounded-xl overflow-hidden shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Portrait of a loyal looking dog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaENOehXwJe41u1MNPFzNXiukvcCEIRNbmIEsQcAIihFMeEQuk3Vbl-ocSFpxw_nVR3_6_MViAzXZKlZ2CiObQdBt1n5Xa7eLweiXcoFsFattVX72-LYWRPZIKEkURRsRoe5q6Xc2YbYF7rGj1H-MJsu0mpylSTw6PNWbpJDK6h_v_dwim2S7VxyfpINMVAYNpup0tg5WiBRuNTii-Rr_0K2ZcA3zw2rvFz1LOplAiRJZLSPO2GqSn1UOmn09s4L_7vV3yViR7RT0"/>
+<div class="absolute inset-0 bg-brand-green/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+</div>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Entrenamiento</span>
+<h3 class="text-xl font-bold text-brand-green dark:text-slate-100 mb-2">Refuerzo Positivo Avanzado</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">Guía paso a paso sobre cómo usar el tono de voz para marcar conductas deseadas.</p>
+<div class="flex items-center gap-4 text-xs font-semibold text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 18:10 min</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">headphones</span> Premium</span>
+</div>
+</div>
+</div>
+<!-- Audio Card 4 -->
+<div class="group relative flex gap-6 p-6 bg-background-light dark:bg-slate-800/50 rounded-2xl border border-transparent hover:border-primary/20 hover:shadow-2xl transition-all">
+<div class="relative w-40 h-40 shrink-0 rounded-xl overflow-hidden shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Small cat playing with a toy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKCq5yRV-CMbn2visBM1-rP5PXKTh8BB3sRRKZ3dYzKMHm1poxqGreA2W-7Ds9HVLYCDcKA2CDU0hpq82vCba9q9bYMq5t8S-Mjgs6SX836Ggeh8PFvXFzaspzsDt3i4KNUWyGDgTjUvDv_dIlJVGNhsBDn7EJ1vcGMaBdjdVfEzP4gDw4f6ETqrGPZblN9lSO4xbzlBBDNTp1TN6dUivqpH8-ZrdPdkN88kW3a-sQV_dufe8VnQR5LMUtXOiT3ozfDajaOgH3X-0"/>
+<div class="absolute inset-0 bg-brand-green/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+</div>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Vínculo</span>
+<h3 class="text-xl font-bold text-brand-green dark:text-slate-100 mb-2">Meditación para Pet Lovers</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">Una experiencia guiada para relajarte junto a tu mascota y fortalecer su lazo.</p>
+<div class="flex items-center gap-4 text-xs font-semibold text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 12:00 min</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">headphones</span> Premium</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sample Player Section -->
+<section class="py-24 bg-brand-green text-white overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10">
+<span class="material-symbols-outlined text-[20rem] rotate-12">graphic_eq</span>
+</div>
+<div class="max-w-4xl mx-auto px-6 relative z-10">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold serif-title mb-4">Escucha una muestra de nuestra calidad.</h2>
+<p class="text-slate-300">Sumérgete en una experiencia sonora diseñada para educar y relajar.</p>
+</div>
+<div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-12 rounded-[2.5rem] shadow-2xl">
+<div class="flex flex-col items-center">
+<!-- Player Artwork & Info -->
+<div class="text-center mb-8">
+<h4 class="text-primary font-bold tracking-widest text-xs uppercase mb-2">Reproduciendo ahora</h4>
+<h3 class="text-2xl font-bold serif-title">Introducción al Lenguaje Silencioso</h3>
+<p class="text-slate-400 text-sm">Dra. Marta Jiménez · Etóloga Veterinaria</p>
+</div>
+<!-- Waveform visualization (Simulated with bars) -->
+<div class="flex items-center justify-center gap-1.5 h-16 mb-8 w-full">
+<div class="w-1.5 h-4 bg-primary/40 rounded-full"></div>
+<div class="w-1.5 h-8 bg-primary/40 rounded-full"></div>
+<div class="w-1.5 h-12 bg-primary/60 rounded-full"></div>
+<div class="w-1.5 h-16 bg-primary rounded-full"></div>
+<div class="w-1.5 h-10 bg-primary/80 rounded-full"></div>
+<div class="w-1.5 h-6 bg-primary/40 rounded-full"></div>
+<div class="w-1.5 h-14 bg-primary rounded-full"></div>
+<div class="w-1.5 h-8 bg-primary/60 rounded-full"></div>
+<div class="w-1.5 h-12 bg-primary rounded-full"></div>
+<div class="w-1.5 h-16 bg-primary rounded-full"></div>
+<div class="w-1.5 h-10 bg-primary/80 rounded-full"></div>
+<div class="w-1.5 h-6 bg-primary/40 rounded-full"></div>
+<div class="w-1.5 h-4 bg-primary/20 rounded-full"></div>
+</div>
+<!-- Controls -->
+<div class="w-full">
+<div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+<span>03:45</span>
+<span>12:00</span>
+</div>
+<div class="relative w-full h-1.5 bg-white/10 rounded-full overflow-hidden mb-8">
+<div class="absolute top-0 left-0 h-full w-[35%] bg-primary"></div>
+</div>
+<div class="flex items-center justify-center gap-10">
+<button class="material-symbols-outlined text-white/60 hover:text-white transition-colors text-3xl">replay_10</button>
+<button class="size-20 flex items-center justify-center bg-primary rounded-full text-white shadow-xl shadow-primary/30 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-5xl fill-current">play_arrow</span>
+</button>
+<button class="material-symbols-outlined text-white/60 hover:text-white transition-colors text-3xl">forward_10</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Global Footer -->
+<footer class="bg-brand-green text-slate-300 pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<!-- Col 1 -->
+<div class="md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="text-primary size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-black serif-title">VETIS DIGITAL</h2>
+</div>
+<p class="text-sm leading-relaxed mb-6">
+                        Transformando la relación entre humanos y mascotas a través de la educación digital experta y el conocimiento profundo del comportamiento animal.
+                    </p>
+<div class="flex gap-4">
+<a class="size-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="size-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<!-- Col 2 -->
+<div class="md:col-span-1">
+<h4 class="text-white font-bold mb-6">Navegación</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Inicio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Biblioteca</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Audioteca</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Nosotros</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Afiliados</a></li>
+</ul>
+</div>
+<!-- Col 3 -->
+<div class="md:col-span-1">
+<h4 class="text-white font-bold mb-6">Soporte y Legal</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Contacto</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Preguntas Frecuentes</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Términos de Servicio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookies</a></li>
+</ul>
+</div>
+<!-- Col 4 -->
+<div class="md:col-span-1">
+<h4 class="text-white font-bold mb-6">Suscríbete al Newsletter</h4>
+<p class="text-xs mb-4">Recibe consejos semanales de etólogos directamente en tu bandeja de entrada.</p>
+<div class="flex flex-col gap-2">
+<input class="bg-white/5 border-white/10 rounded-lg text-sm px-4 py-2 focus:ring-primary focus:border-primary" placeholder="Tu email" type="email"/>
+<button class="bg-primary text-white font-bold text-sm py-2 rounded-lg">Unirse</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium">
+<p>© 2024 Vetis Digital. Todos los derechos reservados.</p>
+<div class="flex gap-6">
+<span>Hecho con <span class="text-primary">❤</span> para mascotas felices</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
