@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html class="light" lang="es"><head>
+<html class="light" lang="es">
+<head>
+
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Universo Felino | Biblioteca Vetis Digital</title>
@@ -13,10 +15,10 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#ec5b13",
+                        "primary": "#ec5b13", // Terracotta
                         "accent-gold": "#d4af37",
                         "deep-green": "#1a2e1a",
-                        "background-light": "#fdfcf9",
+                        "background-light": "#fdfcf9", // Cream/Off-white
                         "background-dark": "#120d0b",
                     },
                     fontFamily: {
@@ -33,19 +35,18 @@
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .glass-nav { backdrop-filter: blur(12px); background-color: rgba(253, 252, 249, 0.8); }
     </style>
+
 </head>
 <body class="bg-background-light text-slate-900 dark:bg-background-dark dark:text-slate-100 overflow-x-hidden">
 <!-- Header -->
 <header class="fixed top-0 w-full z-50 glass-nav border-b border-primary/10 transition-all duration-300">
 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 <div class="flex items-center gap-2">
-<a href="index.html">
 <img src="assets/logo-transparent.png" alt="Vetis Digital Logo" class="h-12 w-auto object-contain transition-transform hover:scale-105" style="mix-blend-mode: multiply;" />
-</a>
 </div>
 <nav class="hidden lg:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="index.html">Inicio</a>
-<a class="text-sm font-medium text-accent-gold transition-colors" href="biblioteca.html">Biblioteca</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="#">Inicio</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="biblioteca.html">Biblioteca</a>
 <a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="audioteca.html">Audioteca Gratis</a>
 <a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="nosotros.html">Sobre Nosotros</a>
 <a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="afiliados.html">Afiliados</a>
@@ -67,15 +68,18 @@
 <button class="absolute top-6 right-6 text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
 <span class="material-symbols-outlined text-4xl">close</span>
 </button>
-<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="index.html">Inicio</a>
-<a class="text-2xl font-bold text-accent-gold transition-colors" href="biblioteca.html">Biblioteca</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="#">Inicio</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="biblioteca.html">Biblioteca</a>
 <a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="audioteca.html">Audioteca Gratis</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="nosotros.html">Sobre Nosotros</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="afiliados.html">Afiliados</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="blog.html">Blog</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="contacto.html">Contacto</a>
 <button class="bg-accent-gold text-deep-green px-12 py-4 rounded-full font-black text-xl hover:scale-105 transition-all shadow-xl shadow-accent-gold/20 mt-4 w-64 uppercase tracking-wider">
     Acceder
 </button>
 </div>
 
-<!-- Hero Section -->
 <section class="relative min-h-[40vh] flex items-center justify-center overflow-hidden pt-20">
 <div class="absolute inset-0 z-0">
 <div class="absolute inset-0 bg-deep-green/70 z-10"></div>
@@ -95,8 +99,6 @@
 </p>
 </div>
 </section>
-
-<!-- Product List -->
 <section class="py-20 md:py-24 bg-background-light dark:bg-background-dark">
 <div class="max-w-7xl mx-auto px-6">
 <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
@@ -156,8 +158,6 @@
 </div>
 </div>
 </section>
-
-<!-- Related Sections -->
 <section class="py-16 bg-slate-50 dark:bg-slate-900/50">
 <div class="max-w-7xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold text-deep-green dark:text-white mb-8">¿Buscas algo para perros?</h2>
@@ -167,7 +167,6 @@
     </a>
 </div>
 </section>
-
 <!-- Footer -->
 <footer class="bg-deep-green text-white py-20 border-t border-white/10">
 <div class="max-w-7xl mx-auto px-6">
@@ -176,13 +175,13 @@
 <div class="flex items-center gap-3 mb-6">
 <img src="assets/logo-transparent.png" alt="Vetis Logo" class="h-14 w-auto object-contain" style="filter: invert(1) brightness(2);" />
 </div>
-<p class="text-white/60 text-sm leading-relaxed mb-6">La biblioteca digital líder en educación y bienestar integral para mascotas en el mundo hispano.</p>
+<p class="text-white/60 text-sm leading-relaxed mb-6">La biblioteca digital para tutores de perros y gatos que buscan comprender, cuidar y convivir mejor con sus mascotas.</p>
 <div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="#">
-<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.instagram.com/vetisdigital" target="_blank" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
 </a>
-<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="#">
-<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.tiktok.com/@vetisdigital" target="_blank" aria-label="TikTok">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 448 512" fill="currentColor"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.32c7.87 33.32 31.74 60.39 63.06 73.66A120.4 120.4 0 0 0 448 109.48v100.43z"/></svg>
 </a>
 </div>
 </div>
@@ -190,14 +189,14 @@
 <h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Explorar y Compañía</h4>
 <div class="grid grid-cols-2 gap-4">
 <ul class="space-y-4 text-white/60 text-sm">
-<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="index.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Inicio</a></li>
-<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="biblioteca.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Biblioteca</a></li>
-<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="audioteca.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Audioteca Gratis</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Inicio</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Biblioteca</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Audioteca Gratis</a></li>
 <li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="blog.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Blog</a></li>
 </ul>
 <ul class="space-y-4 text-white/60 text-sm">
 <li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="nosotros.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Sobre Nosotros</a></li>
-<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="afiliados.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Afiliados</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Afiliados</a></li>
 <li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="contacto.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Contacto</a></li>
 </ul>
 </div>
@@ -212,14 +211,13 @@
 </div>
 </div>
 <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-xs uppercase tracking-widest">
-<span>© 2024 Vetis Digital. Todos los derechos reservados.</span>
+<span>© 2026 Vetis Digital. Todos los derechos reservados.</span>
 <div class="flex gap-6">
-<span class="flex items-center gap-1">Diseñado con <span class="material-symbols-outlined text-[12px] text-accent-gold">favorite</span> por animales</span>
+<span class="flex items-center gap-1">Diseñado con <span class="material-symbols-outlined text-[14px] text-accent-gold" style="font-variation-settings: 'FILL' 1;">favorite</span> por animales</span>
 </div>
 </div>
 </div>
 </footer>
-
 <!-- Initialize AOS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

@@ -1,61 +1,85 @@
 <!DOCTYPE html>
+<html class="light" lang="es">
+<head>
 
-<html class="light" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nosotros - Vetis Digital</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#ec5b13",
-                        "background-light": "#f8f6f6",
-                        "background-dark": "#221610",
-                        "accent-green": "#1a3c34",
-                        "cream-soft": "#fdfbf7"
+                        "primary": "#ec5b13", // Terracotta
+                        "accent-gold": "#d4af37",
+                        "deep-green": "#1a2e1a",
+                        "background-light": "#fdfcf9", // Cream/Off-white
+                        "background-dark": "#120d0b",
                     },
                     fontFamily: {
-                        "display": ["Public Sans", "sans-serif"]
+                        "display": ["Public Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
                 },
             },
         }
     </script>
-<title>Nosotros - Vetis Digital</title>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .glass-nav { backdrop-filter: blur(12px); background-color: rgba(253, 252, 249, 0.8); }
+    </style>
+
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<body class="bg-background-light text-slate-900 dark:bg-background-dark dark:text-slate-100 overflow-x-hidden">
 <!-- Header -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-primary/10 transition-all duration-300">
 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-<div class="flex items-center gap-3">
-<div class="text-primary size-8">
-<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill-rule="evenodd"></path>
-</svg>
-</div>
-<span class="text-xl font-black tracking-tight text-accent-green dark:text-slate-100 uppercase">Vetis Digital</span>
+<div class="flex items-center gap-2">
+<img src="assets/logo-transparent.png" alt="Vetis Digital Logo" class="h-12 w-auto object-contain transition-transform hover:scale-105" style="mix-blend-mode: multiply;" />
 </div>
 <nav class="hidden lg:flex items-center gap-8">
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Inicio</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Biblioteca</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Audioteca</a>
-<a class="text-sm font-semibold text-primary" href="#">Nosotros</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Blog</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Afiliados</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors border-l border-slate-300 dark:border-slate-700 pl-8" href="#">Contacto</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="#">Inicio</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="biblioteca.html">Biblioteca</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="audioteca.html">Audioteca Gratis</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="nosotros.html">Sobre Nosotros</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="afiliados.html">Afiliados</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="blog.html">Blog</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="contacto.html">Contacto</a>
 </nav>
-<button class="bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
-                Ingresar
+<div class="flex items-center gap-4">
+<button class="hidden lg:block bg-deep-green text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-all shadow-lg shadow-deep-green/10">
+                Acceder
             </button>
+<button class="lg:hidden text-deep-green dark:text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
 </div>
 </header>
-<!-- Hero Section -->
+<!-- Menú Móvil Desplegable -->
+<div id="mobile-menu" class="lg:hidden fixed inset-0 z-[100] bg-deep-green transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 py-10 overflow-y-auto">
+<button class="absolute top-6 right-6 text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="#">Inicio</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="biblioteca.html">Biblioteca</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="audioteca.html">Audioteca Gratis</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="nosotros.html">Sobre Nosotros</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="afiliados.html">Afiliados</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="blog.html">Blog</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="contacto.html">Contacto</a>
+<button class="bg-accent-gold text-deep-green px-12 py-4 rounded-full font-black text-xl hover:scale-105 transition-all shadow-xl shadow-accent-gold/20 mt-4 w-64 uppercase tracking-wider">
+    Acceder
+</button>
+</div>
+
 <section class="relative h-[870px] flex items-center justify-center overflow-hidden pt-20">
 <div class="absolute inset-0 z-0">
 <div class="absolute inset-0 bg-gradient-to-r from-accent-green/60 to-transparent z-10"></div>
@@ -68,18 +92,17 @@
                     Nuestra misión es acercarte a tus compañeros de vida a través del conocimiento y la empatía.
                 </p>
 <div class="pt-4">
-<button class="bg-white text-accent-green px-8 py-4 rounded-xl font-bold text-lg hover:bg-cream-soft transition-colors flex items-center gap-2">
+<button class="bg-white text-deep-green px-8 py-4 rounded-xl font-bold text-lg hover:bg-cream-soft transition-colors flex items-center gap-2">
                         Explorar Biblioteca <span class="material-symbols-outlined">arrow_forward</span>
 </button>
 </div>
 </div>
 </div>
 </section>
-<!-- Our Purpose Section -->
 <section class="py-24 bg-cream-soft dark:bg-background-dark/50">
 <div class="max-w-4xl mx-auto px-6 text-center">
 <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Nuestro Propósito</span>
-<h2 class="text-4xl md:text-5xl font-black text-accent-green dark:text-slate-100 mb-8">Por qué hacemos lo que hacemos</h2>
+<h2 class="text-4xl md:text-5xl font-black text-deep-green dark:text-slate-100 mb-8">Por qué hacemos lo que hacemos</h2>
 <div class="space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
 <p>
                     Vetis Digital nace como una biblioteca digital premium dedicada al cuidado y la comprensión profunda de nuestras mascotas. Creemos que el conocimiento guiado por la empatía transforma la vida de los animales y sus tutores.
@@ -90,36 +113,34 @@
 </div>
 </div>
 </section>
-<!-- Mission, Vision, Values -->
 <section class="py-24 px-6 max-w-7xl mx-auto">
 <div class="grid md:grid-cols-3 gap-8">
 <div class="bg-white dark:bg-slate-900 p-10 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center group hover:shadow-xl hover:-translate-y-2 transition-all">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-4xl">target</span>
 </div>
-<h3 class="text-2xl font-bold text-accent-green dark:text-slate-100 mb-4">Nuestra Misión</h3>
+<h3 class="text-2xl font-bold text-deep-green dark:text-slate-100 mb-4">Nuestra Misión</h3>
 <p class="text-slate-500 dark:text-slate-400">Empoderar a los tutores con información científica y humana, transformando la convivencia diaria.</p>
 </div>
 <div class="bg-white dark:bg-slate-900 p-10 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center group hover:shadow-xl hover:-translate-y-2 transition-all">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-4xl">visibility</span>
 </div>
-<h3 class="text-2xl font-bold text-accent-green dark:text-slate-100 mb-4">Nuestra Visión</h3>
+<h3 class="text-2xl font-bold text-deep-green dark:text-slate-100 mb-4">Nuestra Visión</h3>
 <p class="text-slate-500 dark:text-slate-400">Ser el referente global en educación digital para el bienestar animal y la tenencia responsable.</p>
 </div>
 <div class="bg-white dark:bg-slate-900 p-10 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center group hover:shadow-xl hover:-translate-y-2 transition-all">
 <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-4xl">favorite</span>
 </div>
-<h3 class="text-2xl font-bold text-accent-green dark:text-slate-100 mb-4">Nuestros Valores</h3>
+<h3 class="text-2xl font-bold text-deep-green dark:text-slate-100 mb-4">Nuestros Valores</h3>
 <p class="text-slate-500 dark:text-slate-400">Empatía profunda, excelencia científica, compromiso inquebrantable y comunidad vibrante.</p>
 </div>
 </div>
 </section>
-<!-- Team/Community Block -->
 <section class="py-24 bg-cream-soft dark:bg-background-dark/30">
 <div class="max-w-7xl mx-auto px-6">
-<div class="bg-accent-green rounded-[2.5rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+<div class="bg-deep-green rounded-[2.5rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
 <div class="lg:w-1/2 p-12 lg:p-20 flex flex-col justify-center text-white">
 <h2 class="text-4xl md:text-5xl font-black mb-8">Únete a una comunidad de tutores apasionados</h2>
 <p class="text-lg opacity-80 mb-10 leading-relaxed">
@@ -140,17 +161,16 @@
 </div>
 </div>
 </section>
-<!-- FAQ Block -->
 <section class="py-24 max-w-4xl mx-auto px-6">
 <div class="text-center mb-16">
-<h2 class="text-4xl font-black text-accent-green dark:text-slate-100">Preguntas Frecuentes</h2>
+<h2 class="text-4xl font-black text-deep-green dark:text-slate-100">Preguntas Frecuentes</h2>
 <p class="text-slate-500 mt-4">Todo lo que necesitas saber sobre Vetis Digital</p>
 </div>
 <div class="space-y-4">
 <!-- FAQ Items -->
 <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
 <button class="w-full flex justify-between items-center text-left py-4 focus:outline-none group">
-<span class="text-lg font-bold text-accent-green dark:text-slate-200">¿Qué incluye la suscripción a la Biblioteca Digital?</span>
+<span class="text-lg font-bold text-deep-green dark:text-slate-200">¿Qué incluye la suscripción a la Biblioteca Digital?</span>
 <span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
 </button>
 <div class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed pb-2">
@@ -159,7 +179,7 @@
 </div>
 <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
 <button class="w-full flex justify-between items-center text-left py-4 focus:outline-none group">
-<span class="text-lg font-bold text-accent-green dark:text-slate-200">¿El contenido está verificado por veterinarios?</span>
+<span class="text-lg font-bold text-deep-green dark:text-slate-200">¿El contenido está verificado por veterinarios?</span>
 <span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
 </button>
 <div class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed pb-2">
@@ -168,7 +188,7 @@
 </div>
 <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
 <button class="w-full flex justify-between items-center text-left py-4 focus:outline-none group">
-<span class="text-lg font-bold text-accent-green dark:text-slate-200">¿Puedo cancelar mi suscripción en cualquier momento?</span>
+<span class="text-lg font-bold text-deep-green dark:text-slate-200">¿Puedo cancelar mi suscripción en cualquier momento?</span>
 <span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
 </button>
 <div class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed pb-2">
@@ -177,7 +197,7 @@
 </div>
 <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
 <button class="w-full flex justify-between items-center text-left py-4 focus:outline-none group">
-<span class="text-lg font-bold text-accent-green dark:text-slate-200">¿Ofrecen soporte personalizado para casos específicos?</span>
+<span class="text-lg font-bold text-deep-green dark:text-slate-200">¿Ofrecen soporte personalizado para casos específicos?</span>
 <span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
 </button>
 <div class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed pb-2">
@@ -186,7 +206,7 @@
 </div>
 <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
 <button class="w-full flex justify-between items-center text-left py-4 focus:outline-none group">
-<span class="text-lg font-bold text-accent-green dark:text-slate-200">¿Qué formatos están disponibles en la Audioteca?</span>
+<span class="text-lg font-bold text-deep-green dark:text-slate-200">¿Qué formatos están disponibles en la Audioteca?</span>
 <span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
 </button>
 <div class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed pb-2">
@@ -195,7 +215,7 @@
 </div>
 <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
 <button class="w-full flex justify-between items-center text-left py-4 focus:outline-none group">
-<span class="text-lg font-bold text-accent-green dark:text-slate-200">¿Cómo puedo unirme al programa de afiliados?</span>
+<span class="text-lg font-bold text-deep-green dark:text-slate-200">¿Cómo puedo unirme al programa de afiliados?</span>
 <span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
 </button>
 <div class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed pb-2">
@@ -204,60 +224,65 @@
 </div>
 </div>
 </section>
-<!-- Global Footer -->
-<footer class="bg-accent-green text-white py-20 px-6">
-<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-16">
-<div class="col-span-1 md:col-span-1 space-y-6">
-<div class="flex items-center gap-3">
-<div class="text-primary size-6">
-<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill-rule="evenodd"></path>
-</svg>
+<!-- Footer -->
+<footer class="bg-deep-green text-white py-20 border-t border-white/10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img src="assets/logo-transparent.png" alt="Vetis Logo" class="h-14 w-auto object-contain" style="filter: invert(1) brightness(2);" />
 </div>
-<span class="text-xl font-black uppercase tracking-widest">Vetis Digital</span>
-</div>
-<p class="text-sm opacity-60 leading-relaxed italic">
-                    "Transformando el vínculo humano-animal a través de la educación premium y el amor."
-                </p>
+<p class="text-white/60 text-sm leading-relaxed mb-6">La biblioteca digital para tutores de perros y gatos que buscan comprender, cuidar y convivir mejor con sus mascotas.</p>
 <div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-lg">public</span>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.instagram.com/vetisdigital" target="_blank" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
 </a>
-<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-lg">mail</span>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.tiktok.com/@vetisdigital" target="_blank" aria-label="TikTok">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 448 512" fill="currentColor"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.32c7.87 33.32 31.74 60.39 63.06 73.66A120.4 120.4 0 0 0 448 109.48v100.43z"/></svg>
 </a>
 </div>
 </div>
-<div>
-<h4 class="font-bold text-lg mb-6">Navegación</h4>
-<ul class="space-y-4 text-sm opacity-80">
-<li><a class="hover:text-primary transition-colors" href="#">Inicio</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Biblioteca</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Audioteca</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+<div class="col-span-1 md:col-span-2">
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Explorar y Compañía</h4>
+<div class="grid grid-cols-2 gap-4">
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Inicio</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Biblioteca</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Audioteca Gratis</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="blog.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Blog</a></li>
 </ul>
-</div>
-<div>
-<h4 class="font-bold text-lg mb-6">Compañía</h4>
-<ul class="space-y-4 text-sm opacity-80">
-<li><a class="hover:text-primary transition-colors" href="#">Sobre Nosotros</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Afiliados</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Contacto</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Prensa</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-lg mb-6">Legal</h4>
-<ul class="space-y-4 text-sm opacity-80">
-<li><a class="hover:text-primary transition-colors" href="#">Términos y Condiciones</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Política de Cookies</a></li>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="nosotros.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Sobre Nosotros</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Afiliados</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="contacto.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Contacto</a></li>
 </ul>
 </div>
 </div>
-<div class="max-w-7xl mx-auto pt-8 flex flex-col md:flex-row justify-between items-center text-xs opacity-40">
-<p>© 2024 Vetis Digital. Todos los derechos reservados.</p>
-<p>Diseño de Alta Gama para el Bienestar Animal.</p>
+<div>
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Legal</h4>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Términos y Condiciones</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Política de Privacidad</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Aviso Legal</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-xs uppercase tracking-widest">
+<span>© 2026 Vetis Digital. Todos los derechos reservados.</span>
+<div class="flex gap-6">
+<span class="flex items-center gap-1">Diseñado con <span class="material-symbols-outlined text-[14px] text-accent-gold" style="font-variation-settings: 'FILL' 1;">favorite</span> por animales</span>
+</div>
+</div>
 </div>
 </footer>
+<!-- Initialize AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+        offset: 50,
+        duration: 800,
+        easing: 'ease-in-out-sine'
+    });
+</script>
 </body></html>
