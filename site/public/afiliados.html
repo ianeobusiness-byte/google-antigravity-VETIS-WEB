@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html class="light" lang="es">
 <head>
-
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Vetis Digital | Programa de Afiliados Premium</title>
+<title>Vetis Digital | Programa de Afiliados</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#ec5b13", // Terracotta
-                        "accent-gold": "#d4af37",
-                        "deep-green": "#1a2e1a",
-                        "background-light": "#fdfcf9", // Cream/Off-white
-                        "background-dark": "#120d0b",
-                    },
-                    fontFamily: {
-                        "display": ["Public Sans", "sans-serif"],
-                        "serif": ["Playfair Display", "serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "accent-gold": "#d4af37",
+                    "deep-green": "#1a2e1a",
+                    "background-light": "#fdfcf9",
+                    "background-dark": "#120d0b",
                 },
+                fontFamily: {
+                    "display": ["Public Sans", "sans-serif"],
+                    "serif": ["Playfair Display", "serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
             },
-        }
-    </script>
+        },
+    }
+</script>
 <style>
-        body { font-family: 'Public Sans', sans-serif; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .glass-nav { backdrop-filter: blur(12px); background-color: rgba(253, 252, 249, 0.8); }
-    </style>
-
+    body { font-family: 'Public Sans', sans-serif; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    .glass-nav { backdrop-filter: blur(12px); background-color: rgba(253, 252, 249, 0.8); }
+</style>
 </head>
 <body class="bg-background-light text-slate-900 dark:bg-background-dark dark:text-slate-100 overflow-x-hidden">
+
 <!-- Header -->
-<header class="fixed top-0 w-full z-50 glass-nav border-b border-primary/10 transition-all duration-300">
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-deep-green/10 transition-all duration-300">
 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 <div class="flex items-center gap-2">
 <img src="assets/logo-transparent.png" alt="Vetis Digital Logo" class="h-12 w-auto object-contain transition-transform hover:scale-105" style="mix-blend-mode: multiply;" />
@@ -55,15 +53,16 @@
 </nav>
 <div class="flex items-center gap-4">
 <button class="hidden lg:block bg-deep-green text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-all shadow-lg shadow-deep-green/10">
-                Acceder
-            </button>
+    Acceder
+</button>
 <button class="lg:hidden text-deep-green dark:text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
 </div>
 </header>
-<!-- Menú Móvil Desplegable -->
+
+<!-- Menú Móvil -->
 <div id="mobile-menu" class="lg:hidden fixed inset-0 z-[100] bg-deep-green transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 py-10 overflow-y-auto">
 <button class="absolute top-6 right-6 text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
 <span class="material-symbols-outlined text-4xl">close</span>
@@ -81,216 +80,230 @@
 </div>
 
 <main class="pt-20">
+
 <!-- Hero Section -->
-<section class="relative overflow-hidden py-20 lg:py-32 bg-background-light">
-<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-<div class="z-10">
-<span class="inline-block py-1 px-4 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-6">Programa de Partners</span>
-<h2 class="text-5xl lg:text-7xl font-black text-deep-green leading-[1.1] mb-6">
-                        Recomienda Vetis Digital y <span class="text-primary font-outline">gana ingresos</span>
-</h2>
-<p class="text-lg text-stone-600 leading-relaxed mb-10 max-w-xl">
-                        Únete a nuestra red exclusiva de embajadores. Comparte nuestra pasión por el bienestar animal y recibe comisiones premium por cada nueva suscripción que generes.
-                    </p>
-<div class="flex flex-wrap gap-4">
-<button class="bg-deep-green text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-deep-green/90 transition-all shadow-xl shadow-deep-green/10">
-                            Unirme al Programa
-                        </button>
-<div class="flex items-center gap-3 px-4">
-<div class="flex -space-x-2">
-<div class="w-10 h-10 rounded-full border-2 border-white bg-stone-200 overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Portrait of a female affiliate partner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc8TP04PxeG93Z9srJiiAiKEPPm0XA1oQ7Exj2obpjFARp_TgUGNJnoKn7b1n6WSmsFz14kXY6nPZpNyJetFpDoSBOkZCveoAsJYx6pelNYHrpaEABd9x0M-vIKNfSoeCmpIWdS5QyOHSecuBZvCn3DxIn1wwX9r3W92TjIwm9OWQ7fgbLLum0BhdVqW9Y0rejezfpj2zUfwZN-fC2aAJO6bQNdek9QC4fd5In9vzsiDzCPa7z4GTGLUZKOoj69HLH9GCRJzNu11Q"/>
+<section class="relative min-h-[80vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 bg-deep-green/55 z-10"></div>
+    <img alt="Programa de Afiliados Vetis" class="w-full h-full object-cover object-center" src="assets/Hero Afiliados.png"/>
 </div>
-<div class="w-10 h-10 rounded-full border-2 border-white bg-stone-200 overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Portrait of a male affiliate partner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB09j-pSkZL3l5FuBDxJip2rCJm7dnLOKnupvg5NoEYQkchxXVgTqRiq0NTHCRhFt9Emczn5m_Hi1bjZNJQT68oMhFDEKRK_hKi12_bjygLENJ2IsW3Za7mXeEJKoQv1gmWDWvF1Nfatb1-kzk-LF1j6nxStEdLkLF5407prooc5i5IHg39qL-QbyNb1MQs-rax4qDJ3OlAPqbQAZZ-BNVzT9tBSMztPSEylg0HfhRw_5jDHpe0D_DsQjCHD_8NfL0RAOcf71fhamY"/>
-</div>
-</div>
-<p class="text-sm font-medium text-stone-500">+500 Afiliados activos</p>
-</div>
-</div>
-</div>
-<div class="relative">
-<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-<div class="relative rounded-[2rem] overflow-hidden shadow-2xl transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
-<img class="w-full h-[600px] object-cover" data-alt="Happy woman with golden retriever dog working on laptop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD52F_9LF5xndnZDdhwMbsXTmgAvV_g9D0mzgLj0SzHT_d-BNoZvkedWUoWCx1JUN79TPlsupugVC82SiwArZNwn4BsCCxWuY8qFr9C2_g2JM7BbDQS2FjGpJPt_T6IFc6W5syMekNLDliuJREIWR62424pOnS5yWQYIld6h4lyL6C2RZ_yyL2X0-j4b0TE9NnIPk3Vj55t5THOKcP8KOzjaqK36JlaE93OMiPt0gg3Vwjb8k2KhSuCosps7pgaUDZqnAsssPX39gU"/>
-</div>
-</div>
+<div class="relative z-20 max-w-7xl mx-auto px-6 w-full py-20">
+    <div class="max-w-2xl text-white" data-aos="fade-up">
+        <span class="inline-block py-1.5 px-5 rounded-full bg-white/20 border border-white/30 backdrop-blur-sm text-white text-xs font-bold tracking-widest uppercase mb-6">Programa de Afiliados</span>
+        <h1 class="text-5xl md:text-7xl font-bold font-serif leading-tight mb-6">
+            Comparte Vetis y genera ingresos con contenido que <span class="text-accent-gold italic">aporta valor.</span>
+        </h1>
+        <p class="text-xl text-white/90 mb-10 max-w-lg leading-relaxed font-light">
+            Invita a más personas a descubrir nuestros recursos para perros y gatos, y recibe una comisión por cada compra generada a través de tu enlace.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#formulario" class="inline-flex items-center gap-3 bg-accent-gold text-deep-green px-10 py-5 rounded-2xl font-black text-lg hover:bg-white hover:scale-105 transition-all shadow-xl shadow-accent-gold/20">
+                <span class="material-symbols-outlined text-xl">how_to_reg</span>
+                Postular al programa
+                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </a>
+            <div class="flex items-center gap-3 px-4">
+                <div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-accent-gold text-xl">verified</span>
+                </div>
+                <p class="text-sm font-medium text-white/70">Programa revisado y curado</p>
+            </div>
+        </div>
+    </div>
 </div>
 </section>
-<!-- How it works Section -->
-<section class="py-24 bg-white">
+
+<!-- How it Works Section -->
+<section class="py-24 bg-white dark:bg-slate-900">
 <div class="max-w-7xl mx-auto px-6">
-<div class="text-center mb-16">
-<h3 class="text-deep-green text-3xl lg:text-4xl font-extrabold mb-4">¿Cómo funciona?</h3>
-<div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+<div class="text-center mb-16" data-aos="fade-up">
+    <span class="text-accent-gold font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Proceso simple</span>
+    <h3 class="text-deep-green dark:text-white text-3xl lg:text-4xl font-extrabold mb-4">¿Cómo funciona?</h3>
+    <div class="w-16 h-0.5 bg-accent-gold mx-auto mt-4"></div>
 </div>
 <div class="grid md:grid-cols-3 gap-12">
-<div class="flex flex-col items-center text-center p-8 rounded-2xl hover:bg-background-light transition-colors group">
-<div class="w-16 h-16 rounded-2xl bg-deep-green/5 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-<span class="material-symbols-outlined text-deep-green text-3xl group-hover:text-white">person_add</span>
+<div class="flex flex-col items-center text-center p-8 rounded-2xl hover:bg-background-light transition-colors group" data-aos="fade-up" data-aos-delay="100">
+    <div class="w-16 h-16 rounded-2xl bg-deep-green flex items-center justify-center mb-6 shadow-lg shadow-deep-green/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+        <span class="material-symbols-outlined text-accent-gold text-3xl">person_add</span>
+    </div>
+    <div class="text-accent-gold font-black text-sm uppercase tracking-widest mb-2">Paso 1</div>
+    <h4 class="text-xl font-bold text-deep-green dark:text-white mb-3">Postula</h4>
+    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Completa tu solicitud en pocos minutos para que podamos conocer tu perfil.</p>
 </div>
-<h4 class="text-xl font-bold text-deep-green mb-3">Regístrate</h4>
-<p class="text-stone-500 leading-relaxed">Crea tu perfil de embajador en menos de 2 minutos. Acceso instantáneo a tu panel de control.</p>
+<div class="flex flex-col items-center text-center p-8 rounded-2xl hover:bg-background-light transition-colors group" data-aos="fade-up" data-aos-delay="200">
+    <div class="w-16 h-16 rounded-2xl bg-deep-green flex items-center justify-center mb-6 shadow-lg shadow-deep-green/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+        <span class="material-symbols-outlined text-accent-gold text-3xl">link</span>
+    </div>
+    <div class="text-accent-gold font-black text-sm uppercase tracking-widest mb-2">Paso 2</div>
+    <h4 class="text-xl font-bold text-deep-green dark:text-white mb-3">Recibe tu enlace</h4>
+    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Si eres aprobado, obtendrás tu acceso y materiales para compartir Vetis.</p>
 </div>
-<div class="flex flex-col items-center text-center p-8 rounded-2xl hover:bg-background-light transition-colors group">
-<div class="w-16 h-16 rounded-2xl bg-deep-green/5 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-<span class="material-symbols-outlined text-deep-green text-3xl group-hover:text-white">link</span>
-</div>
-<h4 class="text-xl font-bold text-deep-green mb-3">Obtén tu enlace</h4>
-<p class="text-stone-500 leading-relaxed">Genera enlaces personalizados y descarga creatividades de alta calidad para tus redes.</p>
-</div>
-<div class="flex flex-col items-center text-center p-8 rounded-2xl hover:bg-background-light transition-colors group">
-<div class="w-16 h-16 rounded-2xl bg-deep-green/5 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-<span class="material-symbols-outlined text-deep-green text-3xl group-hover:text-white">payments</span>
-</div>
-<h4 class="text-xl font-bold text-deep-green mb-3">Gana Comisiones</h4>
-<p class="text-stone-500 leading-relaxed">Recibe pagos mensuales automáticos por cada suscripción activa que refieras.</p>
+<div class="flex flex-col items-center text-center p-8 rounded-2xl hover:bg-background-light transition-colors group" data-aos="fade-up" data-aos-delay="300">
+    <div class="w-16 h-16 rounded-2xl bg-deep-green flex items-center justify-center mb-6 shadow-lg shadow-deep-green/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+        <span class="material-symbols-outlined text-accent-gold text-3xl">payments</span>
+    </div>
+    <div class="text-accent-gold font-black text-sm uppercase tracking-widest mb-2">Paso 3</div>
+    <h4 class="text-xl font-bold text-deep-green dark:text-white mb-3">Genera comisiones</h4>
+    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Recibe una comisión por cada compra realizada a través de tu enlace.</p>
 </div>
 </div>
 </div>
 </section>
+
 <!-- Benefits Block -->
-<section class="py-24 bg-background-light/50">
+<section class="py-24 bg-background-light/50 dark:bg-slate-900/50">
 <div class="max-w-7xl mx-auto px-6">
 <div class="bg-deep-green rounded-[3rem] p-12 lg:p-20 overflow-hidden relative">
 <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
 <img class="w-full h-full object-cover" data-alt="Artistic close up of a cat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9XuvKhz-IJhPexm11J4GtkVq3MYleK0a2pXCfUe8P0Dpwt7Tl9PosWC5GeIOsjrBnhixUjluvfb8i9V28EXPuImQItyBCdWZfbn_nXwlI-g77d6VuXEo1MFFI-XjzlheMZU09c_quuhEKmgm4QmcAiV-DVgnga5WJW8-gTe0ING7Oc5G8zf2YBeWCESwxmU1eKeavV36sn1kXztFPfjsUaLadmuwXkSJ2039rQTADFi0berTzqGTfBv5h168BL6jBh1xHqykkVU8"/>
 </div>
 <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-<div>
-<h3 class="text-white text-4xl font-bold mb-8 leading-tight">Beneficios diseñados para tu crecimiento profesional</h3>
-<ul class="space-y-6">
-<li class="flex items-start gap-4">
-<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-1">
-<span class="material-symbols-outlined text-primary text-xl">trending_up</span>
+<div data-aos="fade-right">
+    <span class="text-accent-gold font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Ventajas del programa</span>
+    <h3 class="text-white text-4xl font-bold mb-8 leading-tight">Lo que incluye el programa</h3>
+    <ul class="space-y-6">
+        <li class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-accent-gold/20 flex items-center justify-center shrink-0 mt-1">
+                <span class="material-symbols-outlined text-accent-gold text-xl">trending_up</span>
+            </div>
+            <div>
+                <h5 class="text-white font-bold text-lg">Comisiones por venta</h5>
+                <p class="text-white/60">Recibe una comisión por cada compra generada desde tu enlace.</p>
+            </div>
+        </li>
+        <li class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-accent-gold/20 flex items-center justify-center shrink-0 mt-1">
+                <span class="material-symbols-outlined text-accent-gold text-xl">auto_awesome</span>
+            </div>
+            <div>
+                <h5 class="text-white font-bold text-lg">Selección cuidada de productos</h5>
+                <p class="text-white/60">Promociona recursos diseñados para aportar valor real a tutores de perros y gatos.</p>
+            </div>
+        </li>
+        <li class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-accent-gold/20 flex items-center justify-center shrink-0 mt-1">
+                <span class="material-symbols-outlined text-accent-gold text-xl">support_agent</span>
+            </div>
+            <div>
+                <h5 class="text-white font-bold text-lg">Acompañamiento claro</h5>
+                <p class="text-white/60">Te entregamos una base simple para que sepas qué recomendar y cómo hacerlo.</p>
+            </div>
+        </li>
+    </ul>
 </div>
-<div>
-<h5 class="text-white font-bold text-lg">Comisiones Atractivas</h5>
-<p class="text-stone-300">Gana hasta el 30% de comisión recurrente por cada cliente referido.</p>
-</div>
-</li>
-<li class="flex items-start gap-4">
-<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-1">
-<span class="material-symbols-outlined text-primary text-xl">photo_camera</span>
-</div>
-<div>
-<h5 class="text-white font-bold text-lg">Material HD Promocional</h5>
-<p class="text-stone-300">Acceso a un banco exclusivo de fotos, vídeos y banners de alta gama.</p>
-</div>
-</li>
-<li class="flex items-start gap-4">
-<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-1">
-<span class="material-symbols-outlined text-primary text-xl">support_agent</span>
-</div>
-<div>
-<h5 class="text-white font-bold text-lg">Soporte Dedicado</h5>
-<p class="text-stone-300">Un gestor personal asignado para ayudarte a optimizar tus campañas.</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="hidden lg:block">
-<div class="grid grid-cols-2 gap-4">
-<img class="rounded-2xl w-full h-48 object-cover" data-alt="Portrait of a happy dog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDypCFe0e6gBW_R-JrgzgekwP-R6O63wxSaM_yzpod1tWma2Jt0dHo-N4FQu6aYo8uGmT-IeJVhxRMuWD90hPMQ5x6SwT7Y084di0n2zdMbfe8My0fYDYOBCyy57u85WNvHgd6B-Ag66yKUNkY4m7dl2VNKni1LnCByO5Zlh31gtLRmSsDq6CeGUbMvMwPjTHsowIB6__P08fgWw8kknVCKSthKH9RT11p6OoRAkarumwZyfztNVNsX5I3qt1MMwjcFVPiXkIVEMCQ"/>
-<img class="rounded-2xl w-full h-48 object-cover mt-12" data-alt="Cool cat with sunglasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1B-VGNTOmsPypzfBs-crXRw_xWKvYMpENzpuMl7rRvJBecR6vInoIWLoAudS0Q4nufScis1IfHFAV0hlB9upNt84LwatZAabqA5DqwEzXS75JYHHPykNIXtDvZKYO9n4I9X-EUjnZibhTMsFNOaFBGXN0n8jgHoOSBvyW04vdns0JPOIbVOvX_dqM-TWTHoGWmtuKL4eGTUEFQ7vtQiEZqcv4ipdgGCgQVI9710Dow55GZG1q3ZIYW8AqLXbJx7taNic83OYdSqo"/>
-</div>
+<div class="hidden lg:block" data-aos="fade-left">
+    <div class="grid grid-cols-2 gap-4">
+        <img class="rounded-2xl w-full h-48 object-cover" data-alt="Portrait of a happy dog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDypCFe0e6gBW_R-JrgzgekwP-R6O63wxSaM_yzpod1tWma2Jt0dHo-N4FQu6aYo8uGmT-IeJVhxRMuWD90hPMQ5x6SwT7Y084di0n2zdMbfe8My0fYDYOBCyy57u85WNvHgd6B-Ag66yKUNkY4m7dl2VNKni1LnCByO5Zlh31gtLRmSsDq6CeGUbMvMwPjTHsowIB6__P08fgWw8kknVCKSthKH9RT11p6OoRAkarumwZyfztNVNsX5I3qt1MMwjcFVPiXkIVEMCQ"/>
+        <img class="rounded-2xl w-full h-48 object-cover mt-12" data-alt="Cool cat with sunglasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1B-VGNTOmsPypzfBs-crXRw_xWKvYMpENzpuMl7rRvJBecR6vInoIWLoAudS0Q4nufScis1IfHFAV0hlB9upNt84LwatZAabqA5DqwEzXS75JYHHPykNIXtDvZKYO9n4I9X-EUjnZibhTMsFNOaFBGXN0n8jgHoOSBvyW04vdns0JPOIbVOvX_dqM-TWTHoGWmtuKL4eGTUEFQ7vtQiEZqcv4ipdgGCgQVI9710Dow55GZG1q3ZIYW8AqLXbJx7taNic83OYdSqo"/>
+    </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Top Products (Affiliate Cards) -->
-<section class="py-24 bg-white">
+
+<!-- Top Products (1 card only) -->
+<section class="py-24 bg-white dark:bg-slate-900">
 <div class="max-w-7xl mx-auto px-6">
-<div class="flex items-end justify-between mb-12">
-<div>
-<h3 class="text-deep-green text-3xl font-extrabold mb-2">Lo que estarás recomendando</h3>
-<p class="text-stone-500">Nuestros productos más populares y con mayor tasa de conversión.</p>
+<div class="text-center mb-16" data-aos="fade-up">
+    <span class="text-accent-gold font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Catálogo</span>
+    <h3 class="text-deep-green dark:text-white text-3xl lg:text-4xl font-extrabold mb-4">Recursos que podrás recomendar</h3>
+    <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Una selección de productos digitales creados para ayudar a más tutores a comprender, cuidar y convivir mejor con sus animales.</p>
+    <div class="w-16 h-0.5 bg-accent-gold mx-auto mt-6"></div>
 </div>
-<a class="text-primary font-bold hover:underline hidden md:block" href="#">Ver catálogo completo</a>
-</div>
-<div class="grid md:grid-cols-3 gap-8">
-<!-- Card 1 -->
-<div class="group bg-background-light rounded-3xl p-4 transition-all hover:-translate-y-2 hover:shadow-xl border border-stone-100">
-<div class="relative overflow-hidden rounded-2xl aspect-[4/5] mb-6">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Happy dog playing in park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8EnSCIOQjFMBdaB6gAnSMhYktoEH8bWR5itzH-sY3t0o1xqcUYdfC8H0Lm1hKKaCxd2nw3DuwhRS8Xx6PurHXdaDB9j0Jy0kdF5brGeStJ71Sk-WvorpelTcx6EeegYvfrnwgYR2DNpszJT2-xP__hFgTnf-FCJumGsjBX89676nRdu3OC9wBcoG5PbjJ_Mr1R-KqSfMhHz1oRy1YalauW1u0rFw5mP-VqrlrlS-aN_Jb9JVJaKqB0M7xLR4-4bNBP31HJdXOzcM"/>
-<div class="absolute top-4 right-4 bg-primary text-white text-xs font-black px-3 py-1.5 rounded-full uppercase">Top Ventas</div>
-</div>
-<div class="px-2">
-<h4 class="text-xl font-bold text-deep-green mb-2">Masterclass Nutrición Canina</h4>
-<div class="flex items-center justify-between mt-6 pt-4 border-t border-stone-200">
-<span class="text-stone-500 text-sm font-medium">Comisión:</span>
-<span class="text-primary font-bold text-lg">Gana 30%</span>
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="group bg-background-light rounded-3xl p-4 transition-all hover:-translate-y-2 hover:shadow-xl border border-stone-100">
-<div class="relative overflow-hidden rounded-2xl aspect-[4/5] mb-6">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Calm cat sitting indoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlX8qeXXFaZTCuDzEieVzXxxEoM2ZYKf6TBt8kMnvEmDEzBAt152aJng_dDDXIi5wngD8ij9ildA_eqz-3IR_GA6EpKyyPbUXHXNeDxNhnHZ21eCoRz5Dp45f4zrxRyUye5pL8LhTHvi-2asbYaVuRlYs284uHnbI3D4IoS_dgeak6TG5rbcmZwWfse36VqKzg0aijJfDOw5SfFyhIT4M8eqW_9QLNluBhpbkDc7_AaEskY_O8wkcgz4-PKs8Et0BQ96w9PRTNyyE"/>
-<div class="absolute top-4 right-4 bg-deep-green text-white text-xs font-black px-3 py-1.5 rounded-full uppercase">Premium</div>
-</div>
-<div class="px-2">
-<h4 class="text-xl font-bold text-deep-green mb-2">Psicología Felina Avanzada</h4>
-<div class="flex items-center justify-between mt-6 pt-4 border-t border-stone-200">
-<span class="text-stone-500 text-sm font-medium">Comisión:</span>
-<span class="text-primary font-bold text-lg">Gana 25%</span>
-</div>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="group bg-background-light rounded-3xl p-4 transition-all hover:-translate-y-2 hover:shadow-xl border border-stone-100">
-<div class="relative overflow-hidden rounded-2xl aspect-[4/5] mb-6">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="French bulldog portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZkKwlK0ORZJ6OEJxI1qpQISAKTBNrzaVSunqd51tRL04ywdXBqsBqPnhlnJtcqwqUJZCAqhGM7IYTGnq3piFPcx07U2GDU-by-kjQnbRbEVe9SgMxKKebf7b45HhDrCncP7CfFnjNFmfadjB5Ft5TTuRbrhR0lAP2jGKlHFuOmtJ_W3lAZxIqFg6IhUJ9tJVM5DcKeccaDulCqQ1FckvbyMyMhvKj6dvf5HPT-7d1tii6awsUVVAYC0m9jo9Pmz0X751H_Bz2NIE"/>
-<div class="absolute top-4 right-4 bg-primary text-white text-xs font-black px-3 py-1.5 rounded-full uppercase">Nueva</div>
-</div>
-<div class="px-2">
-<h4 class="text-xl font-bold text-deep-green mb-2">Guía de Adiestramiento Positivo</h4>
-<div class="flex items-center justify-between mt-6 pt-4 border-t border-stone-200">
-<span class="text-stone-500 text-sm font-medium">Comisión:</span>
-<span class="text-primary font-bold text-lg">Gana 35%</span>
-</div>
-</div>
-</div>
+<div class="flex justify-center">
+    <!-- Single Card -->
+    <div class="group bg-background-light dark:bg-slate-800 rounded-3xl p-4 transition-all hover:-translate-y-2 hover:shadow-xl border border-deep-green/5 max-w-sm w-full" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative overflow-hidden rounded-2xl aspect-[4/5] mb-6">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Happy dog playing in park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8EnSCIOQjFMBdaB6gAnSMhYktoEH8bWR5itzH-sY3t0o1xqcUYdfC8H0Lm1hKKaCxd2nw3DuwhRS8Xx6PurHXdaDB9j0Jy0kdF5brGeStJ71Sk-WvorpelTcx6EeegYvfrnwgYR2DNpszJT2-xP__hFgTnf-FCJumGsjBX89676nRdu3OC9wBcoG5PbjJ_Mr1R-KqSfMhHz1oRy1YalauW1u0rFw5mP-VqrlrlS-aN_Jb9JVJaKqB0M7xLR4-4bNBP31HJdXOzcM"/>
+            <div class="absolute top-4 right-4 bg-deep-green text-white text-xs font-black px-3 py-1.5 rounded-full uppercase">Producto digital</div>
+        </div>
+        <div class="px-2">
+            <h4 class="text-xl font-bold text-deep-green dark:text-white mb-2">Masterclass Nutrición Canina</h4>
+            <p class="text-slate-500 text-sm mb-4">Ebook + Audiolibro + Bonos exclusivos para tutores.</p>
+            <div class="flex items-center justify-between mt-4 pt-4 border-t border-deep-green/10">
+                <span class="text-slate-500 text-sm font-medium">Comisión por venta:</span>
+                <span class="text-accent-gold font-bold text-lg">50%</span>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
 </section>
+
 <!-- Pre-registration Form -->
-<section class="py-24 bg-background-light">
+<section id="formulario" class="py-24 bg-background-light dark:bg-slate-900/50">
 <div class="max-w-4xl mx-auto px-6">
-<div class="bg-white rounded-[3rem] p-8 lg:p-16 shadow-2xl shadow-primary/5 border border-primary/10">
+<div class="bg-white dark:bg-slate-800 rounded-[3rem] p-8 lg:p-16 shadow-2xl shadow-deep-green/5 border border-deep-green/10" data-aos="fade-up">
 <div class="text-center mb-12">
-<h3 class="text-3xl lg:text-4xl font-black text-deep-green mb-4">Aplica ahora para unirte</h3>
-<p class="text-stone-500">Revisamos cada solicitud manualmente para mantener la calidad premium de nuestra red.</p>
+    <span class="text-accent-gold font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Postulación</span>
+    <h3 class="text-3xl lg:text-4xl font-black text-deep-green dark:text-white mb-4">Solicita tu acceso al programa</h3>
+    <p class="text-slate-500 dark:text-slate-400">Revisamos cada solicitud para mantener una red alineada con el enfoque y la calidad de Vetis Digital.</p>
 </div>
 <form action="#" class="space-y-6">
 <div class="grid md:grid-cols-2 gap-6">
-<div>
-<label class="block text-sm font-bold text-deep-green mb-2">Nombre completo</label>
-<input class="w-full bg-stone-50 border-stone-200 rounded-xl px-4 py-4 focus:ring-primary focus:border-primary" placeholder="Ej: Juan Pérez" type="text"/>
+    <div>
+        <label class="block text-sm font-bold text-deep-green dark:text-white mb-2">Nombre completo</label>
+        <input class="w-full bg-slate-50 dark:bg-slate-700 border-slate-200 dark:border-slate-600 rounded-xl px-4 py-4 focus:ring-accent-gold focus:border-accent-gold text-sm" placeholder="Ej: Juan Pérez" type="text"/>
+    </div>
+    <div>
+        <label class="block text-sm font-bold text-deep-green dark:text-white mb-2">Correo electrónico</label>
+        <input class="w-full bg-slate-50 dark:bg-slate-700 border-slate-200 dark:border-slate-600 rounded-xl px-4 py-4 focus:ring-accent-gold focus:border-accent-gold text-sm" placeholder="juan@ejemplo.com" type="email"/>
+    </div>
 </div>
 <div>
-<label class="block text-sm font-bold text-deep-green mb-2">Correo electrónico</label>
-<input class="w-full bg-stone-50 border-stone-200 rounded-xl px-4 py-4 focus:ring-primary focus:border-primary" placeholder="juan@ejemplo.com" type="email"/>
-</div>
-</div>
-<div>
-<label class="block text-sm font-bold text-deep-green mb-2">Enlace a tus Redes Sociales / Web</label>
-<input class="w-full bg-stone-50 border-stone-200 rounded-xl px-4 py-4 focus:ring-primary focus:border-primary" placeholder="https://instagram.com/tuperfil" type="url"/>
+    <label class="block text-sm font-bold text-deep-green dark:text-white mb-2">Enlace a tus Redes Sociales / Web</label>
+    <input class="w-full bg-slate-50 dark:bg-slate-700 border-slate-200 dark:border-slate-600 rounded-xl px-4 py-4 focus:ring-accent-gold focus:border-accent-gold text-sm" placeholder="https://instagram.com/tuperfil" type="url"/>
 </div>
 <div class="flex items-center gap-3">
-<input class="rounded text-primary focus:ring-primary" id="terms" type="checkbox"/>
-<label class="text-sm text-stone-500" for="terms">Acepto los términos y condiciones del programa de afiliados.</label>
+    <input class="rounded text-accent-gold focus:ring-accent-gold" id="terms" type="checkbox"/>
+    <label class="text-sm text-slate-500 dark:text-slate-400" for="terms">Acepto los términos y condiciones del programa de afiliados.</label>
 </div>
-<button class="w-full bg-primary hover:bg-primary/90 text-white font-black py-5 rounded-xl text-lg transition-all shadow-xl shadow-primary/20" type="submit">
-                            Enviar Solicitud
-                        </button>
+<button class="w-full bg-deep-green hover:bg-accent-gold text-white hover:text-deep-green font-black py-5 rounded-xl text-lg transition-all shadow-xl shadow-deep-green/20 flex items-center justify-center gap-2" type="submit">
+    <span class="material-symbols-outlined">send</span>
+    Enviar Solicitud
+</button>
 </form>
 </div>
 </div>
 </section>
-</main>
 
+<!-- Closing Confidence Block -->
+<section class="py-20 md:py-28 bg-white dark:bg-slate-900 relative">
+<div class="max-w-3xl mx-auto px-6 text-center">
+    <div data-aos="fade-up">
+        <span class="text-accent-gold font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Colaboración con sentido</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-deep-green dark:text-white leading-snug mb-6">Buscamos personas y marcas que recomienden con criterio</h2>
+        <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-12 max-w-2xl mx-auto">El programa de afiliados de Vetis está pensado para creadores, proyectos y perfiles que quieran compartir recursos útiles para perros y gatos desde una recomendación honesta, bien cuidada y alineada con nuestra forma de hacer las cosas.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 lg:gap-10">
+        <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-12 h-12 rounded-full bg-deep-green/5 flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-accent-gold text-2xl">favorite</span>
+            </div>
+            <p class="text-deep-green dark:text-white font-bold text-sm">Recomendación auténtica</p>
+        </div>
+        <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-12 h-12 rounded-full bg-deep-green/5 flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-accent-gold text-2xl">auto_awesome</span>
+            </div>
+            <p class="text-deep-green dark:text-white font-bold text-sm">Contenido con valor real</p>
+        </div>
+        <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-12 h-12 rounded-full bg-deep-green/5 flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-accent-gold text-2xl">verified</span>
+            </div>
+            <p class="text-deep-green dark:text-white font-bold text-sm">Una marca para compartir con confianza</p>
+        </div>
+    </div>
+    <p class="text-deep-green dark:text-white font-bold text-lg mt-10 mb-2" data-aos="fade-up" data-aos-delay="350">Súmate a una comunidad que quiere recomendar valor real</p>
+    <div class="mt-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="h-px w-24 bg-accent-gold/30 mx-auto"></div>
+    </div>
+</div>
+</section>
+
+</main>
 
 <!-- Footer -->
 <footer class="bg-deep-green text-white py-20 border-t border-white/10">
@@ -315,13 +328,13 @@
 <div class="grid grid-cols-2 gap-4">
 <ul class="space-y-4 text-white/60 text-sm">
 <li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Inicio</a></li>
-<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Biblioteca</a></li>
-<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Audioteca Gratis</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="biblioteca.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Biblioteca</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="audioteca.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Audioteca Gratis</a></li>
 <li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="blog.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Blog</a></li>
 </ul>
 <ul class="space-y-4 text-white/60 text-sm">
 <li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="nosotros.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Sobre Nosotros</a></li>
-<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Afiliados</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="afiliados.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Afiliados</a></li>
 <li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="contacto.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Contacto</a></li>
 </ul>
 </div>
@@ -343,6 +356,7 @@
 </div>
 </div>
 </footer>
+
 <!-- Initialize AOS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
@@ -353,4 +367,5 @@
         easing: 'ease-in-out-sine'
     });
 </script>
-</body></html>
+</body>
+</html>
