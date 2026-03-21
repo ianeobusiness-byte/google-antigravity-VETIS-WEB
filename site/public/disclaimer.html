@@ -1,0 +1,325 @@
+
+
+<!-- Vetis Global Styles & Scripts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13", // Terracotta
+                        "accent-gold": "#d4af37",
+                        "deep-green": "#1a2e1a",
+                        "background-light": "#fdfcf9", // Cream/Off-white
+                        "background-dark": "#120d0b",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+
+    /* Full bleed breakout styles to bypass WordPress boxed containers */
+    .vetis-global-wrapper {
+        width: 100vw !important;
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+        max-width: 100vw !important;
+    }
+    
+    html, body {
+        overflow-x: hidden !important;
+    }
+
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .glass-nav { backdrop-filter: blur(12px); background-color: rgba(253, 252, 249, 0.8); }
+    </style>
+
+<!-- Vetis Page Content -->
+<div class="vetis-global-wrapper bg-background-light text-slate-900 dark:bg-background-dark dark:text-slate-100 overflow-x-hidden" style="min-height: 100vh;">
+  
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-primary/10 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.png" alt="Vetis Digital Logo" class="h-12 w-auto object-contain transition-transform hover:scale-105" style="mix-blend-mode: multiply;" />
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/audioteca/">Audioteca Gratis</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block bg-deep-green text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-all shadow-lg shadow-deep-green/10">
+                Acceder
+            </button>
+<button class="lg:hidden text-deep-green dark:text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Menú Móvil Desplegable -->
+<div id="mobile-menu" class="lg:hidden fixed inset-0 z-[100] bg-deep-green transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 py-10 overflow-y-auto">
+<button class="absolute top-6 right-6 text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/audioteca/">Audioteca Gratis</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+<button class="bg-accent-gold text-deep-green px-12 py-4 rounded-full font-black text-xl hover:scale-105 transition-all shadow-xl shadow-accent-gold/20 mt-4 w-64 uppercase tracking-wider">
+    Acceder
+</button>
+</div>
+
+
+
+
+<!-- Legal Content Section -->
+<section class="pt-32 lg:pt-40 pb-20 bg-background-light dark:bg-background-dark min-h-screen">
+    <div class="max-w-4xl mx-auto px-6">
+        <h1 class="text-4xl lg:text-5xl font-serif font-bold text-deep-green dark:text-white mb-6">Disclaimer de Contenido Educativo</h1>
+        <p class="text-sm text-slate-500 mb-12">Última actualización: 21/03/2026</p>
+
+        <div class="space-y-8 text-slate-700 dark:text-slate-300 leading-relaxed text-lg" data-aos="fade-up">
+
+            <!-- Intro -->
+            <div class="space-y-4">
+                <p>El contenido publicado en Vetis Digital, incluyendo textos, ebooks, audioguías, audios, planners, recursos descargables, artículos, materiales gratuitos, contenidos de la audioteca y cualquier otro material disponible en <a href="https://vetisdigital.com" class="text-accent-gold hover:underline">www.vetisdigital.com</a>, tiene un propósito exclusivamente educativo, informativo y orientativo.</p>
+                <p>Vetis Digital es una marca creada para acompañar a tutores de perros y gatos con recursos prácticos, comprensibles y útiles para la convivencia, el bienestar diario, la prevención y el entendimiento general de sus mascotas. Sin embargo, el contenido ofrecido por esta marca no reemplaza la evaluación, diagnóstico, tratamiento, indicación clínica ni seguimiento de un médico veterinario u otro profesional competente.</p>
+            </div>
+
+            <!-- 1 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">1. Identificación del titular</h2>
+                <ul class="list-none space-y-2">
+                    <li><strong class="text-deep-green dark:text-white">Titular:</strong> Luciano Vega Monasterio</li>
+                    <li><strong class="text-deep-green dark:text-white">Marca comercial:</strong> Vetis Digital</li>
+                    <li><strong class="text-deep-green dark:text-white">Correo de contacto:</strong> vetisdigital@gmail.com</li>
+                    <li><strong class="text-deep-green dark:text-white">Sitio web:</strong> www.vetisdigital.com</li>
+                    <li><strong class="text-deep-green dark:text-white">País base de operación:</strong> Chile</li>
+                </ul>
+            </div>
+
+            <!-- 2 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">2. Finalidad del contenido</h2>
+                <p>Los contenidos de Vetis Digital han sido elaborados con fines educativos y de apoyo general para tutores de perros y gatos.</p>
+                <p>Su objetivo es:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>entregar información práctica y comprensible</li>
+                    <li>orientar sobre hábitos, convivencia y bienestar general</li>
+                    <li>ayudar a organizar rutinas, observaciones y cuidados cotidianos</li>
+                    <li>fomentar una relación más consciente entre tutores y mascotas</li>
+                    <li>ofrecer recursos complementarios de aprendizaje y acompañamiento</li>
+                </ul>
+                <p>En ningún caso estos materiales tienen por finalidad sustituir atención profesional individualizada.</p>
+            </div>
+
+            <!-- 3 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">3. No constituye asesoría veterinaria</h2>
+                <p>Ningún contenido de Vetis Digital debe interpretarse como:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>diagnóstico veterinario</li>
+                    <li>tratamiento médico</li>
+                    <li>prescripción</li>
+                    <li>indicación farmacológica</li>
+                    <li>consulta clínica</li>
+                    <li>atención de urgencia</li>
+                    <li>evaluación profesional individual del estado de salud o conducta de un animal</li>
+                </ul>
+                <p>Cada perro y cada gato puede presentar condiciones físicas, emocionales, conductuales o médicas distintas. Por ello, cualquier decisión relevante respecto de su salud o bienestar debe evaluarse según su contexto particular y, cuando corresponda, con apoyo profesional.</p>
+            </div>
+
+            <!-- 4 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">4. Salud, síntomas y urgencias</h2>
+                <p>Si una mascota presenta síntomas físicos, dolor, cambios bruscos de conducta, decaimiento, lesiones, dificultades respiratorias, vómitos persistentes, diarrea severa, sangrado, convulsiones, sospecha de intoxicación, falta de apetito prolongada o cualquier otra señal de alarma, el tutor debe acudir lo antes posible a un médico veterinario o a un servicio de urgencia veterinaria.</p>
+                <p>Vetis Digital no ofrece atención clínica de emergencia ni reemplaza la intervención oportuna de un profesional.</p>
+            </div>
+
+            <!-- 5 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">5. Conducta y bienestar</h2>
+                <p>Los contenidos sobre conducta, convivencia, rutinas o prevención tienen carácter general y pueden no ser suficientes para abordar todos los casos.</p>
+                <p>Cuando existan conductas intensas, persistentes o de riesgo, tales como agresividad, miedo extremo, autolesión, destrucción severa, ansiedad importante, eliminación inapropiada persistente u otras alteraciones relevantes, se recomienda buscar apoyo profesional adecuado.</p>
+            </div>
+
+            <!-- 6 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">6. Uso responsable del contenido</h2>
+                <p>El usuario es el único responsable de cómo interpreta y aplica la información proporcionada por Vetis Digital.</p>
+                <p>Antes de implementar cambios relevantes en la alimentación, rutina, actividad, entorno, manejo, suplementación, tratamiento, medicación o cuidados específicos de una mascota, el tutor debe evaluar si corresponde consultar con un profesional competente.</p>
+                <p>Vetis Digital no garantiza que un contenido general sea adecuado para todas las mascotas, situaciones o contextos particulares.</p>
+            </div>
+
+            <!-- 7 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">7. Sin garantías de resultados</h2>
+                <p>Vetis Digital no garantiza resultados específicos derivados del uso de sus materiales, recursos o recomendaciones generales.</p>
+                <p>La evolución de cada caso depende de múltiples factores, incluyendo la edad del animal, su historia, su estado de salud, su ambiente, la constancia del tutor, la gravedad de la situación y la necesidad o no de intervención profesional.</p>
+            </div>
+
+            <!-- 8 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">8. Limitación de responsabilidad</h2>
+                <p>En la máxima medida permitida por la normativa aplicable, Vetis Digital no será responsable por daños, pérdidas o perjuicios derivados de:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>la interpretación individual que haga el usuario del contenido</li>
+                    <li>la aplicación de recomendaciones generales a un caso particular</li>
+                    <li>la omisión de consulta profesional cuando esta era necesaria</li>
+                    <li>decisiones tomadas exclusivamente sobre la base de los materiales de la marca</li>
+                    <li>uso indebido, incompleto o descontextualizado de los recursos entregados</li>
+                </ul>
+                <p>Nada de lo anterior limitará los derechos irrenunciables que puedan corresponder al usuario conforme a la legislación aplicable.</p>
+            </div>
+
+            <!-- 9 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">9. Alcance de este disclaimer</h2>
+                <p>Este disclaimer aplica a todo el ecosistema de Vetis Digital, incluyendo:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>contenidos del sitio web</li>
+                    <li>artículos del blog</li>
+                    <li>audioteca</li>
+                    <li>materiales gratuitos</li>
+                    <li>correos informativos o educativos</li>
+                    <li>ebooks</li>
+                    <li>planners</li>
+                    <li>checklists</li>
+                    <li>audios</li>
+                    <li>guías descargables</li>
+                    <li>bonos y materiales complementarios</li>
+                </ul>
+                <p>El hecho de que un contenido sea gratuito o pagado no modifica su naturaleza educativa e informativa.</p>
+            </div>
+
+            <!-- 10 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">10. Enlaces y referencias externas</h2>
+                <p>Cuando Vetis Digital incluya referencias, enlaces, herramientas o menciones a terceros, ello no implica que esté prestando servicios veterinarios, clínicos o terapéuticos directamente, ni constituye garantía sobre la suficiencia de dichos recursos para resolver un caso particular.</p>
+            </div>
+
+            <!-- 11 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">11. Aceptación del usuario</h2>
+                <p>Al acceder, descargar, leer, escuchar o utilizar cualquier contenido de Vetis Digital, el usuario reconoce y acepta que:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>el contenido tiene carácter educativo e informativo</li>
+                    <li>no está recibiendo atención veterinaria profesional a través de la marca</li>
+                    <li>la información no sustituye diagnóstico, tratamiento ni urgencia veterinaria</li>
+                    <li>es su responsabilidad buscar ayuda profesional cuando la situación lo requiera</li>
+                </ul>
+            </div>
+
+            <!-- 12 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">12. Modificaciones</h2>
+                <p>Vetis Digital podrá actualizar, modificar o reemplazar este Disclaimer de Contenido Educativo en cualquier momento para adaptarlo a cambios operativos, técnicos, editoriales o legales.</p>
+                <p>La versión vigente será siempre la publicada en esta página junto con su fecha de última actualización.</p>
+            </div>
+
+            <!-- 13 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">13. Contacto</h2>
+                <p>Para consultas relacionadas con este disclaimer o con el contenido educativo de Vetis Digital, puedes escribir a:</p>
+                <ul class="list-none space-y-2">
+                    <li><strong class="text-deep-green dark:text-white">Vetis Digital</strong></li>
+                    <li><strong class="text-deep-green dark:text-white">Titular:</strong> Luciano Vega Monasterio</li>
+                    <li><strong class="text-deep-green dark:text-white">Correo:</strong> vetisdigital@gmail.com</li>
+                    <li><strong class="text-deep-green dark:text-white">Sitio web:</strong> www.vetisdigital.com</li>
+                    <li><strong class="text-deep-green dark:text-white">País base:</strong> Chile</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+
+
+<footer class="bg-deep-green text-white py-20 border-t border-white/10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.png" alt="Vetis Logo" class="h-14 w-auto object-contain" style="filter: invert(1) brightness(2);" />
+</div>
+<p class="text-white/60 text-sm leading-relaxed mb-6">La biblioteca digital para tutores de perros y gatos que buscan comprender, cuidar y convivir mejor con sus mascotas.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.instagram.com/vetisdigital" target="_blank" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.tiktok.com/@vetisdigital" target="_blank" aria-label="TikTok">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 448 512" fill="currentColor"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.32c7.87 33.32 31.74 60.39 63.06 73.66A120.4 120.4 0 0 0 448 109.48v100.43z"/></svg>
+</a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-2">
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Explorar y Compañía</h4>
+<div class="grid grid-cols-2 gap-4">
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Inicio</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Biblioteca</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Audioteca Gratis</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/blog-vetis/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Blog</a></li>
+</ul>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/nosotros/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Sobre Nosotros</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Afiliados</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/contacto/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Contacto</a></li>
+</ul>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Legal</h4>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Términos y Condiciones</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Política de Privacidad</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Aviso Legal</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-xs uppercase tracking-widest">
+<span>© 2026 Vetis Digital. Todos los derechos reservados.</span>
+<div class="flex gap-6">
+<span class="flex items-center gap-1">Diseñado con <span class="material-symbols-outlined text-[14px] text-accent-gold" style="font-variation-settings: 'FILL' 1;">favorite</span> por animales</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Initialize AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+        offset: 50,
+        duration: 800,
+        easing: 'ease-in-out-sine'
+    });
+</script>
+
+</div>
+

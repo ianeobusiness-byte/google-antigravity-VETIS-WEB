@@ -1,0 +1,395 @@
+
+
+<!-- Vetis Global Styles & Scripts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13", // Terracotta
+                        "accent-gold": "#d4af37",
+                        "deep-green": "#1a2e1a",
+                        "background-light": "#fdfcf9", // Cream/Off-white
+                        "background-dark": "#120d0b",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+
+    /* Full bleed breakout styles to bypass WordPress boxed containers */
+    .vetis-global-wrapper {
+        width: 100vw !important;
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+        max-width: 100vw !important;
+    }
+    
+    html, body {
+        overflow-x: hidden !important;
+    }
+
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .glass-nav { backdrop-filter: blur(12px); background-color: rgba(253, 252, 249, 0.8); }
+    </style>
+
+<!-- Vetis Page Content -->
+<div class="vetis-global-wrapper bg-background-light text-slate-900 dark:bg-background-dark dark:text-slate-100 overflow-x-hidden" style="min-height: 100vh;">
+  
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-primary/10 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.png" alt="Vetis Digital Logo" class="h-12 w-auto object-contain transition-transform hover:scale-105" style="mix-blend-mode: multiply;" />
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/audioteca/">Audioteca Gratis</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block bg-deep-green text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-all shadow-lg shadow-deep-green/10">
+                Acceder
+            </button>
+<button class="lg:hidden text-deep-green dark:text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Menú Móvil Desplegable -->
+<div id="mobile-menu" class="lg:hidden fixed inset-0 z-[100] bg-deep-green transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 py-10 overflow-y-auto">
+<button class="absolute top-6 right-6 text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/audioteca/">Audioteca Gratis</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+<button class="bg-accent-gold text-deep-green px-12 py-4 rounded-full font-black text-xl hover:scale-105 transition-all shadow-xl shadow-accent-gold/20 mt-4 w-64 uppercase tracking-wider">
+    Acceder
+</button>
+</div>
+
+
+
+
+<!-- Legal Content Section -->
+<section class="pt-32 lg:pt-40 pb-20 bg-background-light dark:bg-background-dark min-h-screen">
+    <div class="max-w-4xl mx-auto px-6">
+        <h1 class="text-4xl lg:text-5xl font-serif font-bold text-deep-green dark:text-white mb-6">Política de Privacidad</h1>
+        <p class="text-sm text-slate-500 mb-12">Última actualización: 21/03/2026</p>
+
+        <div class="space-y-8 text-slate-700 dark:text-slate-300 leading-relaxed text-lg" data-aos="fade-up">
+
+            <!-- Intro -->
+            <div class="space-y-4">
+                <p>En Vetis Digital, respetamos la privacidad de quienes visitan <a href="https://vetisdigital.com" class="text-accent-gold hover:underline">www.vetisdigital.com</a> y de quienes interactúan con nuestros formularios, recursos gratuitos, contenidos y productos digitales.</p>
+                <p>Esta Política de Privacidad explica qué datos podemos recopilar, cómo los utilizamos, con quién podrían compartirse, cómo los protegemos y qué opciones tiene el usuario respecto de su información.</p>
+                <p>Al navegar por este sitio, completar formularios, solicitar recursos, suscribirse a comunicaciones o interactuar con Vetis Digital, aceptas esta Política de Privacidad.</p>
+            </div>
+
+            <!-- 1 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">1. Identificación del responsable</h2>
+                <ul class="list-none space-y-2">
+                    <li><strong class="text-deep-green dark:text-white">Titular:</strong> Luciano Vega Monasterio</li>
+                    <li><strong class="text-deep-green dark:text-white">Marca comercial:</strong> Vetis Digital</li>
+                    <li><strong class="text-deep-green dark:text-white">Correo de contacto:</strong> vetisdigital@gmail.com</li>
+                    <li><strong class="text-deep-green dark:text-white">Sitio web:</strong> www.vetisdigital.com</li>
+                    <li><strong class="text-deep-green dark:text-white">País base de operación:</strong> Chile</li>
+                </ul>
+            </div>
+
+            <!-- 2 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">2. Datos que podemos recopilar</h2>
+                <p>Vetis Digital podrá recopilar datos personales e información relacionada con la interacción del usuario en el sitio, incluyendo, entre otros:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>nombre</li>
+                    <li>correo electrónico</li>
+                    <li>información entregada voluntariamente en formularios</li>
+                    <li>mensajes enviados a través de medios de contacto</li>
+                    <li>dirección IP</li>
+                    <li>tipo de dispositivo y navegador</li>
+                    <li>páginas visitadas</li>
+                    <li>tiempo de permanencia</li>
+                    <li>interacciones con botones, formularios o recursos</li>
+                    <li>información asociada a cookies, píxeles o herramientas de analítica, cuando corresponda</li>
+                </ul>
+                <p>Vetis Digital no solicita datos sensibles innecesarios para la finalidad del sitio.</p>
+            </div>
+
+            <!-- 3 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">3. Cómo obtenemos los datos</h2>
+                <p>Los datos pueden obtenerse cuando el usuario:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>navega por el sitio web</li>
+                    <li>completa un formulario</li>
+                    <li>solicita un audio, recurso o material gratuito en la audioteca</li>
+                    <li>se suscribe a novedades o comunicaciones</li>
+                    <li>contacta a Vetis Digital por correo o formulario</li>
+                    <li>interactúa con cookies, herramientas de analítica o tecnologías similares</li>
+                    <li>accede a páginas relacionadas con productos comercializados por terceros, como Hotmart</li>
+                </ul>
+            </div>
+
+            <!-- 4 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">4. Para qué usamos los datos</h2>
+                <p>Vetis Digital podrá utilizar los datos recopilados para las siguientes finalidades:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>entregar el recurso gratuito solicitado</li>
+                    <li>enviar audios, materiales, enlaces o accesos relacionados con la audioteca</li>
+                    <li>responder mensajes, dudas o solicitudes</li>
+                    <li>gestionar formularios de contacto o suscripción</li>
+                    <li>enviar correos informativos, educativos o promocionales relacionados con la marca</li>
+                    <li>compartir novedades, lanzamientos, contenidos y productos digitales</li>
+                    <li>mejorar la experiencia del usuario en el sitio</li>
+                    <li>analizar el uso, funcionamiento y rendimiento del sitio</li>
+                    <li>detectar errores técnicos, abusos o actividades no autorizadas</li>
+                    <li>dar soporte relacionado con contenidos o accesos</li>
+                    <li>cumplir obligaciones legales cuando corresponda</li>
+                </ul>
+            </div>
+
+            <!-- 5 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">5. Recursos gratuitos y audioteca</h2>
+                <p>Cuando el usuario solicite un recurso gratuito, un audio de la audioteca o cualquier material de acceso libre, Vetis Digital podrá utilizar el correo electrónico proporcionado para:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>enviar el recurso solicitado</li>
+                    <li>enviar instrucciones de acceso</li>
+                    <li>compartir contenido complementario relacionado con Vetis Digital</li>
+                    <li>mantener comunicaciones futuras sobre contenidos, novedades o productos de la marca, salvo que el usuario solicite su baja</li>
+                </ul>
+                <p>La entrega de estos recursos puede realizarse mediante:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>correo electrónico</li>
+                    <li>enlaces privados</li>
+                    <li>páginas ocultas</li>
+                    <li>herramientas automatizadas de email marketing</li>
+                    <li>plataformas externas de alojamiento o distribución de contenido</li>
+                </ul>
+            </div>
+
+            <!-- 6 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">6. Comunicaciones por correo</h2>
+                <p>Al dejar sus datos en un formulario del sitio, el usuario entiende que está solicitando voluntariamente información, recursos, acceso o contacto por parte de Vetis Digital.</p>
+                <p>Toda persona podrá dejar de recibir correos promocionales o informativos en cualquier momento mediante el enlace de baja incluido en la comunicación, cuando exista, o escribiendo a <a href="mailto:vetisdigital@gmail.com" class="text-accent-gold hover:underline">vetisdigital@gmail.com</a>.</p>
+            </div>
+
+            <!-- 7 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">7. Compras y plataformas de terceros</h2>
+                <p>Vetis Digital puede ofrecer productos o dirigir al usuario a plataformas externas para procesar compras, pagos, acceso a productos digitales o gestión operativa, incluyendo actualmente Hotmart.</p>
+                <p>Cuando una compra o acceso sea gestionado por una plataforma externa:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>determinados datos podrán ser tratados también por dicha plataforma</li>
+                    <li>Vetis Digital no controla en su totalidad las políticas, sistemas o procesos internos del tercero</li>
+                    <li>el usuario deberá revisar además las condiciones y políticas de privacidad del proveedor externo correspondiente</li>
+                </ul>
+                <p>Vetis Digital no necesariamente almacena información completa de tarjetas, cuentas o medios de pago procesados por terceros.</p>
+            </div>
+
+            <!-- 8 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">8. Cookies y tecnologías similares</h2>
+                <p>Este sitio puede utilizar cookies, píxeles, etiquetas y tecnologías similares para:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>recordar preferencias del usuario</li>
+                    <li>mejorar la navegación</li>
+                    <li>medir tráfico y comportamiento en el sitio</li>
+                    <li>analizar rendimiento de páginas y formularios</li>
+                    <li>apoyar campañas de marketing, publicidad o remarketing, cuando corresponda</li>
+                </ul>
+                <p>El detalle sobre este uso se desarrolla en la Política de Cookies de Vetis Digital.</p>
+            </div>
+
+            <!-- 9 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">9. Con quién podemos compartir datos</h2>
+                <p>Vetis Digital no vende datos personales del usuario.</p>
+                <p>No obstante, podrá compartir información con terceros cuando sea necesario para operar el sitio o prestar servicios vinculados a la marca, por ejemplo:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>proveedores de hosting</li>
+                    <li>servicios de formularios</li>
+                    <li>plataformas de email marketing</li>
+                    <li>servicios de almacenamiento o automatización</li>
+                    <li>herramientas de analítica</li>
+                    <li>procesadores de pago o plataformas de productos digitales</li>
+                    <li>proveedores tecnológicos vinculados al funcionamiento del sitio</li>
+                </ul>
+                <p>Dicho intercambio se limitará a lo razonablemente necesario para cumplir la finalidad correspondiente.</p>
+                <p>También podrá compartirse información cuando exista obligación legal, requerimiento de autoridad competente o necesidad razonable de proteger derechos, seguridad o integridad del sitio y de la marca.</p>
+            </div>
+
+            <!-- 10 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">10. Conservación de los datos</h2>
+                <p>Los datos se conservarán durante el tiempo que sea necesario para:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>cumplir la finalidad para la cual fueron recopilados</li>
+                    <li>responder solicitudes o mantener comunicaciones activas</li>
+                    <li>prestar acceso a recursos o contenidos</li>
+                    <li>cumplir obligaciones legales, contractuales o administrativas</li>
+                    <li>resolver incidencias o reclamaciones</li>
+                </ul>
+                <p>Cuando los datos dejen de ser necesarios, Vetis Digital podrá eliminarlos, anonimizaros o bloquear su uso según corresponda.</p>
+            </div>
+
+            <!-- 11 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">11. Seguridad de la información</h2>
+                <p>Vetis Digital adopta medidas razonables de seguridad para proteger la información frente a pérdida, uso indebido, acceso no autorizado, alteración o divulgación indebida.</p>
+                <p>Sin embargo, ningún sistema en internet puede garantizar seguridad absoluta. Por ello, el usuario reconoce que el envío de información por medios digitales siempre implica un nivel de riesgo propio del entorno tecnológico.</p>
+            </div>
+
+            <!-- 12 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">12. Derechos del usuario</h2>
+                <p>El usuario podrá solicitar, en la medida que resulte aplicable:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>información sobre los datos que haya proporcionado</li>
+                    <li>corrección o actualización de datos inexactos</li>
+                    <li>eliminación de sus datos cuando corresponda</li>
+                    <li>limitación de ciertas comunicaciones</li>
+                    <li>baja de correos promocionales o informativos</li>
+                </ul>
+                <p>Para ejercer estas solicitudes, podrá escribir a <a href="mailto:vetisdigital@gmail.com" class="text-accent-gold hover:underline">vetisdigital@gmail.com</a> indicando claramente su requerimiento.</p>
+            </div>
+
+            <!-- 13 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">13. Menores de edad</h2>
+                <p>Este sitio no está diseñado específicamente para la recopilación intencional de datos de menores de edad sin la intervención de un adulto responsable.</p>
+                <p>Si un padre, madre o tutor considera que un menor ha proporcionado información personal sin autorización, podrá solicitar su revisión o eliminación escribiendo a <a href="mailto:vetisdigital@gmail.com" class="text-accent-gold hover:underline">vetisdigital@gmail.com</a>.</p>
+            </div>
+
+            <!-- 14 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">14. Enlaces a terceros</h2>
+                <p>El sitio puede contener enlaces a páginas o plataformas externas. Vetis Digital no controla ni garantiza las prácticas de privacidad de dichos terceros.</p>
+                <p>El acceso a esos sitios será responsabilidad exclusiva del usuario, quien deberá revisar sus políticas antes de entregar datos personales fuera de Vetis Digital.</p>
+            </div>
+
+            <!-- 15 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">15. Herramientas y servicios externos</h2>
+                <p>Determinados servicios digitales utilizados por Vetis Digital pueden implicar almacenamiento, procesamiento o gestión de datos mediante proveedores tecnológicos externos.</p>
+                <p>Al utilizar este sitio, el usuario comprende que parte de la operación digital puede apoyarse en herramientas y servicios de terceros necesarios para el funcionamiento del proyecto.</p>
+            </div>
+
+            <!-- 16 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">16. Modificaciones de esta política</h2>
+                <p>Vetis Digital podrá actualizar, modificar o reemplazar esta Política de Privacidad en cualquier momento para adaptarla a cambios operativos, técnicos, comerciales o legales.</p>
+                <p>La versión vigente será siempre la publicada en esta página junto con su fecha de última actualización.</p>
+            </div>
+
+            <!-- 17 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">17. Contacto</h2>
+                <p>Para consultas relacionadas con privacidad, datos personales, formularios, recursos gratuitos o comunicaciones, puedes escribir a:</p>
+                <ul class="list-none space-y-2">
+                    <li><strong class="text-deep-green dark:text-white">Vetis Digital</strong></li>
+                    <li><strong class="text-deep-green dark:text-white">Titular:</strong> Luciano Vega Monasterio</li>
+                    <li><strong class="text-deep-green dark:text-white">Correo:</strong> vetisdigital@gmail.com</li>
+                    <li><strong class="text-deep-green dark:text-white">Sitio web:</strong> www.vetisdigital.com</li>
+                    <li><strong class="text-deep-green dark:text-white">País base:</strong> Chile</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+
+
+<footer class="bg-deep-green text-white py-20 border-t border-white/10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.png" alt="Vetis Logo" class="h-14 w-auto object-contain" style="filter: invert(1) brightness(2);" />
+</div>
+<p class="text-white/60 text-sm leading-relaxed mb-6">La biblioteca digital para tutores de perros y gatos que buscan comprender, cuidar y convivir mejor con sus mascotas.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.instagram.com/vetisdigital" target="_blank" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.tiktok.com/@vetisdigital" target="_blank" aria-label="TikTok">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 448 512" fill="currentColor"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.32c7.87 33.32 31.74 60.39 63.06 73.66A120.4 120.4 0 0 0 448 109.48v100.43z"/></svg>
+</a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-2">
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Explorar y Compañía</h4>
+<div class="grid grid-cols-2 gap-4">
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Inicio</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Biblioteca</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Audioteca Gratis</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/blog-vetis/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Blog</a></li>
+</ul>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/nosotros/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Sobre Nosotros</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Afiliados</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/contacto/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Contacto</a></li>
+</ul>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Legal</h4>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Términos y Condiciones</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Política de Privacidad</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Aviso Legal</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-xs uppercase tracking-widest">
+<span>© 2026 Vetis Digital. Todos los derechos reservados.</span>
+<div class="flex gap-6">
+<span class="flex items-center gap-1">Diseñado con <span class="material-symbols-outlined text-[14px] text-accent-gold" style="font-variation-settings: 'FILL' 1;">favorite</span> por animales</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Initialize AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+        offset: 50,
+        duration: 800,
+        easing: 'ease-in-out-sine'
+    });
+</script>
+
+</div>
+
