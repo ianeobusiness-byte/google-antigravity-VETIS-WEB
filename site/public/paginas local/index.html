@@ -261,6 +261,25 @@
         transform-origin: center;
     }
 
+    /* Star Subtle Twinkle Animation (Brillo Leve de Estrellas) */
+    @keyframes starTwinkle {
+        0%, 100% {
+            transform: scale(1);
+            filter: drop-shadow(0 0 0px rgba(246, 207, 47, 0));
+            opacity: 0.92;
+        }
+        50% {
+            transform: scale(1.18);
+            filter: drop-shadow(0 0 6px rgba(246, 207, 47, 0.75));
+            opacity: 1;
+        }
+    }
+    .star-twinkle {
+        display: inline-block;
+        animation: starTwinkle 3.2s ease-in-out infinite;
+        transform-origin: center;
+    }
+
     /* Phone Mockup Styling */
     .phone-mockup-frame {
         width: 100%;
@@ -1037,50 +1056,62 @@
     <!-- Tarjetas de Testimonios Reales -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <!-- Testimonio 1 -->
-        <div class="card-dark-luxury p-8 space-y-4 flex flex-col justify-between rounded-3xl" data-aos="fade-up">
+        <div class="card-dark-luxury p-8 space-y-4 flex flex-col justify-between rounded-3xl group hover:-translate-y-1.5 transition-all duration-300" data-aos="fade-up">
             <div class="space-y-4">
-                <div class="flex text-mustard gap-1 text-lg">
-                    ★ ★ ★ ★ ★
+                <div class="flex text-mustard gap-1 text-base select-none">
+                    <span class="star-twinkle" style="animation-delay: 0.0s;">★</span>
+                    <span class="star-twinkle" style="animation-delay: 0.2s;">★</span>
+                    <span class="star-twinkle" style="animation-delay: 0.4s;">★</span>
+                    <span class="star-twinkle" style="animation-delay: 0.6s;">★</span>
+                    <span class="star-twinkle" style="animation-delay: 0.8s;">★</span>
                 </div>
-                <p class="text-sm sm:text-base text-slate-200 leading-relaxed italic">
-                    “Antes de leer la guía no sabía cómo organizar los primeros días con mi cachorro. Me ayudó a ordenar la rutina, entender mejor sus mordidas y saber qué trabajar primero.”
+                <p class="text-sm sm:text-base text-slate-200 leading-relaxed italic font-normal">
+                    “Al principio intentaba corregir las mordidas, los accidentes y la energía de mi cachorro todo al mismo tiempo. La guía me ayudó a ordenar prioridades, crear una rutina más clara y entender qué trabajar primero. Dejé de sentir que cada día estaba improvisando.”
                 </p>
             </div>
             <div class="pt-4 border-t border-white/10">
                 <p class="text-sm font-bold text-white">Carolina M.</p>
-                <p class="text-xs text-mustard">Guía Primeros Días con tu Cachorro</p>
+                <p class="text-xs text-mustard font-semibold">Cachorro en Casa</p>
             </div>
         </div>
 
         <!-- Testimonio 2 -->
-        <div class="card-dark-luxury p-8 space-y-4 flex flex-col justify-between rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-dark-luxury p-8 space-y-4 flex flex-col justify-between rounded-3xl group hover:-translate-y-1.5 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
             <div class="space-y-4">
-                <div class="flex text-mustard gap-1 text-lg">
-                    ★ ★ ★ ★ ★
+                <div class="flex text-mustard gap-1 text-base select-none">
+                    <span class="star-twinkle" style="animation-delay: 0.3s;">★</span>
+                    <span class="star-twinkle" style="animation-delay: 0.5s;">★</span>
+                    <span class="star-twinkle" style="animation-delay: 0.7s;">★</span>
+                    <span class="star-twinkle" style="animation-delay: 0.9s;">★</span>
+                    <span class="star-twinkle" style="animation-delay: 1.1s;">★</span>
                 </div>
-                <p class="text-sm sm:text-base text-slate-200 leading-relaxed italic">
-                    “Tenía muchas dudas sobre cómo interpretar la ansiedad de mi perro en los paseos. La guía me dio pautas claras de observación y redujo mucho el estrés en casa.”
-                </p>
-            </div>
-            <div class="pt-4 border-t border-white/10">
-                <p class="text-sm font-bold text-white">Felipe S.</p>
-                <p class="text-xs text-olive">Guía de Conducta & Calma Canina</p>
-            </div>
-        </div>
-
-        <!-- Testimonio 3 -->
-        <div class="card-dark-luxury p-8 space-y-4 flex flex-col justify-between rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-            <div class="space-y-4">
-                <div class="flex text-mustard gap-1 text-lg">
-                    ★ ★ ★ ★ ★
-                </div>
-                <p class="text-sm sm:text-base text-slate-200 leading-relaxed italic">
-                    “Buscaba información seria y sin complicaciones para la llegada de mi primer gato. El material es súper estructurado, visual y fácil de aplicar desde el minuto uno.”
+                <p class="text-sm sm:text-base text-slate-200 leading-relaxed italic font-normal">
+                    “Era mi primer gato y tenía miedo de interpretar mal sus señales o hacer demasiado durante la adaptación. La guía me explicó qué preparar, cuándo darle espacio y qué cambios observar. Los primeros días se sintieron mucho más tranquilos y organizados.”
                 </p>
             </div>
             <div class="pt-4 border-t border-white/10">
                 <p class="text-sm font-bold text-white">Valentina R.</p>
-                <p class="text-xs text-mustard">Guía Bienestar & Adaptación Felina</p>
+                <p class="text-xs text-mustard font-semibold">Tu Primer Gato</p>
+            </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="card-dark-luxury p-8 space-y-4 flex flex-col justify-between rounded-3xl group hover:-translate-y-1.5 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="space-y-4">
+                <div class="flex text-mustard gap-1 text-base select-none">
+                    <span class="star-twinkle" style="animation-delay: 0.6s;">★</span>
+                    <span class="star-twinkle" style="animation-delay: 0.8s;">★</span>
+                    <span class="star-twinkle" style="animation-delay: 1.0s;">★</span>
+                    <span class="star-twinkle" style="animation-delay: 1.2s;">★</span>
+                    <span class="star-twinkle" style="animation-delay: 1.4s;">★</span>
+                </div>
+                <p class="text-sm sm:text-base text-slate-200 leading-relaxed italic font-normal">
+                    “Llegué a la orientación con muchas dudas y toda la información desordenada. Pude explicar lo que estaba observando, entender qué era prioritario y salir con pasos concretos para aplicar en casa. Lo que más valoré fue terminar la sesión con más claridad y menos ansiedad.”
+                </p>
+            </div>
+            <div class="pt-4 border-t border-white/10">
+                <p class="text-sm font-bold text-white">Daniela P.</p>
+                <p class="text-xs text-mustard font-semibold">Orientación Online Vetis</p>
             </div>
         </div>
     </div>
@@ -1095,58 +1126,83 @@
 </div>
 </section>
 
-<!-- 11. RECURSOS GRATUITOS (Cálido Cream 2 Col) -->
+<!-- 11. RECURSOS GRATUITOS (Cálido Cream · Layout Showcase Alta Gama) -->
 <section class="py-20 sm:py-28 relative overflow-hidden bg-cream text-text-primary">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
-        <!-- Columna Izquierda: Texto y Beneficios -->
-        <div class="lg:col-span-7 space-y-6" data-aos="fade-right">
-            <div class="editorial-badge">
-                <span class="material-symbols-outlined text-mustard text-sm">redeem</span>
-                <span>EMPIEZA SIN COSTO</span>
-            </div>
-            <h2 class="text-3xl sm:text-5xl font-extrabold text-text-heading tracking-tight leading-tight">
-                Descarga una herramienta práctica y <span class="font-serif italic text-mustard">mejora algo concreto desde hoy</span>
-            </h2>
-            <p class="text-base sm:text-lg text-text-secondary leading-relaxed">
-                Accede gratuitamente a checklists, mini guías y retos creados para ayudarte a observar mejor, organizar cuidados y aplicar pequeños cambios en casa.
-            </p>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 space-y-12 sm:space-y-16">
+    
+    <!-- Encabezado Centrado de Alta Gama -->
+    <div class="text-center space-y-4 max-w-3xl mx-auto" data-aos="fade-up">
+        <div class="editorial-badge">
+            <span class="material-symbols-outlined text-mustard text-sm">redeem</span>
+            <span>EMPIEZA SIN COSTO</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-text-heading tracking-tight leading-tight">
+            Descarga una herramienta práctica y <br class="hidden sm:inline" />
+            <span class="font-serif italic text-mustard">mejora algo concreto desde hoy</span>
+        </h2>
+        <p class="text-base sm:text-lg text-text-secondary leading-relaxed font-normal max-w-2xl mx-auto">
+            Accede gratuitamente a checklists, mini guías y retos creados para ayudarte a observar mejor, organizar cuidados y aplicar pequeños cambios en casa.
+        </p>
+    </div>
 
-            <div class="space-y-3 pt-2">
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-olive text-xl">check_circle</span>
-                    <span class="text-base font-semibold text-text-heading">Contenido breve y fácil de utilizar.</span>
-                </div>
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-olive text-xl">pets</span>
-                    <span class="text-base font-semibold text-text-heading">Recursos para perros y gatos.</span>
-                </div>
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-olive text-xl">bolt</span>
-                    <span class="text-base font-semibold text-text-heading">Acceso digital sin costo.</span>
-                </div>
+    <!-- Grid de 3 Tarjetas de Beneficios con Ilustraciones 3D Animadas -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
+        
+        <!-- Tarjeta 1: Rápido y Práctico -->
+        <div class="card-warm p-8 sm:p-9 rounded-3xl space-y-4 flex flex-col items-center text-center group border border-mustard/20 bg-warm-white/90 shadow-sm hover:shadow-2xl hover:border-mustard/50 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-full h-44 flex items-center justify-center relative mb-1">
+                <img src="../assets/recurso_gratis_rapido.webp" alt="Contenido breve y fácil de utilizar" class="h-36 sm:h-40 w-auto max-w-[200px] object-contain drop-shadow-xl float-slow group-hover:scale-110 transition-transform duration-500" />
             </div>
-
-            <div class="pt-4 space-y-2">
-                <a href="https://vetisdigital.com/recursos-gratis/" class="btn-primary-warm inline-flex items-center gap-3 px-10 py-5 rounded-2xl text-base sm:text-lg">
-                    <span class="material-symbols-outlined">download</span>
-                    Ver recursos gratuitos
-                </a>
-                <p class="text-xs text-text-muted">
-                    Elige el recurso que más se ajuste a tu situación y recíbelo en formato digital.
+            <div class="space-y-2">
+                <span class="text-[11px] font-black uppercase tracking-widest text-olive">Rápido y Práctico</span>
+                <h3 class="text-lg sm:text-xl font-bold text-text-heading leading-snug">Contenido breve y fácil de utilizar</h3>
+                <p class="text-xs sm:text-sm text-text-secondary leading-relaxed">
+                    Herramientas directas al punto, diseñadas para leer y aplicar en pocos minutos sin tecnicismos complejos.
                 </p>
             </div>
         </div>
 
-        <!-- Columna Derecha: Mockup Visual Tangible -->
-        <div class="lg:col-span-5 flex justify-center" data-aos="fade-left">
-            <div class="relative w-full max-w-sm">
-                <div class="card-warm p-4 relative z-10 rounded-3xl">
-                    <img src="../assets/bloque recursos inicio.webp" alt="Recursos Gratuitos de Vetis Digital" class="w-full h-auto rounded-2xl shadow-lg" />
-                </div>
+        <!-- Tarjeta 2: Enfoque Integral -->
+        <div class="card-warm p-8 sm:p-9 rounded-3xl space-y-4 flex flex-col items-center text-center group border border-mustard/20 bg-warm-white/90 shadow-sm hover:shadow-2xl hover:border-mustard/50 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-full h-44 flex items-center justify-center relative mb-1">
+                <img src="../assets/recurso_gratis_perros_gatos.webp" alt="Recursos para perros y gatos" class="h-36 sm:h-40 w-auto max-w-[200px] object-contain drop-shadow-xl float-medium group-hover:scale-110 transition-transform duration-500" />
+            </div>
+            <div class="space-y-2">
+                <span class="text-[11px] font-black uppercase tracking-widest text-olive">Enfoque Integral</span>
+                <h3 class="text-lg sm:text-xl font-bold text-text-heading leading-snug">Recursos para perros y gatos</h3>
+                <p class="text-xs sm:text-sm text-text-secondary leading-relaxed">
+                    Materiales organizados y adaptados a las etapas de vida, rutinas y particularidades de cada especie.
+                </p>
             </div>
         </div>
+
+        <!-- Tarjeta 3: Descarga Inmediata -->
+        <div class="card-warm p-8 sm:p-9 rounded-3xl space-y-4 flex flex-col items-center text-center group border border-mustard/20 bg-warm-white/90 shadow-sm hover:shadow-2xl hover:border-mustard/50 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-full h-44 flex items-center justify-center relative mb-1">
+                <img src="../assets/recurso_gratis_descarga.webp" alt="Acceso digital sin costo" class="h-36 sm:h-40 w-auto max-w-[200px] object-contain drop-shadow-xl float-reverse group-hover:scale-110 transition-transform duration-500" />
+            </div>
+            <div class="space-y-2">
+                <span class="text-[11px] font-black uppercase tracking-widest text-olive">Descarga Inmediata</span>
+                <h3 class="text-lg sm:text-xl font-bold text-text-heading leading-snug">Acceso digital sin costo</h3>
+                <p class="text-xs sm:text-sm text-text-secondary leading-relaxed">
+                    Descárgalos de forma directa en tu teléfono o computadora para tenerlos a mano cuando los necesites.
+                </p>
+            </div>
+        </div>
+
     </div>
+
+    <!-- Botón CTA Centrado con Micro-Garantía -->
+    <div class="text-center space-y-3 pt-2" data-aos="fade-up">
+        <a href="https://vetisdigital.com/recursos-gratis/" class="btn-primary-warm inline-flex items-center gap-3 px-10 py-5 rounded-2xl text-base sm:text-lg shadow-xl shadow-mustard/20">
+            <span class="material-symbols-outlined">download</span>
+            Ver recursos gratuitos
+        </a>
+        <p class="text-xs text-text-muted">
+            Elige el recurso que más se ajuste a tu situación y recíbelo en formato digital al instante.
+        </p>
+    </div>
+
 </div>
 </section>
 
