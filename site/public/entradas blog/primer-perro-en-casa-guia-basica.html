@@ -1,0 +1,243 @@
+﻿<!-- Vetis Global Styles & Scripts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13", // Terracotta
+                        "accent-gold": "#d4af37",
+                        "deep-green": "#1a2e1a",
+                        "background-light": "#f5f3ef", // Cream/Off-white
+                        "background-dark": "#120d0b",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    /* Full bleed breakout styles to bypass WordPress boxed containers */
+    .vetis-global-wrapper {
+        width: 100%;
+        position: relative;
+        overflow-x: hidden;
+    }
+    html, body {
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #fdfcf9 !important;
+    }
+    /* Aggressive WP Overrides to kill "Blank" template artifacts */
+    .page, .site, #page, #wrapper, .wrapper { 
+        background-color: #fdfcf9 !important; 
+        padding: 0 !important; 
+        margin: 0 !important; 
+        min-height: 0 !important;
+    }
+    body .is-layout-flow > * {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .wp-site-blocks, .wp-block-group, .entry-content, main#main, #content {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    /* Hide the native title and native Edit link */
+    .wp-block-post-title, .entry-title, .page-title, header.entry-header { display: none !important; }
+    .entry-footer, .edit-link, .post-edit-link, .site-footer, .site-header, .site-info { display: none !important; }
+    body { font-family: 'Public Sans', sans-serif; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    .glass-nav { backdrop-filter: blur(12px); background-color: rgba(253, 252, 249, 0.8); }
+</style>
+<!-- Vetis Page Content -->
+<div class="vetis-global-wrapper text-slate-900 dark:text-slate-100 overflow-x-hidden">
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-deep-green/10 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img decoding="async" src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.webp" alt="Vetis Digital Logo" class="h-12 w-auto object-contain transition-transform hover:scale-105" style="mix-blend-mode: multiply;" />
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/audioteca/">Recursos Gratis</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="lg:hidden text-deep-green dark:text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Menú Móvil Desplegable -->
+<div id="mobile-menu" class="lg:hidden fixed inset-0 z-[100] bg-deep-green transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 py-10 overflow-y-auto">
+<button class="absolute top-6 right-6 text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/audioteca/">Recursos Gratis</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+</div>
+<main class="flex-grow pt-24 pb-16 w-full max-w-7xl mx-auto px-0 md:px-6">
+<article class="max-w-4xl mx-auto px-6">
+<h1 class="text-4xl md:text-5xl lg:text-5xl font-extrabold text-deep-green mb-8 leading-tight text-center" data-aos="fade-up">Primer perro en casa: guía básica para empezar bien desde el primer día</h1>
+<div class="text-lg md:text-xl text-slate-700 space-y-8 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+<p class="text-xl md:text-2xl text-slate-600 font-medium mb-10 text-center max-w-3xl mx-auto">La llegada de tu primer perro en casa es uno de los hitos más emocionantes que vivirás. Sin embargo, para tu nuevo compañero, este cambio supone un reto emocional enorme: un entorno desconocido, olores nuevos y personas que aún no identifica como su familia.</p>
+<div class="bg-deep-green/5 border-l-4 border-deep-green p-6 md:p-8 rounded-r-2xl mb-12 shadow-sm">
+<div class="text-deep-green font-medium m-0">Empezar con el pie derecho no se trata solo de tener la mejor cama del mercado, sino de ofrecerle la <strong class="font-bold">seguridad y la estructura</strong> que necesita para confiar en ti. En esta guía, desglosamos lo esencial para que el día 1 sea el inicio de una vida equilibrada juntos.</div>
+</div>
+<div class="mb-10 rounded-3xl overflow-hidden shadow-2xl bg-white"><img src="bienvenida-perro-casa.webp" alt="Preparación del hogar para la llegada de un primer perro en casa" class="w-full h-auto" /></div>
+<h2 class="text-3xl md:text-4xl font-bold text-deep-green mt-16 mb-8 border-b-2 border-accent-gold/20 pb-4 inline-block">Preparando el terreno: una casa segura y acogedora</h2>
+<p class="mb-8">Antes de que tu perro cruce el umbral, tu hogar debe ser un lugar seguro. Esto implica ver el mundo desde su altura.</p>
+<div class="bg-accent-gold/5 rounded-3xl p-8 md:p-12 mb-16 border border-accent-gold/20 relative overflow-hidden">
+<ul class="space-y-8 relative z-10">
+<li class="flex items-start gap-4"><div class="text-accent-gold mt-1 shrink-0"><span class="material-symbols-outlined">filter_1</span></div><div><strong class="text-deep-green font-bold">Seguridad ambiental:</strong> Revisa que no haya cables sueltos, objetos pequeños que pueda tragar o plantas tóxicas a su alcance. Es vital recordar que muchos medicamentos humanos, como los analgésicos o antidepresivos, son altamente tóxicos para ellos.</div></li>
+<li class="flex items-start gap-4"><div class="text-accent-gold mt-1 shrink-0"><span class="material-symbols-outlined">filter_2</span></div><div><strong class="text-deep-green font-bold">Su zona de refugio:</strong> Designa un lugar tranquilo con su cama y agua fresca. Si es un cachorro, el entrenamiento con jaula (crate training) o un área delimitada puede ayudarle a sentirse protegido y facilitar el aprendizaje de higiene.</div></li>
+</ul>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold text-deep-green mt-16 mb-8 border-b-2 border-accent-gold/20 pb-4 inline-block">Las primeras 24 horas: calma, exploración y paciencia</h2>
+<p class="mb-8">El error más común al traer un primer perro en casa es abrumarlo con visitas, ruidos o exceso de manipulación.</p>
+<ul class="space-y-6 mb-12">
+<li class="flex items-start gap-4"><div class="text-accent-gold mt-1 shrink-0"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div><div><strong class="text-deep-green font-bold">Exploración guiada:</strong> Deja que olfatee la casa a su ritmo. El olfato es su principal herramienta para procesar información y reducir el estrés.</div></li>
+<li class="flex items-start gap-4"><div class="text-accent-gold mt-1 shrink-0"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div><div><strong class="text-deep-green font-bold">Presentaciones graduales:</strong> Si hay otros animales o niños, las presentaciones deben ser supervisadas y tranquilas para evitar asociaciones negativas desde el inicio.</div></li>
+<li class="flex items-start gap-4"><div class="text-accent-gold mt-1 shrink-0"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div><div><strong class="text-deep-green font-bold">La primera visita al veterinario:</strong> Programa una revisión temprana para establecer su calendario de vacunas, desparasitación y verificar su estado general de salud.</div></li>
+</ul>
+<div class="mb-16 rounded-3xl overflow-hidden shadow-2xl bg-white"><img src="perro-explorando-casa.webp" alt="Perro olfateando tranquilamente su nuevo salón, descubriendo su nuevo entorno" class="w-full h-auto" /></div>
+<h2 class="text-3xl md:text-4xl font-bold text-deep-green mt-16 mb-8 border-b-2 border-accent-gold/20 pb-4 inline-block">La clave del éxito: establecer una rutina predecible</h2>
+<p class="mb-8">La ansiedad suele nacer de la incertidumbre. Un perro que sabe qué esperar es un perro tranquilo. Establecer una rutina diaria calma su sistema nervioso.</p>
+<div class="bg-accent-gold/5 rounded-3xl p-8 md:p-12 mb-16 border border-accent-gold/20 relative overflow-hidden">
+<ul class="space-y-8 relative z-10">
+<li class="flex items-start gap-4"><div class="text-accent-gold mt-1 shrink-0"><span class="material-symbols-outlined">schedule</span></div><div><strong class="text-deep-green font-bold">Horarios fijos:</strong> Intenta que las horas de comida, paseos y juego sean consistentes.</div></li>
+<li class="flex items-start gap-4"><div class="text-accent-gold mt-1 shrink-0"><span class="material-symbols-outlined">self_improvement</span></div><div><strong class="text-deep-green font-bold">Tiempo de soledad:</strong> Desde el primer día, enséñale que estar solo es normal. Proporciónale juguetes motivadores (como juguetes rellenables) y prémialo cuando se entretenga de forma independiente. Esto es fundamental para prevenir la futura ansiedad por separación.</div></li>
+</ul>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold text-deep-green mt-16 mb-8 border-b-2 border-accent-gold/20 pb-4 inline-block">Educación desde el minuto uno: el poder del refuerzo positivo</h2>
+<p class="mb-8">La ciencia es clara: los métodos basados en recompensas son los más seguros y efectivos para el bienestar del perro y el vínculo humano-animal.</p>
+<p class="mb-8">Evita bajo cualquier circunstancia el uso de castigos físicos, collares de ahorque o tácticas de dominancia. En su lugar, enfócate en premiar las conductas que quieres que se repitan, como sentarse tranquilamente o acudir a su cama.</p>
+<div class="mb-16 rounded-3xl overflow-hidden shadow-2xl bg-white"><img src="entrenamiento-positivo-premios.webp" alt="Tutor premiando a su perro con un snack tras realizar una conducta deseada" class="w-full h-auto" /></div>
+<h2 class="text-3xl md:text-4xl font-bold text-deep-green mt-16 mb-8 border-b-2 border-accent-gold/20 pb-4 inline-block">Errores comunes que debes evitar hoy mismo</h2>
+<ul class="space-y-6 mb-12">
+<li class="flex items-start gap-4"><div class="text-accent-gold mt-1 shrink-0"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg></div><div><strong class="text-deep-green font-bold">Castigar "accidentes" de higiene:</strong> Si orina en casa, no lo regañes. Limpia con un producto enzimático y refuerza cuando lo haga en el lugar correcto.</div></li>
+<li class="flex items-start gap-4"><div class="text-accent-gold mt-1 shrink-0"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg></div><div><strong class="text-deep-green font-bold">Forzar el contacto:</strong> Si tu perro se esconde o parece tímido, dale espacio. Forzar caricias puede aumentar su miedo.</div></li>
+</ul>
+<div class="bg-deep-green/5 border-l-4 border-deep-green p-6 md:p-8 mb-16 text-deep-green rounded-r-2xl font-medium"><strong class="font-bold border-b border-accent-gold">Recuerda:</strong> Cada perro es diferente. La paciencia y la observación serán tus mejores herramientas durante las primeras semanas. Si tienes dudas, consulta siempre con un veterinario o un profesional en comportamiento canino.</div>
+<!-- FAQ -->
+<div class="mt-20 pt-12 border-t border-slate-200">
+<h2 class="text-3xl md:text-4xl font-bold text-deep-green mb-10 text-center">Preguntas Frecuentes (FAQ)</h2>
+<div class="grid gap-6 md:grid-cols-2">
+<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow"><h3 class="font-bold text-xl text-deep-green mb-4">¿Qué es lo más importante que debo comprar para mi primer perro?</h3><p class="text-slate-600">Lo básico incluye comida de calidad, recipientes para agua y alimento, una cama, collar/arnés con identificación, correa y juguetes seguros.</p></div>
+<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow"><h3 class="font-bold text-xl text-deep-green mb-4">¿Cómo evito que mi perro llore la primera noche?</h3><p class="text-slate-600">Proporciónale una zona cómoda cerca de ti inicialmente o usa una prenda con tu olor. Asegúrate de que haya hecho sus necesidades y haya tenido un rato de juego tranquilo antes de dormir.</p></div>
+<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow"><h3 class="font-bold text-xl text-deep-green mb-4">¿Cuándo puedo empezar a pasear a mi perro?</h3><p class="text-slate-600">Si es un cachorro, consulta con tu veterinario sobre su esquema de vacunas. No obstante, la socialización temprana (exponerlo a estímulos de forma segura) es crítica antes de las 14 semanas.</p></div>
+<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow"><h3 class="font-bold text-xl text-deep-green mb-4">¿Mi perro necesita adiestramiento profesional?</h3><p class="text-slate-600">Las clases para cachorros o la asesoría de un profesional que use refuerzo positivo son excelentes para prevenir problemas de conducta a futuro.</p></div>
+<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow"><h3 class="font-bold text-xl text-deep-green mb-4">¿Es normal que mi perro no quiera comer el primer día?</h3><p class="text-slate-600">Sí, el estrés del cambio puede afectar su apetito. Ofrécele su comida habitual y no lo presiones; si persiste más de 24 horas, consulta al veterinario.</p></div>
+<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow"><h3 class="font-bold text-xl text-deep-green mb-4">¿Cómo sé si mi perro está estresado?</h3><p class="text-slate-600">Señales como lamerse los labios excesivamente, bostezar, jadear sin calor o esconder la cola indican incomodidad.</p></div>
+</div>
+</div>
+<!-- CTA -->
+<div class="mt-20 bg-deep-green text-center p-10 md:p-16 rounded-[2rem] shadow-2xl relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-deep-green via-deep-green to-slate-900 opacity-90 z-0"></div>
+<div class="absolute -top-24 -right-24 bg-accent-gold/10 w-64 h-64 rounded-full blur-3xl group-hover:bg-accent-gold/20 transition-all duration-700"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h3 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">¿Quieres evitar los errores que cometen el 90% de los tutores primerizos?</h3>
+<p class="text-white/80 text-lg md:text-xl mb-10 leading-relaxed font-light">Descubre nuestra guía completa <strong class="text-white">"Tu Primer Perro"</strong>, donde te acompañamos paso a paso desde la preparación del hogar hasta los pilares de una convivencia feliz y saludable. ¡Haz que su primer día sea el comienzo de una historia increíble!</p>
+<a href="https://vetisdigital.com/biblioteca/" class="inline-flex items-center justify-center gap-3 bg-accent-gold text-deep-green font-bold text-lg px-8 py-5 rounded-full hover:bg-white hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-accent-gold/20">Explorar guía completa <span class="material-symbols-outlined text-[20px]">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="mt-auto relative z-50 bg-deep-green text-white py-16 md:py-20 border-t border-white/10 w-full">
+<div class="max-w-7xl mx-auto px-6 content-wrapper">
+<div class="grid lg:grid-cols-5 md:grid-cols-2 gap-12 mb-16">
+<div class="col-span-1 md:col-span-2 lg:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img decoding="async" src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.webp" alt="Vetis Logo" class="h-14 w-auto object-contain" style="filter: invert(1) brightness(2);" />
+</div>
+<p class="text-white/60 text-sm leading-relaxed mb-6">La biblioteca digital para tutores de perros y gatos que buscan comprender, cuidar y convivir mejor con sus mascotas.
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.instagram.com/vetisdigital" target="_blank" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.tiktok.com/@vetisdigital" target="_blank" aria-label="TikTok">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 448 512" fill="currentColor"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.32c7.87 33.32 31.74 60.39 63.06 73.66A120.4 120.4 0 0 0 448 109.48v100.43z"/></svg>
+</a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-1 lg:col-span-2">
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Explorar y Compañía</h4>
+<div class="grid grid-cols-2 gap-4">
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Inicio</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/biblioteca/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Biblioteca</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/audioteca/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Recursos Gratis</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/blog-vetis/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Blog</a></li>
+</ul>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/nosotros/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Sobre Nosotros</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/afiliados/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Afiliados</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/contacto/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Contacto</a></li>
+</ul>
+</div>
+</div>
+<div class="col-span-1 md:col-span-1 lg:col-span-2">
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Legal</h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/terminos-y-condiciones/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Términos y Condiciones</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/politica-de-privacidad/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Privacidad</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/politica-de-cookies/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Cookies</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/politica-de-reembolsos/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Reembolsos</a></li>
+</ul>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/licencia-de-uso-de-productos-digitales/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Licencia de Uso</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/aviso-legal/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Aviso Legal</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/disclaimer-de-contenido-educativo/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Disclaimer Educativo</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-xs uppercase tracking-widest">
+<span>© 2026 Vetis Digital. Todos los derechos reservados.</span>
+<div class="flex gap-6">
+<span class="flex items-center gap-1">Diseñado con <span class="material-symbols-outlined text-[14px] text-accent-gold" style="font-variation-settings: 'FILL' 1;">favorite</span> por animales</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Initialize AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+        offset: 50,
+        duration: 800,
+        easing: 'ease-in-out-sine'
+    });
+</script>
+</div>
+
+
+
+
+

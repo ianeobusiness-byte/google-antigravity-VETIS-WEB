@@ -1,0 +1,293 @@
+﻿<!-- Vetis Global Styles & Scripts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13", // Terracotta
+                        "accent-gold": "#d4af37",
+                        "deep-green": "#1a2e1a",
+                        "background-light": "#f5f3ef", // Cream/Off-white
+                        "background-dark": "#120d0b",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    /* Full bleed breakout styles to bypass WordPress boxed containers */
+    .vetis-global-wrapper {
+        width: 100%;
+        position: relative;
+        overflow-x: hidden;
+    }
+    html, body {
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #fdfcf9 !important;
+    }
+    /* Aggressive WP Overrides to kill "Blank" template artifacts */
+    .page, .site, #page, #wrapper, .wrapper { 
+        background-color: #fdfcf9 !important; 
+        padding: 0 !important; 
+        margin: 0 !important; 
+        min-height: 0 !important;
+    }
+    body .is-layout-flow > * {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .wp-site-blocks, .wp-block-group, .entry-content, main#main, #content {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    /* Hide the native title and native Edit link */
+    .wp-block-post-title, .entry-title, .page-title, header.entry-header { display: none !important; }
+    .entry-footer, .edit-link, .post-edit-link, .site-footer, .site-header, .site-info { display: none !important; }
+    body { font-family: 'Public Sans', sans-serif; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    .glass-nav { backdrop-filter: blur(12px); background-color: rgba(253, 252, 249, 0.8); }
+</style>
+<!-- Vetis Page Content -->
+<div class="vetis-global-wrapper text-slate-900 dark:text-slate-100 overflow-x-hidden">
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-deep-green/10 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img decoding="async" src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.webp" alt="Vetis Digital Logo" class="h-12 w-auto object-contain transition-transform hover:scale-105" style="mix-blend-mode: multiply;" />
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/audioteca/">Recursos Gratis</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="lg:hidden text-deep-green dark:text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Menú Móvil Desplegable -->
+<div id="mobile-menu" class="lg:hidden fixed inset-0 z-[100] bg-deep-green transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 py-10 overflow-y-auto">
+<button class="absolute top-6 right-6 text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/audioteca/">Recursos Gratis</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+</div>
+<main class="flex-grow pt-24 pb-16 w-full max-w-7xl mx-auto px-0 md:px-6">
+<article class="max-w-4xl mx-auto px-6">
+
+<h1 class="text-4xl md:text-5xl font-extrabold text-deep-green mb-8 leading-tight text-center" data-aos="fade-up">Cómo elegir el perro ideal para tu estilo de vida</h1>
+
+<p class="text-xl md:text-2xl text-slate-600 font-medium mb-10 text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Elegir un perro por su belleza es el primer paso hacia una convivencia difícil. La clave del éxito reside en el <strong class="text-deep-green">ajuste de energía</strong> y en tu realidad diaria.</p>
+
+<div class="bg-deep-green/5 border-l-4 border-deep-green p-6 md:p-8 rounded-r-2xl mb-12 shadow-sm" data-aos="fade-up" data-aos-delay="150">
+  <p class="text-deep-green font-medium m-0">Aprende a mirar más allá de la raza: nivel de energía, mantenimiento y etapa de vida son los tres pilares fundamentales para encontrar al perro que te hará feliz.</p>
+</div>
+
+<div class="mb-16 rounded-3xl overflow-hidden shadow-2xl bg-slate-100 min-h-[300px] flex items-center justify-center relative" data-aos="fade-up">
+  <img src="persona-eligiendo-perro.webp" alt="Consejos sobre cómo elegir un perro según el estilo de vida" class="w-full h-auto object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+  <div class="absolute inset-0 flex-col items-center justify-center text-slate-400 hidden">
+    <span class="material-symbols-outlined text-4xl mb-2">image</span>
+    <p>Imagen pendiente de generación</p>
+  </div>
+</div>
+
+<!-- ENERGIA -->
+<div class="mb-16" data-aos="fade-up">
+  <h2 class="text-3xl md:text-4xl font-bold text-deep-green mb-6 border-b-2 border-accent-gold/20 pb-4">Honestidad: ¿cuánta energía tienes realmente?</h2>
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="material-symbols-outlined text-orange-500 text-3xl">directions_run</span>
+        <h3 class="text-2xl font-bold text-deep-green">Perfil Activo</h3>
+      </div>
+      <p class="text-slate-600">Si eres una persona activa que corre a diario o hace senderismo cada fin de semana, un perro de trabajo o un cruce atlético será tu mejor aliado.</p>
+    </div>
+    <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="material-symbols-outlined text-deep-green text-3xl">weekend</span>
+        <h3 class="text-2xl font-bold text-deep-green">Perfil Tranquilo</h3>
+      </div>
+      <p class="text-slate-600">Si prefieres las tardes de sofá y los paseos cortos por el barrio, busca razas de compañía o individuos (generalmente adultos) con niveles bajos de actividad.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TAMAÑO Y MANTENIMIENTO -->
+<div class="mb-16" data-aos="fade-up">
+  <div class="grid md:grid-cols-2 gap-10">
+    <div>
+      <h2 class="text-3xl font-bold text-deep-green mb-6">El tamaño sí importa (pero no por lo que crees)</h2>
+      <p class="text-slate-700 leading-relaxed mb-6">Muchas personas asumen que un perro grande necesita una casa enorme. En realidad, un perro gigante (como un Gran Danés o un Galgo) suele ser mucho más "de sofá" y tranquilo en interiores que un pequeño y enérgico Jack Russell Terrier. Valora el nivel de energía por encima del tamaño.</p>
+      <div class="bg-accent-gold/10 p-6 rounded-2xl border border-accent-gold/20">
+        <img src="perro-departamento.webp" alt="Perro grande descansando tranquilo en un departamento" class="w-full rounded-xl mb-4" onerror="this.style.display='none';" />
+        <p class="text-sm text-deep-green font-medium">El comportamiento en interiores depende de la satisfacción de sus necesidades físicas y mentales fuera de casa, no de sus kilos.</p>
+      </div>
+    </div>
+    
+    <div>
+      <h2 class="text-3xl font-bold text-deep-green mb-6">Pelaje y mantenimiento</h2>
+      <p class="text-slate-700 leading-relaxed mb-6">El factor tiempo no solo se gasta en paseos. Considera el mantenimiento de la higiene:</p>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-accent-gold shrink-0">content_cut</span>
+          <span class="text-slate-700"><strong>Pelo largo o rizado:</strong> Requiere cepillado diario y visitas frecuentes (y costosas) a la peluquería canina para evitar nudos dolorosos.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-accent-gold shrink-0">pets</span>
+          <span class="text-slate-700"><strong>Pelo corto con muda:</strong> Necesita cepillados semanales en época de muda para no llenar la casa de pelo, pero es de bajo mantenimiento profesional.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- ETAPA DE VIDA -->
+<div class="mb-16" data-aos="fade-up">
+  <div class="bg-slate-50 p-8 md:p-10 rounded-[2rem] border border-slate-100 shadow-sm">
+    <h2 class="text-3xl font-bold text-deep-green mb-6 text-center">Cachorros vs. Perros Senior: la realidad de cada etapa</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-deep-green mb-3 flex items-center gap-2"><span class="text-accent-gold material-symbols-outlined">child_care</span> Cachorros</h3>
+        <p class="text-slate-600">Representan una inversión masiva de tiempo. Necesitarás enseñarle higiene, inhibición de mordida, tolerar la soledad y socializarlo correctamente. Son adorables, pero el primer año es exhaustivo.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-deep-green mb-3 flex items-center gap-2"><span class="text-accent-gold material-symbols-outlined">elderly</span> Adultos / Senior</h3>
+        <p class="text-slate-600">Suelen tener un carácter estable, ya controlan esfínteres y su necesidad de ejercicio explosivo es menor. Son la opción ideal para familias primerizas que buscan una adaptación más predecible y tranquila.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="mt-20 pt-12 border-t border-slate-200" data-aos="fade-up">
+  <h2 class="text-3xl md:text-4xl font-bold text-deep-green mb-10 text-center">Preguntas Frecuentes (FAQ)</h2>
+  <div class="grid gap-6 md:grid-cols-2">
+    <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+      <h3 class="font-bold text-xl text-deep-green mb-4">¿Cuál es el mejor perro para un piso?</h3>
+      <p class="text-slate-600">No depende solo del tamaño, sino del nivel de energía. Un Gran Danés o un Galgo adoptado puede ser mucho más tranquilo y feliz en un piso que un hiperactivo Jack Russell Terrier.</p>
+    </div>
+    <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+      <h3 class="font-bold text-xl text-deep-green mb-4">¿Qué perros son mejores para niños?</h3>
+      <p class="text-slate-600">Aquellos con temperamentos tolerantes (como los labradores o mestizos bien socializados) y con niveles de energía que coincidan con la familia. Independientemente de la raza, la interacción siempre debe ser bajo estricta supervisión.</p>
+    </div>
+    <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+      <h3 class="font-bold text-xl text-deep-green mb-4">¿Es mejor adoptar un macho o una hembra?</h3>
+      <p class="text-slate-600">Las diferencias de comportamiento dependen más del individuo y de su socialización que de su sexo, especialmente si ambos están esterilizados.</p>
+    </div>
+    <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+      <h3 class="font-bold text-xl text-deep-green mb-4">¿Cómo sé si tengo energía suficiente?</h3>
+      <p class="text-slate-600">Mide tu tiempo libre real durante la semana, no solo los fines de semana. Si solo tienes 30 minutos al día para pasear, necesitas un perro senior de muy baja energía.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="mt-20 bg-deep-green text-center p-10 md:p-16 rounded-[2rem] shadow-2xl relative overflow-hidden group" data-aos="fade-up">
+  <div class="absolute inset-0 bg-gradient-to-br from-deep-green via-deep-green to-slate-900 opacity-90 z-0"></div>
+  <div class="absolute -top-24 -right-24 bg-accent-gold/10 w-64 h-64 rounded-full blur-3xl group-hover:bg-accent-gold/20 transition-all duration-700"></div>
+  <div class="relative z-10 max-w-2xl mx-auto">
+    <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">No tomes la decisión a ciegas</h3>
+    <p class="text-white/80 text-lg md:text-xl mb-10 leading-relaxed font-light">En el libro <strong class="text-white">"Tu Primer Perro"</strong> te ayudamos a auditar tu estilo de vida de forma realista para que elijas al compañero que realmente encaje contigo y te haga feliz.</p>
+    <a href="https://vetisdigital.com/biblioteca/" class="inline-flex items-center justify-center gap-3 bg-accent-gold text-deep-green font-bold text-lg px-8 py-5 rounded-full hover:bg-white hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-accent-gold/20">Explorar guía completa <span class="material-symbols-outlined text-[20px]">arrow_forward</span></a>
+  </div>
+</div>
+
+</article>
+</main>
+<!-- Footer -->
+<footer class="mt-auto relative z-50 bg-deep-green text-white py-16 md:py-20 border-t border-white/10 w-full">
+<div class="max-w-7xl mx-auto px-6 content-wrapper">
+<div class="grid lg:grid-cols-5 md:grid-cols-2 gap-12 mb-16">
+<div class="col-span-1 md:col-span-2 lg:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img decoding="async" src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.webp" alt="Vetis Logo" class="h-14 w-auto object-contain" style="filter: invert(1) brightness(2);" />
+</div>
+<p class="text-white/60 text-sm leading-relaxed mb-6">La biblioteca digital para tutores de perros y gatos que buscan comprender, cuidar y convivir mejor con sus mascotas.
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.instagram.com/vetisdigital" target="_blank" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.tiktok.com/@vetisdigital" target="_blank" aria-label="TikTok">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 448 512" fill="currentColor"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.32c7.87 33.32 31.74 60.39 63.06 73.66A120.4 120.4 0 0 0 448 109.48v100.43z"/></svg>
+</a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-1 lg:col-span-2">
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Explorar y Compañía</h4>
+<div class="grid grid-cols-2 gap-4">
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Inicio</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/biblioteca/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Biblioteca</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/audioteca/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Recursos Gratis</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/blog-vetis/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Blog</a></li>
+</ul>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/nosotros/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Sobre Nosotros</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/afiliados/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Afiliados</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/contacto/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Contacto</a></li>
+</ul>
+</div>
+</div>
+<div class="col-span-1 md:col-span-1 lg:col-span-2">
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Legal</h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/terminos-y-condiciones/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Términos y Condiciones</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/politica-de-privacidad/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Privacidad</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/politica-de-cookies/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Cookies</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/politica-de-reembolsos/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Reembolsos</a></li>
+</ul>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/licencia-de-uso-de-productos-digitales/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Licencia de Uso</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/aviso-legal/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Aviso Legal</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/disclaimer-de-contenido-educativo/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Disclaimer Educativo</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-xs uppercase tracking-widest">
+<span>© 2026 Vetis Digital. Todos los derechos reservados.</span>
+<div class="flex gap-6">
+<span class="flex items-center gap-1">Diseñado con <span class="material-symbols-outlined text-[14px] text-accent-gold" style="font-variation-settings: 'FILL' 1;">favorite</span> por animales</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Initialize AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+        offset: 50,
+        duration: 800,
+        easing: 'ease-in-out-sine'
+    });
+</script>
+</div>
+
+

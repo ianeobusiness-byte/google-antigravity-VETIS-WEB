@@ -1,0 +1,110 @@
+{
+  "index.html": {
+    "wpId": 199,
+    "slug": "inicio",
+    "title": "Inicio",
+    "action": "update"
+  },
+  "nosotros.html": {
+    "wpId": 196,
+    "slug": "nosotros",
+    "title": "Nosotros",
+    "action": "update"
+  },
+  "afiliados.html": {
+    "wpId": 198,
+    "slug": "afiliados",
+    "title": "Afiliados",
+    "action": "update"
+  },
+  "blog.html": {
+    "wpId": 339,
+    "slug": "blog-vetis",
+    "title": "Blog Vetis",
+    "action": "update"
+  },
+  "contacto.html": {
+    "wpId": 195,
+    "slug": "contacto",
+    "title": "Contacto",
+    "action": "update"
+  },
+  "biblioteca.html": {
+    "wpId": 193,
+    "slug": "biblioteca",
+    "title": "Biblioteca",
+    "action": "update"
+  },
+  "biblioteca-perros.html": {
+    "wpId": 192,
+    "slug": "biblioteca-perros",
+    "title": "Biblioteca Perros",
+    "action": "update"
+  },
+  "biblioteca-gatos.html": {
+    "wpId": 191,
+    "slug": "biblioteca-gatos",
+    "title": "Biblioteca Gatos",
+    "action": "update"
+  },
+  "recursos-gratis.html": {
+    "wpId": null,
+    "slug": "recursos-gratis",
+    "title": "Recursos Gratis",
+    "action": "create"
+  },
+  "orientacion-online.html": {
+    "wpId": null,
+    "slug": "orientacion-online",
+    "title": "Orientación Online",
+    "action": "create"
+  },
+  "app-vetis.html": {
+    "wpId": null,
+    "slug": "app-vetis",
+    "title": "App Vetis",
+    "action": "create"
+  },
+  "aviso-legal.html": {
+    "wpId": 253,
+    "slug": "aviso-legal",
+    "title": "Aviso Legal",
+    "action": "update"
+  },
+  "disclaimer.html": {
+    "wpId": 254,
+    "slug": "disclaimer-de-contenido-educativo",
+    "title": "Disclaimer de Contenido Educativo",
+    "action": "update"
+  },
+  "licencia-de-uso.html": {
+    "wpId": 252,
+    "slug": "licencia-de-uso-de-productos-digitales",
+    "title": "Licencia de Uso de Productos Digitales",
+    "action": "update"
+  },
+  "politica-de-reembolsos.html": {
+    "wpId": 251,
+    "slug": "politica-de-reembolsos",
+    "title": "Política de Reembolsos",
+    "action": "update"
+  },
+  "politica-de-cookies.html": {
+    "wpId": 250,
+    "slug": "politica-de-cookies",
+    "title": "Política de Cookies",
+    "action": "update"
+  },
+  "politica-de-privacidad.html": {
+    "wpId": 249,
+    "slug": "politica-de-privacidad",
+    "title": "Política de Privacidad",
+    "action": "update"
+  },
+  "terminos-y-condiciones.html": {
+    "wpId": 248,
+    "slug": "terminos-y-condiciones",
+    "title": "Términos y Condiciones",
+    "action": "update"
+  }
+}

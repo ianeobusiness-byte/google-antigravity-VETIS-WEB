@@ -1,0 +1,601 @@
+
+
+<!-- Vetis Global Styles & Scripts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13", /* Terracotta */
+                        "accent-gold": "#d4af37",
+                        "deep-green": "#1a2e1a",
+                        "background-light": "#f5f3ef", /* Cream/Off-white */
+                        "background-dark": "#120d0b",
+                        "cream-soft": "#f5eedc",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    /* Full bleed breakout styles to bypass WordPress boxed containers */
+    .vetis-global-wrapper {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+    html, body {
+        overflow-x: hidden !important;
+        margin: 0;
+        padding: 0;
+    }
+/* Full bleed breakout styles to bypass WordPress boxed containers */
+    
+    
+    
+
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .glass-nav { backdrop-filter: blur(12px); background-color: rgba(253, 252, 249, 0.8); }
+</style>
+
+<!-- Vetis Page Content -->
+<div class="vetis-global-wrapper text-slate-900 dark:text-slate-100 overflow-x-hidden bg-background-light dark:bg-background-dark" style="min-height: 100vh;">
+  
+
+
+  
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-primary/10 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.png" alt="Vetis Digital Logo" class="h-12 w-auto object-contain transition-transform hover:scale-105" style="mix-blend-mode: multiply;" />
+</div>
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/recursos-gratis/">Recursos Gratis</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/orientacion-online/">Orientación Online</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/app-vetis/">App Vetis</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+
+<button class="lg:hidden text-deep-green dark:text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Menú Móvil Desplegable -->
+<div id="mobile-menu" class="lg:hidden fixed inset-0 z-[100] bg-deep-green transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 py-10 overflow-y-auto">
+<button class="absolute top-6 right-6 text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/recursos-gratis/">Recursos Gratis</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/orientacion-online/">Orientación Online</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/app-vetis/">App Vetis</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+
+</div>
+
+
+
+
+<!-- Legal Content Section -->
+<section class="pt-32 lg:pt-40 pb-20 min-h-screen">
+    <div class="max-w-4xl mx-auto px-6">
+        <h1 class="text-4xl lg:text-6xl font-serif font-bold text-deep-green dark:text-white mb-6">Política de Reembolsos</h1>
+        <p class="text-sm text-slate-500 mb-12">Última actualización: 21/03/2026</p>
+
+        <div class="space-y-8 text-slate-700 dark:text-slate-300 leading-relaxed text-lg" data-aos="fade-up">
+
+            <!-- Intro -->
+            <div class="space-y-4">
+                <p>En Vetis Digital, buscamos ofrecer una experiencia clara, seria y transparente respecto de nuestros productos digitales, recursos educativos y contenidos comercializados bajo la marca.</p>
+                <p>Esta Política de Reembolsos regula las condiciones aplicables a solicitudes de devolución, cancelación y revisión relacionadas con productos digitales de Vetis Digital, considerando que actualmente las ventas se procesan principalmente a través de Hotmart.</p>
+            </div>
+
+            <!-- 1 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">1. Identificación del titular</h2>
+                <ul class="list-none space-y-2">
+                    <li><strong class="text-deep-green dark:text-white">Titular:</strong> Luciano Vega Monasterio</li>
+                    <li><strong class="text-deep-green dark:text-white">Marca comercial:</strong> Vetis Digital</li>
+                    <li><strong class="text-deep-green dark:text-white">Correo de contacto:</strong> vetisdigital@gmail.com</li>
+                    <li><strong class="text-deep-green dark:text-white">Sitio web:</strong> www.vetisdigital.com</li>
+                    <li><strong class="text-deep-green dark:text-white">País base de operación:</strong> Chile</li>
+                </ul>
+            </div>
+
+            <!-- 2 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">2. Naturaleza de los productos</h2>
+                <p>Vetis Digital ofrece principalmente productos digitales, tales como:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>ebooks</li>
+                    <li>audioguías</li>
+                    <li>audios educativos</li>
+                    <li>planners</li>
+                    <li>checklists</li>
+                    <li>recursos descargables</li>
+                    <li>materiales complementarios</li>
+                    <li>contenidos digitales de acceso online o entrega electrónica</li>
+                </ul>
+                <p>Por su naturaleza, estos productos no requieren despacho físico y normalmente se entregan mediante correo electrónico, enlaces privados, acceso en plataforma o descarga digital.</p>
+            </div>
+
+            <!-- 3 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">3. Compras procesadas por Hotmart</h2>
+                <p>Cuando una compra de Vetis Digital sea procesada a través de Hotmart, la solicitud de reembolso, cancelación o devolución quedará sujeta a las condiciones informadas por dicha plataforma al momento de la compra.</p>
+                <p>En estos casos:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>el comprador deberá revisar las condiciones visibles en el checkout antes de completar el pago</li>
+                    <li>cualquier solicitud deberá realizarse dentro del plazo y condiciones informadas en la compra</li>
+                    <li>la gestión operativa del reembolso podrá depender también de Hotmart</li>
+                    <li>Vetis Digital podrá orientar al comprador por correo, pero la resolución del proceso podrá estar sujeta a las reglas de la plataforma utilizada</li>
+                </ul>
+            </div>
+
+            <!-- 4 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">4. Casos en que podrá solicitarse revisión o reembolso</h2>
+                <p>Sin perjuicio de las condiciones aplicables de Hotmart o de la normativa que corresponda, Vetis Digital podrá atender solicitudes de revisión en situaciones como las siguientes:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>cobro duplicado</li>
+                    <li>error evidente en la transacción</li>
+                    <li>no entrega del producto luego de haberse confirmado correctamente el pago</li>
+                    <li>imposibilidad real de acceso por falla técnica atribuible al producto o a la entrega</li>
+                    <li>archivo defectuoso o enlace inutilizable que no haya sido corregido dentro de un plazo razonable de soporte</li>
+                </ul>
+                <p>Si la compra fue procesada por Hotmart, estos casos deberán revisarse también conforme al mecanismo y plazos aplicables de dicha plataforma.</p>
+            </div>
+
+            <!-- 5 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">5. Casos en que no corresponderá reembolso adicional por parte de Vetis Digital</h2>
+                <p>No corresponderá reembolso adicional o extraordinario por parte de Vetis Digital cuando:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>el comprador ya recibió acceso correcto al producto y simplemente cambió de opinión fuera del plazo aplicable</li>
+                    <li>el producto fue descargado, abierto o utilizado correctamente y no existe falla técnica atribuible a Vetis Digital</li>
+                    <li>el usuario no revisó su correo, carpeta de spam o promociones, pese a haberse enviado correctamente el acceso</li>
+                    <li>el usuario ingresó mal su correo electrónico u otros datos necesarios para la entrega</li>
+                    <li>la falta de acceso derive de problemas de conexión, compatibilidad o configuración del dispositivo del usuario</li>
+                    <li>la solicitud se base en expectativas personales no garantizadas expresamente en la descripción del producto</li>
+                </ul>
+            </div>
+
+            <!-- 6 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">6. Recursos gratuitos</h2>
+                <p>Los recursos gratuitos, muestras, audios promocionales, materiales de captación o contenidos entregados sin cobro no están sujetos a reembolso, por no existir un pago asociado.</p>
+                <p>No obstante, si un recurso gratuito presenta un error técnico, Vetis Digital podrá corregir el enlace, reemplazar el archivo o reenviar el acceso cuando corresponda.</p>
+            </div>
+
+            <!-- 7 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">7. Cómo solicitar soporte o revisión</h2>
+                <p>Para consultas relacionadas con acceso, errores de entrega o incidencias asociadas a un producto de Vetis Digital, el usuario puede escribir a:</p>
+                <p><a href="mailto:vetisdigital@gmail.com" class="text-accent-gold hover:underline">vetisdigital@gmail.com</a></p>
+                <p>En el mensaje, se recomienda incluir:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>nombre utilizado en la compra</li>
+                    <li>correo electrónico usado al pagar</li>
+                    <li>nombre del producto</li>
+                    <li>fecha de compra</li>
+                    <li>comprobante o número de transacción, si lo tiene</li>
+                    <li>descripción clara del problema</li>
+                </ul>
+                <p>Si la compra fue procesada por Hotmart, Vetis Digital podrá indicar al usuario que también utilice los canales de soporte o reembolso habilitados por dicha plataforma.</p>
+            </div>
+
+            <!-- 8 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">8. Moneda y devoluciones</h2>
+                <p>Los precios de Vetis Digital podrán mostrarse en USD (dólares estadounidenses).</p>
+                <p>En caso de reembolso aprobado por la plataforma o medio de pago correspondiente, el monto devuelto, el tiempo de reflejo y cualquier variación por conversión de moneda, comisiones bancarias o reglas del emisor del medio de pago dependerán del procesador utilizado y de la entidad financiera del comprador.</p>
+            </div>
+
+            <!-- 9 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">9. Modificaciones de esta política</h2>
+                <p>Vetis Digital podrá actualizar, modificar o reemplazar esta Política de Reembolsos en cualquier momento para adaptarla a cambios legales, técnicos, operativos o comerciales.</p>
+                <p>La versión vigente será siempre la publicada en este sitio con su fecha de última actualización.</p>
+            </div>
+
+            <!-- 10 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-deep-green dark:text-white mt-12 mb-4 font-serif">10. Contacto</h2>
+                <p>Para consultas relacionadas con reembolsos, acceso o incidencias de compra, puedes escribir a:</p>
+                <ul class="list-none space-y-2">
+                    <li><strong class="text-deep-green dark:text-white">Vetis Digital</strong></li>
+                    <li><strong class="text-deep-green dark:text-white">Titular:</strong> Luciano Vega Monasterio</li>
+                    <li><strong class="text-deep-green dark:text-white">Correo:</strong> vetisdigital@gmail.com</li>
+                    <li><strong class="text-deep-green dark:text-white">Sitio web:</strong> www.vetisdigital.com</li>
+                    <li><strong class="text-deep-green dark:text-white">País base:</strong> Chile</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+
+
+<footer class="bg-deep-green text-white py-20 border-t border-white/10 relative z-10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-5 md:grid-cols-2 gap-12 mb-16">
+<div class="col-span-1 md:col-span-2 lg:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.png" alt="Vetis Logo" class="h-14 w-auto object-contain" style="filter: invert(1) brightness(2);" />
+</div>
+<p class="text-white/60 text-sm leading-relaxed mb-6">La biblioteca digital para tutores de perros y gatos que buscan comprender, cuidar y convivir mejor con sus mascotas.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.instagram.com/vetisdigital" target="_blank" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.tiktok.com/@vetisdigital" target="_blank" aria-label="TikTok">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 448 512" fill="currentColor"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.32c7.87 33.32 31.74 60.39 63.06 73.66A120.4 120.4 0 0 0 448 109.48v100.43z"/></svg>
+</a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-1 lg:col-span-2">
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Explorar y Compañía</h4>
+<div class="grid grid-cols-2 gap-4">
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Inicio</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/biblioteca/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Biblioteca</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/recursos-gratis/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Recursos Gratis</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/orientacion-online/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Orientación Online</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/app-vetis/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> App Vetis</a></li>
+</ul>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/nosotros/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Sobre Nosotros</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/blog-vetis/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Blog</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/afiliados/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Afiliados</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/contacto/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Contacto</a></li>
+</ul>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-xs uppercase tracking-widest">
+<span>© 2026 Vetis Digital. Todos los derechos reservados.</span>
+<div class="flex gap-6">
+<span class="flex items-center gap-1">Diseñado con <span class="material-symbols-outlined text-[14px] text-accent-gold" style="font-variation-settings: 'FILL' 1;">favorite</span> por animales</span>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- Vetis Recursos Gratis Popup -->
+<!-- ===== POPUP STYLES ===== -->
+<style>
+.vetis-popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(26, 46, 26, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.vetis-popup-overlay.vetis-popup-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.vetis-popup-card {
+    background: #fdfcf9;
+    border-radius: 28px;
+    max-width: 440px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3), 0 0 0 1px rgba(212,175,55,0.15);
+    transform: scale(0.85) translateY(30px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+}
+.vetis-popup-overlay.vetis-popup-visible .vetis-popup-card {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* Decorative top banner */
+.vetis-popup-header {
+    background: linear-gradient(135deg, #1a2e1a 0%, #2d4a2d 60%, #1a2e1a 100%);
+    padding: 40px 36px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.vetis-popup-header::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.08);
+}
+.vetis-popup-header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.06);
+}
+
+/* Icon area with rings */
+.vetis-popup-icon-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.vetis-popup-icon-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1.5px solid rgba(212, 175, 55, 0.15);
+}
+.vetis-popup-icon-ring-1 {
+    width: 100px; height: 100px;
+    animation: vetisRingPulse 3s ease-in-out infinite;
+}
+.vetis-popup-icon-ring-2 {
+    width: 130px; height: 130px;
+    animation: vetisRingPulse 3s ease-in-out 0.5s infinite;
+}
+.vetis-popup-icon-ring-3 {
+    width: 160px; height: 160px;
+    animation: vetisRingPulse 3s ease-in-out 1s infinite;
+}
+@keyframes vetisRingPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.vetis-popup-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d4af37, #c49b2c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.35);
+    position: relative;
+    z-index: 2;
+}
+.vetis-popup-icon span {
+    color: #1a2e1a;
+    font-size: 34px;
+    font-variation-settings: 'FILL' 1;
+}
+
+.vetis-popup-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Body */
+.vetis-popup-body {
+    padding: 32px 36px 36px;
+    text-align: center;
+}
+
+.vetis-popup-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a2e1a;
+    margin: 0 0 12px;
+    line-height: 1.3;
+}
+.vetis-popup-title em {
+    color: #d4af37;
+    font-style: italic;
+}
+
+.vetis-popup-text {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 15px;
+    color: #64748b;
+    margin: 0 0 28px;
+    line-height: 1.65;
+}
+
+.vetis-popup-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #1a2e1a, #2d4a2d);
+    color: #d4af37;
+    border: none;
+    border-radius: 16px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 24px rgba(26, 46, 26, 0.25);
+    margin-bottom: 10px;
+}
+.vetis-popup-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 32px rgba(26, 46, 26, 0.35);
+    background: linear-gradient(135deg, #2d4a2d, #1a2e1a);
+}
+
+.vetis-popup-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 32px;
+    background: transparent;
+    color: #1a2e1a;
+    border: 2px solid #1a2e1a;
+    border-radius: 16px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.vetis-popup-btn-secondary:hover {
+    background: #1a2e1a;
+    color: #fdfcf9;
+}
+
+/* Close button */
+.vetis-popup-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.12);
+    color: rgba(255,255,255,0.7);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    line-height: 1;
+    z-index: 10;
+}
+.vetis-popup-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    transform: rotate(90deg);
+}
+</style>
+
+<div class="vetis-popup-overlay" id="vetis-recursos-popup">
+    <div class="vetis-popup-card">
+        <button class="vetis-popup-close" id="vetis-popup-close" aria-label="Cerrar">&times;</button>
+        
+        <!-- Header with icon -->
+        <div class="vetis-popup-header">
+            <div class="vetis-popup-icon-wrap">
+                <div class="vetis-popup-icon-ring vetis-popup-icon-ring-1"></div>
+                <div class="vetis-popup-icon-ring vetis-popup-icon-ring-2"></div>
+                <div class="vetis-popup-icon-ring vetis-popup-icon-ring-3"></div>
+                <div class="vetis-popup-icon">
+                    <span class="material-symbols-outlined">redeem</span>
+                </div>
+            </div>
+            <div class="vetis-popup-header-badge">
+                <span class="material-symbols-outlined" style="font-size:14px;">download</span>
+                Recursos gratuitos
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="vetis-popup-body">
+            <h2 class="vetis-popup-title">Descarga <em>recursos gratis</em> para cuidar mejor a tu mascota</h2>
+            <p class="vetis-popup-text">Recibe checklists, mini gu&iacute;as y calendarios pr&aacute;cticos para perros y gatos directamente en tu correo.</p>
+            <a href="https://vetisdigital.com/recursos-gratis/" class="vetis-popup-btn-primary">
+                <span class="material-symbols-outlined" style="font-size:20px;font-variation-settings:'FILL' 1;">redeem</span>
+                Quiero mis recursos gratis
+            </a>
+            <button class="vetis-popup-btn-secondary" id="vetis-popup-dismiss">
+                Seguir navegando
+            </button>
+            <p class="vetis-popup-disclaimer" style="font-family:'Public Sans',sans-serif;font-size:12px;color:#94a3b8;margin:12px 0 0;line-height:1.5">Al registrarte, recibir&aacute;s contenido educativo de Vetis Digital. Podr&aacute;s darte de baja cuando quieras.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50
+    });
+</script>
+<script>
+    // Mostrar el popup después de 12 segundos (12000 ms), limitado a una vez por semana (7 días)
+    setTimeout(function() {
+        var popup = document.getElementById('vetis-recursos-popup');
+        if (popup) {
+            var lastShown = localStorage.getItem('vetis-popup-last-shown');
+            var now = new Date().getTime();
+            var oneWeek = 7 * 24 * 60 * 60 * 1000; // 7 días en milisegundos
+
+            if (!lastShown || (now - lastShown) > oneWeek) {
+                popup.classList.add('vetis-popup-visible');
+                localStorage.setItem('vetis-popup-last-shown', now);
+            }
+        }
+    }, 12000);
+
+    document.getElementById('vetis-popup-close')?.addEventListener('click', function() {
+        document.getElementById('vetis-recursos-popup').classList.remove('vetis-popup-visible');
+    });
+    document.getElementById('vetis-popup-dismiss')?.addEventListener('click', function() {
+        document.getElementById('vetis-recursos-popup').classList.remove('vetis-popup-visible');
+    });
+    document.getElementById('vetis-recursos-popup')?.addEventListener('click', function(e) {
+        if (e.target === this) this.classList.remove('vetis-popup-visible');
+    });
+</script>
+</body>
+</html>

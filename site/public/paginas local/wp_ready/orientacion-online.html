@@ -1,0 +1,921 @@
+<!-- Vetis Global Styles & Scripts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13", /* Terracotta */
+                        "accent-gold": "#d4af37",
+                        "deep-green": "#1a2e1a",
+                        "background-light": "#f5f3ef", /* Cream/Off-white */
+                        "background-dark": "#120d0b",
+                        "cream-soft": "#f5eedc",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    /* Full bleed breakout styles to bypass WordPress boxed containers */
+    .vetis-global-wrapper {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+    html, body {
+        overflow-x: hidden !important;
+        margin: 0;
+        padding: 0;
+    }
+/* Full bleed breakout styles to bypass WordPress boxed containers */
+
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .glass-nav { backdrop-filter: blur(12px); background-color: rgba(253, 252, 249, 0.8); }
+</style>
+
+<!-- Vetis Page Content -->
+<div class="vetis-global-wrapper text-slate-900 dark:text-slate-100 overflow-x-hidden bg-background-light dark:bg-background-dark" style="min-height: 100vh;">
+
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-primary/10 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.png" alt="Vetis Digital Logo" class="h-12 w-auto object-contain transition-transform hover:scale-105" style="mix-blend-mode: multiply;" />
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/recursos-gratis/">Recursos Gratis</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/orientacion-online/">Orientación Online</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/app-vetis/">App Vetis</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+
+<button class="lg:hidden text-deep-green dark:text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Menú Móvil Desplegable -->
+<div id="mobile-menu" class="lg:hidden fixed inset-0 z-[100] bg-deep-green transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 py-10 overflow-y-auto">
+<button class="absolute top-6 right-6 text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/recursos-gratis/">Recursos Gratis</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/orientacion-online/">Orientación Online</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/app-vetis/">App Vetis</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+
+</div>
+
+<main>
+
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-deep-green via-[#2d4a2d] to-deep-green"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,175,55,0.12),transparent_60%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(212,175,55,0.08),transparent_50%)]"></div>
+    <!-- Subtle decorative circles -->
+    <div class="absolute top-20 right-[10%] w-80 h-80 rounded-full bg-accent-gold/5 blur-[100px]"></div>
+    <div class="absolute bottom-20 left-[10%] w-64 h-64 rounded-full bg-accent-gold/5 blur-[80px]"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center py-32">
+        <span class="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-accent-gold text-xs font-bold tracking-[0.2em] uppercase px-5 py-2.5 rounded-full mb-8" data-aos="fade-down">
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">video_chat</span>
+            Orientación profesional
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight" data-aos="fade-up">
+            Orientación online para cuidar mejor a tu <em class="text-accent-gold italic">perro o gato</em>
+        </h1>
+        <p class="text-lg lg:text-xl text-white/70 mx-auto leading-relaxed font-light mb-10 max-w-2xl" data-aos="fade-up" data-aos-delay="100">
+            Sesiones educativas y preventivas con una Médica Veterinaria, pensadas para resolver dudas, mejorar rutinas y acompañarte en el bienestar diario de tu mascota.
+        </p>
+        <a href="#proximamente" class="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-accent-gold to-[#c49b2c] text-deep-green font-bold tracking-wide rounded-xl hover:-translate-y-1 transition-all shadow-lg shadow-accent-gold/25 text-lg" data-aos="fade-up" data-aos-delay="200">
+            Agendar orientación online
+            <span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+        </a>
+    </div>
+</section>
+
+<!-- About the Professional -->
+<section class="py-20 lg:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+        <!-- Titles: Mobile Only (Above Image) -->
+        <div class="mb-8 lg:hidden" data-aos="fade-up">
+            <span class="text-accent-gold font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Quién te orienta</span>
+            <h2 class="text-3xl font-bold text-deep-green mb-2 leading-tight">Dra. Micaela Callejas, Médica Veterinaria</h2>
+            <p class="text-accent-gold font-semibold text-base">Médica Veterinaria — Bienestar Animal</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <!-- Photo -->
+            <div class="relative" data-aos="fade-right">
+                <div class="absolute -inset-4 bg-gradient-to-br from-accent-gold/10 to-deep-green/5 rounded-3xl blur-[2px]"></div>
+                <div class="relative overflow-hidden rounded-3xl border border-deep-green/5 shadow-2xl shadow-deep-green/10">
+                    <img src="https://vetisdigital.com/wp-content/uploads/2026/03/dra_camila-1.jpg" alt="Dra. Micaela Callejas — Médica Veterinaria" class="w-full h-auto object-cover aspect-[4/5]" />
+                </div>
+                <!-- Decorative badge -->
+                <div class="absolute -bottom-4 -right-4 lg:-right-6 bg-deep-green text-accent-gold px-5 py-3 rounded-2xl shadow-lg flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    <span class="text-sm font-bold tracking-wide">Médica Veterinaria</span>
+                </div>
+            </div>
+            <!-- Text -->
+            <div data-aos="fade-left">
+                <!-- Titles: Desktop Only (Beside Image) -->
+                <div class="hidden lg:block mb-6">
+                    <span class="text-accent-gold font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Quién te orienta</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-deep-green mb-2 leading-tight">Dra. Micaela Callejas, Médica Veterinaria</h2>
+                    <p class="text-accent-gold font-semibold text-lg">Médica Veterinaria — Bienestar Animal</p>
+                </div>
+                
+                <div class="space-y-4 text-slate-600 font-light leading-relaxed text-[16px]">
+                    <p>Micaela es la profesional detrás de las orientaciones online de Vetis Digital. Con su formación en Medicina Veterinaria y su enfoque en bienestar animal, acompaña a tutores de perros y gatos que buscan comprender mejor las necesidades de sus mascotas.</p>
+                    <p>A través de sesiones educativas y preventivas, entrega herramientas prácticas para mejorar la convivencia diaria, resolver dudas frecuentes sobre cuidados generales y promover hábitos saludables.</p>
+                    <p>Su objetivo es que cada tutor se sienta más seguro y preparado para cuidar a su compañero animal con responsabilidad y cariño.</p>
+                </div>
+                <div class="flex flex-wrap gap-3 mt-8">
+                    <span class="inline-flex items-center gap-2 bg-background-light border border-deep-green/5 text-deep-green/70 text-sm font-medium px-4 py-2 rounded-full">
+                        <span class="material-symbols-outlined text-accent-gold text-[18px]">school</span> Titulada en Medicina Veterinaria
+                    </span>
+                    <span class="inline-flex items-center gap-2 bg-background-light border border-deep-green/5 text-deep-green/70 text-sm font-medium px-4 py-2 rounded-full">
+                        <span class="material-symbols-outlined text-accent-gold text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span> Enfoque en bienestar
+                    </span>
+                    <span class="inline-flex items-center gap-2 bg-background-light border border-deep-green/5 text-deep-green/70 text-sm font-medium px-4 py-2 rounded-full">
+                        <span class="material-symbols-outlined text-accent-gold text-[18px]">pets</span> Perros y gatos
+                    </span>
+                    <span class="inline-flex items-center gap-2 bg-background-light border border-deep-green/5 text-deep-green/70 text-sm font-medium px-4 py-2 rounded-full">
+                        <span class="material-symbols-outlined text-accent-gold text-[18px]">health_and_safety</span> Orientación preventiva
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Esta orientación es para ti si... -->
+<section class="py-24 bg-gradient-to-b from-background-light to-[#f0f5f2] relative overflow-hidden border-t border-deep-green/5">
+    <!-- Ambient background glows -->
+    <div class="absolute top-1/2 left-0 w-[500px] h-[500px] bg-accent-gold/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 -translate-x-1/2"></div>
+    <div class="absolute top-1/3 right-0 w-[400px] h-[400px] bg-deep-green/5 rounded-full blur-[80px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+            <span class="text-accent-gold font-bold tracking-[0.2em] uppercase text-xs mb-4 block" data-aos="fade-down">¿Es para ti?</span>
+            <h2 class="text-3xl lg:text-5xl font-bold text-deep-green mb-4">Esta orientación es para ti si…</h2>
+            <div class="h-1 w-20 bg-accent-gold mx-auto"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <!-- Card 1: Dudas diarias -->
+            <div class="flex flex-col items-center text-center gap-4 p-8 rounded-3xl bg-white shadow-[0_15px_40px_rgba(0,0,0,0.03)] border border-deep-green/5 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(212,175,55,0.12)] hover:border-accent-gold/40 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up">
+                <div class="w-12 h-12 rounded-2xl bg-background-light border border-accent-gold/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-deep-green group-hover:text-accent-gold group-hover:border-deep-green transition-all duration-300 relative z-10 mx-auto">
+                    <span class="material-symbols-outlined text-[24px]">help_center</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-deep-green font-bold text-[17px] mb-2" style="font-family: 'Public Sans', sans-serif;">Dudas diarias</h3>
+                    <p class="text-slate-600 text-[14.5px] leading-relaxed font-light">Tienes dudas sobre la alimentación, higiene o el cuidado diario de tu perro o gato.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Nueva mascota -->
+            <div class="flex flex-col items-center text-center gap-4 p-8 rounded-3xl bg-white shadow-[0_15px_40px_rgba(0,0,0,0.03)] border border-deep-green/5 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(212,175,55,0.12)] hover:border-accent-gold/40 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="50">
+                <div class="w-12 h-12 rounded-2xl bg-background-light border border-accent-gold/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-deep-green group-hover:text-accent-gold group-hover:border-deep-green transition-all duration-300 relative z-10 mx-auto">
+                    <span class="material-symbols-outlined text-[24px]">pets</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-deep-green font-bold text-[17px] mb-2" style="font-family: 'Public Sans', sans-serif;">Nueva mascota</h3>
+                    <p class="text-slate-600 text-[14.5px] leading-relaxed font-light">Acabas de adoptar o recibir un cachorro o un animal adulto en tu hogar.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Comportamiento -->
+            <div class="flex flex-col items-center text-center gap-4 p-8 rounded-3xl bg-white shadow-[0_15px_40px_rgba(0,0,0,0.03)] border border-deep-green/5 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(212,175,55,0.12)] hover:border-accent-gold/40 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-12 h-12 rounded-2xl bg-background-light border border-accent-gold/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-deep-green group-hover:text-accent-gold group-hover:border-deep-green transition-all duration-300 relative z-10 mx-auto">
+                    <span class="material-symbols-outlined text-[24px]">psychology</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-deep-green font-bold text-[17px] mb-2" style="font-family: 'Public Sans', sans-serif;">Comportamiento</h3>
+                    <p class="text-slate-600 text-[14.5px] leading-relaxed font-light">Notas cambios de conducta inusuales y no sabes cómo interpretarlos correctamente.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Rutinas saludables -->
+            <div class="flex flex-col items-center text-center gap-4 p-8 rounded-3xl bg-white shadow-[0_15px_40px_rgba(0,0,0,0.03)] border border-deep-green/5 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(212,175,55,0.12)] hover:border-accent-gold/40 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="150">
+                <div class="w-12 h-12 rounded-2xl bg-background-light border border-accent-gold/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-deep-green group-hover:text-accent-gold group-hover:border-deep-green transition-all duration-300 relative z-10 mx-auto">
+                    <span class="material-symbols-outlined text-[24px]">spa</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-deep-green font-bold text-[17px] mb-2" style="font-family: 'Public Sans', sans-serif;">Rutinas saludables</h3>
+                    <p class="text-slate-600 text-[14.5px] leading-relaxed font-light">Quieres establecer rutinas sanas de alimentación, descanso, juego y paseos.</p>
+                </div>
+            </div>
+
+            <!-- Card 5: Señales de alerta -->
+            <div class="flex flex-col items-center text-center gap-4 p-8 rounded-3xl bg-white shadow-[0_15px_40px_rgba(0,0,0,0.03)] border border-deep-green/5 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(212,175,55,0.12)] hover:border-accent-gold/40 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-12 h-12 rounded-2xl bg-background-light border border-accent-gold/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-deep-green group-hover:text-accent-gold group-hover:border-deep-green transition-all duration-300 relative z-10 mx-auto">
+                    <span class="material-symbols-outlined text-[24px]">medical_services</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-deep-green font-bold text-[17px] mb-2" style="font-family: 'Public Sans', sans-serif;">Señales de alerta</h3>
+                    <p class="text-slate-600 text-[14.5px] leading-relaxed font-light">Necesitas aprender a identificar cuándo una señal requiere atención veterinaria presencial.</p>
+                </div>
+            </div>
+
+            <!-- Card 6: Cuidado informado -->
+            <div class="flex flex-col items-center text-center gap-4 p-8 rounded-3xl bg-white shadow-[0_15px_40px_rgba(0,0,0,0.03)] border border-deep-green/5 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(212,175,55,0.12)] hover:border-accent-gold/40 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="250">
+                <div class="w-12 h-12 rounded-2xl bg-background-light border border-accent-gold/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-deep-green group-hover:text-accent-gold group-hover:border-deep-green transition-all duration-300 relative z-10 mx-auto">
+                    <span class="material-symbols-outlined text-[24px]">verified</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-deep-green font-bold text-[17px] mb-2" style="font-family: 'Public Sans', sans-serif;">Cuidado informado</h3>
+                    <p class="text-slate-600 text-[14.5px] leading-relaxed font-light">Quieres cuidar mejor a tu mascota sin depender de consejos contradictorios de internet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services / Pricing Cards -->
+<section class="py-20 lg:py-32 bg-deep-green relative overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 right-0 w-[600px] lg:w-[800px] h-[600px] lg:h-[800px] bg-accent-gold/10 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] lg:w-[600px] h-[400px] lg:h-[600px] bg-[#1a3a2a] rounded-full blur-[100px] pointer-events-none translate-y-1/3 -translate-x-1/3"></div>
+    
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16 lg:mb-20">
+            <span class="text-accent-gold font-bold tracking-[0.2em] uppercase text-xs mb-4 block" data-aos="fade-down">Nuestras sesiones</span>
+            <h2 class="text-3xl lg:text-5xl font-bold text-white mb-6" data-aos="fade-up">Elige tu tipo de orientación</h2>
+            <p class="text-white/60 font-light max-w-xl mx-auto text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100">Sesiones online por videollamada, personalizadas según las necesidades de tu mascota.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Card 1: Orientación Completa -->
+            <div class="bg-[#122e20] p-10 lg:p-12 rounded-[2.5rem] border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.3)] relative overflow-hidden flex flex-col h-full group hover:-translate-y-2 hover:shadow-[0_40px_80px_rgba(0,0,0,0.45)] hover:border-accent-gold/40 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-accent-gold/5 rounded-full blur-[80px] pointer-events-none group-hover:bg-accent-gold/10 transition-colors duration-500"></div>
+                <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-gold mb-8 shadow-sm group-hover:scale-110 group-hover:bg-white/10 transition-all duration-500">
+                    <span class="material-symbols-outlined text-4xl">videocam</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2" style="font-family: 'Public Sans', sans-serif;">Orientación Completa</h3>
+                <p class="text-accent-gold text-sm font-medium mb-4 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[16px]">schedule</span> 45 minutos
+                </p>
+                <p class="text-white/60 font-light mb-8 flex-grow">Para revisar mejor el caso de tu mascota con calma y detalle.</p>
+                <div class="mb-2">
+                    <span class="text-4xl font-bold text-white">$30</span>
+                    <span class="text-white/60 text-lg font-light ml-1">USD</span>
+                </div>
+                <div class="text-white/40 text-xs font-semibold mb-8 leading-relaxed border-b border-white/10 pb-6">
+                    Aprox. $29.990 CLP<br/>
+                    <span class="font-normal text-white/30">El valor puede mostrarse en moneda local al momento del pago.</span>
+                </div>
+                <ul class="space-y-4 mb-10 text-white/80 font-light text-[15px]">
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-gold text-[20px]">check_circle</span> 1 sesión de 45 minutos</li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-gold text-[20px]">check_circle</span> Videollamada personalizada</li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-gold text-[20px]">check_circle</span> Orientación educativa y preventiva</li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-gold text-[20px]">check_circle</span> Recomendaciones prácticas</li>
+                </ul>
+                <div class="mt-auto">
+                    <a href="#proximamente" class="w-full inline-flex justify-center items-center gap-2 px-8 py-4.5 bg-transparent border-2 border-accent-gold/60 text-accent-gold font-bold tracking-wide rounded-xl hover:bg-accent-gold hover:text-deep-green hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_30px_rgba(212,175,55,0.1)] hover:shadow-[0_15px_40px_rgba(212,175,55,0.25)] text-[16px]">
+                        Agendar orientación <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: Pack Acompañamiento -->
+            <div class="bg-[#0f241a] p-10 lg:p-12 rounded-[2.5rem] border border-accent-gold/30 shadow-[0_30px_80px_rgba(0,0,0,0.5)] relative overflow-hidden flex flex-col h-full group hover:-translate-y-2 hover:shadow-[0_40px_100px_rgba(212,175,55,0.15)] hover:border-accent-gold/60 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                <div class="absolute -top-20 -right-20 w-80 h-80 bg-accent-gold/10 rounded-full blur-[80px] pointer-events-none group-hover:bg-accent-gold/20 transition-colors duration-700"></div>
+                <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-accent-gold/5 to-transparent pointer-events-none"></div>
+                
+                <!-- Best value badge -->
+                <div class="absolute top-6 right-6 lg:top-8 lg:right-8 z-10">
+                    <span class="inline-flex items-center gap-1.5 bg-gradient-to-r from-accent-gold to-[#c49b2c] shadow-[0_0_20px_rgba(212,175,55,0.4)] text-deep-green text-[12px] font-black tracking-[0.15em] uppercase px-4 py-2 rounded-full">
+                        <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span> Mejor valor
+                    </span>
+                </div>
+                
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-gold to-[#c49b2c] flex items-center justify-center text-deep-green mb-8 shadow-[0_10px_30px_rgba(212,175,55,0.3)] group-hover:scale-110 transition-transform duration-500 relative z-10">
+                    <span class="material-symbols-outlined text-4xl">group</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2 relative z-10" style="font-family: 'Public Sans', sans-serif;">Pack Acompañamiento</h3>
+                <p class="text-accent-gold text-sm font-medium mb-4 flex items-center gap-2 relative z-10">
+                    <span class="material-symbols-outlined text-[16px]">schedule</span> 2 sesiones de 45 min
+                </p>
+                <p class="text-white/60 font-light mb-8 flex-grow relative z-10">Para seguimiento y evolución del bienestar de tu mascota.</p>
+                
+                <div class="mb-2 flex items-baseline relative z-10">
+                    <span class="text-4xl font-bold text-white">$50</span>
+                    <span class="text-white/60 text-lg font-light ml-1">USD</span>
+                    <span class="ml-3 text-sm text-accent-gold font-bold bg-accent-gold/10 px-3 py-1.5 rounded-lg border border-accent-gold/30 backdrop-blur-sm shadow-inner">Ahorras $10</span>
+                </div>
+                <div class="text-white/40 text-xs font-semibold mb-8 leading-relaxed relative z-10 border-b border-white/10 pb-6">
+                    Aprox. $49.990 CLP<br/>
+                    <span class="font-normal text-white/30">El valor puede mostrarse en moneda local al momento del pago.</span>
+                </div>
+                
+                <ul class="space-y-4 mb-10 text-white/80 font-light text-[15px] relative z-10">
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-gold text-[20px] drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]">check_circle</span> 2 sesiones de 45 minutos</li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-gold text-[20px] drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]">check_circle</span> Seguimiento personalizado</li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-gold text-[20px] drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]">check_circle</span> Evaluación de evolución</li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-gold text-[20px] drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]">check_circle</span> Ajustes de recomendaciones</li>
+                    <li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-gold text-[20px] drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]">check_circle</span> Apoyo continuo entre sesiones</li>
+                </ul>
+                <div class="mt-auto relative z-10">
+                    <a href="#proximamente" class="w-full inline-flex justify-center items-center gap-2 px-8 py-4.5 bg-gradient-to-r from-accent-gold via-[#d4b76a] to-[#c49b2c] text-deep-green font-black tracking-wide rounded-xl hover:-translate-y-1 transition-all duration-300 shadow-[0_15px_40px_rgba(212,175,55,0.35)] hover:shadow-[0_20px_50px_rgba(212,175,55,0.5)] text-[16px]">
+                        Agendar orientación <span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cómo funciona -->
+<section class="py-20 bg-background-light border-t border-deep-green/5">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="text-accent-gold font-bold tracking-[0.2em] uppercase text-xs mb-4 block" data-aos="fade-down">Paso a paso</span>
+            <h2 class="text-3xl lg:text-5xl font-bold text-deep-green mb-4">Cómo funciona</h2>
+            <div class="h-1 w-20 bg-accent-gold mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-6 relative" data-aos="fade-up">
+            <!-- Connecting Line (hidden on mobile) -->
+            <div class="hidden md:block absolute top-8 left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-transparent via-accent-gold/30 to-transparent z-0"></div>
+            
+            <!-- Step 1 -->
+            <div class="text-center relative flex flex-col items-center z-10 group">
+                <div class="w-16 h-16 rounded-full bg-white border border-accent-gold/30 shadow-[0_8px_30px_rgba(212,175,55,0.15)] text-deep-green font-black flex items-center justify-center text-xl mb-6 group-hover:-translate-y-2 group-hover:border-accent-gold group-hover:shadow-[0_12px_40px_rgba(212,175,55,0.25)] transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent-gold/10 to-transparent"></div>
+                    <span class="relative z-10">1</span>
+                </div>
+                <h3 class="text-deep-green font-bold text-lg mb-3">Elige tu sesión</h3>
+                <p class="text-slate-500 text-[15px] leading-relaxed font-light max-w-[200px]">Selecciona la orientación que mejor se ajuste a tu necesidad.</p>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="text-center relative flex flex-col items-center z-10 group">
+                <div class="w-16 h-16 rounded-full bg-white border border-accent-gold/30 shadow-[0_8px_30px_rgba(212,175,55,0.15)] text-deep-green font-black flex items-center justify-center text-xl mb-6 group-hover:-translate-y-2 group-hover:border-accent-gold group-hover:shadow-[0_12px_40px_rgba(212,175,55,0.25)] transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent-gold/10 to-transparent"></div>
+                    <span class="relative z-10">2</span>
+                </div>
+                <h3 class="text-deep-green font-bold text-lg mb-3">Agenda tu horario</h3>
+                <p class="text-slate-500 text-[15px] leading-relaxed font-light max-w-[200px]">Después del pago podrás coordinar el día y hora disponible.</p>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="text-center relative flex flex-col items-center z-10 group">
+                <div class="w-16 h-16 rounded-full bg-white border border-accent-gold/30 shadow-[0_8px_30px_rgba(212,175,55,0.15)] text-deep-green font-black flex items-center justify-center text-xl mb-6 group-hover:-translate-y-2 group-hover:border-accent-gold group-hover:shadow-[0_12px_40px_rgba(212,175,55,0.25)] transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent-gold/10 to-transparent"></div>
+                    <span class="relative z-10">3</span>
+                </div>
+                <h3 class="text-deep-green font-bold text-lg mb-3">Cuéntanos</h3>
+                <p class="text-slate-500 text-[15px] leading-relaxed font-light max-w-[200px]">Antes de la sesión, completa una breve información inicial.</p>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="text-center relative flex flex-col items-center z-10 group">
+                <div class="w-16 h-16 rounded-full bg-white border border-accent-gold/30 shadow-[0_8px_30px_rgba(212,175,55,0.15)] text-deep-green font-black flex items-center justify-center text-xl mb-6 group-hover:-translate-y-2 group-hover:border-accent-gold group-hover:shadow-[0_12px_40px_rgba(212,175,55,0.25)] transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent-gold/10 to-transparent"></div>
+                    <span class="relative z-10">4</span>
+                </div>
+                <h3 class="text-deep-green font-bold text-lg mb-3">Recibe orientación</h3>
+                <p class="text-slate-500 text-[15px] leading-relaxed font-light max-w-[200px]">Conversamos por videollamada y revisamos tus dudas.</p>
+            </div>
+            
+            <!-- Step 5 -->
+            <div class="text-center relative flex flex-col items-center z-10 group">
+                <div class="w-16 h-16 rounded-full bg-white border border-accent-gold/30 shadow-[0_8px_30px_rgba(212,175,55,0.15)] text-deep-green font-black flex items-center justify-center text-xl mb-6 group-hover:-translate-y-2 group-hover:border-accent-gold group-hover:shadow-[0_12px_40px_rgba(212,175,55,0.25)] transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent-gold/10 to-transparent"></div>
+                    <span class="relative z-10">5</span>
+                </div>
+                <h3 class="text-deep-green font-bold text-lg mb-3">Aplica en casa</h3>
+                <p class="text-slate-500 text-[15px] leading-relaxed font-light max-w-[200px]">Te llevas pasos simples y claros para mejorar su bienestar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Topics Covered Section -->
+<section class="py-20 lg:py-28 bg-deep-green relative overflow-hidden border-t border-white/5">
+    <!-- Ambient background glows -->
+    <div class="absolute top-1/2 left-0 w-[500px] h-[500px] bg-accent-gold/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 -translate-x-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#1a3a2a] rounded-full blur-[80px] pointer-events-none translate-y-1/3 translate-x-1/3"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+            <span class="text-accent-gold font-bold tracking-[0.2em] uppercase text-xs mb-4 block" data-aos="fade-down">Áreas de orientación</span>
+            <h2 class="text-3xl lg:text-5xl font-bold text-white mb-4" data-aos="fade-up">Temas que podemos abordar</h2>
+            <p class="text-white/60 font-light max-w-xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">Cada sesión se adapta a tu situación. Estos son algunos de los temas más consultados.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Topic 1 -->
+            <div class="flex gap-5 p-7 rounded-[2rem] bg-[#122e20] border border-white/5 shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(212,175,55,0.08)] hover:border-accent-gold/40 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="50">
+                <div class="absolute -bottom-10 -right-10 w-24 h-24 bg-accent-gold/5 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-accent-gold group-hover:text-deep-green group-hover:border-accent-gold transition-all duration-300 relative z-10">
+                    <span class="material-symbols-outlined text-[24px]">health_and_safety</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-white font-bold text-lg mb-1.5" style="font-family: 'Public Sans', sans-serif;">Cuidados básicos</h3>
+                    <p class="text-white/60 text-[14px] leading-relaxed font-light">Orientación sobre higiene general, corte de uñas, limpieza de oídos y cepillado preventivo.</p>
+                </div>
+            </div>
+            <!-- Topic 2 -->
+            <div class="flex gap-5 p-7 rounded-[2rem] bg-[#122e20] border border-white/5 shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(212,175,55,0.08)] hover:border-accent-gold/40 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute -bottom-10 -right-10 w-24 h-24 bg-accent-gold/5 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-accent-gold group-hover:text-deep-green group-hover:border-accent-gold transition-all duration-300 relative z-10">
+                    <span class="material-symbols-outlined text-[24px]">restaurant</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-white font-bold text-lg mb-1.5" style="font-family: 'Public Sans', sans-serif;">Alimentación general</h3>
+                    <p class="text-white/60 text-[14px] leading-relaxed font-light">Tipos de dietas, porciones adecuadas, hábitos saludables y prevención de sobrepeso.</p>
+                </div>
+            </div>
+            <!-- Topic 3 -->
+            <div class="flex gap-5 p-7 rounded-[2rem] bg-[#122e20] border border-white/5 shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(212,175,55,0.08)] hover:border-accent-gold/40 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="150">
+                <div class="absolute -bottom-10 -right-10 w-24 h-24 bg-accent-gold/5 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-accent-gold group-hover:text-deep-green group-hover:border-accent-gold transition-all duration-300 relative z-10">
+                    <span class="material-symbols-outlined text-[24px]">psychology</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-white font-bold text-lg mb-1.5" style="font-family: 'Public Sans', sans-serif;">Conducta</h3>
+                    <p class="text-white/60 text-[14px] leading-relaxed font-light">Manejo de ansiedad por separación, socialización, ladridos y pautas de convivencia.</p>
+                </div>
+            </div>
+            <!-- Topic 4 -->
+            <div class="flex gap-5 p-7 rounded-[2rem] bg-[#122e20] border border-white/5 shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(212,175,55,0.08)] hover:border-accent-gold/40 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                <div class="absolute -bottom-10 -right-10 w-24 h-24 bg-accent-gold/5 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-accent-gold group-hover:text-deep-green group-hover:border-accent-gold transition-all duration-300 relative z-10">
+                    <span class="material-symbols-outlined text-[24px]">home</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-white font-bold text-lg mb-1.5" style="font-family: 'Public Sans', sans-serif;">Adaptación al hogar</h3>
+                    <p class="text-white/60 text-[14px] leading-relaxed font-light">Preparación del espacio para cachorros, adopción de adultos o cambios de mudanza.</p>
+                </div>
+            </div>
+            <!-- Topic 5 -->
+            <div class="flex gap-5 p-7 rounded-[2rem] bg-[#122e20] border border-white/5 shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(212,175,55,0.08)] hover:border-accent-gold/40 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="250">
+                <div class="absolute -bottom-10 -right-10 w-24 h-24 bg-accent-gold/5 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-accent-gold group-hover:text-deep-green group-hover:border-accent-gold transition-all duration-300 relative z-10">
+                    <span class="material-symbols-outlined text-[24px]">cleaning_services</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-white font-bold text-lg mb-1.5" style="font-family: 'Public Sans', sans-serif;">Higiene</h3>
+                    <p class="text-white/60 text-[14px] leading-relaxed font-light">Pautas para el baño correcto, cuidado dental diario y mantenimiento del pelaje.</p>
+                </div>
+            </div>
+            <!-- Topic 6 -->
+            <div class="flex gap-5 p-7 rounded-[2rem] bg-[#122e20] border border-white/5 shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(212,175,55,0.08)] hover:border-accent-gold/40 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                <div class="absolute -bottom-10 -right-10 w-24 h-24 bg-accent-gold/5 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-accent-gold group-hover:text-deep-green group-hover:border-accent-gold transition-all duration-300 relative z-10">
+                    <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-white font-bold text-lg mb-1.5" style="font-family: 'Public Sans', sans-serif;">Bienestar animal</h3>
+                    <p class="text-white/60 text-[14px] leading-relaxed font-light">Cómo evaluar la calidad de vida de tu mascota, manejo del estrés y necesidades físicas.</p>
+                </div>
+            </div>
+            <!-- Topic 7 -->
+            <div class="flex gap-5 p-7 rounded-[2rem] bg-[#122e20] border border-white/5 shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(212,175,55,0.08)] hover:border-accent-gold/30 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="350">
+                <div class="absolute -bottom-10 -right-10 w-24 h-24 bg-accent-gold/5 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-accent-gold group-hover:text-deep-green group-hover:border-accent-gold transition-all duration-300 relative z-10">
+                    <span class="material-symbols-outlined text-[24px]">schedule</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-white font-bold text-lg mb-1.5" style="font-family: 'Public Sans', sans-serif;">Rutinas diarias</h3>
+                    <p class="text-white/60 text-[14px] leading-relaxed font-light">Estructuración óptima del día a día: paseos, horas de comida, juego y descanso.</p>
+                </div>
+            </div>
+            <!-- Topic 8 -->
+            <div class="flex gap-5 p-7 rounded-[2rem] bg-[#122e20] border border-white/5 shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(212,175,55,0.1)] hover:border-accent-gold/30 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                <div class="absolute -bottom-10 -right-10 w-24 h-24 bg-accent-gold/5 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-accent-gold group-hover:text-deep-green group-hover:border-accent-gold transition-all duration-300 relative z-10">
+                    <span class="material-symbols-outlined text-[24px]">warning</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-white font-bold text-lg mb-1.5" style="font-family: 'Public Sans', sans-serif;">Señales de alerta</h3>
+                    <p class="text-white/60 text-[14px] leading-relaxed font-light">Aprende a identificar síntomas clínicos comunes y cuándo acudir de urgencia al veterinario.</p>
+                </div>
+            </div>
+            <!-- Topic 9 -->
+            <div class="flex gap-5 p-7 rounded-[2rem] bg-[#122e20] border border-white/5 shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(212,175,55,0.1)] hover:border-accent-gold/30 transition-all duration-500 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="450">
+                <div class="absolute -bottom-10 -right-10 w-24 h-24 bg-accent-gold/5 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-gold shrink-0 group-hover:bg-accent-gold group-hover:text-deep-green group-hover:border-accent-gold transition-all duration-300 relative z-10">
+                    <span class="material-symbols-outlined text-[24px]">park</span>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-white font-bold text-lg mb-1.5" style="font-family: 'Public Sans', sans-serif;">Juegos y estimulación</h3>
+                    <p class="text-white/60 text-[14px] leading-relaxed font-light">Técnicas de enriquecimiento ambiental, juguetes interactivos y actividad física saludable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Important Disclaimer Section -->
+<section class="py-20 lg:py-24 bg-gradient-to-b from-[#f0f5f2] to-background-light relative overflow-hidden">
+    <!-- Glow effect -->
+    <div class="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-amber-500/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 -translate-x-1/2"></div>
+    
+    <div class="max-w-5xl mx-auto px-6 relative z-10" data-aos="fade-up">
+        <div class="bg-gradient-to-br from-[#0e2117] to-[#153324] border border-white/10 p-10 lg:p-14 rounded-[2.5rem] shadow-[0_30px_70px_rgba(0,0,0,0.3)] relative overflow-hidden">
+            <!-- Diagonal glow light -->
+            <div class="absolute -top-32 -right-32 w-96 h-96 bg-amber-500/10 rounded-full blur-[90px] pointer-events-none"></div>
+            
+            <div class="relative z-10">
+                <div class="text-center md:text-left mb-10 border-b border-white/15 pb-6">
+                    <span class="text-accent-gold font-bold tracking-[0.25em] uppercase text-[11px] mb-2 block">Protocolo de seguridad</span>
+                    <h3 class="text-2xl lg:text-3xl font-bold text-white" style="font-family: 'Public Sans', sans-serif;">Información importante sobre el servicio</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Column 1: Educational Scope -->
+                    <div class="flex gap-4 items-start p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/15 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-accent-gold/10 border border-accent-gold/20 flex items-center justify-center text-accent-gold shrink-0">
+                            <span class="material-symbols-outlined text-[24px]">school</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg mb-2" style="font-family: 'Public Sans', sans-serif;">Ámbito educativo y preventivo</h4>
+                            <p class="text-white/70 text-[14.5px] leading-relaxed font-light">
+                                La Orientación Online Vetis es un recurso educativo. <strong class="font-medium text-accent-gold">No reemplaza una consulta presencial</strong>, no emite diagnósticos clínicos, no prescribe fármacos y no atiende casos de urgencia médica.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Column 2: Emergency Protocol -->
+                    <div class="flex gap-4 items-start p-6 rounded-2xl bg-amber-950/20 border border-amber-500/25 hover:border-amber-500/40 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
+                            <span class="material-symbols-outlined text-[24px]">gpp_maybe</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg mb-2" style="font-family: 'Public Sans', sans-serif;">Protocolo ante emergencias</h4>
+                            <p class="text-white/70 text-[14.5px] leading-relaxed font-light">
+                                Si tu mascota tiene dolor intenso, dificultad respiratoria, sangrados, decaimiento extremo, vómitos reiterados o heridas graves, <strong class="font-semibold text-amber-400">acude de inmediato a un centro veterinario de urgencia presencial</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="py-24 bg-[#f4f7f5] relative overflow-hidden border-t border-deep-green/5">
+    <!-- Ambient background glows -->
+    <div class="absolute top-1/2 left-0 w-[500px] h-[500px] bg-accent-gold/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 -translate-x-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-deep-green/5 rounded-full blur-[80px] pointer-events-none translate-y-1/3 translate-x-1/3"></div>
+
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <div class="bg-white border border-deep-green/5 rounded-[3rem] p-10 lg:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_70px_rgba(212,175,55,0.07)] hover:border-accent-gold/20 transition-all duration-500 relative overflow-hidden">
+            <!-- Decorative soft gold light -->
+            <div class="absolute -top-32 -right-32 w-80 h-80 bg-accent-gold/5 rounded-full blur-[80px] pointer-events-none"></div>
+            
+            <div class="grid lg:grid-cols-12 gap-12 items-center relative z-10">
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-left" data-aos="fade-right">
+                    <span class="inline-flex items-center gap-2 bg-deep-green/5 text-deep-green text-xs font-bold tracking-[0.2em] uppercase px-4 py-2 rounded-full">
+                        <span class="material-symbols-outlined text-[16px] text-accent-gold" style="font-variation-settings: 'FILL' 1;">security</span>
+                        Reserva 100% Protegida
+                    </span>
+                    
+                    <h2 class="text-3xl lg:text-5xl font-bold text-deep-green leading-tight" style="font-family: 'Public Sans', sans-serif;">
+                        ¿Listo para darle la mejor calidad de vida a tu mascota?
+                    </h2>
+                    
+                    <p class="text-slate-600 font-light text-[16px] leading-relaxed">
+                        Agenda hoy una orientación online con la Dra. Micaela Callejas y resuelve todas tus dudas sobre nutrición, rutinas y bienestar animal con el respaldo de una especialista titulada.
+                    </p>
+                    
+                    <!-- Guarantees list -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-slate-100 pt-6">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent-gold text-[22px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                            <span class="text-slate-700 text-sm font-light">Garantía de Satisfacción</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent-gold text-[22px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+                            <span class="text-slate-700 text-sm font-light">Pago Encriptado SSL</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent-gold text-[22px]" style="font-variation-settings: 'FILL' 1;">contact_support</span>
+                            <span class="text-slate-700 text-sm font-light">Respaldo Profesional</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-accent-gold text-[22px]" style="font-variation-settings: 'FILL' 1;">video_chat</span>
+                            <span class="text-slate-700 text-sm font-light">Sesión 100% Privada</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Button and badges -->
+                <div class="lg:col-span-5 flex flex-col items-center justify-center p-8 rounded-3xl bg-background-light border border-deep-green/5 shadow-inner space-y-6 text-center" data-aos="fade-left">
+                    <div class="w-16 h-16 rounded-full bg-deep-green flex items-center justify-center text-accent-gold mb-2 shadow-[0_8px_20px_rgba(11,38,26,0.2)]">
+                        <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                    </div>
+                    
+                    <div class="space-y-1">
+                        <h4 class="text-deep-green font-bold text-[18px]">Reserva con confianza</h4>
+                        <p class="text-slate-500 text-xs font-light px-4">Procesado de forma segura. Tu satisfacción está 100% garantizada.</p>
+                    </div>
+                    
+                    <a href="#proximamente" class="w-full inline-flex justify-center items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent-gold via-[#d4b76a] to-[#c49b2c] text-deep-green font-black tracking-wide rounded-xl hover:-translate-y-1 transition-all duration-300 shadow-[0_12px_30px_rgba(212,175,55,0.25)] text-base">
+                        Agendar sesión online
+                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                    </a>
+                    
+                    <span class="text-[11px] text-slate-400 font-medium">Plataforma de pago cifrada mediante Hotmart</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+<!-- BEGIN: Global Footer -->
+
+
+<!-- Footer -->
+<footer class="bg-deep-green text-white py-20 border-t border-white/10 relative z-10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-5 md:grid-cols-2 gap-12 mb-16">
+<div class="col-span-1 md:col-span-2 lg:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.png" alt="Vetis Logo" class="h-14 w-auto object-contain" style="filter: invert(1) brightness(2);" />
+</div>
+<p class="text-white/60 text-sm leading-relaxed mb-6">La biblioteca digital para tutores de perros y gatos que buscan comprender, cuidar y convivir mejor con sus mascotas.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.instagram.com/vetisdigital" target="_blank" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.tiktok.com/@vetisdigital" target="_blank" aria-label="TikTok">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 448 512" fill="currentColor"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.32c7.87 33.32 31.74 60.39 63.06 73.66A120.4 120.4 0 0 0 448 109.48v100.43z"/></svg>
+</a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-1 lg:col-span-2">
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Explorar y Compañía</h4>
+<div class="grid grid-cols-2 gap-4">
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Inicio</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/biblioteca/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Biblioteca</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/recursos-gratis/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Recursos Gratis</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/orientacion-online/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Orientación Online</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/app-vetis/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> App Vetis</a></li>
+</ul>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/nosotros/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Sobre Nosotros</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/blog-vetis/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Blog</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/afiliados/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Afiliados</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/contacto/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Contacto</a></li>
+</ul>
+</div>
+</div>
+<div class="col-span-1 md:col-span-1 lg:col-span-2">
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Legal</h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/terminos-y-condiciones/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Términos y Condiciones</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/politica-de-privacidad/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Privacidad</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/politica-de-cookies/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Cookies</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/politica-de-reembolsos/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Reembolsos</a></li>
+</ul>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/licencia-de-uso-de-productos-digitales/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Licencia de Uso</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/aviso-legal/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Aviso Legal</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/disclaimer-de-contenido-educativo/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Disclaimer Educativo</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-xs uppercase tracking-widest">
+<span>© 2026 Vetis Digital. Todos los derechos reservados.</span>
+<div class="flex gap-6">
+<span class="flex items-center gap-1">Diseñado con <span class="material-symbols-outlined text-[14px] text-accent-gold" style="font-variation-settings: 'FILL' 1;">favorite</span> por animales</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Vetis Recursos Gratis Popup -->
+<style>
+.vetis-popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(26, 46, 26, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.vetis-popup-overlay.vetis-popup-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.vetis-popup-card {
+    background: #fdfcf9;
+    border-radius: 28px;
+    max-width: 440px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3), 0 0 0 1px rgba(212,175,55,0.15);
+    transform: scale(0.85) translateY(30px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+}
+.vetis-popup-overlay.vetis-popup-visible .vetis-popup-card {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+.vetis-popup-header{background:linear-gradient(135deg,#1a2e1a 0%,#2d4a2d 60%,#1a2e1a 100%);padding:40px 36px 48px;text-align:center;position:relative;overflow:hidden}
+.vetis-popup-header::before{content:'';position:absolute;top:-60px;right:-60px;width:180px;height:180px;border-radius:50%;background:rgba(212,175,55,0.08)}
+.vetis-popup-header::after{content:'';position:absolute;bottom:-40px;left:-40px;width:140px;height:140px;border-radius:50%;background:rgba(212,175,55,0.06)}
+.vetis-popup-icon-wrap{position:relative;display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px}
+.vetis-popup-icon-ring{position:absolute;border-radius:50%;border:1.5px solid rgba(212,175,55,0.15)}
+.vetis-popup-icon-ring-1{width:100px;height:100px;animation:vetisRingPulse 3s ease-in-out infinite}
+.vetis-popup-icon-ring-2{width:130px;height:130px;animation:vetisRingPulse 3s ease-in-out 0.5s infinite}
+.vetis-popup-icon-ring-3{width:160px;height:160px;animation:vetisRingPulse 3s ease-in-out 1s infinite}
+@keyframes vetisRingPulse{0%,100%{opacity:0.3;transform:scale(1)}50%{opacity:0.8;transform:scale(1.05)}}
+.vetis-popup-icon{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#d4af37,#c49b2c);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(212,175,55,0.35);position:relative;z-index:2}
+.vetis-popup-icon span{color:#1a2e1a;font-size:34px;font-variation-settings:'FILL' 1}
+.vetis-popup-header-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;color:#d4af37;text-transform:uppercase;letter-spacing:1.5px}
+.vetis-popup-body{padding:32px 36px 36px;text-align:center}
+.vetis-popup-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#1a2e1a;margin:0 0 12px;line-height:1.3}
+.vetis-popup-title em{color:#d4af37;font-style:italic}
+.vetis-popup-text{font-family:'Public Sans',sans-serif;font-size:15px;color:#64748b;margin:0 0 28px;line-height:1.65}
+.vetis-popup-btn-primary{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px 32px;background:linear-gradient(135deg,#1a2e1a,#2d4a2d);color:#d4af37;border:none;border-radius:16px;font-family:'Public Sans',sans-serif;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;transition:all 0.3s ease;box-shadow:0 6px 24px rgba(26,46,26,0.25);margin-bottom:10px;box-sizing:border-box}
+.vetis-popup-btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(26,46,26,0.35);background:linear-gradient(135deg,#2d4a2d,#1a2e1a)}
+.vetis-popup-btn-secondary{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 32px;background:transparent;color:#1a2e1a;border:2px solid #1a2e1a;border-radius:16px;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:all 0.3s ease;box-sizing:border-box}
+.vetis-popup-btn-secondary:hover{background:#1a2e1a;color:#fdfcf9}
+.vetis-popup-close{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.25s ease;line-height:1;z-index:10}
+.vetis-popup-close:hover{background:rgba(255,255,255,0.25);color:#fff;transform:rotate(90deg)}
+.vetis-popup-small-text{font-family:'Public Sans',sans-serif;font-size:11px;color:#94a3b8;margin:12px 0 0;line-height:1.5}
+</style>
+<div id="vetis-recursos-popup" class="vetis-popup-overlay">
+    <div class="vetis-popup-card">
+        <button class="vetis-popup-close" id="vetis-popup-close" aria-label="Cerrar">&times;</button>
+        <div class="vetis-popup-header">
+            <div class="vetis-popup-icon-wrap">
+                <div class="vetis-popup-icon-ring vetis-popup-icon-ring-1"></div>
+                <div class="vetis-popup-icon-ring vetis-popup-icon-ring-2"></div>
+                <div class="vetis-popup-icon-ring vetis-popup-icon-ring-3"></div>
+                <div class="vetis-popup-icon">
+                    <span class="material-symbols-outlined">redeem</span>
+                </div>
+            </div>
+            <div class="vetis-popup-header-badge">
+                <span class="material-symbols-outlined" style="font-size:14px;">download</span>
+                Recursos gratuitos
+            </div>
+        </div>
+        <div class="vetis-popup-body">
+            <h2 class="vetis-popup-title">Descarga recursos gratis para cuidar mejor a tu mascota</h2>
+            <p class="vetis-popup-text">Recibe checklists, mini guías y calendarios prácticos para perros y gatos directamente en tu correo.</p>
+            <a href="https://vetisdigital.com/recursos-gratis/" class="vetis-popup-btn-primary">
+                <span class="material-symbols-outlined" style="font-size:20px;font-variation-settings:'FILL' 1;">download</span>
+                Quiero mis recursos gratis
+            </a>
+            <p class="vetis-popup-small-text">Al registrarte, recibirás contenido educativo de Vetis Digital. Podrás darte de baja cuando quieras.</p>
+            <button class="vetis-popup-btn-secondary" id="vetis-popup-dismiss" style="margin-top:16px;">Seguir navegando</button>
+        </div>
+    </div>
+</div>
+<script>
+    // Mostrar el popup después de 12 segundos (12000 ms), limitado a una vez por semana (7 días)
+    setTimeout(function() {
+        var popup = document.getElementById('vetis-recursos-popup');
+        if (popup) {
+            var lastShown = localStorage.getItem('vetis-popup-last-shown');
+            var now = new Date().getTime();
+            var oneWeek = 7 * 24 * 60 * 60 * 1000; // 7 días en milisegundos
+
+            if (!lastShown || (now - lastShown) > oneWeek) {
+                popup.classList.add('vetis-popup-visible');
+                localStorage.setItem('vetis-popup-last-shown', now);
+            }
+        }
+    }, 12000);
+
+    document.getElementById('vetis-popup-close')?.addEventListener('click', function() {
+        document.getElementById('vetis-recursos-popup').classList.remove('vetis-popup-visible');
+    });
+    document.getElementById('vetis-popup-dismiss')?.addEventListener('click', function() {
+        document.getElementById('vetis-recursos-popup').classList.remove('vetis-popup-visible');
+    });
+    document.getElementById('vetis-recursos-popup')?.addEventListener('click', function(e) {
+        if (e.target === this) this.classList.remove('vetis-popup-visible');
+    });
+</script>
+
+<!-- WhatsApp Floating Button -->
+<style>
+.whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55);
+}
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+}
+.whatsapp-float .whatsapp-tooltip {
+    position: absolute;
+    right: 72px;
+    background: #fff;
+    color: #1a2e1a;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+}
+@keyframes whatsapp-pulse {
+    0% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7), 0 0 0 12px rgba(37, 211, 102, 0.1); }
+    100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+}
+.whatsapp-float {
+    animation: whatsapp-pulse 2.5s infinite;
+}
+.whatsapp-float:hover {
+    animation: none;
+}
+</style>
+<a href="https://wa.me/56947930228" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chatea con nosotros por WhatsApp">
+    <span class="whatsapp-tooltip">¿Necesitas ayuda? 🐾</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.3-5.1-3.7-10.6-6.5z"/></svg>
+</a>
+<!-- Initialize AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+        offset: 50,
+        duration: 800,
+        easing: 'ease-in-out-sine'
+    });
+</script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,1122 @@
+<!-- Vetis Global Styles & Scripts -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script id="tailwind-config"> tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#ec5b13", /* Terracotta */ "accent-gold": "#d4af37", "deep-green": "#1a2e1a", "background-light": "#f5f3ef", /* Cream/Off-white */ "background-dark": "#120d0b", "cream-soft": "#f5eedc", }, fontFamily: { "display": ["Public Sans", "sans-serif"], "serif": ["Playfair Display", "serif"] }, borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"}, }, }, } </script>
+<style>
+    /* Full bleed breakout styles to bypass WordPress boxed containers */
+    .vetis-global-wrapper {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+    html, body {
+        overflow-x: hidden !important;
+        margin: 0;
+        padding: 0;
+    }
+/* Full bleed breakout styles to bypass WordPress boxed containers */
+    
+    
+    
+
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .glass-nav { backdrop-filter: blur(12px); background-color: rgba(253, 252, 249, 0.8); }
+</style>
+
+<!-- Vetis Page Content -->
+<div class="vetis-global-wrapper text-slate-900 dark:text-slate-100 overflow-x-hidden bg-background-light dark:bg-background-dark" style="min-height: 100vh;">
+  
+
+
+  
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-primary/10 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.png" alt="Vetis Digital Logo" class="h-12 w-auto object-contain transition-transform hover:scale-105" style="mix-blend-mode: multiply;" />
+</div>
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/recursos-gratis/">Recursos Gratis</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/orientacion-online/">Orientación Online</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/app-vetis/">App Vetis</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-sm font-medium hover:text-deep-green/70 transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+
+<button class="lg:hidden text-deep-green dark:text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Menú Móvil Desplegable -->
+<div id="mobile-menu" class="lg:hidden fixed inset-0 z-[100] bg-deep-green transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 py-10 overflow-y-auto">
+<button class="absolute top-6 right-6 text-white focus:outline-none hover:rotate-90 transition-transform" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/">Inicio</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/recursos-gratis/">Recursos Gratis</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/orientacion-online/">Orientación Online</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/app-vetis/">App Vetis</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+<a class="text-2xl font-bold text-white/90 hover:text-accent-gold transition-colors" href="https://vetisdigital.com/contacto/">Contacto</a>
+
+</div>
+<!-- Hero Section -->
+<section class="relative min-h-[600px] lg:min-h-[90vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-deep-green/60 dark:bg-slate-900/80 z-10"></div>
+<img class="w-full h-full object-cover object-center" data-alt="Mujer feliz abrazando a su perro y gato" src="https://vetisdigital.com/wp-content/uploads/2026/03/IMAGEN-HERO.png"/>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto px-6 flex flex-col items-center text-center space-y-10 pt-20">
+<div class="space-y-8 max-w-4xl" data-aos="fade-up" data-aos-duration="1000">
+<span class="inline-block py-1.5 px-5 rounded-full bg-white/20 text-white border border-white/30 backdrop-blur-sm font-bold text-xs uppercase tracking-widest shadow-lg">Biblioteca digital premium</span>
+<h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] text-white">
+                    Bienvenido a <span class="italic text-accent-gold">Vetis Digital</span><span class="text-accent-gold">.</span> 
+                </h1>
+<p class="text-xl lg:text-2xl text-white/90 font-light leading-relaxed drop-shadow-md">
+                    Aprende con recursos claros y útiles para cuidar mejor, comprender mejor y convivir mejor con tu mascota.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 pt-6 w-full sm:w-auto px-4 sm:px-0">
+<a href="/biblioteca/" class="bg-accent-gold text-deep-green px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 hover:-translate-y-1 hover:bg-white transition-all duration-300 shadow-xl w-full sm:w-auto">
+                        <span class="material-symbols-outlined text-[1.2rem]">menu_book</span>
+                        Explorar la Biblioteca
+                    </a>
+<a href="/recursos-gratis/" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 hover:bg-white/20 transition-colors shadow-lg w-full sm:w-auto">
+                        <span class="material-symbols-outlined text-[1.2rem]">redeem</span>
+                        Ver Recursos Gratis
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-deep-green text-white py-8 border-y border-white/10 overflow-hidden relative">
+<div class="max-w-7xl mx-auto px-6 mb-6 text-center" data-aos="fade-up" data-aos-duration="800">
+<span class="text-sm font-semibold uppercase tracking-widest text-accent-gold/80">Puedes encontrarnos en estas plataformas también:</span>
+</div>
+<div class="relative w-full overflow-hidden flex whitespace-nowrap opacity-80 hover:opacity-100 transition-opacity duration-300">
+<style>
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+</style>
+<div class="animate-marquee flex gap-16 md:gap-32 items-center text-2xl md:text-4xl font-black tracking-widest uppercase opacity-70">
+<!-- Double the items for seamless loop -->
+<span>Hotmart</span><span>Amazon Books</span><span>Etsy</span><span>Google Books</span>
+<span>Hotmart</span><span>Amazon Books</span><span>Etsy</span><span>Google Books</span>
+<span>Hotmart</span><span>Amazon Books</span><span>Etsy</span><span>Google Books</span>
+<span>Hotmart</span><span>Amazon Books</span><span>Etsy</span><span>Google Books</span>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-8 flex justify-center text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+<div class="inline-flex items-center gap-3 bg-white/10 px-6 py-2 rounded-full border border-white/20">
+<span class="material-symbols-outlined text-accent-gold text-xl">devices</span>
+<span class="text-xs md:text-sm font-medium tracking-wide">También disponible en iOS, Android y Desktop</span>
+</div>
+</div>
+</section>
+<!-- Why Vetis Digital? -->
+<section class="py-16 md:py-20 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16 space-y-4" data-aos="fade-up">
+<h2 class="text-4xl lg:text-5xl font-bold text-deep-green dark:text-white">¿Por qué elegir <span class="italic text-accent-gold">Vetis Digital</span> ?</h2>
+<p class="text-slate-500 max-w-2xl mx-auto mt-4 text-lg">Un estándar superior en educación y bienestar animal.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+<div class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-px bg-gradient-to-r from-transparent via-deep-green/10 to-transparent hidden lg:block"></div>
+<!-- Card 1 -->
+<div class="bg-white dark:bg-slate-900 p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-deep-green/5 group hover:-translate-y-3 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 relative z-10 overflow-hidden" data-aos="fade-right" data-aos-delay="100">
+<div class="w-16 h-16 rounded-full bg-deep-green flex items-center justify-center mb-8 shadow-lg shadow-deep-green/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+<span class="material-symbols-outlined text-3xl text-accent-gold">menu_book</span>
+</div>
+<h3 class="text-xl font-bold mb-4 text-deep-green dark:text-white relative z-10">Educación Clara y Aplicable</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed relative z-10 text-sm">Aprende con recursos prácticos, directos y fáciles de entender para mejorar la vida diaria con tu perro o gato.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-slate-900 p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-deep-green/5 group hover:-translate-y-3 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 relative z-10 overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+<div class="w-16 h-16 rounded-full bg-deep-green flex items-center justify-center mb-8 shadow-lg shadow-deep-green/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+<span class="material-symbols-outlined text-3xl text-accent-gold">pets</span>
+</div>
+<h3 class="text-xl font-bold mb-4 text-deep-green dark:text-white relative z-10">Enfoque en Perros y Gatos de Hogar</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed relative z-10 text-sm">Contenido pensado para las necesidades reales de tutores de perros y gatos: conducta, convivencia, bienestar y prevención.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-white dark:bg-slate-900 p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-deep-green/5 group hover:-translate-y-3 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 relative z-10 overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
+<div class="w-16 h-16 rounded-full bg-deep-green flex items-center justify-center mb-8 shadow-lg shadow-deep-green/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+<span class="material-symbols-outlined text-3xl text-accent-gold">favorite_border</span>
+</div>
+<h3 class="text-xl font-bold mb-4 text-deep-green dark:text-white relative z-10">Bienestar y Convivencia Responsable</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed relative z-10 text-sm">Promovemos una relación más consciente con tu mascota, basada en respeto, comprensión y mejores decisiones cotidianas.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-white dark:bg-slate-900 p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-deep-green/5 group hover:-translate-y-3 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 relative z-10 overflow-hidden" data-aos="fade-left" data-aos-delay="400">
+<div class="w-16 h-16 rounded-full bg-deep-green flex items-center justify-center mb-8 shadow-lg shadow-deep-green/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+<span class="material-symbols-outlined text-3xl text-accent-gold">devices</span>
+</div>
+<h3 class="text-xl font-bold mb-4 text-deep-green dark:text-white relative z-10">Recursos Digitales Premium</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed relative z-10 text-sm">Accede a ebooks, audios y materiales diseñados para acompañarte de forma cómoda, ordenada y accesible desde cualquier lugar.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quiénes Somos -->
+<!-- Categories -->
+<section class="py-16 md:py-20 relative overflow-hidden">
+<div class="absolute inset-0" style="background: linear-gradient(135deg, #0d1a0d 0%, #1a2e1a 50%, #0d1a0d 100%);"></div>
+<div class="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<h2 class="text-4xl lg:text-5xl font-bold mb-12 text-white text-center" data-aos="fade-up">Explora nuestros recursos</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Biblioteca -->
+<div onclick="window.location.href='/biblioteca/'" class="group relative rounded-3xl overflow-hidden h-[500px] cursor-pointer shadow-xl" data-aos="fade-right" data-aos-delay="100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Biblioteca Digital" src="https://vetisdigital.com/wp-content/uploads/2026/03/4to-bloque-Imagen-de-Biblioteca-PAG-INICIO.png" onerror="this.src='https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=800&auto=format&fit=crop'"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#1a2e1a] via-[#1a2e1a]/50 to-transparent flex flex-col justify-end p-10">
+<h3 class="text-4xl font-bold text-white mb-4 flex items-center gap-3 transform group-hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-accent-gold">local_library</span> Biblioteca
+</h3>
+<p class="text-white/90 text-lg leading-relaxed mb-8 opacity-90 group-hover:opacity-100 transition-opacity">
+Descubre ebooks, guías y recursos prácticos para entender mejor, cuidar mejor y convivir mejor con tu perro o gato.
+</p>
+<div class="text-accent-gold font-bold uppercase tracking-widest text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
+EXPLORAR BIBLIOTECA <span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Recursos Gratis -->
+<div onclick="window.location.href='/recursos-gratis/'" class="group relative rounded-3xl overflow-hidden h-[500px] cursor-pointer shadow-xl" data-aos="fade-left" data-aos-delay="200">
+<img class="w-full h-full object-cover object-[35%_center] group-hover:scale-105 transition-transform duration-700" alt="Recursos Gratis" src="https://vetisdigital.com/wp-content/uploads/2026/03/Imagen-de-Audioteca-Gratis-Regalo-INICIO-PAG-1.png" />
+<div class="absolute inset-0 bg-gradient-to-t from-[#1a2e1a] via-[#1a2e1a]/50 to-transparent flex flex-col justify-end p-10">
+<h3 class="text-4xl font-bold text-white mb-4 flex items-center gap-3 transform group-hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-accent-gold">redeem</span> Recursos Gratis
+</h3>
+<p class="text-white/90 text-lg leading-relaxed mb-8 opacity-90 group-hover:opacity-100 transition-opacity">
+Accede a guías, checklists y recursos prácticos sobre conducta, bienestar y convivencia para entender mejor a tu perro o gato de forma clara y útil.
+</p>
+<div class="text-accent-gold font-bold uppercase tracking-widest text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
+VER RECURSOS <span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+
+<!-- Orientación Online -->
+<div onclick="window.location.href='/orientacion-online/'" class="group relative rounded-3xl overflow-hidden h-[500px] cursor-pointer shadow-xl" data-aos="fade-up" data-aos-delay="300">
+<div class="absolute inset-0" style="background: linear-gradient(160deg, #0d1a0d 0%, #1a2e1a 50%, #162816 100%);"></div>
+<div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(212,175,55,0.12) 0%, transparent 70%);"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-10 z-10">
+<div class="w-16 h-16 rounded-2xl bg-accent-gold/10 border border-accent-gold/20 flex items-center justify-center mb-6 group-hover:bg-accent-gold/20 transition-colors">
+<span class="material-symbols-outlined text-accent-gold text-3xl" style="font-variation-settings: 'FILL' 1;">video_call</span>
+</div>
+<h3 class="text-4xl font-bold text-white mb-4 transform group-hover:-translate-y-2 transition-transform duration-300">
+Orientación Online
+</h3>
+<p class="text-white/80 text-lg leading-relaxed mb-8 opacity-90 group-hover:opacity-100 transition-opacity">
+Sesiones educativas y preventivas con una profesional titulada en Medicina Veterinaria para el bienestar de tu mascota.
+</p>
+<div class="text-accent-gold font-bold uppercase tracking-widest text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
+CONOCER MÁS <span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Qué encontrarás en Vetis (New Features Section) -->
+<section class="py-16 md:py-24 bg-background-light dark:bg-slate-900 border-t border-deep-green/5 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(9,55,45,0.03),transparent_50%)] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-deep-green dark:text-white">¿Qué encontrarás en <span class="italic text-accent-gold">Vetis</span>?</h2>
+        <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+            Todo lo que necesitas para aprender, entender y cuidar mejor a tu mascota.
+        </p>
+    </div>
+    
+    <!-- Contenedor Carrusel Horizontal -->
+    <div id="features-container" class="flex overflow-x-auto pb-8 snap-x snap-mandatory gap-6 md:gap-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <!-- Tarjeta 1 -->
+        <div class="snap-center shrink-0 w-[85vw] sm:w-[320px] lg:w-[350px] aspect-[4/5] rounded-3xl relative overflow-hidden group shadow-lg hover:-translate-y-2 transition-all duration-500" data-aos="fade-right" data-aos-delay="100">
+            <img src="https://vetisdigital.com/wp-content/uploads/2026/03/que_encontraras_ebooks_v2_hidden_screen_1773873936626.jpg" alt="Leyendo ebook con mascota" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a2e1a]/95 via-[#1a2e1a]/40 to-transparent"></div>
+            <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                <h3 class="text-2xl font-bold text-accent-gold mb-3 transition-colors">Ebooks y guías prácticas</h3>
+                <p class="text-white/80 leading-relaxed text-sm">Recursos claros y aplicables para tu día a día.</p>
+            </div>
+        </div>
+        
+        <!-- Tarjeta 2 -->
+        <div class="snap-center shrink-0 w-[85vw] sm:w-[320px] lg:w-[350px] aspect-[4/5] rounded-3xl relative overflow-hidden group shadow-lg hover:-translate-y-2 transition-all duration-500" data-aos="zoom-in" data-aos-delay="200">
+            <img src="https://vetisdigital.com/wp-content/uploads/2026/03/Imagen-de-Audioteca-Gratis-Regalo-INICIO-PAG-1.png" alt="Recursos gratuitos" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a2e1a]/95 via-[#1a2e1a]/40 to-transparent"></div>
+            <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                <h3 class="text-2xl font-bold text-accent-gold mb-3 transition-colors">Recursos gratuitos</h3>
+                <p class="text-white/80 leading-relaxed text-sm">Accede a checklists, mini guías y herramientas prácticas para entender, cuidar y acompañar mejor a tu mascota.</p>
+            </div>
+        </div>
+        
+        <!-- Tarjeta 3 -->
+        <div class="snap-center shrink-0 w-[85vw] sm:w-[320px] lg:w-[350px] aspect-[4/5] rounded-3xl relative overflow-hidden group shadow-lg hover:-translate-y-2 transition-all duration-500" data-aos="fade-left" data-aos-delay="300">
+            <img src="https://vetisdigital.com/wp-content/uploads/2026/03/que_encontraras_perrosgatos_1773873629542.jpg" alt="Perros y gatos de hogar" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a2e1a]/95 via-[#1a2e1a]/40 to-transparent"></div>
+            <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                <h3 class="text-2xl font-bold text-accent-gold mb-3 transition-colors">Perros y gatos de hogar</h3>
+                <p class="text-white/80 leading-relaxed text-sm">Contenido pensado para tutores y necesidades reales.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Indicador de Scroll Visual -->
+    
+    <!-- Indicador de Scroll Visual -->
+    <div class="flex flex-col items-center justify-center mt-2 md:hidden" data-aos="fade-up" data-aos-delay="400">
+        <div class="flex items-center gap-2 mb-3 text-accent-gold animate-pulse">
+            <span class="text-[11px] font-bold uppercase tracking-widest">Desliza para explorar</span>
+            <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+        </div>
+        <div class="flex justify-center items-center gap-2" id="features-dots">
+            <button aria-label="Ir a tarjeta 1" class="w-5 h-1.5 rounded-full bg-accent-gold transition-all duration-300"></button>
+            <button aria-label="Ir a tarjeta 2" class="w-1.5 h-1.5 rounded-full bg-accent-gold/30 transition-all duration-300"></button>
+            <button aria-label="Ir a tarjeta 3" class="w-1.5 h-1.5 rounded-full bg-accent-gold/30 transition-all duration-300"></button>
+        </div>
+    </div>
+
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-16 md:py-20 overflow-hidden relative">
+<div class="absolute inset-0" style="background: linear-gradient(135deg, #0d1a0d 0%, #1a2e1a 50%, #0d1a0d 100%);"></div>
+<div class="absolute top-0 right-1/4 w-[500px] h-[500px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="text-center mb-16" data-aos="fade-up">
+<div class="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-4">
+<div class="flex text-accent-gold">
+<span class="material-symbols-outlined text-[16px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+</div>
+<span class="text-sm font-bold text-white">Experiencias de quienes ya confían en <span class="italic text-accent-gold">Vetis</span></span>
+</div>
+<h2 class="text-4xl lg:text-5xl font-bold text-white">Lo que opinan nuestros lectores</h2>
+</div>
+<div class="flex overflow-x-auto pb-8 snap-x snap-mandatory gap-6 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]" id="testimonials-container">
+<!-- Review 1 -->
+<div class="snap-center shrink-0 w-[85vw] md:w-auto p-8 rounded-2xl relative border border-white/10 shadow-lg hover:-translate-y-2 transition-transform duration-300" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);" data-aos="fade-right" data-aos-delay="100">
+<div class="flex text-accent-gold mb-6">
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+</div>
+<p class="text-lg leading-relaxed text-white/80 mb-8">"Adopté a mi primer perro y estaba llena de dudas. Este recurso me ayudó a entender qué hacer desde el principio, sin sentirme perdida ni cometer tantos errores por nervios. Se nota que está pensado para tutores reales."</p>
+<div class="flex items-center gap-4 mt-auto">
+
+<div>
+<span class="block font-bold text-white">María Fernández</span>
+<span class="text-xs text-accent-gold/60">Compradora verificada</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="snap-center shrink-0 w-[85vw] md:w-auto p-8 rounded-2xl relative border border-white/10 shadow-lg hover:-translate-y-2 transition-transform duration-300" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);" data-aos="zoom-in" data-aos-delay="200">
+<div class="flex text-accent-gold mb-6">
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+</div>
+<p class="text-lg leading-relaxed text-white/80 mb-8">"Siempre había querido tener un gato, pero no imaginé todas las dudas que me iban a surgir. Me encantó porque explica de forma clara cosas que nadie te dice cuando recién empiezas. Me dio mucha más seguridad."</p>
+<div class="flex items-center gap-4 mt-auto">
+
+<div>
+<span class="block font-bold text-white">Javier Morales</span>
+<span class="text-xs text-accent-gold/60">Comprador verificado</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="snap-center shrink-0 w-[85vw] md:w-auto p-8 rounded-2xl relative border border-white/10 shadow-lg hover:-translate-y-2 transition-transform duration-300" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);" data-aos="fade-left" data-aos-delay="300">
+<div class="flex text-accent-gold mb-6">
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+</div>
+<p class="text-lg leading-relaxed text-white/80 mb-8">"Lo que más me gustó es que no se queda en teoría. Son consejos claros, fáciles de aplicar y pensados para situaciones del día a día. Me ayudó mucho a ordenar rutinas y entender mejor a mi mascota."</p>
+<div class="flex items-center gap-4 mt-auto">
+
+<div>
+<span class="block font-bold text-white">Camila Rojas</span>
+<span class="text-xs text-accent-gold/60">Compradora verificada</span>
+</div>
+</div>
+</div>
+<!-- Review 4 -->
+<div class="snap-center shrink-0 w-[85vw] md:w-auto p-8 rounded-2xl relative border border-white/10 shadow-lg hover:-translate-y-2 transition-transform duration-300" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);" data-aos="fade-right" data-aos-delay="100">
+<div class="flex text-accent-gold mb-6">
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+</div>
+<p class="text-lg leading-relaxed text-white/80 mb-8">"Antes veía mucha información en internet y terminaba más confundida que al principio. Aquí encontré una guía mucho más clara, cercana y útil. Sentí que por fin alguien me explicaba las cosas de forma simple."</p>
+<div class="flex items-center gap-4 mt-auto">
+
+<div>
+<span class="block font-bold text-white">Daniela Soto</span>
+<span class="text-xs text-accent-gold/60">Compradora verificada</span>
+</div>
+</div>
+</div>
+<!-- Review 5 -->
+<div class="snap-center shrink-0 w-[85vw] md:w-auto p-8 rounded-2xl relative border border-white/10 shadow-lg hover:-translate-y-2 transition-transform duration-300" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);" data-aos="zoom-in" data-aos-delay="200">
+<div class="flex text-accent-gold mb-6">
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+</div>
+<p class="text-lg leading-relaxed text-white/80 mb-8">"Se nota que detrás hay criterio y una intención real de ayudar. No promete magia ni soluciones vacías. Te orienta con calma, claridad y consejos que sí sirven cuando estás empezando con un perro o un gato."</p>
+<div class="flex items-center gap-4 mt-auto">
+
+<div>
+<span class="block font-bold text-white">Felipe González</span>
+<span class="text-xs text-accent-gold/60">Comprador verificado</span>
+</div>
+</div>
+</div>
+<!-- Review 6 -->
+<div class="snap-center shrink-0 w-[85vw] md:w-auto p-8 rounded-2xl relative border border-white/10 shadow-lg hover:-translate-y-2 transition-transform duration-300" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);" data-aos="fade-left" data-aos-delay="300">
+<div class="flex text-accent-gold mb-6">
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+<span class="material-symbols-outlined text-[20px] fill-current [font-variation-settings:'FILL'_1]">star</span>
+</div>
+<p class="text-lg leading-relaxed text-white/80 mb-8">"Me dio exactamente lo que estaba buscando: claridad, tranquilidad y una mejor forma de empezar esta etapa con mi mascota. Es de esos recursos que te hacen sentir más preparado y más conectado desde el inicio."</p>
+<div class="flex items-center gap-4 mt-auto">
+
+<div>
+<span class="block font-bold text-white">Valentina Ríos</span>
+<span class="text-xs text-accent-gold/60">Compradora verificada</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Navegación móvil de testimonios -->
+<div class="flex flex-col items-center justify-center mt-2.5 md:hidden">
+    <div class="flex items-center gap-2 mb-3 text-accent-gold animate-pulse">
+        <span class="text-[11px] font-bold uppercase tracking-widest">Desliza para ver más</span>
+        <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+    </div>
+    <div class="flex justify-center items-center gap-2" id="testimonial-dots">
+        <button aria-label="Ir a reseña 1" class="w-5 h-1.5 rounded-full bg-accent-gold transition-all duration-300"></button>
+        <button aria-label="Ir a reseña 2" class="w-1.5 h-1.5 rounded-full bg-accent-gold/30 transition-all duration-300"></button>
+        <button aria-label="Ir a reseña 3" class="w-1.5 h-1.5 rounded-full bg-accent-gold/30 transition-all duration-300"></button>
+        <button aria-label="Ir a reseña 4" class="w-1.5 h-1.5 rounded-full bg-accent-gold/30 transition-all duration-300"></button>
+        <button aria-label="Ir a reseña 5" class="w-1.5 h-1.5 rounded-full bg-accent-gold/30 transition-all duration-300"></button>
+        <button aria-label="Ir a reseña 6" class="w-1.5 h-1.5 rounded-full bg-accent-gold/30 transition-all duration-300"></button>
+    </div>
+</div>
+
+
+<script> document.addEventListener('DOMContentLoaded', () => { const fContainer = document.getElementById('features-container'); const fDots = document.querySelectorAll('#features-dots button'); if(fContainer && fDots.length > 0) { fDots.forEach((dot, index) => { dot.addEventListener('click', () => { const cardWidth = fContainer.scrollWidth / fDots.length; fContainer.scrollTo({ left: index * cardWidth, behavior: 'smooth' }); }); }); fContainer.addEventListener('scroll', () => { const scrollRatio = fContainer.scrollLeft / (fContainer.scrollWidth - fContainer.clientWidth || 1); let activeIndex = Math.round(scrollRatio * (fDots.length - 1)); if (activeIndex < 0) activeIndex = 0; if (activeIndex >= fDots.length) activeIndex = fDots.length - 1; fDots.forEach((dot, index) => { if(index === activeIndex) { dot.className = 'w-5 h-1.5 rounded-full bg-accent-gold transition-all duration-300'; } else { dot.className = 'w-1.5 h-1.5 rounded-full bg-accent-gold/30 transition-all duration-300 hover:bg-accent-gold/50'; } }); }); } }); </script>
+
+<script> document.addEventListener('DOMContentLoaded', () => { const container = document.getElementById('testimonials-container'); const dots = document.querySelectorAll('#testimonial-dots button'); if(container && dots.length > 0) { dots.forEach((dot, index) => { dot.addEventListener('click', () => { const cardWidth = container.scrollWidth / dots.length; container.scrollTo({ left: index * cardWidth, behavior: 'smooth' }); }); }); container.addEventListener('scroll', () => { const scrollRatio = container.scrollLeft / (container.scrollWidth - container.clientWidth || 1); let activeIndex = Math.round(scrollRatio * (dots.length - 1)); if (activeIndex < 0) activeIndex = 0; if (activeIndex >= dots.length) activeIndex = dots.length - 1; dots.forEach((dot, index) => { if(index === activeIndex) { dot.className = 'w-5 h-1.5 rounded-full bg-accent-gold transition-all duration-300'; } else { dot.className = 'w-1.5 h-1.5 rounded-full bg-accent-gold/30 transition-all duration-300 hover:bg-accent-gold/50'; } }); }); } }); </script>
+</div>
+</section>
+
+<!-- Bloque 1: Recursos Gratis -->
+<section class="py-16 md:py-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-deep-green rounded-3xl overflow-hidden flex flex-col lg:flex-row shadow-2xl relative" data-aos="zoom-in" data-aos-duration="1000">
+<div class="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-gold/10 rounded-full blur-[100px] pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div>
+<div class="lg:w-[55%] p-12 lg:p-20 flex flex-col justify-center space-y-8 relative z-10">
+<div class="inline-flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-accent-gold text-2xl">redeem</span>
+</div>
+<span class="text-accent-gold uppercase tracking-[0.2em] text-sm font-bold">Recursos Gratuitos</span>
+</div>
+<h2 class="text-4xl lg:text-5xl font-bold text-white leading-tight">Descarga <span class="text-accent-gold italic">recursos gratis</span> para cuidar mejor a tu mascota.</h2>
+<p class="text-white/80 text-xl leading-relaxed">Checklists, mini guías y calendarios prácticos para tutores de perros y gatos. Descárgalos gratis y empieza a mejorar la convivencia con tu mascota hoy mismo.</p>
+<div class="flex pt-4">
+    <a href="/recursos-gratis/" class="bg-accent-gold text-deep-green px-12 py-5 rounded-2xl font-black text-lg hover:bg-white hover:scale-105 transition-all shadow-xl shadow-accent-gold/20 flex items-center gap-3">
+        Ver recursos gratis
+        <span class="material-symbols-outlined font-black">arrow_forward</span>
+    </a>
+</div>
+</div>
+<div class="w-full lg:w-[45%] h-80 sm:h-96 lg:h-auto relative">
+<img class="w-full h-full object-cover object-center" src="https://vetisdigital.com/wp-content/uploads/2026/03/Imagen-de-Audioteca-Gratis-Regalo-INICIO-PAG-1.png" alt="Recursos Gratis Vetis" />
+<div class="absolute inset-0 bg-gradient-to-t from-deep-green to-transparent lg:bg-gradient-to-r lg:from-deep-green lg:w-32 lg:inset-y-0 lg:left-0 lg:bottom-auto lg:right-auto"></div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Bloque 7: Orientación Online — Premium -->
+<section class="py-20 md:py-28 relative overflow-hidden">
+<div class="absolute inset-0" style="background: linear-gradient(160deg, #0d1a0d 0%, #1a2e1a 40%, #162816 100%);"></div>
+<div class="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%);"></div>
+<div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);"></div>
+<div class="absolute inset-0 pointer-events-none opacity-[0.02]" style="background-image: linear-gradient(rgba(212,175,55,1) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+<div class="lg:w-1/2 space-y-8" data-aos="fade-right">
+<span class="inline-flex items-center gap-2 bg-accent-gold/10 border border-accent-gold/20 rounded-full px-5 py-2 text-accent-gold text-xs font-bold uppercase tracking-[0.2em]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">video_call</span>
+Nuevo servicio
+</span>
+<h2 class="text-4xl lg:text-5xl font-bold text-white leading-tight" style="font-family: 'Playfair Display', serif;">Orientación <span class="italic text-accent-gold">Online</span></h2>
+<p class="text-lg text-white/60 leading-relaxed" style="font-family: 'Public Sans', sans-serif;">Sesiones online educativas y preventivas con una profesional titulada en Medicina Veterinaria. Recibe apoyo personalizado sobre cuidados básicos, conducta, alimentación, rutinas y bienestar de tu perro o gato.</p>
+</div>
+<div class="lg:w-1/2 flex justify-center" data-aos="fade-left">
+<div class="rounded-3xl p-10 shadow-2xl border border-white/10 max-w-md w-full" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(12px);">
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-accent-gold/10 border border-accent-gold/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-accent-gold text-xl" style="font-variation-settings: 'FILL' 1;">schedule</span>
+</div>
+<div>
+<h4 class="font-bold text-white">Orientación Completa</h4>
+<p class="text-white/50 text-sm">45 minutos · $30 USD</p>
+</div>
+</div>
+<div class="h-px bg-white/10"></div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-accent-gold/10 border border-accent-gold/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-accent-gold text-xl" style="font-variation-settings: 'FILL' 1;">event_repeat</span>
+</div>
+<div>
+<h4 class="font-bold text-white">Pack Acompañamiento</h4>
+<p class="text-white/50 text-sm">2 sesiones de 45 min · $50 USD</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA below card -->
+<div class="mt-8 text-center">
+<a href="/orientacion-online/" class="inline-flex items-center gap-3 bg-accent-gold text-deep-green px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all shadow-xl shadow-accent-gold/20">
+<span class="material-symbols-outlined">calendar_month</span>
+Agendar orientación
+</a>
+<p class="text-xs text-white/30 leading-relaxed mt-5">Apoyo educativo y preventivo. No reemplaza una consulta veterinaria presencial.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Bloque 8: App Vetis Próximamente — Premium -->
+<section class="py-20 md:py-28 bg-background-light dark:bg-slate-900/50 relative overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 60%);"></div>
+<div class="max-w-5xl mx-auto px-6 relative z-10" data-aos="fade-up">
+<div class="rounded-[3rem] overflow-hidden p-12 lg:p-20 text-center border border-accent-gold/20 shadow-2xl relative" style="background: linear-gradient(135deg, #1a2e1a 0%, #0d1a0d 100%);">
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-accent-gold/5 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-[400px] h-[400px] bg-white/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="inline-flex items-center gap-2 bg-white/5 border border-accent-gold/20 rounded-full px-5 py-2 mb-8 relative z-10">
+<span class="material-symbols-outlined text-accent-gold text-[18px]" style="font-variation-settings: 'FILL' 1;">smartphone</span>
+<span class="text-accent-gold text-xs font-bold uppercase tracking-[0.2em]">Próximamente</span>
+</div>
+<h2 class="text-4xl lg:text-6xl font-bold text-white mb-6 relative z-10" style="font-family: 'Playfair Display', serif;">App <span class="italic text-accent-gold">Vetis</span></h2>
+<p class="text-xl text-white/60 max-w-2xl mx-auto leading-relaxed mb-10 relative z-10" style="font-family: 'Public Sans', sans-serif;">El bienestar de tu perro o gato, organizado en un solo lugar. Perfil de mascota, recordatorios, rutinas, biblioteca y mucho más.</p>
+<a href="/app-vetis/" class="inline-flex items-center gap-3 bg-accent-gold text-deep-green px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all shadow-xl shadow-accent-gold/20 relative z-10">
+<span class="material-symbols-outlined">smartphone</span>
+Ver App Vetis
+</a>
+</div>
+</div>
+</section>
+<section class="py-20 md:py-28 relative overflow-hidden">
+<div class="absolute inset-0" style="background: linear-gradient(135deg, #0d1a0d 0%, #1a2e1a 50%, #0d1a0d 100%);"></div>
+<div class="absolute top-0 right-1/4 w-[500px] h-[500px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);"></div>
+<div class="absolute bottom-0 left-1/3 w-[400px] h-[400px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);"></div>
+<div class="absolute inset-0 pointer-events-none opacity-[0.02]" style="background-image: linear-gradient(rgba(212,175,55,1) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+
+<div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
+    <!-- Badge + Heading -->
+    <div data-aos="fade-up">
+        <span class="inline-flex items-center gap-2 bg-accent-gold/10 border border-accent-gold/20 rounded-full px-5 py-2 text-accent-gold text-xs font-bold uppercase tracking-[0.2em] mb-8">
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">group</span>
+            Nuestro equipo
+        </span>
+        <h2 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 mt-2" style="font-family: 'Playfair Display', serif;">
+            Conoce al equipo detrás de <em class="text-accent-gold not-italic italic">Vetis Digital</em>
+        </h2>
+        <p class="text-white/50 text-lg leading-relaxed max-w-2xl mx-auto mb-16" style="font-family: 'Public Sans', sans-serif;">
+            Vetis Digital reúne visión de marca, enfoque educativo y una mirada responsable sobre bienestar animal, conducta y convivencia.
+        </p>
+    </div>
+
+    <!-- 3 Team Members in a row -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-14">
+        <!-- Luciano -->
+        <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-36 h-36 rounded-full overflow-hidden border-2 border-accent-gold/20 shadow-xl mb-6 group-hover:border-accent-gold/50 transition-colors">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Luciano Vega M." src="https://vetisdigital.com/wp-content/uploads/2026/03/luciano.png" />
+            </div>
+            <h4 class="text-white font-bold text-lg mb-1" style="font-family: 'Playfair Display', serif;">Luciano Vega M.</h4>
+            <p class="text-accent-gold text-sm font-semibold mb-2">CEO & Fundador</p>
+            <p class="text-white/40 text-xs leading-relaxed max-w-[220px]">Visión de marca y estrategia digital al servicio del bienestar animal.</p>
+        </div>
+        <!-- Sofía -->
+        <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-36 h-36 rounded-full overflow-hidden border-2 border-accent-gold/20 shadow-xl mb-6 group-hover:border-accent-gold/50 transition-colors">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Lic. Sofía Morales" src="https://vetisdigital.com/wp-content/uploads/2026/03/lic_sofia.jpg" />
+            </div>
+            <h4 class="text-white font-bold text-lg mb-1" style="font-family: 'Playfair Display', serif;">Lic. Sofía Morales</h4>
+            <p class="text-accent-gold text-sm font-semibold mb-2">Comportamiento y Convivencia Animal</p>
+            <p class="text-white/40 text-xs leading-relaxed max-w-[220px]">Enfoque educativo para mejorar la relación entre tutores y mascotas.</p>
+        </div>
+        <!-- Micaela -->
+        <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-36 h-36 rounded-full overflow-hidden border-2 border-accent-gold/20 shadow-xl mb-6 group-hover:border-accent-gold/50 transition-colors">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Dra. Micaela Callejas" src="https://vetisdigital.com/wp-content/uploads/2026/03/dra_camila-1.jpg" />
+            </div>
+            <h4 class="text-white font-bold text-lg mb-1" style="font-family: 'Playfair Display', serif;">Dra. Micaela Callejas</h4>
+            <p class="text-accent-gold text-sm font-semibold mb-2">Médica Veterinaria · Bienestar Animal</p>
+            <p class="text-white/40 text-xs leading-relaxed max-w-[220px]">Mirada profesional y responsable sobre salud y bienestar de perros y gatos.</p>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div data-aos="fade-up" data-aos-delay="350">
+        <a href="/nosotros/" class="inline-flex items-center gap-3 bg-accent-gold text-deep-green px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all shadow-xl shadow-accent-gold/20">
+            <span class="material-symbols-outlined">arrow_forward</span>
+            Conocer más sobre nosotros
+        </a>
+    </div>
+</div>
+</section>
+
+<!-- Blog Preview Section -->
+<section class="py-16 md:py-20 bg-background-light dark:bg-slate-900">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-end mb-12" data-aos="fade-up">
+<div>
+<h2 class="text-4xl font-bold text-deep-green dark:text-white mb-4">Últimos Artículos del Blog</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg">Consejos rápidos y noticias sobre bienestar animal.</p>
+</div>
+<a href="https://vetisdigital.com/blog-vetis/" class="hidden md:flex items-center gap-2 text-deep-green font-bold hover:text-accent-gold transition-colors">
+                    Ir al Blog <span class="material-symbols-outlined">east</span>
+</a>
+</div>
+<div class="flex flex-col gap-8 md:gap-12">
+    <!-- Top Row: 2 columns -->
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+        <!-- Blog Post 1 -->
+        <a href="https://vetisdigital.com/que-necesita-tu-primer-perro-el-dia-1-checklist-facil-para-prepararte-bien/" class="group block" data-aos="fade-up" data-aos-delay="100">
+            <div class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                <img src="https://vetisdigital.com/wp-content/uploads/2026/03/kit-basico-recibir-perro-casa.jpg" alt="Kit básico de bienvenida para el primer perro en casa." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold text-deep-green shadow-sm">Primeros pasos</div>
+                <div class="absolute bottom-4 left-4 transition-all duration-300 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full inline-flex items-center gap-2 text-deep-green font-bold text-sm shadow-sm">Seguir leyendo <span class="material-symbols-outlined text-[16px]">arrow_forward</span></div>
+            </div>
+            <p class="text-sm font-medium text-slate-500 mb-3">23 de Marzo, 2026</p>
+            <h3 class="text-2xl lg:text-[28px] font-bold text-deep-green dark:text-white mb-3 group-hover:text-accent-gold transition-colors leading-tight">Qué necesita tu primer perro el día 1: checklist fácil para prepararte bien</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-lg line-clamp-2">¡Felicidades por tu nuevo amigo! Antes de que cruce la puerta, deja lista su comida, zona de descanso y seguridad.</p>
+        </a>
+        <!-- Blog Post 2 -->
+        <a href="https://vetisdigital.com/por-que-mi-perro-me-sigue-a-todas-partes/" class="group block mt-4 md:mt-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                <img src="https://vetisdigital.com/wp-content/uploads/2026/03/perro-velcro-destacada.jpg" alt="Perro relajado en su cama manteniendo una distancia saludable con su dueño en casa." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold text-deep-green shadow-sm">Conducta</div>
+                <div class="absolute bottom-4 left-4 transition-all duration-300 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full inline-flex items-center gap-2 text-deep-green font-bold text-sm shadow-sm">Seguir leyendo <span class="material-symbols-outlined text-[16px]">arrow_forward</span></div>
+            </div>
+            <p class="text-sm font-medium text-slate-500 mb-3">24 de Marzo, 2026</p>
+            <h3 class="text-2xl lg:text-[28px] font-bold text-deep-green dark:text-white mb-3 group-hover:text-accent-gold transition-colors leading-tight">¿Por qué mi perro me sigue a todas partes? Entiende a tu "perro velcro"</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-lg line-clamp-2">¿Tu perro no se te despega ni un segundo? Aprende a distinguir entre el afecto natural y la ansiedad, y descubre cómo ayudarlo a sentirse seguro incluso cuando no estás a su lado.</p>
+        </a>
+    </div>
+    <!-- Bottom Row: 1 centered column -->
+    <div class="flex justify-center mt-4">
+        <a href="https://vetisdigital.com/por-que-mi-gato-duerme-conmigo-significado/" class="group block w-full md:w-[60%] lg:w-[50%]" data-aos="fade-up" data-aos-delay="300">
+            <div class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                <img src="https://vetisdigital.com/wp-content/uploads/2026/03/gato_relajado_cama_1774399885182.jpg" alt="Gato descansando relajado en la cama" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold text-deep-green shadow-sm">Gatos</div>
+                <div class="absolute bottom-4 left-4 transition-all duration-300 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full inline-flex items-center gap-2 text-deep-green font-bold text-sm shadow-sm">Seguir leyendo <span class="material-symbols-outlined text-[16px]">arrow_forward</span></div>
+            </div>
+            <p class="text-sm font-medium text-slate-500 mb-3">25 de Marzo, 2026</p>
+            <h3 class="text-2xl lg:text-[28px] font-bold text-deep-green dark:text-white mb-3 group-hover:text-accent-gold transition-colors leading-tight">¿Tu gato duerme contigo? Entiende qué significa y cómo mejora vuestro vínculo</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-lg line-clamp-2">Tu gato no te elige para dormir solo por comodidad. Entiende los instintos de seguridad y el vínculo de confianza que lo llevan a tu cama, y cómo organizar vuestro descanso compartido.</p>
+        </a>
+    </div>
+</div>
+<div class="mt-12 text-center">
+<a href="https://vetisdigital.com/blog-vetis/" class="inline-flex items-center gap-2 bg-deep-green text-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-deep-green border-2 border-deep-green transition-colors">
+                Ver todos los artículos
+            </a>
+</div>
+</div>
+</section>
+<!-- Nuevos Bloques: Recursos Gratis + Orientación Online + App Vetis -->
+<!-- FAQ -->
+<section class="py-16 md:py-20 relative overflow-hidden">
+<div class="absolute inset-0" style="background: linear-gradient(135deg, #0d1a0d 0%, #1a2e1a 50%, #0d1a0d 100%);"></div>
+<div class="absolute top-0 right-1/3 w-[500px] h-[500px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);"></div>
+<div class="max-w-3xl mx-auto px-6">
+<h2 class="text-4xl font-bold mb-12 text-center text-deep-green dark:text-white" data-aos="fade-up">Preguntas Frecuentes</h2>
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<details class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-deep-green/5 p-6 cursor-pointer overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+<summary class="flex justify-between items-center font-bold text-lg list-none focus:outline-none">
+    ¿Cómo recibo mis libros o audios una vez comprados?
+    <span class="material-symbols-outlined text-accent-gold group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 pt-4">
+    Una vez completada tu compra, recibirás acceso al contenido digital de forma simple y ordenada. Dependiendo del producto, podrás acceder mediante un enlace de descarga, correo de confirmación o plataforma indicada en la compra. La idea es que puedas comenzar a disfrutar tu recurso sin complicaciones, de forma rápida y cómoda.
+</div>
+</details>
+
+<!-- FAQ 2 -->
+<details class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-deep-green/5 p-6 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+<summary class="flex justify-between items-center font-bold text-lg list-none focus:outline-none">
+    ¿Recibo acceso inmediato después de comprar?
+    <span class="material-symbols-outlined text-accent-gold group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 pt-4">
+    Sí. En la mayoría de los casos, el acceso se entrega de forma inmediata una vez confirmado el pago. Así podrás revisar tu ebook, audio o recurso digital en pocos minutos y comenzar a aprovecharlo desde el mismo día de tu compra.
+</div>
+</details>
+
+<!-- FAQ 3 -->
+<details class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-deep-green/5 p-6 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+<summary class="flex justify-between items-center font-bold text-lg list-none focus:outline-none">
+    ¿Qué formatos tienen los libros digitales?
+    <span class="material-symbols-outlined text-accent-gold group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 pt-4">
+    Nuestros libros digitales están pensados para ser cómodos, prácticos y fáciles de consultar. Según el recurso, pueden estar disponibles en formatos como PDF u otros formatos digitales compatibles con computador, tablet y teléfono. En cada producto se indicará claramente el formato incluido para que sepas exactamente qué recibirás.
+</div>
+</details>
+
+<!-- FAQ 4 -->
+<details class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-deep-green/5 p-6 cursor-pointer" data-aos="fade-up" data-aos-delay="400">
+<summary class="flex justify-between items-center font-bold text-lg list-none focus:outline-none">
+    ¿Hay contenido específico para perros y gatos?
+    <span class="material-symbols-outlined text-accent-gold group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 pt-4">
+    Sí. Vetis está diseñado especialmente para tutores de perros y gatos. Por eso encontrarás recursos enfocados en las necesidades, conductas, rutinas y desafíos más comunes de cada especie, siempre con un enfoque práctico, claro y útil para la vida diaria.
+</div>
+</details>
+
+<!-- FAQ 5 -->
+<details class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-deep-green/5 p-6 cursor-pointer" data-aos="fade-up" data-aos-delay="500">
+<summary class="flex justify-between items-center font-bold text-lg list-none focus:outline-none">
+    ¿Esto reemplaza una consulta veterinaria o de conducta?
+    <span class="material-symbols-outlined text-accent-gold group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 pt-4">
+    No. Vetis es una biblioteca educativa creada para ayudarte a entender mejor a tu mascota, mejorar la convivencia y tomar decisiones más informadas en el día a día. Sin embargo, no reemplaza la evaluación de un veterinario, etólogo o profesional especializado cuando existe un problema de salud, dolor, cambios importantes de conducta o situaciones que requieren atención personalizada.
+</div>
+</details>
+
+<!-- FAQ 6 -->
+<details class="group bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-deep-green/5 p-6 cursor-pointer" data-aos="fade-up" data-aos-delay="600">
+<summary class="flex justify-between items-center font-bold text-lg list-none focus:outline-none">
+    ¿En qué se basa el contenido de Vetis?
+    <span class="material-symbols-outlined text-accent-gold group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 pt-4">
+    El contenido de Vetis se desarrolla con un enfoque educativo, práctico y responsable. Está orientado a promover una mejor comprensión de perros y gatos de hogar, priorizando el bienestar animal, la convivencia diaria y la prevención. Buscamos entregar recursos claros, útiles y respetuosos, pensados para que el tutor se sienta más preparado, más tranquilo y más conectado con su mascota.
+</div>
+</details>
+</div>
+</div>
+</section>
+
+<!-- Final CTA (Newsletter Style) -->
+<section class="py-20 md:py-24 relative overflow-hidden bg-background-light dark:bg-background-dark">
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%2307372d\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-gold/5 rounded-full blur-[100px]"></div>
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10 space-y-10" data-aos="zoom-in">
+<h2 class="text-5xl lg:text-7xl font-bold text-deep-green dark:text-white tracking-tight">Da el primer paso hoy.</h2>
+<p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Únete a nuestra lista exclusiva. Recibe novedades de nuestra biblioteca, consejos semanales y acceso a descuentos ocultos directamente en tu correo.
+            </p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto pt-4">
+<div class="relative flex-1">
+
+<input class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl pl-16 pr-5 py-6 text-deep-green dark:text-white placeholder:!text-slate-500 placeholder:!opacity-100 focus:ring-2 focus:ring-accent-gold focus:border-transparent outline-none transition-all shadow-inner" placeholder="Tu mejor correo electrónico..." type="email" required/>
+</div>
+<button class="bg-deep-green text-accent-gold px-10 py-6 rounded-2xl font-black text-lg hover:-translate-y-1 hover:bg-slate-800 transition-all shadow-xl shadow-deep-green/20 whitespace-nowrap">
+                Suscribirse Gratis
+            </button>
+</form>
+<p class="text-slate-400 text-sm mt-4 flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">lock</span> Tu información está 100% segura con nosotros.
+</p>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-deep-green text-white py-20 border-t border-white/10 relative z-10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-5 md:grid-cols-2 gap-12 mb-16">
+<div class="col-span-1 md:col-span-2 lg:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img src="https://vetisdigital.com/wp-content/uploads/2026/03/logo-transparent.png" alt="Vetis Logo" class="h-14 w-auto object-contain" style="filter: invert(1) brightness(2);" />
+</div>
+<p class="text-white/60 text-sm leading-relaxed mb-6">La biblioteca digital para tutores de perros y gatos que buscan comprender, cuidar y convivir mejor con sus mascotas.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.instagram.com/vetisdigital" target="_blank" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent-gold hover:text-deep-green transition-colors" href="https://www.tiktok.com/@vetisdigital" target="_blank" aria-label="TikTok">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 448 512" fill="currentColor"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.32c7.87 33.32 31.74 60.39 63.06 73.66A120.4 120.4 0 0 0 448 109.48v100.43z"/></svg>
+</a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-1 lg:col-span-2">
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Explorar y Compañía</h4>
+<div class="grid grid-cols-2 gap-4">
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Inicio</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/biblioteca/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Biblioteca</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/recursos-gratis/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Recursos Gratis</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/orientacion-online/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Orientación Online</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/app-vetis/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> App Vetis</a></li>
+</ul>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/nosotros/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Sobre Nosotros</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/blog-vetis/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Blog</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/afiliados/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Afiliados</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2" href="https://vetisdigital.com/contacto/"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Contacto</a></li>
+</ul>
+</div>
+</div>
+<div class="col-span-1 md:col-span-1 lg:col-span-2">
+<h4 class="font-bold mb-6 text-accent-gold uppercase tracking-wider text-sm">Legal</h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/terminos-y-condiciones/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Términos y Condiciones</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/politica-de-privacidad/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Privacidad</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/politica-de-cookies/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Cookies</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/politica-de-reembolsos/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Reembolsos</a></li>
+</ul>
+<ul class="space-y-4 text-white/60 text-sm">
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/licencia-de-uso-de-productos-digitales/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Licencia de Uso</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/aviso-legal/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Aviso Legal</a></li>
+<li><a class="hover:text-accent-gold transition-colors flex items-center gap-2 w-max" href="https://vetisdigital.com/disclaimer-de-contenido-educativo/"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Disclaimer Educativo</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-xs uppercase tracking-widest">
+<span>© 2026 Vetis Digital. Todos los derechos reservados.</span>
+<div class="flex gap-6">
+<span class="flex items-center gap-1">Diseñado con <span class="material-symbols-outlined text-[14px] text-accent-gold" style="font-variation-settings: 'FILL' 1;">favorite</span> por animales</span>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- Vetis Recursos Gratis Popup -->
+<!-- ===== POPUP STYLES ===== -->
+<style>
+.vetis-popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(26, 46, 26, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.vetis-popup-overlay.vetis-popup-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.vetis-popup-card {
+    background: #fdfcf9;
+    border-radius: 28px;
+    max-width: 440px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3), 0 0 0 1px rgba(212,175,55,0.15);
+    transform: scale(0.85) translateY(30px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+}
+.vetis-popup-overlay.vetis-popup-visible .vetis-popup-card {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* Decorative top banner */
+.vetis-popup-header {
+    background: linear-gradient(135deg, #1a2e1a 0%, #2d4a2d 60%, #1a2e1a 100%);
+    padding: 40px 36px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.vetis-popup-header::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.08);
+}
+.vetis-popup-header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.06);
+}
+
+/* Icon area with rings */
+.vetis-popup-icon-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.vetis-popup-icon-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1.5px solid rgba(212, 175, 55, 0.15);
+}
+.vetis-popup-icon-ring-1 {
+    width: 100px; height: 100px;
+    animation: vetisRingPulse 3s ease-in-out infinite;
+}
+.vetis-popup-icon-ring-2 {
+    width: 130px; height: 130px;
+    animation: vetisRingPulse 3s ease-in-out 0.5s infinite;
+}
+.vetis-popup-icon-ring-3 {
+    width: 160px; height: 160px;
+    animation: vetisRingPulse 3s ease-in-out 1s infinite;
+}
+@keyframes vetisRingPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.vetis-popup-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d4af37, #c49b2c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.35);
+    position: relative;
+    z-index: 2;
+}
+.vetis-popup-icon span {
+    color: #1a2e1a;
+    font-size: 34px;
+    font-variation-settings: 'FILL' 1;
+}
+
+.vetis-popup-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Body */
+.vetis-popup-body {
+    padding: 32px 36px 36px;
+    text-align: center;
+}
+
+.vetis-popup-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a2e1a;
+    margin: 0 0 12px;
+    line-height: 1.3;
+}
+.vetis-popup-title em {
+    color: #d4af37;
+    font-style: italic;
+}
+
+.vetis-popup-text {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 15px;
+    color: #64748b;
+    margin: 0 0 28px;
+    line-height: 1.65;
+}
+
+.vetis-popup-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #1a2e1a, #2d4a2d);
+    color: #d4af37;
+    border: none;
+    border-radius: 16px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 24px rgba(26, 46, 26, 0.25);
+    margin-bottom: 10px;
+}
+.vetis-popup-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 32px rgba(26, 46, 26, 0.35);
+    background: linear-gradient(135deg, #2d4a2d, #1a2e1a);
+}
+
+.vetis-popup-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 32px;
+    background: transparent;
+    color: #1a2e1a;
+    border: 2px solid #1a2e1a;
+    border-radius: 16px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.vetis-popup-btn-secondary:hover {
+    background: #1a2e1a;
+    color: #fdfcf9;
+}
+
+/* Close button */
+.vetis-popup-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.12);
+    color: rgba(255,255,255,0.7);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    line-height: 1;
+    z-index: 10;
+}
+.vetis-popup-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    transform: rotate(90deg);
+}
+</style>
+
+<div class="vetis-popup-overlay" id="vetis-recursos-popup">
+    <div class="vetis-popup-card">
+        <button class="vetis-popup-close" id="vetis-popup-close" aria-label="Cerrar">&times;</button>
+        
+        <!-- Header with icon -->
+        <div class="vetis-popup-header">
+            <div class="vetis-popup-icon-wrap">
+                <div class="vetis-popup-icon-ring vetis-popup-icon-ring-1"></div>
+                <div class="vetis-popup-icon-ring vetis-popup-icon-ring-2"></div>
+                <div class="vetis-popup-icon-ring vetis-popup-icon-ring-3"></div>
+                <div class="vetis-popup-icon">
+                    <span class="material-symbols-outlined">redeem</span>
+                </div>
+            </div>
+            <div class="vetis-popup-header-badge">
+                <span class="material-symbols-outlined" style="font-size:14px;">download</span>
+                Recursos gratuitos
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="vetis-popup-body">
+            <h2 class="vetis-popup-title">Descarga <em>recursos gratis</em> para cuidar mejor a tu mascota</h2>
+            <p class="vetis-popup-text">Recibe checklists, mini gu&iacute;as y calendarios pr&aacute;cticos para perros y gatos directamente en tu correo.</p>
+            <a href="https://vetisdigital.com/recursos-gratis/" class="vetis-popup-btn-primary">
+                <span class="material-symbols-outlined" style="font-size:20px;font-variation-settings:'FILL' 1;">redeem</span>
+                Quiero mis recursos gratis
+            </a>
+            <button class="vetis-popup-btn-secondary" id="vetis-popup-dismiss">
+                Seguir navegando
+            </button>
+            <p class="vetis-popup-disclaimer" style="font-family:'Public Sans',sans-serif;font-size:12px;color:#94a3b8;margin:12px 0 0;line-height:1.5">Al registrarte, recibir&aacute;s contenido educativo de Vetis Digital. Podr&aacute;s darte de baja cuando quieras.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script> AOS.init({ duration: 800, once: true, offset: 50 }); </script>
+<script> setTimeout(function() { var popup = document.getElementById('vetis-recursos-popup'); if (popup) { var lastShown = localStorage.getItem('vetis-popup-last-shown'); var now = new Date().getTime(); var oneWeek = 7 * 24 * 60 * 60 * 1000; // 7 días en milisegundos if (!lastShown || (now - lastShown) > oneWeek) { popup.classList.add('vetis-popup-visible'); localStorage.setItem('vetis-popup-last-shown', now); } } }, 12000); document.getElementById('vetis-popup-close')?.addEventListener('click', function() { document.getElementById('vetis-recursos-popup').classList.remove('vetis-popup-visible'); }); document.getElementById('vetis-popup-dismiss')?.addEventListener('click', function() { document.getElementById('vetis-recursos-popup').classList.remove('vetis-popup-visible'); }); document.getElementById('vetis-recursos-popup')?.addEventListener('click', function(e) { if (e.target === this) this.classList.remove('vetis-popup-visible'); }); </script>
+</body>
+</html>

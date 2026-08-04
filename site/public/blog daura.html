@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Daura Digital — Escucha, Siente, Transforma</title>
+    <meta name="description" content="Artículos, consejos y reflexiones para cultivar tu bienestar, autoconocimiento y calma interior. Únete a la comunidad de Daura Digital." />
+    
+    <!-- Scripts & Fonts -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "gold": "#c9a84c",
+                        "surface": "#0a131b",
+                        "surface-dim": "#0d1825",
+                        "surface-bright": "#152535",
+                        "on-surface": "#f0ebe3",
+                        "on-surface-variant": "#c3c7cc",
+                    },
+                    fontFamily: {
+                        "serif": ["Noto Serif", "serif"],
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Public Sans", "sans-serif"],
+                        "label": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "3xl": "2rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer base {
+            body { font-family: 'Public Sans', sans-serif; background-color: #0a131b; color: #f0ebe3; overflow-x: hidden; }
+            h1, h2, h3, h4, h5, h6 { font-family: 'Noto Serif', serif; }
+        }
+
+        @layer utilities {
+            .daura-global-wrapper {
+                width: 100vw !important;
+                position: relative !important;
+                left: 50% !important;
+                right: 50% !important;
+                margin-left: -50vw !important;
+                margin-right: -50vw !important;
+                max-width: 100vw !important;
+                background-color: transparent;
+            }
+            
+            .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+            .filled-star { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+            
+            .glass-effect { 
+                backdrop-filter: blur(16px); 
+                -webkit-backdrop-filter: blur(16px); 
+                background: rgba(255, 255, 255, 0.03); 
+                border: 1px solid rgba(255, 255, 255, 0.08); 
+            }
+            .glass-nav { 
+                backdrop-filter: blur(20px); 
+                -webkit-backdrop-filter: blur(20px); 
+                background-color: rgba(13, 24, 37, 0.75); 
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            
+            .gold-glow { box-shadow: 0 0 25px rgba(201, 168, 76, 0.15); }
+            
+            .card-hover-gold { 
+                border: 1px solid rgba(255, 255, 255, 0.08); 
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+            }
+            .card-hover-gold:hover { 
+                border-color: rgba(201, 168, 76, 0.3); 
+                transform: translateY(-4px); 
+                box-shadow: 0 10px 30px -10px rgba(201, 168, 76, 0.2); 
+            }
+            
+            .bg-radial-gold { background: radial-gradient(circle at center, rgba(201, 168, 76, 0.06) 0%, transparent 60%); }
+            .text-glow-gold { text-shadow: 0 0 15px rgba(201, 168, 76, 0.3); }
+            
+            .grad-to-dim { background: linear-gradient(to bottom, rgba(10,19,27,0.82) 0%, rgba(13,24,37,0.82) 100%); }
+            .grad-dim-to-bright { background: linear-gradient(to bottom, rgba(13,24,37,0.82) 0%, rgba(21,37,53,0.82) 100%); }
+            .grad-bright-to-dim { background: linear-gradient(to bottom, rgba(21,37,53,0.82) 0%, rgba(13,24,37,0.82) 100%); }
+            .grad-dim-to-base { background: linear-gradient(to bottom, rgba(13,24,37,0.82) 0%, rgba(10,19,27,0.82) 100%); }
+        }
+    </style>
+<style>input::placeholder, textarea::placeholder { color: white !important; opacity: 1 !important; }</style>
+<style>.gold-glow:hover, .hover\:text-surface:hover, .hover\:bg-gold:hover, a.gold-glow:hover, a:hover.gold-glow { color: #000000 !important; } .text-white { color: #ffffff !important; } .text-gold { color: #c9a84c !important; } .bg-gold { background-color: #c9a84c !important; color: #0a131b !important; }</style>
+</head>
+
+<body class="bg-surface font-body text-on-surface">
+
+<div class="daura-global-wrapper" style="min-height: 100vh;">
+
+    <!-- Global Animated Background Beams -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <canvas id="beams-canvas" class="absolute inset-0 w-full h-full"></canvas>
+        <div class="absolute inset-0 hidden md:block" style="backdrop-filter: blur(50px); background: rgba(10, 19, 27, 0.05);"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-[100vw] z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+            <a href="index.html" class="hover:opacity-80 transition-opacity">
+                <img src="assets/daura-logo-gold.png" alt="Daura Digital" class="h-20 w-auto object-contain transform scale-110 origin-left" />
+            </a>
+            
+            <nav class="hidden lg:flex items-center gap-8 z-[110]">
+                <a class="text-sm font-medium text-white/80 hover:text-gold transition-colors" href="index.html">Inicio</a>
+                <a class="text-sm font-medium text-white/80 hover:text-gold transition-colors" href="biblioteca.html">Biblioteca</a>
+                <a class="text-sm font-medium text-white/80 hover:text-gold transition-colors" href="audioteca.html">Audioteca Gratis</a>
+                <a class="text-sm font-medium text-white/80 hover:text-gold transition-colors" href="nosotros.html">Sobre Nosotros</a>
+                <a class="text-sm font-medium text-white/80 hover:text-gold transition-colors" href="afiliados.html">Afiliados</a>
+                <a class="text-sm font-medium text-gold italic transition-colors" href="blog.html">Blog</a>
+                <a class="text-sm font-medium text-white/80 hover:text-gold transition-colors" href="contacto.html">Contacto</a>
+</nav>
+            
+            <button class="lg:hidden text-white hover:text-gold transition-transform hover:rotate-90 p-2 focus:outline-none z-[110]" onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full'); document.getElementById('menu-icon').innerText = document.getElementById('menu-icon').innerText === 'menu' ? 'close' : 'menu'; document.body.classList.toggle('overflow-hidden');">
+                <span id="menu-icon" class="material-symbols-outlined text-4xl">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Fullscreen Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] bg-surface/95 backdrop-blur-2xl transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-center items-center py-10 overflow-hidden border-l border-white/5">
+        
+        <button class="absolute top-8 right-8 text-white/70 hover:text-gold transition-colors p-2 z-50" aria-label="Cerrar menú" onclick="closeMenu()">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+
+        <div class="flex flex-col items-center gap-10 lg:gap-12 w-full max-w-lg px-6">
+            <a href="index.html" class="text-4xl md:text-5xl font-serif text-white hover:text-gold hover:italic transition-all duration-300" onclick="closeMenu()">Inicio</a>
+            <a href="biblioteca.html" class="text-4xl md:text-5xl font-serif text-white hover:text-gold hover:italic transition-all duration-300" onclick="closeMenu()">Biblioteca</a>
+            <a href="audioteca.html" class="text-4xl md:text-5xl font-serif text-white hover:text-gold hover:italic transition-all duration-300" onclick="closeMenu()">Audioteca Gratis</a>
+            <a href="nosotros.html" class="text-4xl md:text-5xl font-serif text-white hover:text-gold hover:italic transition-all duration-300" onclick="closeMenu()">Sobre Nosotros</a>
+            <a href="afiliados.html" class="text-4xl md:text-5xl font-serif text-white hover:text-gold hover:italic transition-all duration-300" onclick="closeMenu()">Afiliados</a>
+            <a href="blog.html" class="text-4xl md:text-5xl font-serif text-gold hover:text-white transition-all duration-300" onclick="closeMenu()">Blog</a>
+            <a href="contacto.html" class="text-4xl md:text-5xl font-serif text-white hover:text-gold hover:italic transition-all duration-300" onclick="closeMenu()">Contacto</a>
+</div>
+        
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="pt-32 relative z-10 pb-20">
+        
+        <!-- Hero Section -->
+        <section class="max-w-5xl mx-auto px-6 text-center mb-16 pt-12 lg:pt-20">
+            <span class="text-gold font-bold tracking-[0.2em] uppercase text-sm mb-4 block" data-aos="fade-down">ARTÍCULOS Y REFLEXIONES</span>
+            <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight" data-aos="fade-up">
+                El <span class="italic text-gold text-glow-gold">Blog</span> de Daura
+            </h1>
+            <p class="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed font-light" data-aos="fade-up" data-aos-delay="100">
+                Explora contenidos sobre bienestar emocional, autoconocimiento y claridad mental desde una mirada profunda, práctica y humana.
+            </p>
+        </section>
+
+                                                        <!-- Article Grid -->
+        <section class="max-w-7xl mx-auto px-6 mb-24 relative z-40">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+                <!-- Blog Post 1 -->
+                <a href="https://dauradigital.com/ansiedad-emocional-volver-al-presente/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md"  data-aos="fade-up" data-aos-delay="100">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog_ansiedad_destacada.webp" alt="Ansiedad emocional: cómo volver al presente cuando tu mente se adelanta a todo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">15 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">Ansiedad emocional: cómo volver al presente cuando tu mente se adelanta a todo</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">¿Sientes que tu mente siempre está en el futuro imaginando problemas? Descubre qué es la ansiedad emocional y aprende herramientas de Daura para recuperar la calma y la presencia hoy mismo.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 2 -->
+                <a href="https://dauradigital.com/cansancio-mental-senales-pausa-real/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md"  data-aos="fade-up" data-aos-delay="200">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog_cansancio_destacada.webp" alt="Cansancio mental: señales de que tu mente necesita una pausa real" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">14 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">Cansancio mental: señales de que tu mente necesita una pausa real</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">¿Vives agotado pero no puedes dejar de cumplir? Descubre por qué dormir no siempre es suficiente, las señales de la saturación mental y herramientas para recuperar tu claridad.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 3 -->
+                <a href="https://dauradigital.com/como-controlar-emociones-sin-reprimirlas/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md"  data-aos="fade-up" data-aos-delay="300">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog_controlar_destacada.webp" alt="Cómo controlar tus emociones sin reprimirlas: Guía para una gestión sana" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">13 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">Cómo controlar tus emociones sin reprimirlas: Guía para una gestión sana</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">¿Crees que el control emocional es volverse frío? Descubre la diferencia entre reprimir lo que sientes y regular tus emociones para recuperar tu paz sin dejar de ser tú mismo.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 4 -->
+                <a href="https://dauradigital.com/como-dejar-de-autosabotearte-guia-practica/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md"  data-aos="fade-up" data-aos-delay="100">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog1-pausa-consciente.webp" alt="Cómo dejar de autosabotearte: guía para pasar de la intención a la acción" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">12 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">Cómo dejar de autosabotearte: guía para pasar de la intención a la acción</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">¿Sabes qué hacer pero no lo haces? Descubre por qué tu mente se frena a sí misma, la raíz emocional del autosabotaje y herramientas prácticas para recuperar el avance con Daura.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 5 -->
+                <a href="https://dauradigital.com/como-dejar-de-exigirte-tanto-autoexigencia/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md"  data-aos="fade-up" data-aos-delay="200">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog_autoexigencia_destacada.webp" alt="Cómo dejar de exigirte tanto: guía para una disciplina compasiva" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">11 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">Cómo dejar de exigirte tanto: guía para una disciplina compasiva</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">¿Sientes que nunca haces lo suficiente? Descubre por qué la autoexigencia te agota y aprende herramientas para avanzar con claridad sin vivir bajo presión constante con Daura.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 6 -->
+                <a href="https://dauradigital.com/como-dejar-de-sobrepensar-guia-calma-mental/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md"  data-aos="fade-up" data-aos-delay="300">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/sobrepensar_destacada.webp" alt="Cómo dejar de sobrepensar: guía práctica para calmar el ruido mental" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">10 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">Cómo dejar de sobrepensar: guía práctica para calmar el ruido mental</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">¿Tu mente no se detiene? Descubre por qué caes en bucles de preocupación y rumiación, y aprende herramientas prácticas para recuperar la claridad y la paz mental con Daura.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 7 -->
+                <a href="https://dauradigital.com/como-recuperar-claridad-mental-bloqueo/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md extra-blog" style="display: none;" data-aos="fade-up" data-aos-delay="100">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog2-prisma-claridad-emocional-1.webp" alt="Cómo recuperar claridad mental cuando te sientes bloqueado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">9 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">Cómo recuperar claridad mental cuando te sientes bloqueado</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">¿Sientes parálisis o pesadez mental? Descubre por qué ocurre el bloqueo, cómo funciona tu carga cognitiva y herramientas prácticas de Daura para ordenar tus pensamientos y avanzar.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 8 -->
+                <a href="https://dauradigital.com/dejar-vivir-piloto-automatico-emocional/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md extra-blog" style="display: none;" data-aos="fade-up" data-aos-delay="200">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog3-volante-control-emocional-1.webp" alt="Cómo dejar de vivir en piloto automático emocional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">8 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">Cómo dejar de vivir en piloto automático emocional</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">¿Sientes que tus emociones controlan tu vida? Descubre las 7 señales del piloto automático emocional y aprende herramientas prácticas para recuperar el mando de tu mente con Daura.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 9 -->
+                <a href="https://dauradigital.com/explotar-alguien-quieres-arrepentimiento-reparacion/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md extra-blog" style="display: none;" data-aos="fade-up" data-aos-delay="300">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog_explotar_destacada.webp" alt="¿Qué hacer cuando explotas con alguien que quieres? Guía para reparar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">7 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">¿Qué hacer cuando explotas con alguien que quieres? Guía para reparar</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">¿Has dicho cosas hirientes en un momento de rabia? Aprende por qué ocurren las explosiones emocionales, cómo reparar el vínculo sin culparte y herramientas para recuperar el autocontrol con Daura.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 10 -->
+                <a href="https://dauradigital.com/me-siento-emocionalmente-agotado-senales/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md extra-blog" style="display: none;" data-aos="fade-up" data-aos-delay="100">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog_agotamiento_destacada.webp" alt="Me siento emocionalmente agotado: cómo saber si estás cargando demasiado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">6 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">Me siento emocionalmente agotado: cómo saber si estás cargando demasiado</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">¿Vives en piloto automático y te sientes saturado por dentro aunque por fuera todo parezca estar bien? Aprende a identificar el agotamiento emocional silencioso y cómo recuperar tu energía con Daura.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 11 -->
+                <a href="https://dauradigital.com/poner-limites-sin-culpa-guia-practica/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md extra-blog" style="display: none;" data-aos="fade-up" data-aos-delay="200">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog_limites_destacada.webp" alt="Cómo dejar de sentir culpa por poner límites: Guía para tu paz mental" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">5 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">Cómo dejar de sentir culpa por poner límites: Guía para tu paz mental</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">¿Te cuesta decir que no? Aprende a poner límites sin sentirte culpable, entiende la raíz de este sentimiento y recupera tu energía vital con las herramientas prácticas de Daura.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 12 -->
+                <a href="https://dauradigital.com/por-que-me-siento-mal-sin-saber-por-que/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md extra-blog" style="display: none;" data-aos="fade-up" data-aos-delay="300">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog_malestar_destacada.webp" alt="¿Por qué me siento mal sin saber por qué? Entiende lo que pasa dentro de ti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">4 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">¿Por qué me siento mal sin saber por qué? Entiende lo que pasa dentro de ti</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">A veces el malestar emocional no llega con una explicación clara. Descubre cómo interpretar estas señales (ansiedad, tristeza o vacío) antes de juzgarte.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 13 -->
+                <a href="https://dauradigital.com/porque-me-afecta-opinion-demas-estabilidad-emocional/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md extra-blog" style="display: none;" data-aos="fade-up" data-aos-delay="100">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog3-equilibrio-razon-emocion.webp" alt="¿Por qué me afecta tanto lo que dicen los demás? Guía para recuperar tu centro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">3 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">¿Por qué me afecta tanto lo que dicen los demás? Guía para recuperar tu centro</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">¿Tu paz depende de la validación ajena? Descubre por qué te afectan tanto las críticas y aprende herramientas prácticas para construir una estabilidad emocional innegociable.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 14 -->
+                <a href="https://dauradigital.com/reacciono-asi-me-arrepiento-control-emocional/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md extra-blog" style="display: none;" data-aos="fade-up" data-aos-delay="200">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog1-llave-control-emocional-1.webp" alt="¿Por qué reacciono así y después me arrepiento?" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">2 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">¿Por qué reacciono así y después me arrepiento?</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">¿Te arrepientes de tus reacciones impulsivas? Descubre por qué tu mente actúa en automático y cómo recuperar el control emocional con herramientas prácticas de autoconocimiento.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Post 15 -->
+                <a href="https://dauradigital.com/tus-emociones-no-estan-en-tu-contra/" class="group block card-hover-gold rounded-3xl p-2 bg-surface-dim/30 backdrop-blur-md extra-blog" style="display: none;" data-aos="fade-up" data-aos-delay="300">
+                    <div class="rounded-[22px] overflow-hidden aspect-[4/3] lg:aspect-[16/10] mb-6 relative">
+                        <img src="https://dauradigital.com/wp-content/uploads/2026/04/blog2-prisma-claridad-emocional-1.webp" alt="Tus emociones no están en tu contra: qué intentan decirte realmente" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="px-4 pb-2">
+                        <p class="text-[13px] font-medium text-gold/70 mb-3 tracking-wide">1 de Abril, 2026</p>
+                        <h3 class="text-xl lg:text-2xl font-headline font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">Tus emociones no están en tu contra: qué intentan decirte realmente</h3>
+                        <p class="text-white/60 text-sm leading-relaxed line-clamp-3 font-light">Deja de luchar con lo que sientes. Aprende a descifrar el mensaje oculto detrás de la tristeza, el miedo y la rabia para recuperar tu paz interior y claridad mental.</p>
+                        <div class="mt-6 flex items-center gap-2 text-gold font-bold text-sm">
+                            Leer artículo <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+
+
+            <div class="mt-16 text-center w-full col-span-full">
+                <button type="button" id="btn-more-blogs" class="px-8 py-3.5 bg-surface-dim border border-gold/30 text-gold rounded-xl font-bold hover:bg-gold hover:text-surface transition-colors cursor-pointer relative z-50">
+                    Ver más artículos
+                </button>
+            </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="max-w-7xl mx-auto px-6" data-aos="fade-up">
+            <div class="glass-effect rounded-3xl p-10 lg:p-20 flex flex-col items-center text-center border-t border-gold/20 relative overflow-hidden">
+                <!-- Background glow for newsletter -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gold/5 rounded-full blur-[80px] pointer-events-none"></div>
+                
+                <div class="relative z-10 w-16 h-16 rounded-2xl flex items-center justify-center text-gold mb-8 bg-surface-dim border border-gold/10 shadow-lg gold-glow">
+                    <span class="material-symbols-outlined text-3xl">mail</span>
+                </div>
+                <h3 class="font-headline text-3xl lg:text-5xl text-white mb-5 leading-tight relative z-10">Sigue aprendiendo con <span class="text-gold italic">Daura</span></h3>
+                <p class="text-white/70 max-w-xl mb-12 text-lg font-light relative z-10">
+                    Recibe en tu bandeja de entrada reflexiones selectas, recursos gratuitos y novedades diseñadas exclusivamente para acompañar tu bienestar.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4 w-full max-w-lg relative z-10">
+                    <input class="flex-1 px-6 py-4 rounded-xl border border-white/10 bg-surface-dim text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold/30 transition-all font-light" placeholder="Tu mejor correo electrónico" type="email" required />
+                    <button class="bg-gold text-surface px-8 py-4 rounded-xl font-bold hover:bg-white transition-all whitespace-nowrap gold-glow" type="submit">
+                        Suscribirme <span class="material-symbols-outlined text-[18px] align-middle ml-1">arrow_forward</span>
+                    </button>
+                </form>
+                <p class="text-xs text-white/40 mt-6 font-light relative z-10">Prometemos no enviar spam. Solo contenido valioso con propósito.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="relative z-20 border-t border-white/5" style="background: rgba(10, 19, 27, 0.95);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+            <div class="grid lg:grid-cols-5 md:grid-cols-2 gap-12 mb-16">
+                
+                <div class="col-span-1 md:col-span-2 lg:col-span-1 border-white/10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <a href="index.html" class="hover:opacity-80 transition-opacity"><img src="assets/daura-logo-gold.png" alt="Daura Digital" class="h-24 lg:h-32 w-auto object-contain" /></a>
+                    </div>
+                    <p class="text-white/60 text-sm leading-relaxed mb-6 font-light">
+                        Recursos digitales para cultivar claridad mental, bienestar emocional y crecimiento personal.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-surface transition-colors" href="https://www.instagram.com/dauradigital/" target="_blank" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-surface transition-colors" href="https://www.tiktok.com/@dauradigital" target="_blank" aria-label="TikTok">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 448 512" fill="currentColor"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.32c7.87 33.32 31.74 60.39 63.06 73.66A120.4 120.4 0 0 0 448 109.48v100.43z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-span-1 md:col-span-1 lg:col-span-1 lg:ml-8">
+                    <h4 class="font-bold mb-6 text-gold uppercase tracking-[0.1em] text-[13px]">Explorar</h4>
+                    <ul class="space-y-4 text-white/60 text-sm font-light">
+                        <li><a class="hover:text-gold transition-colors flex items-center gap-2" href="index.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Inicio</a></li>
+                        <li><a class="hover:text-gold transition-colors flex items-center gap-2" href="biblioteca.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Biblioteca</a></li>
+                        <li><a class="hover:text-gold transition-colors flex items-center gap-2" href="audioteca.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Audioteca Gratis</a></li>
+                        <li><a class="hover:text-gold transition-colors flex items-center gap-2" href="blog.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Blog / Journal</a></li>
+                                            <li><a class="hover:text-gold transition-colors flex items-center gap-2" href="afiliados.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Afiliados</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1 md:col-span-1 lg:col-span-1">
+                    <h4 class="font-bold mb-6 text-gold uppercase tracking-[0.1em] text-[13px]">Compañía</h4>
+                    <ul class="space-y-4 text-white/60 text-sm font-light">
+                        <li><a class="hover:text-gold transition-colors flex items-center gap-2" href="nosotros.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Sobre Nosotros</a></li>
+                                                <li><a class="hover:text-gold transition-colors flex items-center gap-2" href="contacto.html"><span class="material-symbols-outlined text-[14px]">chevron_right</span> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1 md:col-span-1 lg:col-span-2">
+                    <h4 class="font-bold mb-6 text-gold uppercase tracking-[0.1em] text-[13px]">Legal</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <ul class="space-y-4 text-white/60 text-sm font-light">
+                            <li><a class="hover:text-gold transition-colors flex items-center gap-2 w-max" href="terminos-y-condiciones.html"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Términos y Condiciones</a></li>
+                            <li><a class="hover:text-gold transition-colors flex items-center gap-2 w-max" href="politica-de-privacidad.html"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Privacidad</a></li>
+                            <li><a class="hover:text-gold transition-colors flex items-center gap-2 w-max" href="politica-de-cookies-ue.html"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Cookies (UE)</a></li>
+                        </ul>
+                        <ul class="space-y-4 text-white/60 text-sm font-light">
+                            <li><a class="hover:text-gold transition-colors flex items-center gap-2 w-max" href="politica-de-reembolsos.html"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Política de Reembolsos</a></li>
+                            <li><a class="hover:text-gold transition-colors flex items-center gap-2 w-max" href="politica-de-entrega-y-acceso.html"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Entrega y Acceso Digital</a></li>
+                            <li><a class="hover:text-gold transition-colors flex items-center gap-2 w-max" href="aviso-legal.html"><span class="material-symbols-outlined text-[14px] shrink-0">chevron_right</span> Aviso Legal</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-[10px] uppercase tracking-[0.1em] font-medium">
+                <span>© 2026 Daura Digital. Todos los derechos reservados.</span>
+                <div class="flex gap-6">
+                    <span class="flex items-center gap-1.5">Hecho con <span class="material-symbols-outlined text-[14px] text-gold filled-star">favorite</span> en calma</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+
+
+
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    function initBlogScripts() {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ once: true, offset: 50, duration: 1200 });
+            // Forzar actualización para evitar que queden invisibles sin hacer scroll
+            setTimeout(() => { AOS.refresh(); }, 300);
+            setTimeout(() => { window.dispatchEvent(new Event('scroll')); }, 500);
+        }
+
+        const btn = document.getElementById('btn-more-blogs');
+        if (btn && !btn.dataset.initialized) {
+            btn.dataset.initialized = 'true';
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const hiddenBlogs = document.querySelectorAll('.extra-blog');
+                let count = 0;
+                let remaining = 0;
+                
+                hiddenBlogs.forEach(el => {
+                    if (el.style.display === 'none' && count < 10) {
+                        el.style.display = 'block';
+                        el.classList.remove('aos-animate');
+                        count++;
+                    } else if (el.style.display === 'none') {
+                        remaining++;
+                    }
+                });
+                
+                setTimeout(() => {
+                    if (typeof AOS !== 'undefined') {
+                        AOS.refresh();
+                        window.dispatchEvent(new Event('scroll'));
+                    }
+                }, 100);
+                
+                if (remaining === 0) {
+                    btn.style.display = 'none';
+                }
+            });
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initBlogScripts);
+    } else {
+        initBlogScripts();
+    }
+</script>
+
+
+
+
+<script>
+
+
+
+
+<!-- Floating WhatsApp Button -->
+<style>
+    #whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 16px;
+        z-index: 99999;
+        width: 56px;
+        height: 56px;
+    }
+    #whatsapp-float a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        transition: transform 0.3s ease;
+        animation: wa-pulse 2s infinite;
+    }
+    #whatsapp-float a:hover {
+        transform: scale(1.1);
+    }
+    #whatsapp-float svg {
+        width: 30px;
+        height: 30px;
+    }
+    @keyframes wa-pulse {
+        0% { box-shadow: 0 4px 12px rgba(0,0,0,0.3), 0 0 0 0 rgba(37, 211, 102, 0.5); }
+        70% { box-shadow: 0 4px 12px rgba(0,0,0,0.3), 0 0 0 12px rgba(37, 211, 102, 0); }
+        100% { box-shadow: 0 4px 12px rgba(0,0,0,0.3), 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    @media (min-width: 768px) {
+        #whatsapp-float {
+            bottom: 28px;
+            right: 28px;
+            width: 68px;
+            height: 68px;
+        }
+        #whatsapp-float svg {
+            width: 38px;
+            height: 38px;
+        }
+    }
+    @media (min-width: 1024px) {
+        #whatsapp-float {
+            bottom: 32px;
+            right: 32px;
+            width: 72px;
+            height: 72px;
+        }
+        #whatsapp-float svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+</style>
+<div id="whatsapp-float">
+    <a href="https://wa.me/56961407382" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.003 2.667C8.638 2.667 2.67 8.633 2.67 16c0 2.35.614 4.646 1.78 6.672L2.667 29.333l6.84-1.795A13.28 13.28 0 0016.003 29.333c7.365 0 13.33-5.966 13.33-13.333S23.368 2.667 16.003 2.667zm0 24.39a11.01 11.01 0 01-5.614-1.535l-.403-.239-4.175 1.096 1.114-4.072-.263-.418A10.97 10.97 0 014.947 16c0-6.1 4.962-11.057 11.056-11.057 6.1 0 11.057 4.957 11.057 11.057 0 6.094-4.957 11.057-11.057 11.057zm6.064-8.277c-.333-.167-1.968-.971-2.273-1.082-.305-.111-.527-.167-.749.167-.222.333-.86 1.082-1.054 1.304-.194.222-.389.25-.722.083-.333-.167-1.406-.518-2.678-1.652-.99-.882-1.658-1.971-1.852-2.304-.194-.333-.02-.514.146-.68.15-.149.333-.389.5-.583.167-.194.222-.333.333-.555.111-.222.056-.417-.028-.583-.083-.167-.749-1.805-1.027-2.472-.27-.649-.546-.56-.749-.571-.194-.01-.417-.012-.639-.012a1.224 1.224 0 00-.888.416c-.306.334-1.166 1.139-1.166 2.777 0 1.639 1.194 3.222 1.36 3.444.167.222 2.35 3.59 5.696 5.034.796.344 1.417.549 1.902.703.799.254 1.527.218 2.102.132.641-.096 1.968-.805 2.245-1.582.278-.778.278-1.444.195-1.583-.084-.139-.306-.222-.639-.389z" fill="currentColor"/>
+        </svg>
+    </a>
+</div>
+
+</body>
+</html>
