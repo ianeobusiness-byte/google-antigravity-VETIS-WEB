@@ -247,6 +247,12 @@
     .float-slow { animation: floatSlow 5s ease-in-out infinite; }
     .float-medium { animation: floatMedium 4s ease-in-out infinite; }
     .float-reverse { animation: floatReverse 4.5s ease-in-out infinite; }
+    @keyframes floatSubtle {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+    }
+    .float-subtle { animation: floatSubtle 4.5s ease-in-out infinite; }
+    .float-subtle-delay { animation: floatSubtle 4.5s ease-in-out 1.2s infinite; }
 
     /* Heartbeat Slow Animation (Palpitar Leve) */
     @keyframes heartbeatSlow {
@@ -327,6 +333,19 @@
     }
     .tag-badge-animated:hover {
         transform: translateY(-3px) scale(1.02);
+    }
+
+    /* Marquesina Infinita de Plataformas */
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+        display: inline-flex;
+        flex-shrink: 0;
+        width: max-content;
+        animation: marquee 16s linear infinite;
+        will-change: transform;
     }
 
     /* ============================================
@@ -509,184 +528,400 @@
 </div>
 
 <!-- 2. HERO PRINCIPAL (Verde Oscuro Editorial & Destello Dorado) -->
-<section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0C3528] via-[#0A2D22] to-[#08241B] pt-28 pb-16 text-white">
+<section class="relative w-full max-w-full overflow-hidden bg-gradient-to-b from-[#0C3528] via-[#0A2D22] to-[#08241B] pt-28 sm:pt-36 pb-4 text-white border-b border-mustard/20">
 <!-- Hero Background Image -->
-<div class="absolute inset-0 z-0 overflow-hidden">
-    <img class="w-full h-full object-cover object-center scale-100 sm:scale-105 opacity-30 brightness-95 contrast-105 transition-transform duration-1000" alt="Tutor compartiendo con su mascota" src="../assets/IMAGEN HERO.webp"/>
-    <div class="absolute inset-0 bg-gradient-to-t from-[#08241B] via-[#0C3528]/80 to-[#0C3528]/60"></div>
+<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+    <img class="w-full h-full object-cover object-center opacity-25 brightness-90 contrast-105" alt="Tutor compartiendo con su mascota" src="../assets/IMAGEN HERO.webp"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#08241B] via-[#0C3528]/85 to-[#0C3528]/60"></div>
     <div class="absolute inset-0 bg-gradient-to-r from-[#08241B]/90 via-transparent to-[#08241B]/90"></div>
 </div>
 
-<div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-12 flex flex-col items-center text-center space-y-7 sm:space-y-9">
-<!-- Floating Pill Badge -->
-<div data-aos="fade-down" data-aos-duration="800">
-    <div class="editorial-badge-dark">
-        <span class="material-symbols-outlined text-mustard text-sm">pets</span>
-        <span>EDUCACIÓN PRÁCTICA PARA TUTORES DE PERROS Y GATOS</span>
+<!-- Contenedor Principal de Contenido del Hero (Espacioso y con respiración) -->
+<div class="relative z-20 w-full max-w-5xl mx-auto px-4 sm:px-6 pt-4 pb-12 sm:pb-16 flex flex-col items-center text-center space-y-7 sm:space-y-9">
+    <!-- Pill Badge Superior -->
+    <div data-aos="fade-down" data-aos-duration="700">
+        <div class="editorial-badge-dark">
+            <span class="material-symbols-outlined text-mustard text-sm">pets</span>
+            <span>EDUCACIÓN PRÁCTICA PARA TUTORES DE PERROS Y GATOS</span>
+        </div>
     </div>
+
+    <!-- Main Heading -->
+    <div class="space-y-5 sm:space-y-6 max-w-4xl" data-aos="fade-up" data-aos-duration="800">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.18] text-white tracking-tight drop-shadow-md">
+            Entiende qué necesita tu mascota y actúa <span class="font-serif italic text-mustard">con más seguridad</span>.
+        </h1>
+        <p class="text-base sm:text-xl text-slate-200 font-normal leading-relaxed max-w-3xl mx-auto drop-shadow">
+            Guías prácticas, recursos gratuitos y orientación profesional para ayudarte a cuidar mejor, resolver dudas concretas y dejar de depender de consejos contradictorios.
+        </p>
+    </div>
+
+    <!-- Call to Action Buttons -->
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2 w-full sm:w-auto px-2">
+        <a href="https://vetisdigital.com/biblioteca/" class="btn-primary-warm inline-flex items-center justify-center gap-3 px-8 sm:px-11 py-4 sm:py-5 rounded-2xl text-base sm:text-lg w-full sm:w-auto">
+            <span class="material-symbols-outlined text-[1.5rem]">menu_book</span>
+            Explorar la biblioteca Vetis
+        </a>
+        <a href="https://vetisdigital.com/recursos-gratis/" class="btn-secondary-dark inline-flex items-center justify-center gap-3 px-8 sm:px-11 py-4 sm:py-5 rounded-2xl text-base sm:text-lg w-full sm:w-auto">
+            <span class="material-symbols-outlined text-[1.5rem] text-mustard">redeem</span>
+            Descargar recursos gratis
+        </a>
+    </div>
+
+    <!-- Línea de Confianza Limpia y Editorial -->
+    <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-sm sm:text-base text-slate-300 font-medium pt-2">
+        <span class="inline-flex items-center gap-2">
+            <span class="material-symbols-outlined text-mustard text-lg">verified</span>
+            Guías digitales prácticas
+        </span>
+        <span class="inline-flex items-center gap-2">
+            <span class="material-symbols-outlined text-mustard text-lg">bolt</span>
+            Acceso inmediato
+        </span>
+        <span class="inline-flex items-center gap-2">
+            <span class="material-symbols-outlined text-mustard text-lg">pets</span>
+            Perros y gatos
+        </span>
+    </div>
+
+    <!-- Frase pequeña inferior -->
+    <p class="text-xs sm:text-sm text-slate-400 max-w-2xl mx-auto font-medium pt-1">
+        Información clara para tomar mejores decisiones. Sin alarmismo, sin complicaciones y sin promesas irreales.
+    </p>
 </div>
 
-<!-- Main Heading -->
-<div class="space-y-5 max-w-4xl" data-aos="fade-up" data-aos-duration="1000">
-<h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.18] text-white tracking-tight drop-shadow-md">
-    Entiende qué necesita tu mascota y actúa <span class="font-serif italic text-mustard">con más seguridad</span>.
-</h1>
-<p class="text-base sm:text-xl text-slate-200 font-normal leading-relaxed max-w-3xl mx-auto drop-shadow">
-    Guías prácticas, recursos gratuitos y orientación profesional para ayudarte a cuidar mejor, resolver dudas concretas y dejar de depender de consejos contradictorios.
-</p>
-
-<!-- Call to Action Buttons -->
-<div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-3 w-full sm:w-auto px-2">
-<a href="https://vetisdigital.com/biblioteca/" class="btn-primary-warm inline-flex items-center justify-center gap-3 px-8 sm:px-11 py-4 sm:py-5 rounded-2xl text-base sm:text-lg w-full sm:w-auto">
-    <span class="material-symbols-outlined text-[1.5rem]">menu_book</span>
-    Explorar la biblioteca Vetis
-</a>
-<a href="https://vetisdigital.com/recursos-gratis/" class="btn-secondary-dark inline-flex items-center justify-center gap-3 px-8 sm:px-11 py-4 sm:py-5 rounded-2xl text-base sm:text-lg w-full sm:w-auto">
-    <span class="material-symbols-outlined text-[1.5rem] text-mustard">redeem</span>
-    Descargar recursos gratis
-</a>
-</div>
-
-<!-- Floating Badges in Hero (Línea de confianza) -->
-<div class="flex flex-wrap justify-center items-center gap-3 pt-3">
-    <div class="editorial-badge-dark float-slow">
-        <span class="material-symbols-outlined text-mustard text-[18px]">menu_book</span>
-        <span>Guías digitales prácticas</span>
+<!-- Franja de Plataformas Amplia, Majestuosa y con Presencia (Fondo Verde Oscuro Blindado) -->
+<div class="relative z-20 w-full max-w-full overflow-hidden border-t border-mustard/20 bg-black/20 backdrop-blur-sm py-10 sm:py-12" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4 mb-6 sm:mb-7 text-center">
+        <div class="editorial-badge-dark inline-flex">
+            <span class="material-symbols-outlined text-mustard text-sm">hub</span>
+            <span>PUEDES ENCONTRARNOS EN ESTAS PLATAFORMAS</span>
+        </div>
     </div>
-    <div class="editorial-badge-dark float-medium">
-        <span class="material-symbols-outlined text-mustard text-[18px]">bolt</span>
-        <span>Acceso inmediato</span>
-    </div>
-    <div class="editorial-badge-dark float-reverse">
-        <span class="material-symbols-outlined text-mustard text-[18px]">pets</span>
-        <span>Contenido para perros y gatos</span>
-    </div>
-</div>
 
-<!-- Frase pequeña inferior -->
-<p class="text-xs sm:text-sm text-slate-300 max-w-2xl mx-auto pt-2 font-medium">
-    Información clara para tomar mejores decisiones. Sin alarmismo, sin complicaciones y sin promesas irreales.
-</p>
+    <div class="w-full max-w-full overflow-hidden flex whitespace-nowrap opacity-90 hover:opacity-100 transition-opacity duration-300">
+        <div class="animate-marquee flex gap-12 sm:gap-24 items-center py-2">
+            <img src="../assets/logo_hotmart.webp" alt="Hotmart" class="h-20 sm:h-28 md:h-32 w-auto object-contain inline-block drop-shadow-lg"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_amazon_books.webp" alt="Amazon Books" class="h-8 sm:h-12 md:h-14 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_etsy.webp" alt="Etsy" class="h-14 sm:h-20 md:h-24 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_google_books.webp" alt="Google Books" class="h-14 sm:h-20 md:h-24 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span>
+            <img src="../assets/logo_hotmart.webp" alt="Hotmart" class="h-20 sm:h-28 md:h-32 w-auto object-contain inline-block drop-shadow-lg"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_amazon_books.webp" alt="Amazon Books" class="h-8 sm:h-12 md:h-14 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_etsy.webp" alt="Etsy" class="h-14 sm:h-20 md:h-24 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_google_books.webp" alt="Google Books" class="h-14 sm:h-20 md:h-24 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span>
+        </div>
+    </div>
 
-</div>
+    <!-- Disponibilidad Multiplataforma -->
+    <div class="mt-6 sm:mt-7 text-center">
+        <p class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-slate-300">
+            <span class="material-symbols-outlined text-mustard text-base sm:text-lg">devices</span>
+            <span>También disponible en <span class="text-white font-semibold">iOS</span>, <span class="text-white font-semibold">Android</span> y <span class="text-white font-semibold">Desktop</span></span>
+        </p>
+    </div>
 </div>
 </section>
 
-<!-- 3. FRANJA DE PLATAFORMAS & 3 PROMESAS (Cálida Cream & Cards de Alta Gama) -->
-<section class="bg-cream py-14 relative overflow-hidden border-y border-mustard/20 text-text-primary">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 mb-8 text-center" data-aos="fade-up">
-    <div class="editorial-badge">
-        <span class="material-symbols-outlined text-mustard text-sm">hub</span>
-        <span>Puedes encontrarnos en estas plataformas</span>
+<!-- 3. SECCIÓN 3: TRÍADA VETIS (Cálida Cream & Enfoque Triangular) -->
+<section class="bg-cream py-14 relative overflow-hidden border-b border-mustard/20 text-text-primary">
+
+<!-- Tríada Triangular Vetis (3 Pilares Interconectados de Alta Gama) -->
+<div class="max-w-4xl mx-auto px-4 sm:px-6 mt-2 mb-4 relative" data-aos="fade-up">
+    <!-- SVG de Conexión Geométrica Triangular Sutil -->
+    <div class="hidden md:block absolute inset-0 pointer-events-none z-0">
+        <svg class="w-full h-full" viewBox="0 0 600 380" fill="none" preserveAspectRatio="xMidYMid meet">
+            <defs>
+                <linearGradient id="triadGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#F6CF2F" stop-opacity="0.5"/>
+                    <stop offset="50%" stop-color="#FFE57F" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#C5A028" stop-opacity="0.5"/>
+                </linearGradient>
+            </defs>
+            <polygon points="300,60 140,290 460,290" stroke="url(#triadGold)" stroke-width="1.5" stroke-dasharray="5 5" fill="rgba(246, 207, 47, 0.02)"/>
+            <circle cx="300" cy="60" r="4" fill="#F6CF2F"/>
+            <circle cx="140" cy="290" r="4" fill="#F6CF2F"/>
+            <circle cx="460" cy="290" r="4" fill="#F6CF2F"/>
+        </svg>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center space-y-4 sm:space-y-6">
+        
+        <!-- VÉRTICE SUPERIOR (Punto 1 Centrado Arriba): Menos Confusión -->
+        <div class="w-full max-w-[260px] sm:max-w-[310px] flex justify-center">
+            <div class="w-full p-4 sm:p-6 rounded-3xl bg-gradient-to-b from-white via-[#FDFBF7] to-white border-2 border-mustard/40 shadow-lg hover:border-mustard hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 text-center flex flex-col items-center justify-between space-y-2.5 sm:space-y-3 group float-slow">
+                <!-- Icono Joya Oro Satinado: Guías y Estructura -->
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-mustard/25 via-mustard/15 to-mustard/5 border-2 border-mustard/50 flex items-center justify-center text-mustard shadow-sm group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-2xl sm:text-3xl">auto_stories</span>
+                </div>
+                <div>
+                    <h3 class="text-base sm:text-lg md:text-xl font-bold text-text-heading group-hover:text-dark-forest transition-colors">
+                        Menos confusión
+                    </h3>
+                </div>
+                <p class="text-[11px] sm:text-xs md:text-sm text-text-secondary leading-snug font-medium">
+                    Información organizada, sin contradicciones y fácil de entender.
+                </p>
+            </div>
+        </div>
+
+        <!-- BASE DEL TRIÁNGULO: 2 Tarjetas estrictamente lado a lado en la MISMA LÍNEA -->
+        <div class="grid grid-cols-2 gap-3 sm:gap-6 w-full max-w-[540px] sm:max-w-[640px] justify-center items-stretch">
+            
+            <!-- VÉRTICE INFERIOR IZQUIERDO (Punto 2): Más Criterio -->
+            <div class="w-full p-4 sm:p-6 rounded-3xl bg-gradient-to-b from-white via-[#FDFBF7] to-white border-2 border-mustard/40 shadow-lg hover:border-mustard hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 text-center flex flex-col items-center justify-between space-y-2.5 sm:space-y-3 group float-medium">
+                <!-- Icono Joya Oro Satinado: Observación y Diagnóstico Preventivo -->
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-mustard/25 via-mustard/15 to-mustard/5 border-2 border-mustard/50 flex items-center justify-center text-mustard shadow-sm group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-2xl sm:text-3xl">troubleshoot</span>
+                </div>
+                <div>
+                    <h3 class="text-base sm:text-lg md:text-xl font-bold text-text-heading group-hover:text-dark-forest transition-colors">
+                        Más criterio
+                    </h3>
+                </div>
+                <p class="text-[11px] sm:text-xs md:text-sm text-text-secondary leading-snug font-medium">
+                    Aprende qué señales observar y qué pasos dar primero.
+                </p>
+            </div>
+
+            <!-- VÉRTICE INFERIOR DERECHO (Punto 3): Mejores Decisiones -->
+            <div class="w-full p-4 sm:p-6 rounded-3xl bg-gradient-to-b from-white via-[#FDFBF7] to-white border-2 border-mustard/40 shadow-lg hover:border-mustard hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 text-center flex flex-col items-center justify-between space-y-2.5 sm:space-y-3 group float-reverse">
+                <!-- Icono Joya Oro Satinado: Seguridad y Confianza Verificada -->
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-mustard/25 via-mustard/15 to-mustard/5 border-2 border-mustard/50 flex items-center justify-center text-mustard shadow-sm group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-2xl sm:text-3xl">verified_user</span>
+                </div>
+                <div>
+                    <h3 class="text-base sm:text-lg md:text-xl font-bold text-text-heading group-hover:text-dark-forest transition-colors">
+                        Mejores decisiones
+                    </h3>
+                </div>
+                <p class="text-[11px] sm:text-xs md:text-sm text-text-secondary leading-snug font-medium">
+                    Actúa con certeza y tranquilidad en cada etapa del cuidado.
+                </p>
+            </div>
+
+        </div>
+
     </div>
 </div>
 
-<div class="relative w-full overflow-hidden flex whitespace-nowrap opacity-90 hover:opacity-100 transition-opacity duration-300">
-<style>
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.animate-marquee {
-  animation: marquee 25s linear infinite;
-}
-</style>
-<div class="animate-marquee flex gap-12 sm:gap-24 items-center text-lg sm:text-2xl font-extrabold tracking-wider uppercase text-text-heading">
-<span>Hotmart</span><span class="text-mustard text-2xl">•</span><span>Amazon Books</span><span class="text-olive text-2xl">•</span><span>Etsy</span><span class="text-terracotta text-2xl">•</span><span>Google Books</span><span class="text-mustard text-2xl">•</span>
-<span>Hotmart</span><span class="text-mustard text-2xl">•</span><span>Amazon Books</span><span class="text-olive text-2xl">•</span><span>Etsy</span><span class="text-terracotta text-2xl">•</span><span>Google Books</span><span class="text-mustard text-2xl">•</span>
-</div>
-</div>
-
-<!-- 3 Promesas de Alta Gama -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 mt-14 grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up">
-    <!-- Promesa 1 -->
-    <div class="card-warm p-8 text-center space-y-3 flex flex-col items-center rounded-3xl">
-        <div class="w-14 h-14 rounded-2xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-text-heading shadow-sm">
-            <span class="material-symbols-outlined text-3xl text-mustard">psychology_alt</span>
+<!-- Frase central de Alta Gama Compacta -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 mt-8 flex justify-center text-center" data-aos="fade-up">
+    <div class="inline-flex items-center gap-3 bg-white/90 backdrop-blur-md px-6 sm:px-8 py-2.5 rounded-full border border-mustard/35 shadow-sm hover:border-mustard hover:shadow-md transition-all duration-300 float-subtle group">
+        <!-- Icono Joya en Oro Satinado con Halo -->
+        <div class="w-6 h-6 rounded-full bg-gradient-to-r from-[#F6CF2F] via-[#FFE57F] to-[#F6CF2F] text-dark-forest flex items-center justify-center shadow-xs border border-white/80 ring-1 ring-mustard/50 flex-shrink-0 group-hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined text-xs font-black">auto_awesome</span>
         </div>
-        <h3 class="text-xl font-bold text-text-heading">Menos confusión</h3>
-        <p class="text-sm text-text-secondary leading-relaxed">Información organizada y fácil de entender.</p>
-    </div>
-    <!-- Promesa 2 -->
-    <div class="card-warm p-8 text-center space-y-3 flex flex-col items-center rounded-3xl">
-        <div class="w-14 h-14 rounded-2xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-text-heading shadow-sm">
-            <span class="material-symbols-outlined text-3xl text-mustard">explore</span>
-        </div>
-        <h3 class="text-xl font-bold text-text-heading">Más criterio</h3>
-        <p class="text-sm text-text-secondary leading-relaxed">Aprende qué observar y qué hacer primero.</p>
-    </div>
-    <!-- Promesa 3 -->
-    <div class="card-warm p-8 text-center space-y-3 flex flex-col items-center rounded-3xl">
-        <div class="w-14 h-14 rounded-2xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-text-heading shadow-sm">
-            <span class="material-symbols-outlined text-3xl text-mustard">verified</span>
-        </div>
-        <h3 class="text-xl font-bold text-text-heading">Mejores decisiones</h3>
-        <p class="text-sm text-text-secondary leading-relaxed">Actúa con más claridad en cada etapa.</p>
-    </div>
-</div>
-
-<!-- Frase central -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 mt-10 flex justify-center text-center" data-aos="fade-up">
-    <div class="inline-flex items-center gap-3 bg-warm-white px-7 py-3 rounded-full border border-mustard/30 shadow-sm">
-        <span class="material-symbols-outlined text-mustard text-lg">auto_awesome</span>
-        <span class="text-xs sm:text-sm font-bold tracking-wide text-text-heading">Entiende mejor. Cuida mejor. Vive mejor junto a tu mascota.</span>
+        <span class="text-xs sm:text-sm font-bold tracking-wide text-text-heading">
+            Entiende mejor <span class="text-mustard px-1">&middot;</span> Cuida mejor <span class="text-mustard px-1">&middot;</span> Vive mejor junto a tu mascota
+        </span>
     </div>
 </div>
 </section>
 
 <!-- 4. EL PROBLEMA PRINCIPAL (Warm White Editorial) -->
 <section class="py-20 sm:py-28 relative overflow-hidden bg-warm-white text-text-primary">
-<div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 space-y-12">
-    <div class="text-center space-y-4 max-w-3xl mx-auto" data-aos="fade-up">
-        <div class="editorial-badge">
-            <span class="material-symbols-outlined text-mustard text-sm">favorite</span>
-            <span>CUIDAR TAMBIÉN ES SABER QUÉ HACER</span>
-        </div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-text-heading tracking-tight leading-tight">
-            Amar a tu mascota no siempre significa <span class="font-serif italic text-mustard">saber cómo ayudarla</span>.
-        </h2>
-        <p class="text-base sm:text-lg text-text-secondary leading-relaxed font-normal">
-            Cuando aparecen dudas sobre alimentación, comportamiento, adaptación, bienestar o primeros cuidados, es fácil terminar saltando entre videos, publicaciones y consejos que se contradicen.
-        </p>
-        <p class="text-base sm:text-lg text-text-secondary leading-relaxed font-normal">
-            El problema no es que no te importe. El problema es que muchas veces nadie te explica qué observar, qué hacer primero y cuándo una situación necesita ayuda profesional.
-        </p>
-    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 space-y-14">
+        <!-- Encabezado Editorial -->
+        <div class="text-center space-y-6 max-w-4xl mx-auto" data-aos="fade-up">
+            <div class="editorial-badge">
+                <span class="material-symbols-outlined text-mustard text-sm">favorite</span>
+                <span>CUIDAR TAMBIÉN ES SABER QUÉ HACER</span>
+            </div>
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-text-heading tracking-tight leading-tight">
+                Amar a tu mascota no siempre significa <span class="font-serif italic text-mustard block sm:inline">saber cómo ayudarla.</span>
+            </h2>
+            
+            <!-- Dual Card Editorial Breakdown con Iconografía Creativa de Gran Formato (Sin Tonos Grises) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 text-left pt-2">
+                <!-- Ficha 1: La realidad de buscar en internet -->
+                <div class="p-7 sm:p-9 rounded-3xl bg-gradient-to-br from-white via-[#FDFBF7] to-mustard/10 border-2 border-mustard/40 shadow-lg space-y-5 hover:border-mustard hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <!-- Gran Icono Creativo Flotante Multicapa y Badge de Contexto -->
+                        <div class="flex items-center justify-between">
+                            <div class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-mustard/30 via-mustard/20 to-mustard/5 border-2 border-mustard/60 flex items-center justify-center text-text-heading shadow-md float-slow group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-4xl sm:text-5xl text-mustard">alt_route</span>
+                                <span class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-mustard text-dark-forest flex items-center justify-center text-xs font-black shadow-md border-2 border-white">
+                                    <span class="material-symbols-outlined text-sm">search</span>
+                                </span>
+                            </div>
+                            <span class="px-3.5 py-1.5 rounded-full bg-mustard/15 border border-mustard/40 text-xs font-bold uppercase tracking-wider text-text-heading">
+                                El Problema
+                            </span>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <h3 class="text-xl sm:text-2xl font-black text-text-heading tracking-tight">
+                                La realidad de buscar en internet
+                            </h3>
+                            <p class="text-xs sm:text-sm font-bold text-mustard uppercase tracking-wide">
+                                Información dispersa y consejos que se contradicen
+                            </p>
+                        </div>
+                        
+                        <p class="text-sm sm:text-base text-text-heading/90 leading-relaxed font-medium">
+                            Cuando aparecen dudas sobre alimentación, comportamiento o bienestar, es fácil terminar saltando entre videos, foros y publicaciones que se contradicen entre sí y generan más incertidumbre.
+                        </p>
+                    </div>
+                    
+                    <div class="pt-3 border-t border-mustard/25 flex items-center gap-2 text-xs font-bold text-text-heading">
+                        <span class="material-symbols-outlined text-mustard text-lg">info</span>
+                        <span>Sobrecarga de información sin guía clara</span>
+                    </div>
+                </div>
 
-    <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
+                <!-- Ficha 2: El verdadero desafío -->
+                <div class="p-7 sm:p-9 rounded-3xl bg-gradient-to-br from-white via-[#FDFBF7] to-mustard/10 border-2 border-mustard/40 shadow-lg space-y-5 hover:border-mustard hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <!-- Gran Icono Creativo Flotante Multicapa y Badge de Contexto -->
+                        <div class="flex items-center justify-between">
+                            <div class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-mustard/30 via-mustard/20 to-mustard/5 border-2 border-mustard/60 flex items-center justify-center text-text-heading shadow-md float-medium group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-4xl sm:text-5xl text-mustard">troubleshoot</span>
+                                <span class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-mustard text-dark-forest flex items-center justify-center text-xs font-black shadow-md border-2 border-white">
+                                    <span class="material-symbols-outlined text-sm">visibility</span>
+                                </span>
+                            </div>
+                            <span class="px-3.5 py-1.5 rounded-full bg-mustard/15 border border-mustard/40 text-xs font-bold uppercase tracking-wider text-text-heading">
+                                El Desafío
+                            </span>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <h3 class="text-xl sm:text-2xl font-black text-text-heading tracking-tight">
+                                El verdadero desafío
+                            </h3>
+                            <p class="text-xs sm:text-sm font-bold text-mustard uppercase tracking-wide">
+                                Criterio clínico, observación y pasos a seguir
+                            </p>
+                        </div>
+                        
+                        <p class="text-sm sm:text-base text-text-heading/90 leading-relaxed font-medium">
+                            El problema no es que no te importe. El problema es que muchas veces nadie te enseña qué señales observar primero, qué hacer en casa y cuándo una situación necesita atención profesional.
+                        </p>
+                    </div>
+                    
+                    <div class="pt-3 border-t border-mustard/25 flex items-center gap-2 text-xs font-bold text-text-heading">
+                        <span class="material-symbols-outlined text-mustard text-lg">verified</span>
+                        <span>Prioridades claras y acompañamiento responsable</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Callout Destacado de Cristal Cálido -->
-    <div class="card-warm p-8 sm:p-12 text-center max-w-4xl mx-auto rounded-3xl border-2 border-mustard/30 relative overflow-hidden" data-aos="fade-up">
-        <span class="material-symbols-outlined text-mustard text-4xl mb-3 block">auto_awesome</span>
-        <blockquote class="text-xl sm:text-2xl font-serif font-bold text-text-heading italic leading-relaxed">
-            “Vetis transforma información dispersa en pasos claros que puedes entender y aplicar.”
-        </blockquote>
-    </div>
+        <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
 
-    <!-- Tres Pequeñas Señales -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto" data-aos="fade-up">
-        <div class="card-warm p-6 flex items-start gap-4 rounded-2xl">
-            <span class="material-symbols-outlined text-mustard text-2xl flex-shrink-0 mt-0.5">help_outline</span>
-            <p class="text-base font-bold text-text-heading">¿Estoy haciendo lo correcto?</p>
+        <!-- Manifesto Central de Alta Gama con Imagen Nítida y Tipografía Fluida de Alto Contraste -->
+        <div class="relative max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border-2 border-mustard/40 group" data-aos="fade-up">
+            <!-- Imagen de fondo 100% Nítida (Sin filtros de desenfoque) -->
+            <img src="../assets/vetis_transforma_manifiesto_bg.webp" alt="Tutor aprendiendo con su mascota" class="absolute inset-0 w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700" />
+            
+            <!-- Capa de Tinte Oscuro con 5-10% más de profundidad para legibilidad garantizada -->
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-forest/98 via-dark-forest/92 to-dark-forest/80"></div>
+            
+            <!-- Badge Flotante en la Esquina Superior Izquierda -->
+            <div class="absolute top-5 left-5 sm:top-7 sm:left-8 z-20 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#F6CF2F] via-[#FFE57F] to-[#F6CF2F] text-dark-forest shadow-[0_4px_20px_rgba(246,207,47,0.4)] border-2 border-white/70 ring-2 ring-mustard/60 float-slow hover:scale-105 transition-transform duration-300">
+                <span class="material-symbols-outlined text-sm font-black">auto_awesome</span>
+                <span class="text-[11px] sm:text-xs font-black uppercase tracking-widest drop-shadow-sm">El Propósito Vetis</span>
+            </div>
+            
+            <!-- Contenido Fluido Centralizado -->
+            <div class="relative z-10 p-8 pt-16 sm:p-14 sm:pt-20 md:p-16 md:pt-20 text-center max-w-3xl mx-auto space-y-5">
+                <!-- Cita Principal (Preservada con máximo protagonismo y separación) -->
+                <blockquote class="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-serif font-extrabold text-white italic leading-snug tracking-wide drop-shadow-[0_3px_15px_rgba(0,0,0,1)]">
+                    “Vetis transforma información dispersa en pasos claros que puedes entender y aplicar.”
+                </blockquote>
+                
+                <!-- Divisor y Etiquetas de Valor (Tamaño reducido y sutil para no competir con la frase) -->
+                <div class="flex items-center justify-center gap-3 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#FFE57F]/90 pt-3 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                    <span class="h-px w-5 sm:w-10 bg-mustard/60"></span>
+                    <span>Enfoque Práctico &middot; Guiado &middot; Responsable</span>
+                    <span class="h-px w-5 sm:w-10 bg-mustard/60"></span>
+                </div>
+            </div>
         </div>
-        <div class="card-warm p-6 flex items-start gap-4 rounded-2xl">
-            <span class="material-symbols-outlined text-olive text-2xl flex-shrink-0 mt-0.5">help_outline</span>
-            <p class="text-base font-bold text-text-heading">¿Esto es normal o debería preocuparme?</p>
-        </div>
-        <div class="card-warm p-6 flex items-start gap-4 rounded-2xl">
-            <span class="material-symbols-outlined text-mustard text-2xl flex-shrink-0 mt-0.5">help_outline</span>
-            <p class="text-base font-bold text-text-heading">¿Qué puedo hacer hoy para ayudarlo?</p>
-        </div>
-    </div>
 
-    <!-- Cierre del bloque -->
-    <div class="text-center pt-4" data-aos="fade-up">
-        <div class="inline-flex items-center gap-3 bg-cream px-7 py-3.5 rounded-full border border-mustard/30 shadow-sm">
-            <span class="material-symbols-outlined text-olive text-xl">verified</span>
-            <span class="text-sm sm:text-base font-bold text-text-heading">Si alguna vez te has hecho estas preguntas, Vetis fue creado para ti.</span>
+        <!-- 3 Fichas de Dudas Frecuentes con Iconografía Creativa Uniforme y Alta Gama -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto" data-aos="fade-up">
+            <!-- Duda 1: Claridad en decisiones -->
+            <div class="p-7 rounded-3xl bg-gradient-to-br from-white via-[#FDFBF7] to-mustard/10 border-2 border-mustard/40 shadow-md hover:border-mustard hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-5 group">
+                <div class="space-y-4">
+                    <!-- Icono Creativo Uniforme 1: Orientación con Validación -->
+                    <div class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-mustard/25 via-mustard/15 to-mustard/5 border-2 border-mustard/50 flex items-center justify-center text-text-heading shadow-sm float-slow group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl sm:text-4xl text-mustard">explore</span>
+                        <span class="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-mustard text-dark-forest flex items-center justify-center text-[10px] font-black shadow-sm border-2 border-white">
+                            <span class="material-symbols-outlined text-xs font-bold">done_all</span>
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-lg sm:text-xl font-bold text-text-heading group-hover:text-dark-forest transition-colors leading-snug tracking-tight">
+                        ¿Estoy haciendo lo correcto?
+                    </h3>
+                    <p class="text-xs sm:text-sm text-text-heading/85 leading-relaxed font-medium">
+                        Elimina la incertidumbre frente a consejos contradictorios y avanza con la seguridad de seguir pautas claras.
+                    </p>
+                </div>
+                
+                <div class="pt-3 border-t border-mustard/25 flex items-center gap-2 text-xs font-bold text-text-heading">
+                    <span class="material-symbols-outlined text-mustard text-base">verified</span>
+                    <span>Claridad en decisiones</span>
+                </div>
+            </div>
+
+            <!-- Duda 2: Detección y prevención -->
+            <div class="p-7 rounded-3xl bg-gradient-to-br from-white via-[#FDFBF7] to-mustard/10 border-2 border-mustard/40 shadow-md hover:border-mustard hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-5 group">
+                <div class="space-y-4">
+                    <!-- Icono Creativo Uniforme 2: Ojo Dorado con Pequeña Alerta -->
+                    <div class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-mustard/25 via-mustard/15 to-mustard/5 border-2 border-mustard/50 flex items-center justify-center text-text-heading shadow-sm float-medium group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl sm:text-4xl text-mustard">visibility</span>
+                        <span class="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-mustard text-dark-forest flex items-center justify-center text-[10px] font-black shadow-sm border-2 border-white">
+                            <span class="material-symbols-outlined text-xs font-black">priority_high</span>
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-lg sm:text-xl font-bold text-text-heading group-hover:text-dark-forest transition-colors leading-snug tracking-tight">
+                        ¿Esto es normal o debería preocuparme?
+                    </h3>
+                    <p class="text-xs sm:text-sm text-text-heading/85 leading-relaxed font-medium">
+                        Aprende a reconocer señales tempranas, cambios de conducta y momentos clave para consultar a un profesional.
+                    </p>
+                </div>
+                
+                <div class="pt-3 border-t border-mustard/25 flex items-center gap-2 text-xs font-bold text-text-heading">
+                    <span class="material-symbols-outlined text-mustard text-base">verified</span>
+                    <span>Detección y prevención</span>
+                </div>
+            </div>
+
+            <!-- Duda 3: Acción inmediata -->
+            <div class="p-7 rounded-3xl bg-gradient-to-br from-white via-[#FDFBF7] to-mustard/10 border-2 border-mustard/40 shadow-md hover:border-mustard hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-5 group">
+                <div class="space-y-4">
+                    <!-- Icono Creativo Uniforme 3: Rutinas Prácticas y Hábitos Diarios de Acción -->
+                    <div class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-mustard/25 via-mustard/15 to-mustard/5 border-2 border-mustard/50 flex items-center justify-center text-text-heading shadow-sm float-reverse group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl sm:text-4xl text-mustard">fact_check</span>
+                        <span class="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-mustard text-dark-forest flex items-center justify-center text-[10px] font-black shadow-sm border-2 border-white">
+                            <span class="material-symbols-outlined text-xs font-black">today</span>
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-lg sm:text-xl font-bold text-text-heading group-hover:text-dark-forest transition-colors leading-snug tracking-tight">
+                        ¿Qué puedo hacer hoy para ayudarlo?
+                    </h3>
+                    <p class="text-xs sm:text-sm text-text-heading/85 leading-relaxed font-medium">
+                        Encuentra rutinas prácticas, hábitos saludables y soluciones concretas para aplicar en tu día a día.
+                    </p>
+                </div>
+                
+                <div class="pt-3 border-t border-mustard/25 flex items-center gap-2 text-xs font-bold text-text-heading">
+                    <span class="material-symbols-outlined text-mustard text-base">verified</span>
+                    <span>Acción inmediata</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cierre del bloque de Alta Gama -->
+        <div class="text-center pt-3" data-aos="fade-up">
+            <div class="inline-flex items-center gap-3.5 bg-gradient-to-r from-white via-[#FDFBF7] to-white px-7 sm:px-9 py-3.5 rounded-full border-2 border-mustard/40 shadow-md hover:border-mustard hover:shadow-xl transition-all duration-300 float-subtle">
+                <!-- Icono Joya Oro Satinado con Relieve Blanco y Halo Dorado -->
+                <div class="w-8 h-8 rounded-full bg-gradient-to-r from-[#F6CF2F] via-[#FFE57F] to-[#F6CF2F] text-dark-forest flex items-center justify-center shadow-md border-2 border-white/80 ring-1 ring-mustard/60 flex-shrink-0">
+                    <span class="material-symbols-outlined text-base font-black">verified</span>
+                </div>
+                <span class="text-sm sm:text-base font-bold text-text-heading">Si alguna vez te has hecho estas preguntas, Vetis fue creado para darte claridad.</span>
+            </div>
         </div>
     </div>
-</div>
 </section>
 
 <!-- 5. ¿POR QUÉ ELEGIR VETIS DIGITAL? (Dark Luxury #0C3528) -->
@@ -705,55 +940,95 @@
         </p>
     </div>
 
-    <!-- 4 Tarjetas Oscuras de Lujo en Rejilla 2x2 -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        <!-- Tarjeta 1 -->
-        <div class="card-dark-luxury p-8 sm:p-10 space-y-4 flex flex-col justify-between rounded-3xl" data-aos="fade-up">
+    <!-- 4 Tarjetas Oscuras de Lujo en Rejilla 2x2 con Barras Horizontales Centradas y Flotantes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        <!-- Tarjeta 1: Entiendes el porqué -->
+        <div class="card-dark-luxury p-6 sm:p-8 space-y-5 rounded-3xl group hover:border-mustard/50 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up">
             <div class="space-y-4">
-                <div class="w-14 h-14 rounded-2xl bg-mustard/15 border border-mustard/40 flex items-center justify-center text-mustard shadow-lg">
-                    <span class="material-symbols-outlined text-3xl">lightbulb</span>
+                <!-- Barra Horizontal Flotante Leve con Icono y Texto Centrado -->
+                <div class="w-full flex items-center justify-center p-3 sm:p-3.5 rounded-2xl bg-gradient-to-r from-mustard/15 via-mustard/25 to-mustard/15 border border-mustard/35 shadow-md float-subtle group-hover:border-mustard/60 group-hover:bg-mustard/20 transition-all duration-300">
+                    <div class="inline-flex items-center gap-3">
+                        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shadow-sm shrink-0">
+                            <span class="material-symbols-outlined text-2xl sm:text-2xl">psychology_alt</span>
+                        </div>
+                        <div class="text-left">
+                            <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-mustard block">01 / Comprensión</span>
+                            <span class="text-xs text-slate-300 font-medium block">Causa y contexto</span>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold text-white">Entiendes el porqué</h3>
-                <p class="text-base text-slate-300 leading-relaxed">
+
+                <h3 class="text-xl sm:text-2xl font-bold text-white leading-tight">Entiendes el porqué</h3>
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
                     No recibirás instrucciones sueltas. Comprenderás qué puede estar ocurriendo y por qué una recomendación tiene sentido.
                 </p>
             </div>
         </div>
 
-        <!-- Tarjeta 2 -->
-        <div class="card-dark-luxury p-8 sm:p-10 space-y-4 flex flex-col justify-between rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+        <!-- Tarjeta 2: Sabes qué hacer primero -->
+        <div class="card-dark-luxury p-6 sm:p-8 space-y-5 rounded-3xl group hover:border-mustard/50 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
             <div class="space-y-4">
-                <div class="w-14 h-14 rounded-2xl bg-mustard/15 border border-mustard/40 flex items-center justify-center text-mustard shadow-lg">
-                    <span class="material-symbols-outlined text-3xl">format_list_numbered</span>
+                <!-- Barra Horizontal Flotante Leve con Icono y Texto Centrado -->
+                <div class="w-full flex items-center justify-center p-3 sm:p-3.5 rounded-2xl bg-gradient-to-r from-mustard/15 via-mustard/25 to-mustard/15 border border-mustard/35 shadow-md float-subtle-delay group-hover:border-mustard/60 group-hover:bg-mustard/20 transition-all duration-300">
+                    <div class="inline-flex items-center gap-3">
+                        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shadow-sm shrink-0">
+                            <span class="material-symbols-outlined text-2xl sm:text-2xl">format_list_numbered</span>
+                        </div>
+                        <div class="text-left">
+                            <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-mustard block">02 / Aplicación</span>
+                            <span class="text-xs text-slate-300 font-medium block">Prioridad y pasos</span>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold text-white">Sabes qué hacer primero</h3>
-                <p class="text-base text-slate-300 leading-relaxed">
+
+                <h3 class="text-xl sm:text-2xl font-bold text-white leading-tight">Sabes qué hacer primero</h3>
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
                     Cada guía convierte temas amplios en pasos concretos, prioridades y acciones que puedes aplicar en casa.
                 </p>
             </div>
         </div>
 
-        <!-- Tarjeta 3 -->
-        <div class="card-dark-luxury p-8 sm:p-10 space-y-4 flex flex-col justify-between rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+        <!-- Tarjeta 3: Aprendes qué observar -->
+        <div class="card-dark-luxury p-6 sm:p-8 space-y-5 rounded-3xl group hover:border-mustard/50 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
             <div class="space-y-4">
-                <div class="w-14 h-14 rounded-2xl bg-mustard/15 border border-mustard/40 flex items-center justify-center text-mustard shadow-lg">
-                    <span class="material-symbols-outlined text-3xl">visibility</span>
+                <!-- Barra Horizontal Flotante Leve con Icono y Texto Centrado -->
+                <div class="w-full flex items-center justify-center p-3 sm:p-3.5 rounded-2xl bg-gradient-to-r from-mustard/15 via-mustard/25 to-mustard/15 border border-mustard/35 shadow-md float-subtle group-hover:border-mustard/60 group-hover:bg-mustard/20 transition-all duration-300">
+                    <div class="inline-flex items-center gap-3">
+                        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shadow-sm shrink-0">
+                            <span class="material-symbols-outlined text-2xl sm:text-2xl">visibility</span>
+                        </div>
+                        <div class="text-left">
+                            <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-mustard block">03 / Observación</span>
+                            <span class="text-xs text-slate-300 font-medium block">Señales y evolución</span>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold text-white">Aprendes qué observar</h3>
-                <p class="text-base text-slate-300 leading-relaxed">
+
+                <h3 class="text-xl sm:text-2xl font-bold text-white leading-tight">Aprendes qué observar</h3>
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
                     Reconoce cambios, señales y avances para tomar decisiones con más criterio y comunicarte mejor con un profesional.
                 </p>
             </div>
         </div>
 
-        <!-- Tarjeta 4 -->
-        <div class="card-dark-luxury p-8 sm:p-10 space-y-4 flex flex-col justify-between rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+        <!-- Tarjeta 4: Encuentras ayuda según la etapa -->
+        <div class="card-dark-luxury p-6 sm:p-8 space-y-5 rounded-3xl group hover:border-mustard/50 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
             <div class="space-y-4">
-                <div class="w-14 h-14 rounded-2xl bg-mustard/15 border border-mustard/40 flex items-center justify-center text-mustard shadow-lg">
-                    <span class="material-symbols-outlined text-3xl">pets</span>
+                <!-- Barra Horizontal Flotante Leve con Icono y Texto Centrado -->
+                <div class="w-full flex items-center justify-center p-3 sm:p-3.5 rounded-2xl bg-gradient-to-r from-mustard/15 via-mustard/25 to-mustard/15 border border-mustard/35 shadow-md float-subtle-delay group-hover:border-mustard/60 group-hover:bg-mustard/20 transition-all duration-300">
+                    <div class="inline-flex items-center gap-3">
+                        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shadow-sm shrink-0">
+                            <span class="material-symbols-outlined text-2xl sm:text-2xl">pets</span>
+                        </div>
+                        <div class="text-left">
+                            <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-mustard block">04 / Acompañamiento</span>
+                            <span class="text-xs text-slate-300 font-medium block">Guía para cada momento</span>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold text-white">Encuentras ayuda según la etapa</h3>
-                <p class="text-base text-slate-300 leading-relaxed">
+
+                <h3 class="text-xl sm:text-2xl font-bold text-white leading-tight">Encuentras ayuda según la etapa</h3>
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
                     Desde la llegada de un cachorro o gato hasta dificultades de convivencia, prevención y bienestar diario.
                 </p>
             </div>
@@ -786,42 +1061,48 @@
         </p>
     </div>
 
-    <!-- 3 Pasos Estructurados -->
+    <!-- 3 Pasos Estructurados con Ilustraciones 3D -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <!-- Paso 1 -->
-        <div class="card-warm p-8 text-left space-y-4 relative overflow-hidden rounded-3xl" data-aos="fade-up">
-            <div class="text-5xl font-black text-mustard/30 font-serif absolute top-4 right-6">01</div>
-            <div class="w-12 h-12 rounded-xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard mb-4 shadow-sm">
-                <span class="material-symbols-outlined text-2xl">psychology</span>
+        <!-- Paso 1: Entender -->
+        <div class="card-warm p-8 text-left space-y-4 relative overflow-hidden rounded-3xl group border border-mustard/20 bg-warm-white/90 shadow-sm hover:shadow-2xl hover:border-mustard/50 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up">
+            <div class="text-5xl font-black text-mustard/30 font-serif absolute top-4 right-6 select-none">01</div>
+            <div class="space-y-4">
+                <div class="w-full h-40 flex items-center justify-center relative my-2">
+                    <img src="../assets/metodo_entender.webp" alt="Entender" class="h-32 sm:h-36 w-auto max-w-[200px] object-contain drop-shadow-xl float-slow group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <h3 class="text-2xl font-bold text-text-heading">Entender</h3>
+                <p class="text-sm sm:text-base text-text-secondary leading-relaxed">
+                    Primero comprendes qué está ocurriendo, qué factores pueden influir y cuáles son los errores más frecuentes.
+                </p>
             </div>
-            <h3 class="text-2xl font-bold text-text-heading">Entender</h3>
-            <p class="text-sm sm:text-base text-text-secondary leading-relaxed">
-                Primero comprendes qué está ocurriendo, qué factores pueden influir y cuáles son los errores más frecuentes.
-            </p>
         </div>
 
-        <!-- Paso 2 -->
-        <div class="card-warm p-8 text-left space-y-4 relative overflow-hidden rounded-3xl" data-aos="fade-up" data-aos-delay="100">
-            <div class="text-5xl font-black text-mustard/30 font-serif absolute top-4 right-6">02</div>
-            <div class="w-12 h-12 rounded-xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard mb-4 shadow-sm">
-                <span class="material-symbols-outlined text-2xl">checklist_rtl</span>
+        <!-- Paso 2: Aplicar -->
+        <div class="card-warm p-8 text-left space-y-4 relative overflow-hidden rounded-3xl group border border-mustard/20 bg-warm-white/90 shadow-sm hover:shadow-2xl hover:border-mustard/50 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-5xl font-black text-mustard/30 font-serif absolute top-4 right-6 select-none">02</div>
+            <div class="space-y-4">
+                <div class="w-full h-40 flex items-center justify-center relative my-2">
+                    <img src="../assets/metodo_aplicar.webp" alt="Aplicar" class="h-32 sm:h-36 w-auto max-w-[200px] object-contain drop-shadow-xl float-medium group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <h3 class="text-2xl font-bold text-text-heading">Aplicar</h3>
+                <p class="text-sm sm:text-base text-text-secondary leading-relaxed">
+                    Después conviertes esa comprensión en acciones pequeñas, realistas y adaptables a tu rutina.
+                </p>
             </div>
-            <h3 class="text-2xl font-bold text-text-heading">Aplicar</h3>
-            <p class="text-sm sm:text-base text-text-secondary leading-relaxed">
-                Después conviertes esa comprensión en acciones pequeñas, realistas y adaptables a tu rutina.
-            </p>
         </div>
 
-        <!-- Paso 3 -->
-        <div class="card-warm p-8 text-left space-y-4 relative overflow-hidden rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-            <div class="text-5xl font-black text-mustard/30 font-serif absolute top-4 right-6">03</div>
-            <div class="w-12 h-12 rounded-xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard mb-4 shadow-sm">
-                <span class="material-symbols-outlined text-2xl">monitoring</span>
+        <!-- Paso 3: Observar -->
+        <div class="card-warm p-8 text-left space-y-4 relative overflow-hidden rounded-3xl group border border-mustard/20 bg-warm-white/90 shadow-sm hover:shadow-2xl hover:border-mustard/50 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-5xl font-black text-mustard/30 font-serif absolute top-4 right-6 select-none">03</div>
+            <div class="space-y-4">
+                <div class="w-full h-40 flex items-center justify-center relative my-2">
+                    <img src="../assets/metodo_observar.webp" alt="Observar" class="h-32 sm:h-36 w-auto max-w-[200px] object-contain drop-shadow-xl float-reverse group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <h3 class="text-2xl font-bold text-text-heading">Observar</h3>
+                <p class="text-sm sm:text-base text-text-secondary leading-relaxed">
+                    Finalmente aprendes qué cambios mirar, cómo evaluar avances y cuándo es necesario pedir ayuda.
+                </p>
             </div>
-            <h3 class="text-2xl font-bold text-text-heading">Observar</h3>
-            <p class="text-sm sm:text-base text-text-secondary leading-relaxed">
-                Finalmente aprendes qué cambios mirar, cómo evaluar avances y cuándo es necesario pedir ayuda.
-            </p>
         </div>
     </div>
 
@@ -856,7 +1137,7 @@
         <div class="card-dark-luxury overflow-hidden flex flex-col justify-between rounded-3xl" data-aos="fade-up">
             <div>
                 <div class="h-56 overflow-hidden relative">
-                    <img src="../assets/4to bloque Imagen de Biblioteca PAG INICIO.webp" alt="Biblioteca Vetis" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    <img src="../assets/biblioteca_vetis_card.webp" alt="Biblioteca Vetis" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                     <div class="absolute inset-0 bg-gradient-to-t from-[#08241B] via-transparent to-transparent"></div>
                     <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold bg-mustard text-vetis-dark shadow">Guías Completas</span>
                 </div>
@@ -883,7 +1164,7 @@
         <div class="card-dark-luxury overflow-hidden flex flex-col justify-between rounded-3xl" data-aos="fade-up" data-aos-delay="100">
             <div>
                 <div class="h-56 overflow-hidden relative">
-                    <img src="../assets/Imagen de Audioteca Gratis Regalo INICIO PAG.webp" alt="Recursos Gratuitos Vetis" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    <img src="../assets/recursos_gratuitos_card.webp" alt="Recursos Gratuitos Vetis" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                     <div class="absolute inset-0 bg-gradient-to-t from-[#08241B] via-transparent to-transparent"></div>
                     <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold bg-olive text-white shadow">100% Gratis</span>
                 </div>
@@ -910,7 +1191,7 @@
         <div class="card-dark-luxury overflow-hidden flex flex-col justify-between rounded-3xl" data-aos="fade-up" data-aos-delay="200">
             <div>
                 <div class="h-56 overflow-hidden relative">
-                    <img src="../assets/Hero Nosotros.webp" alt="Orientación Online Vetis" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    <img src="../assets/orientacion_online_card.webp" alt="Orientación Online Vetis" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                     <div class="absolute inset-0 bg-gradient-to-t from-[#08241B] via-transparent to-transparent"></div>
                     <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full text-xs font-bold bg-terracotta text-white shadow">Personalizado</span>
                 </div>
@@ -952,13 +1233,13 @@
         </p>
     </div>
 
-    <!-- Rejilla 2x2 de Categorías -->
+    <!-- Rejilla 2x2 de Categorías con Ilustraciones 3D -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        <!-- Categoría 1 -->
-        <div class="card-warm p-8 sm:p-10 space-y-4 flex flex-col justify-between rounded-3xl" data-aos="fade-up">
+        <!-- Categoría 1: Primeros pasos -->
+        <div class="card-warm p-8 sm:p-10 space-y-6 flex flex-col justify-between rounded-3xl group border border-mustard/20 bg-warm-white/90 shadow-sm hover:shadow-2xl hover:border-mustard/50 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up">
             <div class="space-y-4">
-                <div class="w-14 h-14 rounded-2xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
-                    <span class="material-symbols-outlined text-3xl">home_app_logo</span>
+                <div class="w-full h-48 sm:h-52 flex items-center justify-center relative">
+                    <img src="../assets/etapa_primeros_pasos.webp" alt="Primeros pasos" class="h-40 sm:h-44 w-auto max-w-[240px] object-contain drop-shadow-xl float-slow group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <h3 class="text-2xl font-bold text-text-heading">Primeros pasos</h3>
                 <p class="text-base text-text-secondary leading-relaxed">
@@ -972,11 +1253,11 @@
             </div>
         </div>
 
-        <!-- Categoría 2 -->
-        <div class="card-warm p-8 sm:p-10 space-y-4 flex flex-col justify-between rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+        <!-- Categoría 2: Conducta y convivencia -->
+        <div class="card-warm p-8 sm:p-10 space-y-6 flex flex-col justify-between rounded-3xl group border border-mustard/20 bg-warm-white/90 shadow-sm hover:shadow-2xl hover:border-mustard/50 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
             <div class="space-y-4">
-                <div class="w-14 h-14 rounded-2xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
-                    <span class="material-symbols-outlined text-3xl">psychology</span>
+                <div class="w-full h-48 sm:h-52 flex items-center justify-center relative">
+                    <img src="../assets/etapa_conducta_convivencia.webp" alt="Conducta y convivencia" class="h-40 sm:h-44 w-auto max-w-[240px] object-contain drop-shadow-xl float-medium group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <h3 class="text-2xl font-bold text-text-heading">Conducta y convivencia</h3>
                 <p class="text-base text-text-secondary leading-relaxed">
@@ -990,11 +1271,11 @@
             </div>
         </div>
 
-        <!-- Categoría 3 -->
-        <div class="card-warm p-8 sm:p-10 space-y-4 flex flex-col justify-between rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+        <!-- Categoría 3: Bienestar y prevención -->
+        <div class="card-warm p-8 sm:p-10 space-y-6 flex flex-col justify-between rounded-3xl group border border-mustard/20 bg-warm-white/90 shadow-sm hover:shadow-2xl hover:border-mustard/50 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
             <div class="space-y-4">
-                <div class="w-14 h-14 rounded-2xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
-                    <span class="material-symbols-outlined text-3xl">health_and_safety</span>
+                <div class="w-full h-48 sm:h-52 flex items-center justify-center relative">
+                    <img src="../assets/etapa_bienestar_prevencion.webp" alt="Bienestar y prevención" class="h-40 sm:h-44 w-auto max-w-[240px] object-contain drop-shadow-xl float-reverse group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <h3 class="text-2xl font-bold text-text-heading">Bienestar y prevención</h3>
                 <p class="text-base text-text-secondary leading-relaxed">
@@ -1008,11 +1289,11 @@
             </div>
         </div>
 
-        <!-- Categoría 4 -->
-        <div class="card-warm p-8 sm:p-10 space-y-4 flex flex-col justify-between rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+        <!-- Categoría 4: Organización del cuidado -->
+        <div class="card-warm p-8 sm:p-10 space-y-6 flex flex-col justify-between rounded-3xl group border border-mustard/20 bg-warm-white/90 shadow-sm hover:shadow-2xl hover:border-mustard/50 hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
             <div class="space-y-4">
-                <div class="w-14 h-14 rounded-2xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
-                    <span class="material-symbols-outlined text-3xl">calendar_month</span>
+                <div class="w-full h-48 sm:h-52 flex items-center justify-center relative">
+                    <img src="../assets/etapa_organizacion_cuidado.webp" alt="Organización del cuidado" class="h-40 sm:h-44 w-auto max-w-[240px] object-contain drop-shadow-xl float-slow group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <h3 class="text-2xl font-bold text-text-heading">Organización del cuidado</h3>
                 <p class="text-base text-text-secondary leading-relaxed">
