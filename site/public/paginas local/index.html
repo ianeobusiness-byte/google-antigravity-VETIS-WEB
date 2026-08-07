@@ -167,6 +167,64 @@
         transform: translateY(-2px);
     }
 
+    /* ============================================
+       BOTONES HERO: EDITORIAL LUXURY CHUNKY (64px, R:18px, Max-w: 380px)
+    ============================================ */
+    .btn-hero-primary-mustard {
+        min-height: 64px;
+        border-radius: 18px;
+        padding-left: 20px;
+        padding-right: 16px;
+        background: linear-gradient(180deg, #FAD058 0%, #F0BC48 50%, #E5A62E 100%) !important;
+        color: #0A261D !important;
+        font-weight: 700;
+        font-size: 1.05rem;
+        letter-spacing: -0.01em;
+        border: 1px solid rgba(255, 255, 255, 0.45) !important;
+        box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.45), 0 4px 8px -2px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.6) !important;
+        transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
+        max-width: 380px;
+    }
+    .btn-hero-primary-mustard:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(180deg, #FBD870 0%, #F5C658 50%, #EDB03C 100%) !important;
+        box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.5), 0 6px 12px -2px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.7) !important;
+        color: #0A261D !important;
+    }
+
+    .btn-hero-secondary-darkglass {
+        min-height: 64px;
+        border-radius: 18px;
+        padding-left: 20px;
+        padding-right: 16px;
+        background: linear-gradient(180deg, #102E22 0%, #071F17 100%) !important;
+        color: #FFFFFF !important;
+        font-weight: 600;
+        font-size: 1.02rem;
+        letter-spacing: -0.01em;
+        border: 1.5px solid rgba(230, 169, 51, 0.7) !important;
+        box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.08) !important;
+        transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
+        max-width: 380px;
+    }
+    .btn-hero-secondary-darkglass:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(180deg, #163B2C 0%, #0B291F 100%) !important;
+        border-color: rgba(246, 207, 47, 0.95) !important;
+        box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
+        color: #FFFFFF !important;
+    }
+
     /* Badges Editoriales con Animación Flotante Suave */
     @keyframes badgeFloat {
         0%, 100% { transform: translateY(0px); }
@@ -528,70 +586,125 @@
 </div>
 
 <!-- 2. HERO PRINCIPAL (Verde Oscuro Editorial & Destello Dorado) -->
-<section class="relative w-full max-w-full overflow-hidden bg-gradient-to-b from-[#0C3528] via-[#0A2D22] to-[#08241B] pt-28 sm:pt-36 pb-4 text-white border-b border-mustard/20">
-<!-- Hero Background Image -->
-<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-    <img class="w-full h-full object-cover object-center opacity-25 brightness-90 contrast-105" alt="Tutor compartiendo con su mascota" src="../assets/IMAGEN HERO.webp"/>
-    <div class="absolute inset-0 bg-gradient-to-t from-[#08241B] via-[#0C3528]/85 to-[#0C3528]/60"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-[#08241B]/90 via-transparent to-[#08241B]/90"></div>
-</div>
+<section class="relative w-full max-w-full overflow-hidden bg-[#08241B] text-white border-b border-mustard/20">
 
-<!-- Contenedor Principal de Contenido del Hero (Espacioso y con respiración) -->
-<div class="relative z-20 w-full max-w-5xl mx-auto px-4 sm:px-6 pt-4 pb-12 sm:pb-16 flex flex-col items-center text-center space-y-7 sm:space-y-9">
-    <!-- Pill Badge Superior -->
-    <div data-aos="fade-down" data-aos-duration="700">
-        <div class="editorial-badge-dark">
-            <span class="material-symbols-outlined text-mustard text-sm">pets</span>
-            <span>EDUCACIÓN PRÁCTICA PARA TUTORES DE PERROS Y GATOS</span>
+<!-- Bloque Superior Hero con Fondo Fotográfico -->
+<div class="relative w-full overflow-hidden bg-gradient-to-b from-[#0C3528] via-[#0A2D22] to-[#08241B] pt-28 sm:pt-36">
+    <!-- Hero Background Image (Termina antes de la franja de plataformas - Máxima Claridad y Brillo) -->
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <picture>
+            <source media="(min-width: 640px)" srcset="../assets/IMAGEN HERO.webp">
+            <img class="w-full h-full object-cover object-[center_50%] sm:object-center opacity-95 sm:opacity-40 brightness-105 contrast-105" alt="Tutor compartiendo con su mascota" src="../assets/hero_mobile.webp"/>
+        </picture>
+        <!-- Degradado equilibrado superior, inferior y laterales para fundir suavemente la imagen -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#08241B] via-transparent via-50% to-[#08241B]"></div>
+        <div class="absolute top-0 inset-x-0 h-44 sm:h-56 bg-gradient-to-b from-[#08241B] via-[#08241B]/80 to-transparent"></div>
+        <div class="absolute bottom-0 inset-x-0 h-32 sm:h-40 bg-gradient-to-t from-[#08241B] to-transparent"></div>
+        <!-- Degradados Laterales (Izquierdo y Derecho) -->
+        <div class="absolute inset-y-0 left-0 w-20 sm:w-44 lg:w-64 bg-gradient-to-r from-[#08241B] via-[#08241B]/60 to-transparent"></div>
+        <div class="absolute inset-y-0 right-0 w-20 sm:w-44 lg:w-64 bg-gradient-to-l from-[#08241B] via-[#08241B]/60 to-transparent"></div>
+    </div>
+
+    <!-- Contenedor Principal de Contenido del Hero (Espacioso y con respiración) -->
+    <div class="relative z-20 w-full max-w-5xl mx-auto px-4 sm:px-6 pt-4 pb-10 sm:pb-14 flex flex-col items-center text-center space-y-6 sm:space-y-8">
+        <!-- Pill Badge Superior -->
+        <div data-aos="fade-down" data-aos-duration="700">
+            <div class="editorial-badge-dark backdrop-blur-md shadow-lg">
+                <span class="material-symbols-outlined text-mustard text-sm">pets</span>
+                <span>EDUCACIÓN PRÁCTICA PARA TUTORES DE PERROS Y GATOS</span>
+            </div>
+        </div>
+
+        <!-- Main Heading -->
+        <div class="space-y-5 sm:space-y-6 max-w-4xl" data-aos="fade-up" data-aos-duration="800">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.18] text-white tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.95)]">
+                Entiende qué necesita tu mascota y actúa <span class="font-serif italic text-mustard drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)]">con más seguridad</span>.
+            </h1>
+            <p class="text-base sm:text-xl text-slate-100 font-medium leading-relaxed max-w-3xl mx-auto drop-shadow-[0_3px_12px_rgba(0,0,0,0.95)]">
+                Guías prácticas, recursos gratuitos y orientación profesional para cuidar mejor a tu mascota y resolver dudas concretas con más claridad.
+            </p>
+        </div>
+
+        <!-- Call to Action Buttons (Chunky Luxury Editorial Mockup Replica con Animación AOS) -->
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-2 w-full px-2" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+            <!-- Botón Primario: Explorar la Biblioteca -->
+            <a href="https://vetisdigital.com/biblioteca/" class="btn-hero-primary-mustard group">
+                <!-- Icono Libro Abierto con Líneas de Texto en Ambas Páginas -->
+                <svg class="w-8 h-8 shrink-0 text-[#0A261D] transition-transform duration-200 group-hover:scale-105" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Páginas del Libro -->
+                    <path d="M4 8C8.5 6 12 6.5 16 9C20 6.5 23.5 6 28 8V24C23.5 22 20 22.5 16 25C12 22.5 8.5 22 4 24V8Z" />
+                    <path d="M16 9V25" />
+                    <!-- Relieve de Páginas Inferior -->
+                    <path d="M4 24C8.5 22 12 22.5 16 25M28 24C23.5 22 20 22.5 16 25" />
+                    <!-- Líneas Escritas Página Izquierda -->
+                    <path d="M7.5 12.5H13" stroke-width="1.8" />
+                    <path d="M7.5 16H11.5" stroke-width="1.8" />
+                    <path d="M7.5 19.5H13" stroke-width="1.8" />
+                    <!-- Líneas Escritas Página Derecha (Diferentes / Asimétricas) -->
+                    <path d="M19 12.5H24.5" stroke-width="1.8" />
+                    <path d="M19 16H23" stroke-width="1.8" />
+                    <path d="M19 19.5H21" stroke-width="1.8" />
+                </svg>
+                <span class="flex-1 text-center font-bold text-[16px] sm:text-[17px] text-[#0A261D] leading-tight">Explorar la Biblioteca</span>
+                <!-- Flecha Circular -->
+                <span class="w-9 h-9 rounded-full bg-black/10 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:translate-x-1">
+                    <span class="material-symbols-outlined text-[1.25rem] text-[#0A261D]">arrow_forward</span>
+                </span>
+            </a>
+
+            <!-- Botón Secundario: Explorar recursos gratuitos -->
+            <a href="https://vetisdigital.com/recursos-gratis/" class="btn-hero-secondary-darkglass group">
+                <!-- Icono Documento con Descarga y Checkmark en Círculo -->
+                <svg class="w-8 h-8 shrink-0 text-[#E5A62E] transition-transform duration-200 group-hover:scale-105" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Hoja con Pliegue -->
+                    <path d="M6 3.5H16L22 9.5V14M6 3.5C4.89543 3.5 4 4.39543 4 5.5V20.5C4 21.6046 4.89543 22.5 6 22.5H9.5" />
+                    <path d="M16 3.5V9.5H22" />
+                    <!-- Líneas de Texto -->
+                    <path d="M8 9.5H12.5M8 13H11.5" />
+                    <!-- Flecha de Descarga en Esquina Inferior Izquierda -->
+                    <path d="M7 16V24.5M7 24.5L4 21.5M7 24.5L10 21.5" stroke-width="2" />
+                    <!-- Checkmark en Círculo en Esquina Inferior Derecha -->
+                    <circle cx="19" cy="19.5" r="5" stroke-width="1.8" />
+                    <path d="M16.5 19.5L18.2 21.2L21.5 17.8" stroke-width="2" />
+                </svg>
+                <span class="flex-1 text-center font-semibold text-[16px] sm:text-[17px] text-white leading-tight">Explorar recursos gratuitos</span>
+                <!-- Flecha Circular -->
+                <span class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:translate-x-1">
+                    <span class="material-symbols-outlined text-[1.25rem] text-white">arrow_forward</span>
+                </span>
+            </a>
+        </div>
+
+        <!-- Formación Triangular de Confianza con Animación Flotante -->
+        <div class="flex flex-col items-center gap-2.5 pt-2" data-aos="fade-up" data-aos-delay="150">
+            <!-- Vértice Superior: Perros y gatos -->
+            <div class="float-subtle">
+                <div class="editorial-badge-dark px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide border border-mustard/35 bg-black/40 backdrop-blur-md shadow-md inline-flex items-center gap-2">
+                    <span class="material-symbols-outlined text-mustard text-base">pets</span>
+                    <span>Perros y gatos</span>
+                </div>
+            </div>
+            <!-- Base del Triángulo: 2 Etiquetas Inferiores -->
+            <div class="flex flex-wrap justify-center items-center gap-2.5 sm:gap-5">
+                <div class="float-subtle-delay">
+                    <div class="editorial-badge-dark px-3.5 py-1.5 text-xs sm:text-sm font-semibold tracking-wide border border-mustard/35 bg-black/40 backdrop-blur-md shadow-md inline-flex items-center gap-2">
+                        <span class="material-symbols-outlined text-mustard text-base">verified</span>
+                        <span>Guías digitales prácticas</span>
+                    </div>
+                </div>
+                <div class="float-subtle" style="animation-delay: 1.8s;">
+                    <div class="editorial-badge-dark px-3.5 py-1.5 text-xs sm:text-sm font-semibold tracking-wide border border-mustard/35 bg-black/40 backdrop-blur-md shadow-md inline-flex items-center gap-2">
+                        <span class="material-symbols-outlined text-mustard text-base">bolt</span>
+                        <span>Acceso inmediato</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <!-- Main Heading -->
-    <div class="space-y-5 sm:space-y-6 max-w-4xl" data-aos="fade-up" data-aos-duration="800">
-        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.18] text-white tracking-tight drop-shadow-md">
-            Entiende qué necesita tu mascota y actúa <span class="font-serif italic text-mustard">con más seguridad</span>.
-        </h1>
-        <p class="text-base sm:text-xl text-slate-200 font-normal leading-relaxed max-w-3xl mx-auto drop-shadow">
-            Guías prácticas, recursos gratuitos y orientación profesional para ayudarte a cuidar mejor, resolver dudas concretas y dejar de depender de consejos contradictorios.
-        </p>
-    </div>
-
-    <!-- Call to Action Buttons -->
-    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2 w-full sm:w-auto px-2">
-        <a href="https://vetisdigital.com/biblioteca/" class="btn-primary-warm inline-flex items-center justify-center gap-3 px-8 sm:px-11 py-4 sm:py-5 rounded-2xl text-base sm:text-lg w-full sm:w-auto">
-            <span class="material-symbols-outlined text-[1.5rem]">menu_book</span>
-            Explorar la biblioteca Vetis
-        </a>
-        <a href="https://vetisdigital.com/recursos-gratis/" class="btn-secondary-dark inline-flex items-center justify-center gap-3 px-8 sm:px-11 py-4 sm:py-5 rounded-2xl text-base sm:text-lg w-full sm:w-auto">
-            <span class="material-symbols-outlined text-[1.5rem] text-mustard">redeem</span>
-            Descargar recursos gratis
-        </a>
-    </div>
-
-    <!-- Línea de Confianza Limpia y Editorial -->
-    <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-sm sm:text-base text-slate-300 font-medium pt-2">
-        <span class="inline-flex items-center gap-2">
-            <span class="material-symbols-outlined text-mustard text-lg">verified</span>
-            Guías digitales prácticas
-        </span>
-        <span class="inline-flex items-center gap-2">
-            <span class="material-symbols-outlined text-mustard text-lg">bolt</span>
-            Acceso inmediato
-        </span>
-        <span class="inline-flex items-center gap-2">
-            <span class="material-symbols-outlined text-mustard text-lg">pets</span>
-            Perros y gatos
-        </span>
-    </div>
-
-    <!-- Frase pequeña inferior -->
-    <p class="text-xs sm:text-sm text-slate-400 max-w-2xl mx-auto font-medium pt-1">
-        Información clara para tomar mejores decisiones. Sin alarmismo, sin complicaciones y sin promesas irreales.
-    </p>
 </div>
 
 <!-- Franja de Plataformas Amplia, Majestuosa y con Presencia (Fondo Verde Oscuro Blindado) -->
-<div class="relative z-20 w-full max-w-full overflow-hidden border-t border-mustard/20 bg-black/20 backdrop-blur-sm py-10 sm:py-12" data-aos="fade-up">
+<div class="relative z-20 w-full max-w-full overflow-hidden border-t border-mustard/20 bg-black/25 backdrop-blur-sm py-10 sm:py-12" data-aos="fade-up">
     <div class="max-w-7xl mx-auto px-4 mb-6 sm:mb-7 text-center">
         <div class="editorial-badge-dark inline-flex">
             <span class="material-symbols-outlined text-mustard text-sm">hub</span>
@@ -601,8 +714,8 @@
 
     <div class="w-full max-w-full overflow-hidden flex whitespace-nowrap opacity-90 hover:opacity-100 transition-opacity duration-300">
         <div class="animate-marquee flex gap-12 sm:gap-24 items-center py-2">
-            <img src="../assets/logo_hotmart.webp" alt="Hotmart" class="h-20 sm:h-28 md:h-32 w-auto object-contain inline-block drop-shadow-lg"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_amazon_books.webp" alt="Amazon Books" class="h-8 sm:h-12 md:h-14 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_etsy.webp" alt="Etsy" class="h-14 sm:h-20 md:h-24 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_google_books.webp" alt="Google Books" class="h-14 sm:h-20 md:h-24 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span>
-            <img src="../assets/logo_hotmart.webp" alt="Hotmart" class="h-20 sm:h-28 md:h-32 w-auto object-contain inline-block drop-shadow-lg"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_amazon_books.webp" alt="Amazon Books" class="h-8 sm:h-12 md:h-14 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_etsy.webp" alt="Etsy" class="h-14 sm:h-20 md:h-24 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_google_books.webp" alt="Google Books" class="h-14 sm:h-20 md:h-24 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span>
+            <img src="../assets/logo_google_books.webp" alt="Google Books" class="h-14 sm:h-20 md:h-24 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_etsy.webp" alt="Etsy" class="h-14 sm:h-20 md:h-24 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_amazon_books.webp" alt="Amazon Books" class="h-8 sm:h-12 md:h-14 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_hotmart.webp" alt="Hotmart" class="h-20 sm:h-28 md:h-32 w-auto object-contain inline-block drop-shadow-lg"/><span class="text-mustard text-2xl">•</span>
+            <img src="../assets/logo_google_books.webp" alt="Google Books" class="h-14 sm:h-20 md:h-24 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_etsy.webp" alt="Etsy" class="h-14 sm:h-20 md:h-24 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_amazon_books.webp" alt="Amazon Books" class="h-8 sm:h-12 md:h-14 w-auto object-contain inline-block drop-shadow-md"/><span class="text-mustard text-2xl">•</span><img src="../assets/logo_hotmart.webp" alt="Hotmart" class="h-20 sm:h-28 md:h-32 w-auto object-contain inline-block drop-shadow-lg"/><span class="text-mustard text-2xl">•</span>
         </div>
     </div>
 
@@ -610,7 +723,7 @@
     <div class="mt-6 sm:mt-7 text-center">
         <p class="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-slate-300">
             <span class="material-symbols-outlined text-mustard text-base sm:text-lg">devices</span>
-            <span>También disponible en <span class="text-white font-semibold">iOS</span>, <span class="text-white font-semibold">Android</span> y <span class="text-white font-semibold">Desktop</span></span>
+            <span>Accede desde <span class="text-white font-semibold">celular</span>, <span class="text-white font-semibold">tablet</span> o <span class="text-white font-semibold">computador</span></span>
         </p>
     </div>
 </div>
