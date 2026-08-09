@@ -113,25 +113,83 @@
         color: #0C3528 !important;
     }
 
-    /* Botón Secundario Elegante */
-    .btn-secondary-light {
-        background: #FAF6F0 !important;
-        color: #0C3528 !important;
-        border: 1.5px solid rgba(246, 207, 47, 0.4) !important;
+    /* Botón Secundario Oscuro / Verde (#102E22 con borde dorado) */
+    .btn-secondary-dark, .btn-secondary-green {
+        background: linear-gradient(180deg, #102E22 0%, #071F17 100%) !important;
+        color: #FFFFFF !important;
+        border: 1.5px solid rgba(230, 169, 51, 0.7) !important;
         font-weight: 700;
         border-radius: 0.875rem;
-        box-shadow: 0 2px 8px rgba(12, 53, 40, 0.04);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.08) !important;
         transition: all 0.25s ease;
         display: inline-flex;
         align-items: center;
         justify-content: center;
     }
-    .btn-secondary-light:hover {
-        background: #F3EDE2 !important;
-        border-color: #F6CF2F !important;
+    .btn-secondary-dark:hover, .btn-secondary-green:hover {
+        background: linear-gradient(180deg, #163B2C 0%, #0B291F 100%) !important;
+        border-color: rgba(246, 207, 47, 0.95) !important;
         transform: translateY(-2px);
-        box-shadow: 0 6px 18px rgba(12, 53, 40, 0.08);
-        color: #0C3528 !important;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
+        color: #FFFFFF !important;
+    }
+
+    /* ============================================
+       BOTONES HERO: EDITORIAL LUXURY CHUNKY (64px, R:18px, Max-w: 380px)
+    ============================================ */
+    .btn-hero-primary-mustard {
+        min-height: 64px;
+        border-radius: 18px;
+        padding-left: 20px;
+        padding-right: 16px;
+        background: linear-gradient(180deg, #FAD058 0%, #F0BC48 50%, #E5A62E 100%) !important;
+        color: #0A261D !important;
+        font-weight: 700;
+        font-size: 1.05rem;
+        letter-spacing: -0.01em;
+        border: 1px solid rgba(255, 255, 255, 0.45) !important;
+        box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.45), 0 4px 8px -2px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.6) !important;
+        transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
+        max-width: 380px;
+    }
+    .btn-hero-primary-mustard:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(180deg, #FBD870 0%, #F5C658 50%, #EDB03C 100%) !important;
+        box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.5), 0 6px 12px -2px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.7) !important;
+        color: #0A261D !important;
+    }
+
+    .btn-hero-secondary-darkglass {
+        min-height: 64px;
+        border-radius: 18px;
+        padding-left: 20px;
+        padding-right: 16px;
+        background: linear-gradient(180deg, #102E22 0%, #071F17 100%) !important;
+        color: #FFFFFF !important;
+        font-weight: 600;
+        font-size: 1.02rem;
+        letter-spacing: -0.01em;
+        border: 1.5px solid rgba(230, 169, 51, 0.7) !important;
+        box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.08) !important;
+        transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
+        max-width: 380px;
+    }
+    .btn-hero-secondary-darkglass:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(180deg, #163B2C 0%, #0B291F 100%) !important;
+        border-color: rgba(246, 207, 47, 0.95) !important;
+        box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
+        color: #FFFFFF !important;
     }
 
     /* Badges Editoriales */
@@ -379,12 +437,53 @@
             Explora guías, checklists y organizadores prácticos creados por profesionales para ayudarte a entender y acompañar el bienestar de tu perro o gato día a día.
         </p>
 
-        <div class="pt-2 flex flex-wrap justify-center gap-4">
-            <a href="#recursos" class="btn-primary-warm px-8 py-4 text-base font-bold shadow-xl">
-                Explorar recursos gratis <span class="material-symbols-outlined text-lg ml-1">arrow_downward</span>
+        <!-- Botones Hero de Alta Gama (Primario Dorado y Secundario Verde según diseño de Inicio) -->
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4 w-full px-2" data-aos="fade-up" data-aos-delay="100">
+            <!-- Botón Primario: Explorar recursos gratuitos (Dorado) -->
+            <a href="#recursos" class="btn-hero-primary-mustard group">
+                <!-- Icono Documento con Descarga y Checkmark en Círculo -->
+                <svg class="w-8 h-8 shrink-0 text-[#0A261D] transition-transform duration-200 group-hover:scale-105" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Hoja con Pliegue -->
+                    <path d="M6 3.5H16L22 9.5V14M6 3.5C4.89543 3.5 4 4.39543 4 5.5V20.5C4 21.6046 4.89543 22.5 6 22.5H9.5" />
+                    <path d="M16 3.5V9.5H22" />
+                    <!-- Líneas de Texto -->
+                    <path d="M8 9.5H12.5M8 13H11.5" />
+                    <!-- Flecha de Descarga en Esquina Inferior Izquierda -->
+                    <path d="M7 16V24.5M7 24.5L4 21.5M7 24.5L10 21.5" stroke-width="2" />
+                    <!-- Checkmark en Círculo en Esquina Inferior Derecha -->
+                    <circle cx="19" cy="19.5" r="5" stroke-width="2" />
+                    <path d="M17 19.5L18.5 21L21.5 18" stroke-width="2" />
+                </svg>
+                <span class="flex-1 text-center font-bold text-[16px] sm:text-[17px] text-[#0A261D] leading-tight">Explorar recursos gratuitos</span>
+                <!-- Flecha Circular -->
+                <span class="w-9 h-9 rounded-full bg-black/10 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:translate-y-0.5">
+                    <span class="material-symbols-outlined text-[1.25rem] text-[#0A261D]">arrow_downward</span>
+                </span>
             </a>
-            <a href="https://vetisdigital.com/biblioteca/" class="btn-secondary-light px-8 py-4 text-base font-bold shadow-xl">
-                Ver biblioteca completa
+
+            <!-- Botón Secundario: Explorar la Biblioteca (Verde Oscuro con Borde Dorado) -->
+            <a href="https://vetisdigital.com/biblioteca/" class="btn-hero-secondary-darkglass group">
+                <!-- Icono Libro Abierto con Líneas de Texto en Ambas Páginas -->
+                <svg class="w-8 h-8 shrink-0 text-[#E5A62E] transition-transform duration-200 group-hover:scale-105" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Páginas del Libro -->
+                    <path d="M4 8C8.5 6 12 6.5 16 9C20 6.5 23.5 6 28 8V24C23.5 22 20 22.5 16 25C12 22.5 8.5 22 4 24V8Z" />
+                    <path d="M16 9V25" />
+                    <!-- Relieve de Páginas Inferior -->
+                    <path d="M4 24C8.5 22 12 22.5 16 25M28 24C23.5 22 20 22.5 16 25" />
+                    <!-- Líneas Escritas Página Izquierda -->
+                    <path d="M7.5 12.5H13" stroke-width="1.8" />
+                    <path d="M7.5 16H11.5" stroke-width="1.8" />
+                    <path d="M7.5 19.5H13" stroke-width="1.8" />
+                    <!-- Líneas Escritas Página Derecha -->
+                    <path d="M19 12.5H24.5" stroke-width="1.8" />
+                    <path d="M19 16H23" stroke-width="1.8" />
+                    <path d="M19 19.5H21" stroke-width="1.8" />
+                </svg>
+                <span class="flex-1 text-center font-bold text-[16px] sm:text-[17px] text-white leading-tight">Explorar la Biblioteca</span>
+                <!-- Flecha Circular -->
+                <span class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:translate-x-1">
+                    <span class="material-symbols-outlined text-[1.25rem] text-[#E5A62E]">arrow_forward</span>
+                </span>
             </a>
         </div>
     </div>
@@ -455,95 +554,127 @@
             <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <!-- Cuadrícula: 2 columnas en Móvil, 2 en Tablet y 4 en Desktop -->
+        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             <!-- Recurso 1: Checklist Gato -->
-            <div class="card-warm rounded-3xl overflow-hidden bg-warm-white flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-warm rounded-2xl sm:rounded-3xl overflow-hidden bg-warm-white flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                 <div>
                     <div class="relative aspect-[4/3] overflow-hidden bg-beige">
                         <img class="w-full h-full object-cover" alt="Checklist Bienvenida Gato" src="../assets/blog_cat_sleeping_1773871257989.webp"/>
-                        <div class="absolute top-4 left-4 bg-[#0C3528] text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-md">
+                        <div class="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 bg-[#0C3528] text-white px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs font-bold flex items-center gap-1 shadow-md">
                             <span class="material-symbols-outlined text-mustard text-xs">pets</span> Felinos
                         </div>
-                        <div class="absolute bottom-4 right-4 bg-mustard text-vetis-dark px-3 py-1 rounded-full text-xs font-extrabold shadow-md">
+                        <div class="absolute bottom-2.5 right-2.5 sm:bottom-4 sm:right-4 bg-mustard text-vetis-dark px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs font-extrabold shadow-md">
                             100% Gratis
                         </div>
                     </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-xl font-bold text-text-heading">Checklist de Bienvenida para un Gato en Casa</h3>
-                        <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Todo lo que necesitas preparar y considerar para recibir de forma segura y sin estrés al nuevo integrante felino de tu hogar.</p>
-                        <div class="flex items-center gap-4 text-xs font-semibold text-text-muted pt-2">
-                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-sm">description</span> Guía PDF</span>
-                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-sm">verified</span> Descarga Directa</span>
+                    <div class="p-3.5 sm:p-5 space-y-1.5 sm:space-y-3">
+                        <h3 class="text-xs sm:text-base font-bold text-text-heading leading-snug line-clamp-2">Checklist de Bienvenida para un Gato en Casa</h3>
+                        <p class="text-text-secondary text-[11px] sm:text-xs leading-relaxed font-normal line-clamp-3">Todo lo que necesitas preparar y considerar para recibir de forma segura y sin estrés al nuevo integrante felino de tu hogar.</p>
+                        <div class="flex items-center gap-2 sm:gap-4 text-[10px] sm:text-xs font-semibold text-text-muted pt-1 flex-wrap">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-xs sm:text-sm">description</span> Guía PDF</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-xs sm:text-sm">verified</span> Directa</span>
                         </div>
                     </div>
                 </div>
-                <div class="p-6 pt-0 border-t border-mustard/15 mt-4">
-                    <form class="flex flex-col gap-2.5 mt-4" onsubmit="event.preventDefault(); alert('¡Gracias! Tu recurso ha sido enviado a tu correo.');">
-                        <input type="email" placeholder="Escribe tu correo electrónico" required class="w-full bg-cream border border-mustard/30 rounded-xl px-4 py-3 text-xs text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-mustard"/>
-                        <button type="submit" class="btn-primary-warm w-full py-3 text-xs font-bold">
-                            <span class="material-symbols-outlined text-base mr-1">download</span> Descargar Gratis
+                <div class="p-3.5 sm:p-5 pt-0 border-t border-mustard/15 mt-2">
+                    <form class="flex flex-col gap-2 mt-3" onsubmit="event.preventDefault(); alert('¡Gracias! Tu recurso ha sido enviado a tu correo.');">
+                        <input type="email" placeholder="Tu correo electrónico" required class="w-full bg-cream border border-mustard/30 rounded-lg sm:rounded-xl px-2.5 py-2 sm:px-3 sm:py-2.5 text-[11px] sm:text-xs text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-mustard"/>
+                        <button type="submit" class="btn-primary-warm w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-bold flex items-center justify-center gap-1">
+                            <span class="material-symbols-outlined text-sm sm:text-base">download</span> <span class="hidden sm:inline">Descargar</span> Gratis
                         </button>
                     </form>
                 </div>
             </div>
 
             <!-- Recurso 2: Checklist Cachorro -->
-            <div class="card-warm rounded-3xl overflow-hidden bg-warm-white flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-warm rounded-2xl sm:rounded-3xl overflow-hidden bg-warm-white flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                 <div>
                     <div class="relative aspect-[4/3] overflow-hidden bg-beige">
-                        <img class="w-full h-full object-cover" alt="Checklist Cachorro en Casa" src="../assets/que_encontraras_ebooks_1773873599303.webp"/>
-                        <div class="absolute top-4 left-4 bg-[#0C3528] text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-md">
+                        <img class="w-full h-full object-cover" alt="Checklist Cachorro en Casa" src="../assets/etapa_primeros_pasos.webp"/>
+                        <div class="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 bg-[#0C3528] text-white px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs font-bold flex items-center gap-1 shadow-md">
                             <span class="material-symbols-outlined text-mustard text-xs">pets</span> Caninos
                         </div>
-                        <div class="absolute bottom-4 right-4 bg-mustard text-vetis-dark px-3 py-1 rounded-full text-xs font-extrabold shadow-md">
+                        <div class="absolute bottom-2.5 right-2.5 sm:bottom-4 sm:right-4 bg-mustard text-vetis-dark px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs font-extrabold shadow-md">
                             100% Gratis
                         </div>
                     </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-xl font-bold text-text-heading">Checklist Básica para un Cachorro en Casa</h3>
-                        <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Los elementos esenciales, primeros cuidados de salud y pautas de socialización indispensables para las primeras semanas.</p>
-                        <div class="flex items-center gap-4 text-xs font-semibold text-text-muted pt-2">
-                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-sm">description</span> Guía PDF</span>
-                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-sm">verified</span> Descarga Directa</span>
+                    <div class="p-3.5 sm:p-5 space-y-1.5 sm:space-y-3">
+                        <h3 class="text-xs sm:text-base font-bold text-text-heading leading-snug line-clamp-2">Checklist Básica para un Cachorro en Casa</h3>
+                        <p class="text-text-secondary text-[11px] sm:text-xs leading-relaxed font-normal line-clamp-3">Los elementos esenciales, primeros cuidados de salud y pautas de socialización indispensables para las primeras semanas.</p>
+                        <div class="flex items-center gap-2 sm:gap-4 text-[10px] sm:text-xs font-semibold text-text-muted pt-1 flex-wrap">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-xs sm:text-sm">description</span> Guía PDF</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-xs sm:text-sm">verified</span> Directa</span>
                         </div>
                     </div>
                 </div>
-                <div class="p-6 pt-0 border-t border-mustard/15 mt-4">
-                    <form class="flex flex-col gap-2.5 mt-4" onsubmit="event.preventDefault(); alert('¡Gracias! Tu recurso ha sido enviado a tu correo.');">
-                        <input type="email" placeholder="Escribe tu correo electrónico" required class="w-full bg-cream border border-mustard/30 rounded-xl px-4 py-3 text-xs text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-mustard"/>
-                        <button type="submit" class="btn-primary-warm w-full py-3 text-xs font-bold">
-                            <span class="material-symbols-outlined text-base mr-1">download</span> Descargar Gratis
+                <div class="p-3.5 sm:p-5 pt-0 border-t border-mustard/15 mt-2">
+                    <form class="flex flex-col gap-2 mt-3" onsubmit="event.preventDefault(); alert('¡Gracias! Tu recurso ha sido enviado a tu correo.');">
+                        <input type="email" placeholder="Tu correo electrónico" required class="w-full bg-cream border border-mustard/30 rounded-lg sm:rounded-xl px-2.5 py-2 sm:px-3 sm:py-2.5 text-[11px] sm:text-xs text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-mustard"/>
+                        <button type="submit" class="btn-primary-warm w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-bold flex items-center justify-center gap-1">
+                            <span class="material-symbols-outlined text-sm sm:text-base">download</span> <span class="hidden sm:inline">Descargar</span> Gratis
                         </button>
                     </form>
                 </div>
             </div>
 
             <!-- Recurso 3: Calendario Mensual -->
-            <div class="card-warm rounded-3xl overflow-hidden bg-warm-white flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-warm rounded-2xl sm:rounded-3xl overflow-hidden bg-warm-white flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
                 <div>
                     <div class="relative aspect-[4/3] overflow-hidden bg-beige">
-                        <img class="w-full h-full object-cover" alt="Calendario mensual de cuidados" src="../assets/que_encontraras_ebooks_1773873599303.webp"/>
-                        <div class="absolute top-4 left-4 bg-[#0C3528] text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-md">
+                        <img class="w-full h-full object-cover" alt="Calendario mensual de cuidados" src="../assets/etapa_organizacion_cuidado.webp"/>
+                        <div class="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 bg-[#0C3528] text-white px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs font-bold flex items-center gap-1 shadow-md">
                             <span class="material-symbols-outlined text-mustard text-xs">calendar_month</span> Organizador
                         </div>
-                        <div class="absolute bottom-4 right-4 bg-mustard text-vetis-dark px-3 py-1 rounded-full text-xs font-extrabold shadow-md">
+                        <div class="absolute bottom-2.5 right-2.5 sm:bottom-4 sm:right-4 bg-mustard text-vetis-dark px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs font-extrabold shadow-md">
                             100% Gratis
                         </div>
                     </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-xl font-bold text-text-heading">Calendario Mensual de Cuidados</h3>
-                        <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Un práctico planificador mensual para organizar desparasitaciones, vacunas, higiene y rutinas de paseos y juegos.</p>
-                        <div class="flex items-center gap-4 text-xs font-semibold text-text-muted pt-2">
-                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-sm">description</span> Calendario PDF</span>
-                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-sm">verified</span> Descarga Directa</span>
+                    <div class="p-3.5 sm:p-5 space-y-1.5 sm:space-y-3">
+                        <h3 class="text-xs sm:text-base font-bold text-text-heading leading-snug line-clamp-2">Calendario Mensual de Cuidados</h3>
+                        <p class="text-text-secondary text-[11px] sm:text-xs leading-relaxed font-normal line-clamp-3">Un práctico planificador mensual para organizar desparasitaciones, vacunas, higiene y rutinas de paseos y juegos.</p>
+                        <div class="flex items-center gap-2 sm:gap-4 text-[10px] sm:text-xs font-semibold text-text-muted pt-1 flex-wrap">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-xs sm:text-sm">description</span> Calendario PDF</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-xs sm:text-sm">verified</span> Directa</span>
                         </div>
                     </div>
                 </div>
-                <div class="p-6 pt-0 border-t border-mustard/15 mt-4">
-                    <form class="flex flex-col gap-2.5 mt-4" onsubmit="event.preventDefault(); alert('¡Gracias! Tu recurso ha sido enviado a tu correo.');">
-                        <input type="email" placeholder="Escribe tu correo electrónico" required class="w-full bg-cream border border-mustard/30 rounded-xl px-4 py-3 text-xs text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-mustard"/>
-                        <button type="submit" class="btn-primary-warm w-full py-3 text-xs font-bold">
-                            <span class="material-symbols-outlined text-base mr-1">download</span> Descargar Gratis
+                <div class="p-3.5 sm:p-5 pt-0 border-t border-mustard/15 mt-2">
+                    <form class="flex flex-col gap-2 mt-3" onsubmit="event.preventDefault(); alert('¡Gracias! Tu recurso ha sido enviado a tu correo.');">
+                        <input type="email" placeholder="Tu correo electrónico" required class="w-full bg-cream border border-mustard/30 rounded-lg sm:rounded-xl px-2.5 py-2 sm:px-3 sm:py-2.5 text-[11px] sm:text-xs text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-mustard"/>
+                        <button type="submit" class="btn-primary-warm w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-bold flex items-center justify-center gap-1">
+                            <span class="material-symbols-outlined text-sm sm:text-base">download</span> <span class="hidden sm:inline">Descargar</span> Gratis
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Recurso 4: Señales de Alerta y Bienestar -->
+            <div class="card-warm rounded-2xl sm:rounded-3xl overflow-hidden bg-warm-white flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
+                <div>
+                    <div class="relative aspect-[4/3] overflow-hidden bg-beige">
+                        <img class="w-full h-full object-cover" alt="Guía de Señales de Alerta y Bienestar" src="../assets/recurso_gratis_perros_gatos.webp"/>
+                        <div class="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 bg-[#0C3528] text-white px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs font-bold flex items-center gap-1 shadow-md">
+                            <span class="material-symbols-outlined text-mustard text-xs">health_and_safety</span> Prevención
+                        </div>
+                        <div class="absolute bottom-2.5 right-2.5 sm:bottom-4 sm:right-4 bg-mustard text-vetis-dark px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs font-extrabold shadow-md">
+                            100% Gratis
+                        </div>
+                    </div>
+                    <div class="p-3.5 sm:p-5 space-y-1.5 sm:space-y-3">
+                        <h3 class="text-xs sm:text-base font-bold text-text-heading leading-snug line-clamp-2">Guía de Señales de Alerta y Bienestar</h3>
+                        <p class="text-text-secondary text-[11px] sm:text-xs leading-relaxed font-normal line-clamp-3">Aprende a reconocer a tiempo signos sutiles de dolor o malestar y cuándo acudir al veterinario.</p>
+                        <div class="flex items-center gap-2 sm:gap-4 text-[10px] sm:text-xs font-semibold text-text-muted pt-1 flex-wrap">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-xs sm:text-sm">description</span> Guía PDF</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-mustard text-xs sm:text-sm">verified</span> Directa</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-3.5 sm:p-5 pt-0 border-t border-mustard/15 mt-2">
+                    <form class="flex flex-col gap-2 mt-3" onsubmit="event.preventDefault(); alert('¡Gracias! Tu recurso ha sido enviado a tu correo.');">
+                        <input type="email" placeholder="Tu correo electrónico" required class="w-full bg-cream border border-mustard/30 rounded-lg sm:rounded-xl px-2.5 py-2 sm:px-3 sm:py-2.5 text-[11px] sm:text-xs text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-mustard"/>
+                        <button type="submit" class="btn-primary-warm w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-bold flex items-center justify-center gap-1">
+                            <span class="material-symbols-outlined text-sm sm:text-base">download</span> <span class="hidden sm:inline">Descargar</span> Gratis
                         </button>
                     </form>
                 </div>
@@ -556,70 +687,73 @@
     </div>
 </section>
 
-<!-- Sección: Da el siguiente paso con la Biblioteca Vetis -->
-<section class="py-16 sm:py-24 bg-gradient-to-b from-[#0C3528] to-[#08241B] text-warm-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7 space-y-6" data-aos="fade-right">
-                <div class="editorial-badge-dark inline-flex">
-                    <span class="material-symbols-outlined text-mustard text-sm">auto_stories</span>
-                    <span>Productos Digitales Completos</span>
-                </div>
-                
-                <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
-                    Da el siguiente paso con la <span class="font-serif italic text-mustard">Biblioteca Vetis</span>
-                </h2>
-                
-                <p class="text-slate-200 text-base sm:text-lg leading-relaxed font-normal">
-                    Si el recurso gratuito te ayudó, en la Biblioteca Vetis encontrarás libros digitales estructurados, bonos prácticos y herramientas completas para profundizar en el cuidado y la convivencia con tu mascota.
-                </p>
+<!-- Sección: Da el siguiente paso con la Biblioteca Vetis (Banner Editorial con Imagen de Fondo) -->
+<section class="py-12 sm:py-16 relative overflow-hidden bg-warm-white text-white border-t border-mustard/20">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10" data-aos="fade-up">
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-mustard/40 min-h-[520px] sm:min-h-[580px] lg:min-h-[620px] flex items-center">
+        <!-- Imagen de Fondo Enfocada en el iPad, Perro, Gato y Tutora -->
+        <img src="../assets/tutor_perro_gato_tablet.webp" alt="Tutora aprendiendo con su perro y gato desde la tablet en Vetis" class="absolute inset-0 w-full h-full object-cover object-[center_65%] sm:object-[center_58%] lg:object-[70%_52%] brightness-105 contrast-105 transition-transform duration-700 hover:scale-105" />
+        
+        <!-- Degradado Superior para Suavizar la Parte Superior de la Imagen -->
+        <div class="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-[#08241B]/90 via-[#08241B]/40 to-transparent pointer-events-none z-[1]"></div>
 
-                <div class="space-y-4 pt-2">
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-white/10 border border-mustard/30 flex items-center justify-center text-mustard shrink-0">
-                            <span class="material-symbols-outlined text-xl">menu_book</span>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold text-base">Ebooks Completos</h4>
-                            <p class="text-slate-300 text-xs sm:text-sm font-normal">Contenido exhaustivo, claro y ordenado para aplicar paso a paso en el hogar.</p>
-                        </div>
-                    </div>
+        <!-- Overlay Gradiente Lateral e Inferior para Máxima Legibilidad -->
+        <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[#08241B]/95 via-[#08241B]/75 sm:via-[#08241B]/55 via-45% to-transparent pointer-events-none z-[1]"></div>
 
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-white/10 border border-mustard/30 flex items-center justify-center text-mustard shrink-0">
-                            <span class="material-symbols-outlined text-xl">card_giftcard</span>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold text-base">Bonos Exclusivos</h4>
-                            <p class="text-slate-300 text-xs sm:text-sm font-normal">Checklists imprimibles, plantillas de seguimiento y mini guías temáticas incluidas.</p>
-                        </div>
-                    </div>
+        <!-- Contenido Directo por Encima -->
+        <div class="relative z-10 p-6 sm:p-10 lg:p-14 max-w-xl lg:max-w-[560px] space-y-4 sm:space-y-5 text-left text-white">
+            <div class="editorial-badge-dark inline-flex">
+                <span class="material-symbols-outlined text-mustard text-sm">auto_stories</span>
+                <span>PRODUCTOS DIGITALES COMPLETOS</span>
+            </div>
+            
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight drop-shadow-md">
+                Da el siguiente paso con la <span class="font-serif italic text-mustard">Biblioteca Vetis</span>
+            </h2>
+            
+            <p class="text-slate-200 text-xs sm:text-sm md:text-base leading-relaxed font-normal drop-shadow-sm">
+                Si el recurso gratuito te ayudó, en la Biblioteca Vetis encontrarás libros digitales estructurados, bonos prácticos y herramientas completas para profundizar en el cuidado y la convivencia con tu mascota.
+            </p>
 
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-white/10 border border-mustard/30 flex items-center justify-center text-mustard shrink-0">
-                            <span class="material-symbols-outlined text-xl">bolt</span>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold text-base">Acceso Inmediato de por Vida</h4>
-                            <p class="text-slate-300 text-xs sm:text-sm font-normal">Consulta tus materiales desde tu celular, tablet o computador cuando quieras.</p>
-                        </div>
+            <!-- 3 Beneficios Clave con Iconos -->
+            <div class="space-y-3 pt-1">
+                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-100 font-semibold drop-shadow-sm">
+                    <span class="w-7 h-7 rounded-lg bg-mustard/25 border border-mustard/50 flex items-center justify-center text-mustard shrink-0 shadow-xs mt-0.5">
+                        <span class="material-symbols-outlined text-base">menu_book</span>
+                    </span>
+                    <div>
+                        <span class="text-white font-bold block text-sm">Ebooks Completos</span>
+                        <span class="text-slate-300 text-xs font-normal">Contenido exhaustivo, claro y ordenado para aplicar paso a paso en el hogar.</span>
                     </div>
                 </div>
-
-                <div class="pt-4">
-                    <a href="https://vetisdigital.com/biblioteca/" class="btn-primary-warm px-8 py-4 text-sm font-bold shadow-xl">
-                        Explorar Biblioteca Completa <span class="material-symbols-outlined text-base ml-1">arrow_forward</span>
-                    </a>
+                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-100 font-semibold drop-shadow-sm">
+                    <span class="w-7 h-7 rounded-lg bg-mustard/25 border border-mustard/50 flex items-center justify-center text-mustard shrink-0 shadow-xs mt-0.5">
+                        <span class="material-symbols-outlined text-base">card_giftcard</span>
+                    </span>
+                    <div>
+                        <span class="text-white font-bold block text-sm">Bonos Exclusivos</span>
+                        <span class="text-slate-300 text-xs font-normal">Checklists imprimibles, plantillas de seguimiento y mini guías temáticas incluidas.</span>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3 text-xs sm:text-sm text-slate-100 font-semibold drop-shadow-sm">
+                    <span class="w-7 h-7 rounded-lg bg-mustard/25 border border-mustard/50 flex items-center justify-center text-mustard shrink-0 shadow-xs mt-0.5">
+                        <span class="material-symbols-outlined text-base">bolt</span>
+                    </span>
+                    <div>
+                        <span class="text-white font-bold block text-sm">Acceso Inmediato de por Vida</span>
+                        <span class="text-slate-300 text-xs font-normal">Consulta tus materiales desde tu celular, tablet o computador cuando quieras.</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="lg:col-span-5" data-aos="fade-left">
-                <div class="card-warm p-4 rounded-3xl bg-white/5 border border-mustard/30 shadow-2xl">
-                    <img src="../assets/Imagen-de-Audioteca-Gratis-Regalo-INICIO-PAG-1.webp" alt="Biblioteca Vetis Productos Digitales" class="w-full h-auto object-cover rounded-2xl" />
-                </div>
+            <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <a href="https://vetisdigital.com/biblioteca/" class="btn-primary-warm px-8 sm:px-9 py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-bold shadow-lg">
+                    Explorar Biblioteca Completa <span class="material-symbols-outlined text-base ml-1">arrow_forward</span>
+                </a>
             </div>
         </div>
     </div>
+</div>
 </section>
 
 <!-- Sección: Cierre de Confianza (Fondo Crema) -->

@@ -389,11 +389,11 @@
         </div>
         
         <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
-            Todo el cuidado de tu mascota, organizado en <span class="font-serif italic text-mustard">un solo lugar</span>
+            Menos cosas que recordar. Más claridad para <span class="font-serif italic text-mustard">cuidar a tu mascota</span>
         </h1>
         
         <p class="text-base sm:text-xl text-slate-200 font-normal leading-relaxed max-w-2xl mx-auto">
-            Registra información importante, organiza rutinas, recibe recordatorios y consulta recursos prácticos para cuidar a tu perro o gato con más claridad.
+            Organiza rutinas, recibe recordatorios y toma mejores decisiones con un seguimiento simple.
         </p>
 
         <div class="pt-4 flex flex-col items-center gap-4">
@@ -477,78 +477,163 @@
 
         <!-- Phone Mockup Container -->
         <div class="flex justify-center" data-aos="zoom-in" data-aos-delay="150">
-            <div class="relative w-[300px] sm:w-[340px] rounded-[44px] border-[8px] border-[#0C3528] bg-[#0C3528] shadow-2xl shadow-[#0C3528]/30 overflow-hidden" style="aspect-ratio: 9/19.5;">
+            <div class="relative w-[320px] sm:w-[360px] h-[650px] sm:h-[720px] rounded-[44px] border-[8px] border-[#0C3528] bg-[#0C3528] shadow-2xl shadow-[#0C3528]/30 overflow-hidden">
                 <!-- Notch -->
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[26px] bg-[#0C3528] rounded-b-2xl z-20 flex items-center justify-center">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[26px] bg-[#0C3528] rounded-b-2xl z-30 flex items-center justify-center">
                     <div class="w-[50px] h-[5px] bg-white/20 rounded-full"></div>
                 </div>
                 
-                <!-- Screen content -->
-                <div class="w-full h-full rounded-[36px] overflow-hidden relative bg-warm-white flex flex-col justify-between pt-10 pb-6 px-4">
-                    <div class="space-y-3">
+                <!-- Screen content (Scrollable inner area) -->
+                <div class="w-full h-full rounded-[36px] overflow-hidden relative bg-cream flex flex-col">
+                    
+                    <div class="flex-1 overflow-y-auto overflow-x-hidden scrollbar-hide pt-10 pb-24 px-4 space-y-5">
+                        
                         <!-- App Header inside mockup -->
-                        <div class="flex items-center justify-between border-b border-mustard/20 pb-2.5">
+                        <div class="flex items-center justify-between pb-4 pt-10 px-5 -mt-10 -mx-4 bg-[#0C3528] shadow-sm relative z-10 rounded-t-[36px]">
                             <div class="flex items-center gap-1.5">
-                                <span class="font-serif font-bold text-[#0C3528] text-base">Vetis</span>
-                                <span class="text-[10px] bg-mustard/20 text-[#0C3528] px-2 py-0.5 rounded-full font-bold">App</span>
+                                <span class="font-serif font-bold text-white text-base">Vetis</span>
+                                <span class="text-[10px] bg-mustard text-[#0C3528] px-2 py-0.5 rounded-full font-bold">App</span>
                             </div>
-                            <span class="material-symbols-outlined text-[#0C3528] text-lg">notifications</span>
+                            <span class="material-symbols-outlined text-white text-lg">notifications</span>
                         </div>
 
-                        <!-- Greeting -->
+                        <!-- 1. Resumen Superior -->
                         <div>
                             <p class="text-[11px] text-text-muted">Hola, tutor 👋</p>
                             <p class="text-sm font-bold text-text-heading">Panel de Luna 🐕</p>
+                            <div class="flex flex-col gap-1 mt-2.5">
+                                <p class="text-[10px] text-text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-mustard">vaccines</span> <span class="font-semibold text-text-heading">Próximo recordatorio:</span> Vacuna — 12 jul</p>
+                                <p class="text-[10px] text-text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-mustard">directions_walk</span> <span class="font-semibold text-text-heading">Último registro:</span> Paseo — hoy 08:30</p>
+                                <p class="text-[10px] text-text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-olive">check_circle</span> <span class="font-semibold text-text-heading">Estado general:</span> Al día</p>
+                            </div>
                         </div>
 
-                        <!-- Pet Profile Card inside mockup -->
-                        <div class="rounded-2xl p-3.5 bg-gradient-to-br from-[#0C3528] to-[#08241B] text-white space-y-2 relative overflow-hidden shadow-sm">
+                        <!-- 2. Tarjeta principal más rica -->
+                        <div class="rounded-2xl p-4 bg-gradient-to-br from-[#0C3528] to-[#08241B] text-white relative overflow-hidden shadow-sm">
                             <div class="shimmer absolute inset-0 pointer-events-none"></div>
-                            <div class="flex items-center justify-between relative z-10">
+                            <div class="relative z-10 flex justify-between items-start">
                                 <div>
-                                    <p class="text-xs font-bold text-mustard">Golden Retriever</p>
-                                    <p class="text-[10px] text-slate-300">3 años · Vacunas al día</p>
+                                    <p class="text-sm font-bold text-mustard mb-1.5">Golden Retriever</p>
+                                    <p class="text-[11px] text-slate-200 mb-0.5">3 años · 28 kg</p>
+                                    <p class="text-[11px] text-emerald-300 font-medium mb-0.5 flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">verified</span> Vacunas al día</p>
+                                    <p class="text-[11px] text-slate-300">Próximo control: 12 jul</p>
                                 </div>
-                                <span class="material-symbols-outlined text-mustard text-xl">verified</span>
+                                <span class="material-symbols-outlined text-white/50 text-4xl">pets</span>
                             </div>
                         </div>
 
-                        <!-- Quick Actions inside mockup -->
-                        <div class="grid grid-cols-4 gap-1.5 text-center">
-                            <div class="p-2 rounded-xl bg-cream border border-mustard/20">
-                                <span class="material-symbols-outlined text-mustard text-base">vaccines</span>
-                                <p class="text-[8px] font-bold text-text-heading mt-0.5">Vacunas</p>
+                        <!-- 5. Accesos Rápidos (6 items) -->
+                        <div class="grid grid-cols-3 gap-2">
+                            <div class="p-2 rounded-xl bg-warm-white border border-mustard/20 shadow-sm flex flex-col items-center justify-center text-center">
+                                <span class="material-symbols-outlined text-mustard text-lg">vaccines</span>
+                                <p class="text-[9px] font-bold text-text-heading mt-1">Vacunas</p>
                             </div>
-                            <div class="p-2 rounded-xl bg-cream border border-mustard/20">
-                                <span class="material-symbols-outlined text-mustard text-base">restaurant</span>
-                                <p class="text-[8px] font-bold text-text-heading mt-0.5">Dieta</p>
+                            <div class="p-2 rounded-xl bg-warm-white border border-mustard/20 shadow-sm flex flex-col items-center justify-center text-center">
+                                <span class="material-symbols-outlined text-mustard text-lg">restaurant</span>
+                                <p class="text-[9px] font-bold text-text-heading mt-1">Dieta</p>
                             </div>
-                            <div class="p-2 rounded-xl bg-cream border border-mustard/20">
-                                <span class="material-symbols-outlined text-mustard text-base">directions_walk</span>
-                                <p class="text-[8px] font-bold text-text-heading mt-0.5">Paseos</p>
+                            <div class="p-2 rounded-xl bg-warm-white border border-mustard/20 shadow-sm flex flex-col items-center justify-center text-center">
+                                <span class="material-symbols-outlined text-mustard text-lg">directions_walk</span>
+                                <p class="text-[9px] font-bold text-text-heading mt-1">Paseos</p>
                             </div>
-                            <div class="p-2 rounded-xl bg-cream border border-mustard/20">
-                                <span class="material-symbols-outlined text-mustard text-base">menu_book</span>
-                                <p class="text-[8px] font-bold text-text-heading mt-0.5">Guías</p>
+                            <div class="p-2 rounded-xl bg-warm-white border border-mustard/20 shadow-sm flex flex-col items-center justify-center text-center">
+                                <span class="material-symbols-outlined text-mustard text-lg">menu_book</span>
+                                <p class="text-[9px] font-bold text-text-heading mt-1">Guías</p>
+                            </div>
+                            <div class="p-2 rounded-xl bg-warm-white border border-mustard/20 shadow-sm flex flex-col items-center justify-center text-center">
+                                <span class="material-symbols-outlined text-mustard text-lg">pill</span>
+                                <p class="text-[9px] font-bold text-text-heading mt-1">Medicación</p>
+                            </div>
+                            <div class="p-2 rounded-xl bg-warm-white border border-mustard/20 shadow-sm flex flex-col items-center justify-center text-center">
+                                <span class="material-symbols-outlined text-mustard text-lg">history</span>
+                                <p class="text-[9px] font-bold text-text-heading mt-1">Historial</p>
                             </div>
                         </div>
 
-                        <!-- Upcoming Reminder -->
-                        <div class="p-2.5 rounded-xl bg-cream border border-mustard/20 flex items-center gap-2.5">
-                            <span class="material-symbols-outlined text-mustard text-lg">event</span>
-                            <div class="text-left flex-1 min-w-0">
-                                <p class="text-[9px] font-bold text-text-heading truncate">Antiparasitario Interno</p>
-                                <p class="text-[8px] text-text-muted">En 3 días · 28 jun</p>
+                        <!-- 3. Próximos pendientes -->
+                        <div class="space-y-2.5">
+                            <h4 class="text-[11px] font-bold text-text-heading uppercase tracking-wider ml-1">Próximos pendientes</h4>
+                            
+                            <div class="p-2.5 rounded-xl bg-warm-white border border-mustard/30 flex items-center gap-3 shadow-sm relative overflow-hidden">
+                                <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-terracotta"></div>
+                                <span class="material-symbols-outlined text-terracotta text-lg ml-1">medication</span>
+                                <div class="text-left flex-1 min-w-0">
+                                    <p class="text-[10px] font-bold text-text-heading truncate">Antiparasitario Interno</p>
+                                    <p class="text-[9px] text-terracotta font-medium">En 3 días: 28 jun</p>
+                                </div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-warm-white border border-mustard/20 flex items-center gap-3 shadow-sm">
+                                <span class="material-symbols-outlined text-olive/70 text-lg ml-1">vaccines</span>
+                                <div class="text-left flex-1 min-w-0">
+                                    <p class="text-[10px] font-bold text-text-heading truncate">Vacuna anual</p>
+                                    <p class="text-[9px] text-text-muted font-medium">En 12 días: 7 jul</p>
+                                </div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-warm-white border border-mustard/20 flex items-center gap-3 shadow-sm">
+                                <span class="material-symbols-outlined text-olive/70 text-lg ml-1">local_hospital</span>
+                                <div class="text-left flex-1 min-w-0">
+                                    <p class="text-[10px] font-bold text-text-heading truncate">Control veterinario</p>
+                                    <p class="text-[9px] text-text-muted font-medium">En 20 días: 15 jul</p>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- 4. Actividad reciente -->
+                        <div class="space-y-3">
+                            <h4 class="text-[11px] font-bold text-text-heading uppercase tracking-wider ml-1 pt-1 border-t border-mustard/20">Actividad reciente</h4>
+                            <div class="space-y-2 relative before:absolute before:inset-0 before:ml-[11px] before:-translate-x-px before:h-[95%] before:w-0.5 before:bg-mustard/30 pl-6 pb-2 text-[10px] text-text-heading">
+                                <div class="relative">
+                                    <div class="absolute left-[-23px] top-1 w-[8px] h-[8px] rounded-full bg-olive ring-2 ring-cream"></div>
+                                    <p class="font-bold">Paseo registrado</p>
+                                    <p class="text-text-muted text-[9px]">Hoy, 08:30</p>
+                                </div>
+                                <div class="relative">
+                                    <div class="absolute left-[-23px] top-1 w-[8px] h-[8px] rounded-full bg-mustard ring-2 ring-cream"></div>
+                                    <p class="font-bold">Comida completada</p>
+                                    <p class="text-text-muted text-[9px]">Hoy, 07:45</p>
+                                </div>
+                                <div class="relative">
+                                    <div class="absolute left-[-23px] top-1 w-[8px] h-[8px] rounded-full bg-terracotta ring-2 ring-cream"></div>
+                                    <p class="font-bold">Agua renovada</p>
+                                    <p class="text-text-muted text-[9px]">Ayer, 21:10</p>
+                                </div>
+                                <div class="relative">
+                                    <div class="absolute left-[-23px] top-1 w-[8px] h-[8px] rounded-full bg-vetis-dark ring-2 ring-cream"></div>
+                                    <p class="font-bold">Guía consultada: "Vacunas básicas"</p>
+                                    <p class="text-text-muted text-[9px]">Ayer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. Consejo Vetis -->
+                        <div class="p-3 rounded-xl bg-mustard/15 border border-mustard/30 flex items-start gap-2 shadow-sm">
+                            <span class="material-symbols-outlined text-mustard text-lg mt-0.5 shrink-0">lightbulb</span>
+                            <div>
+                                <h4 class="text-[10px] font-bold text-text-heading">Consejo Vetis</h4>
+                                <p class="text-[9px] text-text-secondary mt-0.5 leading-relaxed">Recuerda revisar si el antiparasitario interno corresponde según fecha y peso actual.</p>
+                            </div>
+                        </div>
+
                     </div>
 
                     <!-- Mockup Bottom Bar -->
-                    <div class="pt-2 border-t border-slate-100 flex justify-around text-text-muted">
-                        <span class="material-symbols-outlined text-mustard text-lg">home</span>
-                        <span class="material-symbols-outlined text-lg">pets</span>
-                        <span class="material-symbols-outlined text-lg">auto_stories</span>
-                        <span class="material-symbols-outlined text-lg">settings</span>
+                    <div class="absolute bottom-0 left-0 right-0 bg-[#0C3528] pt-3 pb-5 flex justify-around text-slate-300 shadow-[0_-4px_15px_rgba(0,0,0,0.15)] z-20">
+                        <div class="flex flex-col items-center gap-1 text-mustard">
+                            <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">home</span>
+                            <span class="text-[8px] font-bold">Inicio</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-xl">pets</span>
+                            <span class="text-[8px] font-bold">Mascotas</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-xl">auto_stories</span>
+                            <span class="text-[8px] font-bold">Guías</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-xl">settings</span>
+                            <span class="text-[8px] font-bold">Ajustes</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -574,13 +659,13 @@
             <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Feature 1 -->
             <div class="card-warm p-6 rounded-3xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="w-12 h-12 rounded-xl bg-warm-white border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
                     <span class="material-symbols-outlined text-2xl">pets</span>
                 </div>
-                <h3 class="text-lg font-bold text-text-heading">Perfil de cada mascota</h3>
+                <h3 class="text-lg font-bold text-text-heading">Perfil de la mascota</h3>
                 <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Reúne información básica, antecedentes, características y datos importantes de tu perro o gato.</p>
             </div>
 
@@ -589,26 +674,26 @@
                 <div class="w-12 h-12 rounded-xl bg-warm-white border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
                     <span class="material-symbols-outlined text-2xl">notifications_active</span>
                 </div>
-                <h3 class="text-lg font-bold text-text-heading">Recordatorios importantes</h3>
-                <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Organiza fechas de vacunas, controles, medicamentos, desparasitaciones y otras tareas relevantes.</p>
+                <h3 class="text-lg font-bold text-text-heading">Recordatorios</h3>
+                <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Organiza fechas de vacunas, controles, medicamentos, desparasitaciones y otras tareas.</p>
             </div>
 
             <!-- Feature 3 -->
             <div class="card-warm p-6 rounded-3xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="200">
                 <div class="w-12 h-12 rounded-xl bg-warm-white border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
-                    <span class="material-symbols-outlined text-2xl">event_repeat</span>
+                    <span class="material-symbols-outlined text-2xl">calendar_month</span>
                 </div>
-                <h3 class="text-lg font-bold text-text-heading">Rutinas y cuidados</h3>
-                <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Registra alimentación, paseos, descanso, higiene, juego y hábitos que quieras mantener o ajustar.</p>
+                <h3 class="text-lg font-bold text-text-heading">Calendario y Rutinas</h3>
+                <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Visualiza el mes y estructura hábitos de alimentación, paseos, descanso y juego.</p>
             </div>
 
             <!-- Feature 4 -->
             <div class="card-warm p-6 rounded-3xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="250">
                 <div class="w-12 h-12 rounded-xl bg-warm-white border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
-                    <span class="material-symbols-outlined text-2xl">menu_book</span>
+                    <span class="material-symbols-outlined text-2xl">history</span>
                 </div>
-                <h3 class="text-lg font-bold text-text-heading">Biblioteca Vetis</h3>
-                <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Consulta guías, checklists y recursos educativos para comprender mejor distintas etapas y necesidades.</p>
+                <h3 class="text-lg font-bold text-text-heading">Historial</h3>
+                <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Accede rápidamente a registros pasados, controles previos y antecedentes de salud.</p>
             </div>
 
             <!-- Feature 5 -->
@@ -616,8 +701,8 @@
                 <div class="w-12 h-12 rounded-xl bg-warm-white border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
                     <span class="material-symbols-outlined text-2xl">edit_note</span>
                 </div>
-                <h3 class="text-lg font-bold text-text-heading">Registro de cambios y señales</h3>
-                <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Anota cambios de apetito, energía, comportamiento, movilidad o rutina para observarlos con más estructura.</p>
+                <h3 class="text-lg font-bold text-text-heading">Registros de cuidados</h3>
+                <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Anota cambios de apetito, energía, comportamiento o síntomas para no olvidarlos.</p>
             </div>
 
             <!-- Feature 6 -->
@@ -625,32 +710,113 @@
                 <div class="w-12 h-12 rounded-xl bg-warm-white border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
                     <span class="material-symbols-outlined text-2xl">monitoring</span>
                 </div>
-                <h3 class="text-lg font-bold text-text-heading">Seguimiento cotidiano</h3>
-                <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Observa registros y tendencias simples para comprender mejor cómo han cambiado sus rutinas con el tiempo.</p>
-            </div>
-
-            <!-- Feature 7 -->
-            <div class="card-warm p-6 rounded-3xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="400">
-                <div class="w-12 h-12 rounded-xl bg-warm-white border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
-                    <span class="material-symbols-outlined text-2xl">link</span>
-                </div>
-                <h3 class="text-lg font-bold text-text-heading">Acceso a servicios Vetis</h3>
-                <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Encuentra fácilmente información sobre orientación online, recursos y próximos servicios disponibles.</p>
-            </div>
-
-            <!-- Feature 8 -->
-            <div class="card-warm p-6 rounded-3xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="450">
-                <div class="w-12 h-12 rounded-xl bg-warm-white border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
-                    <span class="material-symbols-outlined text-2xl">folder_open</span>
-                </div>
-                <h3 class="text-lg font-bold text-text-heading">Documentos organizados</h3>
-                <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Guarda referencias importantes como indicaciones, comprobantes, resultados o archivos relacionados con sus cuidados.</p>
+                <h3 class="text-lg font-bold text-text-heading">Seguimiento</h3>
+                <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">Observa tendencias simples para comprender mejor cómo evolucionan sus hábitos.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- BLOQUE: Resultado esperado -->
+<!-- BLOQUE: Para quién será ("Puede ayudarte si hoy...") -->
+<section class="py-16 sm:py-24 bg-warm-white text-text-primary border-t border-mustard/20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6" data-aos="fade-up">
+        <div class="text-center space-y-4 mb-12">
+            <div class="editorial-badge inline-flex">
+                <span class="material-symbols-outlined text-mustard text-sm">group</span>
+                <span>CREADA PARA TUTORES REALES</span>
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-bold text-text-heading">
+                App Vetis puede ayudarte <span class="font-serif italic text-mustard">si hoy…</span>
+            </h2>
+            <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5 mb-8">
+            <div class="card-warm p-5 rounded-2xl bg-cream flex items-start gap-3">
+                <span class="material-symbols-outlined text-mustard text-2xl mt-0.5 shrink-0">check_circle</span>
+                <p class="text-text-secondary text-sm leading-relaxed">Guardas información de tu mascota en aplicaciones, mensajes o notas sueltas.</p>
+            </div>
+            <div class="card-warm p-5 rounded-2xl bg-cream flex items-start gap-3">
+                <span class="material-symbols-outlined text-mustard text-2xl mt-0.5 shrink-0">check_circle</span>
+                <p class="text-text-secondary text-sm leading-relaxed">Te cuesta recordar fechas, controles o cambios que observaste semanas atrás.</p>
+            </div>
+            <div class="card-warm p-5 rounded-2xl bg-cream flex items-start gap-3">
+                <span class="material-symbols-outlined text-mustard text-2xl mt-0.5 shrink-0">check_circle</span>
+                <p class="text-text-secondary text-sm leading-relaxed">Quieres llegar a los controles con datos claros y observaciones organizadas.</p>
+            </div>
+            <div class="card-warm p-5 rounded-2xl bg-cream flex items-start gap-3">
+                <span class="material-symbols-outlined text-mustard text-2xl mt-0.5 shrink-0">check_circle</span>
+                <p class="text-text-secondary text-sm leading-relaxed">Buscas una herramienta sencilla, sin funciones innecesarias ni lenguaje complejo.</p>
+            </div>
+        </div>
+        <p class="text-center text-text-secondary text-sm font-normal max-w-xl mx-auto">No necesitas ser una persona extremadamente organizada. La aplicación está pensada para ayudarte a empezar.</p>
+    </div>
+</section>
+
+<!-- Sección: Paso a Paso (Cinco pasos más compactos) -->
+<section class="py-16 sm:py-24 bg-cream text-text-primary border-t border-mustard/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12 sm:mb-16 space-y-4" data-aos="fade-up">
+            <div class="editorial-badge inline-flex">
+                <span class="material-symbols-outlined text-mustard text-sm">route</span>
+                <span>UN PROCESO SIMPLE</span>
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-bold text-text-heading">
+                Cinco pasos para organizar mejor <span class="font-serif italic text-mustard">el cuidado diario</span>
+            </h2>
+            <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
+        </div>
+
+        <div class="flex flex-col md:flex-row flex-wrap justify-center gap-4 max-w-6xl mx-auto">
+            <!-- Paso 1 -->
+            <div class="card-warm p-4 rounded-2xl bg-warm-white flex items-center gap-3 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33%-1rem)]" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-8 h-8 rounded-full bg-[#0C3528] text-mustard font-bold text-sm flex items-center justify-center shrink-0">1</div>
+                <div>
+                    <h3 class="text-sm font-bold text-text-heading">Crea su perfil</h3>
+                    <p class="text-text-secondary text-xs leading-relaxed mt-0.5">Registra la información básica de tu mascota.</p>
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="card-warm p-4 rounded-2xl bg-warm-white flex items-center gap-3 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33%-1rem)]" data-aos="fade-up" data-aos-delay="150">
+                <div class="w-8 h-8 rounded-full bg-[#0C3528] text-mustard font-bold text-sm flex items-center justify-center shrink-0">2</div>
+                <div>
+                    <h3 class="text-sm font-bold text-text-heading">Añade fechas</h3>
+                    <p class="text-text-secondary text-xs leading-relaxed mt-0.5">Organiza controles y vacunas importantes.</p>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="card-warm p-4 rounded-2xl bg-warm-white flex items-center gap-3 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33%-1rem)]" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-8 h-8 rounded-full bg-[#0C3528] text-mustard font-bold text-sm flex items-center justify-center shrink-0">3</div>
+                <div>
+                    <h3 class="text-sm font-bold text-text-heading">Construye rutinas</h3>
+                    <p class="text-text-secondary text-xs leading-relaxed mt-0.5">Define hábitos diarios y seguimientos.</p>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="card-warm p-4 rounded-2xl bg-warm-white flex items-center gap-3 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33%-1rem)]" data-aos="fade-up" data-aos-delay="250">
+                <div class="w-8 h-8 rounded-full bg-[#0C3528] text-mustard font-bold text-sm flex items-center justify-center shrink-0">4</div>
+                <div>
+                    <h3 class="text-sm font-bold text-text-heading">Registra cambios</h3>
+                    <p class="text-text-secondary text-xs leading-relaxed mt-0.5">Anota observaciones para no olvidarlas.</p>
+                </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="card-warm p-4 rounded-2xl bg-warm-white flex items-center gap-3 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33%-1rem)]" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-8 h-8 rounded-full bg-[#0C3528] text-mustard font-bold text-sm flex items-center justify-center shrink-0">5</div>
+                <div>
+                    <h3 class="text-sm font-bold text-text-heading">Consulta y decide</h3>
+                    <p class="text-text-secondary text-xs leading-relaxed mt-0.5">Prepara mejor tus próximos pasos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BLOQUE: Resultado esperado (Movido aquí) -->
 <section class="py-16 sm:py-24 bg-[#0C3528] text-warm-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-12" data-aos="fade-up">
         <div class="text-center space-y-4">
@@ -685,103 +851,11 @@
             </div>
         </div>
 
-        <p class="text-center text-mustard font-bold text-base sm:text-lg italic">“Cuando la información está ordenada, cuidar también se vuelve más sencillo.”</p>
-    </div>
-</section>
-
-<!-- Sección: Paso a Paso -->
-<section class="py-16 sm:py-24 bg-cream text-text-primary border-t border-mustard/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12 sm:mb-16 space-y-4" data-aos="fade-up">
-            <div class="editorial-badge inline-flex">
-                <span class="material-symbols-outlined text-mustard text-sm">route</span>
-                <span>UN PROCESO SIMPLE</span>
-            </div>
-            <h2 class="text-3xl sm:text-5xl font-bold text-text-heading">
-                Cinco pasos para organizar mejor <span class="font-serif italic text-mustard">el cuidado diario</span>
-            </h2>
-            <p class="text-text-secondary text-base sm:text-lg max-w-xl mx-auto font-normal">
-                La experiencia está pensada para que puedas comenzar sin configuraciones complejas.
-            </p>
-            <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
+        <div class="flex justify-center pt-8" data-aos="fade-up">
+            <img src="../assets/app_vetis_lifestyle_rounded.png" alt="Persona usando App Vetis" class="w-full max-w-4xl object-contain drop-shadow-2xl" />
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-            <!-- Paso 1 -->
-            <div class="card-warm p-6 rounded-3xl bg-warm-white text-center space-y-3 relative" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-8 h-8 rounded-full bg-[#0C3528] text-mustard font-bold text-sm flex items-center justify-center mx-auto shadow-md">1</div>
-                <h3 class="text-base font-bold text-text-heading">Crea su perfil</h3>
-                <p class="text-text-secondary text-xs leading-relaxed font-normal">Registra la información básica de tu perro o gato y agrega los datos que quieras conservar.</p>
-            </div>
-
-            <!-- Paso 2 -->
-            <div class="card-warm p-6 rounded-3xl bg-warm-white text-center space-y-3 relative" data-aos="fade-up" data-aos-delay="150">
-                <div class="w-8 h-8 rounded-full bg-[#0C3528] text-mustard font-bold text-sm flex items-center justify-center mx-auto shadow-md">2</div>
-                <h3 class="text-base font-bold text-text-heading">Añade fechas importantes</h3>
-                <p class="text-text-secondary text-xs leading-relaxed font-normal">Organiza controles, vacunas, medicamentos y otras tareas que necesites recordar.</p>
-            </div>
-
-            <!-- Paso 3 -->
-            <div class="card-warm p-6 rounded-3xl bg-warm-white text-center space-y-3 relative" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-8 h-8 rounded-full bg-[#0C3528] text-mustard font-bold text-sm flex items-center justify-center mx-auto shadow-md">3</div>
-                <h3 class="text-base font-bold text-text-heading">Construye sus rutinas</h3>
-                <p class="text-text-secondary text-xs leading-relaxed font-normal">Define hábitos de alimentación, paseo, descanso, juego, higiene o seguimiento.</p>
-            </div>
-
-            <!-- Paso 4 -->
-            <div class="card-warm p-6 rounded-3xl bg-warm-white text-center space-y-3 relative" data-aos="fade-up" data-aos-delay="250">
-                <div class="w-8 h-8 rounded-full bg-[#0C3528] text-mustard font-bold text-sm flex items-center justify-center mx-auto shadow-md">4</div>
-                <h3 class="text-base font-bold text-text-heading">Registra cambios</h3>
-                <p class="text-text-secondary text-xs leading-relaxed font-normal">Anota observaciones relevantes para recordar cuándo comenzaron y cómo han evolucionado.</p>
-            </div>
-
-            <!-- Paso 5 -->
-            <div class="card-warm p-6 rounded-3xl bg-warm-white text-center space-y-3 relative" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-8 h-8 rounded-full bg-[#0C3528] text-mustard font-bold text-sm flex items-center justify-center mx-auto shadow-md">5</div>
-                <h3 class="text-base font-bold text-text-heading">Consulta y decide mejor</h3>
-                <p class="text-text-secondary text-xs leading-relaxed font-normal">Revisa la información reunida, accede a recursos educativos y prepara mejor tus próximos pasos.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- BLOQUE: Para quién será -->
-<section class="py-16 sm:py-24 bg-warm-white text-text-primary border-t border-mustard/20">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6" data-aos="fade-up">
-        <div class="text-center space-y-4 mb-12">
-            <div class="editorial-badge inline-flex">
-                <span class="material-symbols-outlined text-mustard text-sm">group</span>
-                <span>CREADA PARA TUTORES REALES</span>
-            </div>
-            <h2 class="text-3xl sm:text-5xl font-bold text-text-heading">
-                App Vetis puede ayudarte <span class="font-serif italic text-mustard">si hoy…</span>
-            </h2>
-            <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
-            <div class="card-warm p-5 rounded-2xl bg-cream flex items-start gap-3">
-                <span class="material-symbols-outlined text-mustard text-2xl mt-0.5 shrink-0">check_circle</span>
-                <p class="text-text-secondary text-sm leading-relaxed">Guardas información de tu mascota en diferentes aplicaciones, mensajes o cuadernos.</p>
-            </div>
-            <div class="card-warm p-5 rounded-2xl bg-cream flex items-start gap-3">
-                <span class="material-symbols-outlined text-mustard text-2xl mt-0.5 shrink-0">check_circle</span>
-                <p class="text-text-secondary text-sm leading-relaxed">Te cuesta recordar fechas, controles o cambios que observaste semanas atrás.</p>
-            </div>
-            <div class="card-warm p-5 rounded-2xl bg-cream flex items-start gap-3">
-                <span class="material-symbols-outlined text-mustard text-2xl mt-0.5 shrink-0">check_circle</span>
-                <p class="text-text-secondary text-sm leading-relaxed">Convives con más de una mascota y necesitas mantener su información separada.</p>
-            </div>
-            <div class="card-warm p-5 rounded-2xl bg-cream flex items-start gap-3">
-                <span class="material-symbols-outlined text-mustard text-2xl mt-0.5 shrink-0">check_circle</span>
-                <p class="text-text-secondary text-sm leading-relaxed">Quieres llegar a los controles con datos más claros y observaciones mejor organizadas.</p>
-            </div>
-            <div class="card-warm p-5 rounded-2xl bg-cream flex items-start gap-3 sm:col-span-2 lg:col-span-1">
-                <span class="material-symbols-outlined text-mustard text-2xl mt-0.5 shrink-0">check_circle</span>
-                <p class="text-text-secondary text-sm leading-relaxed">Buscas una herramienta sencilla, sin funciones innecesarias ni lenguaje complicado.</p>
-            </div>
-        </div>
-        <p class="text-center text-text-secondary text-sm font-normal max-w-xl mx-auto">No necesitas ser una persona extremadamente organizada. La aplicación está pensada precisamente para ayudarte a empezar.</p>
+        <p class="text-center text-mustard font-bold text-base sm:text-lg italic pt-4">“Cuando la información está ordenada, cuidar también se vuelve más sencillo.”</p>
     </div>
 </section>
 

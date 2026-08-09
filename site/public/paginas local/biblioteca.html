@@ -1,6 +1,6 @@
 <!-- Vetis Global Styles & Scripts -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script id="tailwind-config">
@@ -9,29 +9,30 @@
         theme: {
             extend: {
                 colors: {
-                    "primary": "#ec5b13",
-                    "accent-gold": "#d4af37",
-                    "gold-bright": "#facc15",
-                    "gold-light": "#fef08a",
-                    "gold-dark": "#996515",
-                    "forest-deep": "#05180f",
-                    "forest-base": "#09261a",
-                    "forest-surface": "#0f3e2c",
-                    "forest-emerald": "#10b981",
-                    "forest-jade": "#059669",
-                    "forest-fresh": "#157751",
+                    // Paleta Editorial Cálida Vetis (Alta Gama)
+                    "vetis-dark": "#0C3528",
+                    "vetis-forest": "#0C3528",
+                    "vetis-deep": "#08241B",
+                    "warm-white": "#FFFFFF",
                     "cream": "#FAF6F0",
-                    "warm-white": "#FFFDF8",
                     "beige": "#F3EDE2",
                     "sage-light": "#E4ECE6",
+                    "mustard": "#F6CF2F",
+                    "accent-gold": "#F6CF2F",
                     "terracotta": "#D96B43",
+                    "olive": "#4A6B52",
+                    "text-primary": "#1F2937",
+                    "text-secondary": "#4B5563",
+                    "text-muted": "#8A94A0",
+                    "text-heading": "#0C3528",
                 },
                 fontFamily: {
-                    "sans": ["'Plus Jakarta Sans'", "sans-serif"],
-                    "display": ["'Plus Jakarta Sans'", "sans-serif"],
-                    "serif": ["'Playfair Display'", "serif"]
+                    "sans": ["Plus Jakarta Sans", "sans-serif"],
+                    "serif": ["Playfair Display", "serif"]
                 },
-                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "3xl": "2.25rem", "full": "9999px"},
+                borderRadius: {
+                    "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "3xl": "2rem", "full": "9999px"
+                },
             },
         },
     }
@@ -39,29 +40,263 @@
 <style>
     /* Full bleed breakout styles to bypass WordPress boxed containers */
     .vetis-global-wrapper {
-        width: 100vw;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
+        width: 100vw !important;
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+        max-width: 100vw !important;
+        background-color: #FAF6F0;
+        color: #1F2937;
+        font-family: 'Plus Jakarta Sans', sans-serif;
     }
+    
     html, body {
         overflow-x: hidden !important;
+        background-color: #FAF6F0;
         margin: 0;
         padding: 0;
         scroll-behavior: smooth;
-        background-color: #061f14;
     }
 
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
-    
+    h1, h2, h3, .font-serif {
+        font-family: 'Playfair Display', serif;
+    }
+
     /* Header Friendly Emerald Glass */
     .glass-nav-emerald { 
         backdrop-filter: blur(20px); 
         -webkit-backdrop-filter: blur(20px);
         background-color: rgba(9, 38, 26, 0.94); 
+    }
+
+    /* Luxury Micro-details & Hairlines */
+    .luxury-hairline {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(246,207,47,0.4) 25%, rgba(246,207,47,0.8) 50%, rgba(246,207,47,0.4) 75%, transparent);
+        position: relative;
+        margin: 1.5rem 0;
+    }
+    .luxury-diamond {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 7px;
+        height: 7px;
+        background-color: #F6CF2F;
+        box-shadow: 0 0 8px rgba(246,207,47,0.8);
+    }
+
+    /* Cards cálidas editoriales */
+    .card-warm {
+        background-color: #FFFFFF;
+        border: 1px solid rgba(246, 207, 47, 0.2);
+        box-shadow: 0 4px 20px -2px rgba(12, 53, 40, 0.05), 0 2px 6px -1px rgba(12, 53, 40, 0.03);
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    }
+    .card-warm:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 35px -5px rgba(12, 53, 40, 0.08), 0 8px 16px -3px rgba(12, 53, 40, 0.04);
+        border-color: rgba(246, 207, 47, 0.45);
+    }
+
+    /* Cards oscuras de lujo */
+    .card-dark-luxury {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(246, 207, 47, 0.2);
+        backdrop-filter: blur(12px);
+        transition: all 0.3s ease;
+    }
+    .card-dark-luxury:hover {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: rgba(246, 207, 47, 0.45);
+        transform: translateY(-3px);
+    }
+
+    /* Botón Primario de Lujo */
+    .btn-primary-warm {
+        background: #F6CF2F !important;
+        color: #0C3528 !important;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        border-radius: 0.875rem;
+        box-shadow: 0 4px 14px rgba(246, 207, 47, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    .btn-primary-warm:hover {
+        background: #f3c713 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(246, 207, 47, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        color: #0C3528 !important;
+    }
+
+    /* Botón Secundario Elegante Claro */
+    .btn-secondary-light {
+        background: #FAF6F0 !important;
+        color: #0C3528 !important;
+        border: 1.5px solid rgba(246, 207, 47, 0.4) !important;
+        font-weight: 700;
+        border-radius: 0.875rem;
+        box-shadow: 0 2px 8px rgba(12, 53, 40, 0.04);
+        transition: all 0.25s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-secondary-light:hover {
+        background: #F3EDE2 !important;
+        border-color: #F6CF2F !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(12, 53, 40, 0.08);
+        color: #0C3528 !important;
+    }
+
+    /* Botón Secundario Oscuro */
+    .btn-secondary-dark {
+        background: rgba(255, 255, 255, 0.08) !important;
+        color: #FFFFFF !important;
+        border: 1.5px solid rgba(246, 207, 47, 0.35) !important;
+        font-weight: 700;
+        border-radius: 0.875rem;
+        backdrop-filter: blur(8px);
+        transition: all 0.25s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-secondary-dark:hover {
+        background: rgba(255, 255, 255, 0.15) !important;
+        border-color: #F6CF2F !important;
+        color: #F6CF2F !important;
+        transform: translateY(-2px);
+    }
+
+    /* ============================================
+       BOTONES HERO: EDITORIAL LUXURY CHUNKY (64px, R:18px, Max-w: 380px)
+    ============================================ */
+    .btn-hero-primary-mustard {
+        min-height: 60px;
+        border-radius: 18px;
+        padding-left: 20px;
+        padding-right: 16px;
+        background: linear-gradient(180deg, #FAD058 0%, #F0BC48 50%, #E5A62E 100%) !important;
+        color: #0A261D !important;
+        font-weight: 700;
+        font-size: 1.02rem;
+        letter-spacing: -0.01em;
+        border: 1px solid rgba(255, 255, 255, 0.45) !important;
+        box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.45), 0 4px 8px -2px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.6) !important;
+        transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
+        max-width: 380px;
+    }
+    .btn-hero-primary-mustard:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(180deg, #FBD870 0%, #F5C658 50%, #EDB03C 100%) !important;
+        box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.5), 0 6px 12px -2px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.7) !important;
+        color: #0A261D !important;
+    }
+
+    .btn-hero-secondary-darkglass {
+        min-height: 60px;
+        border-radius: 18px;
+        padding-left: 20px;
+        padding-right: 16px;
+        background: linear-gradient(180deg, #102E22 0%, #071F17 100%) !important;
+        color: #FFFFFF !important;
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: -0.01em;
+        border: 1.5px solid rgba(230, 169, 51, 0.7) !important;
+        box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.08) !important;
+        transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
+        max-width: 380px;
+    }
+    .btn-hero-secondary-darkglass:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(180deg, #163B2C 0%, #0B291F 100%) !important;
+        border-color: rgba(246, 207, 47, 0.95) !important;
+        box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
+        color: #FFFFFF !important;
+    }
+
+    /* Badges Editoriales con Animación Flotante Suave */
+    @keyframes badgeFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+    }
+
+    .editorial-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #FAF6F0;
+        border: 1px solid rgba(246, 207, 47, 0.35);
+        padding: 0.35rem 0.9rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #0C3528;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        box-shadow: 0 2px 6px rgba(12, 53, 40, 0.04);
+        animation: badgeFloat 4s ease-in-out infinite;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .editorial-badge:hover {
+        transform: translateY(-2px) scale(1.02);
+    }
+
+    .editorial-badge-dark {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(246, 207, 47, 0.3);
+        padding: 0.35rem 0.9rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #FFFFFF;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        backdrop-filter: blur(8px);
+        animation: badgeFloat 4.5s ease-in-out infinite;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .editorial-badge-dark:hover {
+        transform: translateY(-2px) scale(1.02);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #FAF6F0;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #0C3528;
+        border-radius: 5px;
+        border: 2px solid #FAF6F0;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #F6CF2F;
     }
 
     /* Floating Micro-Animations */
@@ -77,234 +312,28 @@
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(7px); }
     }
-    @keyframes starPulseSubtle {
-        0%, 100% { transform: scale(1); opacity: 0.92; filter: drop-shadow(0 0 1px rgba(250, 204, 21, 0.3)); }
-        50% { transform: scale(1.04); opacity: 1; filter: drop-shadow(0 0 4px rgba(250, 204, 21, 0.6)); }
-    }
-    @keyframes shineSweep {
-        0% { transform: translateX(-150%) skewX(-20deg); }
-        100% { transform: translateX(250%) skewX(-20deg); }
-    }
-
     .float-slow { animation: floatSlow 5s ease-in-out infinite; }
     .float-medium { animation: floatMedium 4s ease-in-out infinite; }
     .float-reverse { animation: floatReverse 4.5s ease-in-out infinite; }
-    .stars-subtle { animation: starPulseSubtle 4s ease-in-out infinite; }
 
-    /* Shimmer Text */
-    .text-shimmer-gold {
-        background: linear-gradient(135deg, #d4af37 0%, #fff2be 40%, #facc15 70%, #9a650a 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+    /* Star Subtle Twinkle Animation */
+    @keyframes starTwinkle {
+        0%, 100% {
+            transform: scale(1);
+            filter: drop-shadow(0 0 0px rgba(246, 207, 47, 0));
+            opacity: 0.92;
+        }
+        50% {
+            transform: scale(1.18);
+            filter: drop-shadow(0 0 6px rgba(246, 207, 47, 0.75));
+            opacity: 1;
+        }
     }
-    .text-shimmer-emerald {
-        background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #6ee7b7 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+    .star-twinkle {
+        display: inline-block;
+        animation: starTwinkle 3.2s ease-in-out infinite;
+        transform-origin: center;
     }
-
-    /* Botones Táctiles de Alta Gama */
-    .btn-tactile-gold {
-        position: relative;
-        background: linear-gradient(135deg, #facc15 0%, #eab308 50%, #ca8a04 100%);
-        color: #05180f !important;
-        font-weight: 800;
-        border-bottom: 4px solid #854d0e;
-        box-shadow: 0 10px 25px -3px rgba(212, 175, 55, 0.4);
-        overflow: hidden;
-        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .btn-tactile-gold::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 45%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
-        transform: skewX(-20deg);
-        animation: shineSweep 4s infinite ease-in-out;
-    }
-    .btn-tactile-gold:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 14px 30px -3px rgba(212, 175, 55, 0.55);
-        filter: brightness(1.05);
-    }
-    .btn-tactile-gold:active {
-        transform: translateY(2px);
-        border-bottom-width: 1px;
-    }
-
-    .btn-tactile-emerald {
-        position: relative;
-        background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
-        color: #ffffff !important;
-        font-weight: 800;
-        border-bottom: 4px solid #064e3b;
-        box-shadow: 0 10px 25px -3px rgba(16, 185, 129, 0.35);
-        overflow: hidden;
-        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .btn-tactile-emerald::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 45%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-        transform: skewX(-20deg);
-        animation: shineSweep 4.5s infinite ease-in-out 1s;
-    }
-    .btn-tactile-emerald:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 14px 30px -3px rgba(16, 185, 129, 0.5);
-        filter: brightness(1.06);
-    }
-    .btn-tactile-emerald:active {
-        transform: translateY(2px);
-        border-bottom-width: 1px;
-    }
-
-    .btn-tactile-outline-dark {
-        background: rgba(255, 255, 255, 0.12);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 2px solid rgba(52, 211, 153, 0.55);
-        color: #a7f3d0 !important;
-        font-weight: 800;
-        border-bottom: 4px solid rgba(52, 211, 153, 0.85);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-        transition: all 0.2s ease;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .btn-tactile-outline-dark:hover {
-        background: rgba(16, 185, 129, 0.25);
-        border-color: #34d399;
-        color: #ffffff !important;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
-    }
-    .btn-tactile-outline-dark:active {
-        transform: translateY(2px);
-        border-bottom-width: 2px;
-    }
-
-    /* Insignias Flotantes Elegantes */
-    .floating-pill-gold-dark {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.45rem 1.1rem;
-        border-radius: 9999px;
-        background: rgba(212, 175, 55, 0.18);
-        border: 1.5px solid rgba(212, 175, 55, 0.55);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        font-size: 0.8rem;
-        font-weight: 700;
-        color: #fef08a;
-        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.18);
-        transition: all 0.3s ease;
-    }
-
-    .floating-pill-emerald-dark {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.45rem 1.1rem;
-        border-radius: 9999px;
-        background: rgba(16, 185, 129, 0.2);
-        border: 1.5px solid rgba(52, 211, 153, 0.55);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        font-size: 0.8rem;
-        font-weight: 700;
-        color: #a7f3d0;
-        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
-        transition: all 0.3s ease;
-    }
-
-    /* Forest Emerald Glass Cards (Estándar Ultra-Lujo) */
-    .forest-glass-card {
-        background: linear-gradient(145deg, rgba(16, 68, 48, 0.82) 0%, rgba(10, 44, 30, 0.92) 100%);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1.5px solid rgba(212, 175, 55, 0.4);
-        border-radius: 1.75rem;
-        box-shadow: 0 14px 34px -5px rgba(0, 0, 0, 0.35), 0 0 18px rgba(212, 175, 55, 0.08);
-        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .forest-glass-card:hover {
-        transform: translateY(-6px);
-        border-color: #d4af37;
-        background: linear-gradient(145deg, rgba(22, 86, 61, 0.92) 0%, rgba(12, 53, 37, 0.96) 100%);
-        box-shadow: 0 22px 45px -5px rgba(0, 0, 0, 0.45), 0 0 25px rgba(212, 175, 55, 0.3);
-    }
-
-    /* FAQ Glass Accordion */
-    .faq-glass-card {
-        background: linear-gradient(145deg, rgba(14, 58, 41, 0.78) 0%, rgba(9, 39, 27, 0.88) 100%);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        border: 1.5px solid rgba(212, 175, 55, 0.35);
-        border-radius: 1.5rem;
-        box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.28);
-        transition: all 0.3s ease;
-    }
-    .faq-glass-card:hover, .faq-glass-card[open] {
-        border-color: #d4af37;
-        background: linear-gradient(145deg, rgba(18, 74, 52, 0.88) 0%, rgba(11, 48, 33, 0.94) 100%);
-        box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.38), 0 0 16px rgba(212, 175, 55, 0.18);
-    }
-
-    /* Hairlines de Alta Gama */
-    .luxury-hairline {
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3) 25%, rgba(212, 175, 55, 0.8) 50%, rgba(212, 175, 55, 0.3) 75%, transparent);
-        position: relative;
-        margin: 1.75rem auto;
-        max-width: 320px;
-    }
-    .luxury-diamond {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(45deg);
-        width: 7px;
-        height: 7px;
-        background-color: #facc15;
-        box-shadow: 0 0 8px rgba(250, 204, 21, 0.8);
-    }
-
-    /* Curvas de Ultra-Lujo con Filo Dorado */
-    .wave-luxury-divider {
-        display: block;
-        width: 100%;
-        height: 65px;
-        line-height: 0;
-        position: relative;
-        z-index: 10;
-    }
-    @media (min-width: 768px) {
-        .wave-luxury-divider { height: 95px; }
-    }
-
-    /* Custom smooth scrollbar */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #05180f; }
-    ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #059669; }
 
     /* ============================================
        VETIS — AMBIENT AURORA BEAM
@@ -358,20 +387,10 @@
     }
 
     @keyframes beam-sweep {
-        0% {
-            transform: translateX(-20vw) skewX(-12deg);
-            opacity: 0;
-        }
-        8% {
-            opacity: 1;
-        }
-        85% {
-            opacity: 1;
-        }
-        100% {
-            transform: translateX(140vw) skewX(-12deg);
-            opacity: 0;
-        }
+        0% { transform: translateX(-20vw) skewX(-12deg); opacity: 0; }
+        8% { opacity: 1; }
+        85% { opacity: 1; }
+        100% { transform: translateX(140vw) skewX(-12deg); opacity: 0; }
     }
 
     /* Canvas de partículas */
@@ -383,7 +402,7 @@
         opacity: 0.55;
     }
 
-    /* Orb ambiental pulsante */
+    /* Orbes ambientales */
     .vetis-ambient-orb {
         position: fixed;
         border-radius: 50%;
@@ -426,7 +445,7 @@
 </style>
 
 <!-- Vetis Global Wrapper -->
-<div class="vetis-global-wrapper bg-[#061f14] text-slate-100 overflow-x-hidden selection:bg-accent-gold selection:text-forest-deep" style="min-height: 100vh;">
+<div class="vetis-global-wrapper bg-cream text-text-primary overflow-x-hidden selection:bg-mustard selection:text-vetis-dark" style="min-height: 100vh;">
 
 <!-- 1. HEADER (Friendly Emerald Glass & Gold Accents) -->
 <header class="fixed top-0 w-full z-50 glass-nav-emerald border-b border-emerald-500/30 transition-all duration-300 shadow-lg">
@@ -437,20 +456,20 @@
         </a>
     </div>
     <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-100">
-        <a class="hover:text-accent-gold transition-colors duration-200" href="https://vetisdigital.com/">Inicio</a>
-        <a class="text-accent-gold font-bold tracking-wide border-b-2 border-accent-gold pb-0.5" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
-        <a class="hover:text-accent-gold transition-colors duration-200" href="https://vetisdigital.com/recursos-gratis/">Recursos Gratis</a>
-        <a class="hover:text-accent-gold transition-colors duration-200" href="https://vetisdigital.com/orientacion-online/">Orientación Online</a>
-        <a class="hover:text-accent-gold transition-colors duration-200 flex items-center gap-1.5" href="https://vetisdigital.com/app-vetis/">
-            App Vetis <span class="px-2 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded-full bg-accent-gold/25 text-gold-light border border-accent-gold/40">Nuevo</span>
+        <a class="hover:text-mustard transition-colors duration-200" href="https://vetisdigital.com/">Inicio</a>
+        <a class="text-mustard font-bold tracking-wide border-b-2 border-mustard pb-0.5" href="https://vetisdigital.com/biblioteca/">Biblioteca</a>
+        <a class="hover:text-mustard transition-colors duration-200" href="https://vetisdigital.com/recursos-gratis/">Recursos Gratis</a>
+        <a class="hover:text-mustard transition-colors duration-200" href="https://vetisdigital.com/orientacion-online/">Orientación Online</a>
+        <a class="hover:text-mustard transition-colors duration-200 flex items-center gap-1.5" href="https://vetisdigital.com/app-vetis/">
+            App Vetis <span class="px-2 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded-full bg-mustard/25 text-mustard border border-mustard/40">Nuevo</span>
         </a>
-        <a class="hover:text-accent-gold transition-colors duration-200" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
-        <a class="hover:text-accent-gold transition-colors duration-200" href="https://vetisdigital.com/blog-vetis/">Blog</a>
-        <a class="hover:text-accent-gold transition-colors duration-200" href="https://vetisdigital.com/afiliados/">Afiliados</a>
-        <a class="hover:text-accent-gold transition-colors duration-200" href="https://vetisdigital.com/contacto/">Contacto</a>
+        <a class="hover:text-mustard transition-colors duration-200" href="https://vetisdigital.com/nosotros/">Sobre Nosotros</a>
+        <a class="hover:text-mustard transition-colors duration-200" href="https://vetisdigital.com/blog-vetis/">Blog</a>
+        <a class="hover:text-mustard transition-colors duration-200" href="https://vetisdigital.com/afiliados/">Afiliados</a>
+        <a class="hover:text-mustard transition-colors duration-200" href="https://vetisdigital.com/contacto/">Contacto</a>
     </nav>
     <div class="flex items-center gap-3 sm:gap-4">
-        <a href="https://vetisdigital.com/recursos-gratis/" class="btn-tactile-gold inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs uppercase tracking-wider">
+        <a href="https://vetisdigital.com/recursos-gratis/" class="btn-primary-warm inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs uppercase tracking-wider">
             <span class="material-symbols-outlined text-[17px]">redeem</span>
             <span class="hidden sm:inline">Recursos Gratis</span>
             <span class="sm:hidden">Gratis</span>
@@ -468,18 +487,18 @@
         <span class="material-symbols-outlined text-3xl">close</span>
     </button>
     <img src="../assets/logo-transparent.webp" alt="Vetis Digital" class="h-12 w-auto mb-4" />
-    <a class="text-2xl font-bold text-white hover:text-accent-gold transition-colors" href="https://vetisdigital.com/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Inicio</a>
-    <a class="text-2xl font-bold text-accent-gold" href="https://vetisdigital.com/biblioteca/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Biblioteca</a>
-    <a class="text-2xl font-bold text-white hover:text-accent-gold transition-colors" href="https://vetisdigital.com/recursos-gratis/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Recursos Gratis</a>
-    <a class="text-2xl font-bold text-white hover:text-accent-gold transition-colors" href="https://vetisdigital.com/orientacion-online/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Orientación Online</a>
-    <a class="text-2xl font-bold text-white hover:text-accent-gold transition-colors" href="https://vetisdigital.com/app-vetis/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">App Vetis</a>
-    <a class="text-2xl font-bold text-white hover:text-accent-gold transition-colors" href="https://vetisdigital.com/nosotros/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Sobre Nosotros</a>
-    <a class="text-2xl font-bold text-white hover:text-accent-gold transition-colors" href="https://vetisdigital.com/blog-vetis/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Blog</a>
-    <a class="text-2xl font-bold text-white hover:text-accent-gold transition-colors" href="https://vetisdigital.com/afiliados/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Afiliados</a>
-    <a class="text-2xl font-bold text-white hover:text-accent-gold transition-colors" href="https://vetisdigital.com/contacto/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Contacto</a>
+    <a class="text-2xl font-bold text-white hover:text-mustard transition-colors" href="https://vetisdigital.com/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Inicio</a>
+    <a class="text-2xl font-bold text-mustard" href="https://vetisdigital.com/biblioteca/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Biblioteca</a>
+    <a class="text-2xl font-bold text-white hover:text-mustard transition-colors" href="https://vetisdigital.com/recursos-gratis/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Recursos Gratis</a>
+    <a class="text-2xl font-bold text-white hover:text-mustard transition-colors" href="https://vetisdigital.com/orientacion-online/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Orientación Online</a>
+    <a class="text-2xl font-bold text-white hover:text-mustard transition-colors" href="https://vetisdigital.com/app-vetis/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">App Vetis</a>
+    <a class="text-2xl font-bold text-white hover:text-mustard transition-colors" href="https://vetisdigital.com/nosotros/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Sobre Nosotros</a>
+    <a class="text-2xl font-bold text-white hover:text-mustard transition-colors" href="https://vetisdigital.com/blog-vetis/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Blog</a>
+    <a class="text-2xl font-bold text-white hover:text-mustard transition-colors" href="https://vetisdigital.com/afiliados/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Afiliados</a>
+    <a class="text-2xl font-bold text-white hover:text-mustard transition-colors" href="https://vetisdigital.com/contacto/" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Contacto</a>
 
     <div class="mt-4 pt-6 border-t border-white/15 w-full max-w-xs text-center">
-        <a href="https://vetisdigital.com/recursos-gratis/" class="btn-tactile-gold w-full py-4 rounded-2xl flex items-center justify-center gap-2 text-base">
+        <a href="https://vetisdigital.com/recursos-gratis/" class="btn-primary-warm w-full py-4 rounded-2xl flex items-center justify-center gap-2 text-base">
             <span class="material-symbols-outlined">redeem</span>
             Descargar Recursos Gratis
         </a>
@@ -488,57 +507,63 @@
 
 <main>
 
-<!-- 2. HERO DE LA BIBLIOTECA (Orientado al Resultado & Ultra-Lujo) -->
-<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#05180f] via-[#0b3826] to-[#0e4832] pt-28 pb-16 text-white">
+<!-- 2. HERO DE LA BIBLIOTECA (Dark Luxury Editorial - Mantenido como está) -->
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#08241B] via-[#0C3528] to-[#0A2D22] pt-32 pb-20 text-white">
     <!-- Ambient Glow Orbs -->
-    <div class="absolute top-1/4 left-10 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-emerald-400/20 rounded-full blur-[140px] pointer-events-none float-slow"></div>
-    <div class="absolute bottom-10 right-10 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-accent-gold/20 rounded-full blur-[160px] pointer-events-none float-medium"></div>
+    <div class="absolute top-1/4 left-10 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-emerald-400/10 rounded-full blur-[140px] pointer-events-none float-slow"></div>
+    <div class="absolute bottom-10 right-10 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-mustard/10 rounded-full blur-[160px] pointer-events-none float-medium"></div>
 
     <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-12 flex flex-col items-center text-center space-y-7 sm:space-y-9">
-        <!-- Floating Pill Badge con Ping Animado -->
+        <!-- Floating Pill Badge (Sin Icono) -->
         <div data-aos="fade-down" data-aos-duration="800">
-            <div class="floating-pill-emerald-dark shadow-xl">
-                <span class="relative flex h-2.5 w-2.5">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
-                </span>
-                <span class="text-xs font-bold uppercase tracking-widest text-emerald-100">COLECCIÓN DIGITAL VETIS</span>
+            <div class="editorial-badge-dark">
+                <span>COLECCIÓN DIGITAL VETIS</span>
             </div>
         </div>
 
         <!-- Main Heading -->
         <div class="space-y-5 max-w-4xl" data-aos="fade-up" data-aos-duration="1000">
             <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.18] text-white tracking-tight drop-shadow-md">
-                Encuentra la guía que te ayuda a <span class="text-shimmer-gold italic">resolver lo que hoy te preocupa</span>.
+                Encuentra la guía que te ayuda a <span class="font-serif italic text-mustard">resolver lo que hoy te preocupa</span>.
             </h1>
-            <p class="text-base sm:text-xl text-emerald-50 font-normal leading-relaxed max-w-3xl mx-auto drop-shadow">
+            <p class="text-base sm:text-xl text-slate-200 font-normal leading-relaxed max-w-3xl mx-auto drop-shadow">
                 Guías digitales prácticas para comprender mejor a tu perro o gato, actuar con más claridad y dejar de depender de consejos dispersos o contradictorios.
             </p>
 
             <!-- Chunky Tactile Call to Action Buttons -->
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-3 w-full sm:w-auto px-2">
-                <a href="biblioteca-perros.html" class="btn-tactile-gold inline-flex items-center justify-center gap-3 px-8 sm:px-11 py-4 sm:py-5 rounded-2xl text-base sm:text-lg w-full sm:w-auto shadow-2xl">
-                    <span class="material-symbols-outlined text-[1.5rem]">pets</span>
-                    Ver guías para perros
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-5 w-full sm:w-auto px-2">
+                <a href="biblioteca-perros.html" class="btn-hero-primary-mustard">
+                    <span class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-[1.4rem]">pets</span>
+                        <span>Ver guías para perros</span>
+                    </span>
+                    <span class="w-8 h-8 rounded-full bg-[#0A261D]/15 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+                    </span>
                 </a>
-                <a href="biblioteca-gatos.html" class="btn-tactile-outline-dark inline-flex items-center justify-center gap-3 px-8 sm:px-11 py-4 sm:py-5 rounded-2xl text-base sm:text-lg w-full sm:w-auto shadow-2xl">
-                    <span class="material-symbols-outlined text-[1.5rem] text-emerald-300">pets</span>
-                    Ver guías para gatos
+                <a href="biblioteca-gatos.html" class="btn-hero-secondary-darkglass">
+                    <span class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-[1.4rem] text-mustard">pets</span>
+                        <span>Ver guías para gatos</span>
+                    </span>
+                    <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+                    </span>
                 </a>
             </div>
 
-            <!-- Floating Badges in Hero (Línea de confianza con micro-animaciones) -->
-            <div class="flex flex-wrap justify-center items-center gap-3 pt-4">
-                <div class="floating-pill-gold-dark float-slow">
-                    <span class="material-symbols-outlined text-amber-400 text-[18px]">bolt</span>
+            <!-- Floating Badges in Hero (Línea de confianza) -->
+            <div class="flex flex-wrap justify-center items-center gap-3 pt-6">
+                <div class="editorial-badge-dark float-slow">
+                    <span class="material-symbols-outlined text-mustard text-base">bolt</span>
                     <span>Acceso digital inmediato</span>
                 </div>
-                <div class="floating-pill-emerald-dark float-medium">
-                    <span class="material-symbols-outlined text-emerald-300 text-[18px]">schedule</span>
+                <div class="editorial-badge-dark float-medium">
+                    <span class="material-symbols-outlined text-mustard text-base">schedule</span>
                     <span>Lectura a tu ritmo</span>
                 </div>
-                <div class="floating-pill-gold-dark float-reverse">
-                    <span class="material-symbols-outlined text-amber-400 text-[18px]">home</span>
+                <div class="editorial-badge-dark float-reverse">
+                    <span class="material-symbols-outlined text-mustard text-base">home</span>
                     <span>Herramientas aplicables en casa</span>
                 </div>
             </div>
@@ -546,114 +571,110 @@
     </div>
 </section>
 
-<!-- CURVA DE ULTRA-LUJO CON FILO DORADO -->
-<div class="wave-luxury-divider bg-gradient-to-b from-[#0e4832] to-[#0c3a27]">
-    <svg class="w-full h-full" viewBox="0 0 1440 95" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,0 C320,75 420,20 720,50 C1020,80 1180,30 1440,60 L1440,95 L0,95 Z" fill="rgba(212, 175, 55, 0.25)"></path>
-        <path d="M0,10 C320,85 420,30 720,60 C1020,90 1180,40 1440,70 L1440,95 L0,95 Z" fill="#0c3a27"></path>
-        <path d="M0,10 C320,85 420,30 720,60 C1020,90 1180,40 1440,70" stroke="rgba(212, 175, 55, 0.85)" stroke-width="2.5" stroke-linecap="round"></path>
-    </svg>
-</div>
-
-<!-- 3. TRES PUERTAS DE ENTRADA (Elige tu punto de partida) -->
-<section class="py-16 sm:py-24 bg-gradient-to-b from-[#0c3a27] via-[#0e4832] to-[#09261a] text-white relative overflow-hidden">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 space-y-12">
-    <div class="text-center space-y-4 max-w-3xl mx-auto" data-aos="fade-up">
-        <div class="floating-pill-emerald-dark float-slow">
-            <span class="material-symbols-outlined text-emerald-300 text-sm">explore</span>
-            <span class="text-xs uppercase tracking-widest font-bold">ELIGE TU PUNTO DE PARTIDA</span>
+<!-- 3. TRES PUERTAS DE ENTRADA (Cálido Cream - Alturas e imágenes 100% igualadas) -->
+<section class="py-14 sm:py-20 relative overflow-hidden bg-cream text-text-primary">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 space-y-10 sm:space-y-12">
+    <div class="text-center space-y-3 max-w-3xl mx-auto" data-aos="fade-up">
+        <div class="editorial-badge">
+            <span>ELIGE TU PUNTO DE PARTIDA</span>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Empieza por tu mascota o por el <span class="text-shimmer-gold italic">tipo de ayuda</span> que necesitas
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-text-heading tracking-tight leading-tight">
+            Empieza por tu mascota o por el <span class="font-serif italic text-mustard">tipo de ayuda</span> que necesitas
         </h2>
-        <p class="text-emerald-100/90 text-base sm:text-lg max-w-2xl mx-auto font-normal">
+        <p class="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
             Explora una colección completa o comienza con un recurso gratuito para conocer el enfoque Vetis.
         </p>
         <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
     </div>
 
-    <!-- 3 Tarjetas de Entrada Ultra-Lujo -->
-    <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up">
+    <!-- 3 Tarjetas de Entrada con Alturas, Imágenes y Botones Rigurosamente Igualados -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch max-w-7xl mx-auto" data-aos="fade-up">
         <!-- Puerta 1: Colección Canina -->
-        <div class="forest-glass-card overflow-hidden flex flex-col justify-between group p-6 sm:p-7">
-            <div class="space-y-6">
-                <div class="h-60 rounded-2xl overflow-hidden relative border border-white/10 shadow-lg">
-                    <img src="../assets/Hero coleccion canina.webp" alt="Biblioteca Canina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#05180f] via-transparent to-transparent"></div>
-                    <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-gradient-to-r from-amber-400 to-amber-500 text-forest-deep shadow-lg uppercase tracking-wider flex items-center gap-1.5">
-                        <span class="material-symbols-outlined text-sm">pets</span> Caninos (7 Guías)
+        <div class="card-warm overflow-hidden flex flex-col justify-between h-full rounded-3xl p-6 sm:p-7 group">
+            <div class="space-y-5 flex-1 flex flex-col">
+                <div class="w-full h-56 rounded-2xl overflow-hidden relative border border-slate-200/80 shadow-md shrink-0">
+                    <img src="../assets/biblioteca_canina_card.jpg" alt="Biblioteca Canina" class="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#08241B]/70 via-transparent to-transparent"></div>
+                    <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-extrabold bg-mustard text-vetis-dark shadow-md uppercase tracking-wider flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-sm">pets</span> Caninos
                     </span>
                 </div>
-                <div class="space-y-3">
-                    <h3 class="text-2xl font-bold text-white group-hover:text-amber-300 transition-colors">Biblioteca Canina</h3>
-                    <p class="text-emerald-100/90 text-sm leading-relaxed font-normal">
-                        Guías para prepararte, educar, prevenir problemas y comprender mejor el comportamiento y las necesidades de tu perro.
-                    </p>
-                    <div class="p-3.5 rounded-2xl bg-white/5 border border-emerald-400/20 text-xs font-semibold text-emerald-200">
-                        <span class="text-amber-300 font-bold block mb-1">Temas clave:</span>
+                <div class="space-y-2.5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-text-heading group-hover:text-olive transition-colors">Biblioteca Canina</h3>
+                        <p class="text-text-secondary text-sm leading-relaxed font-normal mt-2">
+                            Guías para prepararte, educar, prevenir problemas y comprender mejor el comportamiento y las necesidades de tu perro.
+                        </p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-cream border border-slate-200 text-xs font-semibold text-text-secondary mt-3">
+                        <span class="text-vetis-dark font-bold block mb-0.5">Temas clave:</span>
                         Primeros días · Cachorros · Adiestramiento · Ansiedad · Reactividad · Prevención
                     </div>
                 </div>
             </div>
-            <div class="pt-6">
-                <a href="biblioteca-perros.html" class="w-full btn-tactile-gold py-4 rounded-2xl text-sm font-extrabold shadow-lg">
-                    Ver colección canina <span class="material-symbols-outlined text-sm ml-1.5">arrow_forward</span>
+            <div class="pt-5 mt-auto">
+                <a href="biblioteca-perros.html" class="btn-primary-warm w-full py-3.5 sm:py-4 rounded-xl flex items-center justify-center gap-2 text-sm sm:text-base font-bold shadow-md">
+                    Ver colección canina <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </a>
             </div>
         </div>
 
         <!-- Puerta 2: Colección Felina -->
-        <div class="forest-glass-card overflow-hidden flex flex-col justify-between group p-6 sm:p-7">
-            <div class="space-y-6">
-                <div class="h-60 rounded-2xl overflow-hidden relative border border-white/10 shadow-lg">
-                    <img src="../assets/Hero coleccion felina.webp" alt="Biblioteca Felina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#05180f] via-transparent to-transparent"></div>
-                    <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-gradient-to-r from-amber-400 to-amber-500 text-forest-deep shadow-lg uppercase tracking-wider flex items-center gap-1.5">
-                        <span class="material-symbols-outlined text-sm">pets</span> Felinos (5 Guías)
+        <div class="card-warm overflow-hidden flex flex-col justify-between h-full rounded-3xl p-6 sm:p-7 group">
+            <div class="space-y-5 flex-1 flex flex-col">
+                <div class="w-full h-56 rounded-2xl overflow-hidden relative border border-slate-200/80 shadow-md shrink-0">
+                    <img src="../assets/biblioteca_felina_card.jpg" alt="Biblioteca Felina" class="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#08241B]/70 via-transparent to-transparent"></div>
+                    <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-extrabold bg-mustard text-vetis-dark shadow-md uppercase tracking-wider flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-sm">pets</span> Felinos
                     </span>
                 </div>
-                <div class="space-y-3">
-                    <h3 class="text-2xl font-bold text-white group-hover:text-amber-300 transition-colors">Biblioteca Felina</h3>
-                    <p class="text-emerald-100/90 text-sm leading-relaxed font-normal">
-                        Recursos para mejorar la adaptación, el bienestar indoor, la prevención y el cuidado cotidiano de tu gato.
-                    </p>
-                    <div class="p-3.5 rounded-2xl bg-white/5 border border-emerald-400/20 text-xs font-semibold text-emerald-200">
-                        <span class="text-amber-300 font-bold block mb-1">Temas clave:</span>
+                <div class="space-y-2.5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-text-heading group-hover:text-olive transition-colors">Biblioteca Felina</h3>
+                        <p class="text-text-secondary text-sm leading-relaxed font-normal mt-2">
+                            Recursos para mejorar la adaptación, el bienestar indoor, la prevención y el cuidado cotidiano de tu gato.
+                        </p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-cream border border-slate-200 text-xs font-semibold text-text-secondary mt-3">
+                        <span class="text-vetis-dark font-bold block mb-0.5">Temas clave:</span>
                         Primeros días · Vida indoor · Señales · Primeros auxilios · Organización
                     </div>
                 </div>
             </div>
-            <div class="pt-6">
-                <a href="biblioteca-gatos.html" class="w-full btn-tactile-gold py-4 rounded-2xl text-sm font-extrabold shadow-lg">
-                    Ver colección felina <span class="material-symbols-outlined text-sm ml-1.5">arrow_forward</span>
+            <div class="pt-5 mt-auto">
+                <a href="biblioteca-gatos.html" class="btn-primary-warm w-full py-3.5 sm:py-4 rounded-xl flex items-center justify-center gap-2 text-sm sm:text-base font-bold shadow-md">
+                    Ver colección felina <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </a>
             </div>
         </div>
 
         <!-- Puerta 3: Empieza sin Costo -->
-        <div class="forest-glass-card overflow-hidden flex flex-col justify-between group p-6 sm:p-7">
-            <div class="space-y-6">
-                <div class="h-60 rounded-2xl overflow-hidden relative border border-white/10 shadow-lg">
-                    <img src="../assets/recursos tarjeta.webp" alt="Recursos Gratuitos Vetis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#05180f] via-transparent to-transparent"></div>
-                    <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg uppercase tracking-wider flex items-center gap-1.5">
+        <div class="card-warm overflow-hidden flex flex-col justify-between h-full rounded-3xl p-6 sm:p-7 group">
+            <div class="space-y-5 flex-1 flex flex-col">
+                <div class="w-full h-56 rounded-2xl overflow-hidden relative border border-slate-200/80 shadow-md shrink-0">
+                    <img src="../assets/recursos_gratis_punto_partida.jpg" alt="Recursos Gratuitos Vetis" class="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#08241B]/70 via-transparent to-transparent"></div>
+                    <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full text-xs font-extrabold bg-mustard text-vetis-dark shadow-md uppercase tracking-wider flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-sm">redeem</span> 100% Gratis
                     </span>
                 </div>
-                <div class="space-y-3">
-                    <h3 class="text-2xl font-bold text-white group-hover:text-emerald-300 transition-colors">Empieza sin costo</h3>
-                    <p class="text-emerald-100/90 text-sm leading-relaxed font-normal">
-                        Descarga checklists, mini guías y retos prácticos para resolver una primera necesidad y conocer la forma de trabajar de Vetis.
-                    </p>
-                    <div class="p-3.5 rounded-2xl bg-white/5 border border-emerald-400/20 text-xs font-semibold text-emerald-200">
-                        <span class="text-emerald-300 font-bold block mb-1">Incluye:</span>
+                <div class="space-y-2.5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-text-heading group-hover:text-olive transition-colors">Empieza sin costo</h3>
+                        <p class="text-text-secondary text-sm leading-relaxed font-normal mt-2">
+                            Descarga checklists, mini guías y retos prácticos para resolver una primera necesidad y conocer la forma de trabajar de Vetis.
+                        </p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-cream border border-slate-200 text-xs font-semibold text-text-secondary mt-3">
+                        <span class="text-vetis-dark font-bold block mb-0.5">Incluye:</span>
                         Checklists · Retos · Mini guías · Herramientas prácticas
                     </div>
                 </div>
             </div>
-            <div class="pt-6">
-                <a href="https://vetisdigital.com/recursos-gratis/" class="w-full btn-tactile-emerald py-4 rounded-2xl text-sm font-extrabold shadow-lg">
-                    Ver recursos gratis <span class="material-symbols-outlined text-sm ml-1.5">arrow_forward</span>
+            <div class="pt-5 mt-auto">
+                <a href="https://vetisdigital.com/recursos-gratis/" class="btn-primary-warm w-full py-3.5 sm:py-4 rounded-xl flex items-center justify-center gap-2 text-sm sm:text-base font-bold shadow-md">
+                    Ver recursos gratis <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </a>
             </div>
         </div>
@@ -661,388 +682,394 @@
 </div>
 </section>
 
-<!-- CURVA DE TRANSICIÓN -->
-<div class="wave-luxury-divider bg-gradient-to-b from-[#09261a] to-[#0a3424]">
-    <svg class="w-full h-full" viewBox="0 0 1440 95" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,0 C320,75 420,20 720,50 C1020,80 1180,30 1440,60 L1440,95 L0,95 Z" fill="rgba(212, 175, 55, 0.2)"></path>
-        <path d="M0,10 C320,85 420,30 720,60 C1020,90 1180,40 1440,70 L1440,95 L0,95 Z" fill="#0a3424"></path>
-        <path d="M0,10 C320,85 420,30 720,60 C1020,90 1180,40 1440,70" stroke="rgba(212, 175, 55, 0.8)" stroke-width="2.5" stroke-linecap="round"></path>
-    </svg>
-</div>
-
-<!-- 4. CÓMO ELEGIR UNA GUÍA (No necesitas comprar todo) -->
-<section class="py-16 sm:py-24 bg-gradient-to-b from-[#0a3424] via-[#0e4832] to-[#07261a] text-white relative overflow-hidden">
-<div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-12 relative z-10">
-    <div class="text-center space-y-4 max-w-3xl mx-auto" data-aos="fade-up">
-        <div class="floating-pill-gold-dark float-slow">
-            <span class="material-symbols-outlined text-amber-300 text-sm">lightbulb</span>
-            <span class="text-xs uppercase tracking-widest font-bold">NO NECESITAS COMPRAR TODO</span>
+<!-- 4. CÓMO ELEGIR UNA GUÍA (Warm White 01-02-03 - Proceso Ágil, Compacto y Rápido de Leer) -->
+<section class="py-12 sm:py-16 relative overflow-hidden bg-warm-white text-text-primary border-t border-slate-200/60">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-8 relative z-10">
+    <div class="text-center space-y-2.5 max-w-3xl mx-auto" data-aos="fade-up">
+        <div class="editorial-badge">
+            <span>NO NECESITAS COMPRAR TODO</span>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Elige la guía que resuelve tu necesidad <span class="text-shimmer-gold italic">más importante primero</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-text-heading tracking-tight leading-tight">
+            Elige la guía que resuelve tu necesidad <span class="font-serif italic text-mustard">más importante primero</span>
         </h2>
-        <p class="text-emerald-100/90 text-base sm:text-lg leading-relaxed font-normal">
-            La mejor forma de comenzar no es acumular información. Es elegir el recurso que se conecta con la situación que estás viviendo y aplicar un cambio a la vez.
+        <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal max-w-2xl mx-auto">
+            La mejor forma de comenzar no es acumular información. Es elegir el recurso para tu situación actual y aplicar un cambio a la vez.
         </p>
-        <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
     </div>
 
-    <!-- 3 Pasos en Cards de Ultra-Lujo -->
-    <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up">
+    <!-- 3 Pasos Compactos en Barra/Cards Horizontales Rápidas -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5" data-aos="fade-up">
         <!-- Paso 1 -->
-        <div class="forest-glass-card p-8 space-y-4 relative overflow-hidden">
-            <div class="text-6xl font-extrabold text-amber-400/20 font-serif absolute top-3 right-6">01</div>
-            <div class="w-14 h-14 rounded-2xl bg-amber-400/20 border border-amber-400/50 flex items-center justify-center text-amber-300 shadow-lg">
-                <span class="material-symbols-outlined text-3xl">search_check</span>
+        <div class="card-warm p-5 sm:p-6 rounded-2xl flex items-start gap-4 border border-slate-200/80">
+            <span class="w-10 h-10 rounded-xl bg-mustard/20 text-vetis-dark font-serif font-black text-lg flex items-center justify-center shrink-0 border border-mustard/40 shadow-xs">
+                01
+            </span>
+            <div class="space-y-1">
+                <h3 class="text-sm sm:text-base font-bold text-text-heading">Identifica el problema principal</h3>
+                <p class="text-xs text-text-secondary leading-relaxed font-normal">
+                    Qué situación genera más confusión, preocupación o dificultad hoy.
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-white">Identifica el problema principal</h3>
-            <p class="text-xs sm:text-sm text-emerald-100/90 leading-relaxed font-normal">
-                Pregúntate qué situación está generando más confusión, preocupación o dificultad en este momento.
-            </p>
         </div>
 
         <!-- Paso 2 -->
-        <div class="forest-glass-card p-8 space-y-4 relative overflow-hidden">
-            <div class="text-6xl font-extrabold text-emerald-400/20 font-serif absolute top-3 right-6">02</div>
-            <div class="w-14 h-14 rounded-2xl bg-emerald-400/20 border border-emerald-400/50 flex items-center justify-center text-emerald-300 shadow-lg">
-                <span class="material-symbols-outlined text-3xl">target</span>
+        <div class="card-warm p-5 sm:p-6 rounded-2xl flex items-start gap-4 border border-slate-200/80">
+            <span class="w-10 h-10 rounded-xl bg-sage-light text-olive font-serif font-black text-lg flex items-center justify-center shrink-0 border border-olive/30 shadow-xs">
+                02
+            </span>
+            <div class="space-y-1">
+                <h3 class="text-sm sm:text-base font-bold text-text-heading">Elige la guía más específica</h3>
+                <p class="text-xs text-text-secondary leading-relaxed font-normal">
+                    Un recurso concreto es más fácil de aplicar que intentar aprender todo a la vez.
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-white">Elige la guía más específica</h3>
-            <p class="text-xs sm:text-sm text-emerald-100/90 leading-relaxed font-normal">
-                Un recurso concreto suele ser más fácil de aplicar que intentar aprender sobre todos los temas al mismo tiempo.
-            </p>
         </div>
 
         <!-- Paso 3 -->
-        <div class="forest-glass-card p-8 space-y-4 relative overflow-hidden">
-            <div class="text-6xl font-extrabold text-amber-400/20 font-serif absolute top-3 right-6">03</div>
-            <div class="w-14 h-14 rounded-2xl bg-amber-400/20 border border-amber-400/50 flex items-center justify-center text-amber-300 shadow-lg">
-                <span class="material-symbols-outlined text-3xl">trending_up</span>
+        <div class="card-warm p-5 sm:p-6 rounded-2xl flex items-start gap-4 border border-slate-200/80">
+            <span class="w-10 h-10 rounded-xl bg-mustard/20 text-vetis-dark font-serif font-black text-lg flex items-center justify-center shrink-0 border border-mustard/40 shadow-xs">
+                03
+            </span>
+            <div class="space-y-1">
+                <h3 class="text-sm sm:text-base font-bold text-text-heading">Avanza antes de añadir más</h3>
+                <p class="text-xs text-text-secondary leading-relaxed font-normal">
+                    Lee, aplica y observa. Después podrás complementar cuando lo necesites.
+                </p>
             </div>
-            <h3 class="text-xl font-bold text-white">Avanza antes de añadir más</h3>
-            <p class="text-xs sm:text-sm text-emerald-100/90 leading-relaxed font-normal">
-                Lee, aplica y observa. Después podrás complementar con otra guía cuando realmente la necesites.
-            </p>
         </div>
     </div>
 
-    <!-- Frase Destacada de Confianza -->
-    <div class="forest-glass-card p-8 sm:p-10 text-center space-y-4 max-w-4xl mx-auto border-2 border-accent-gold/50 shadow-2xl" data-aos="fade-up">
-        <span class="material-symbols-outlined text-amber-400 text-4xl stars-subtle">format_quote</span>
-        <p class="text-base sm:text-xl font-bold text-white leading-relaxed italic">
+    <!-- Frase Destacada de Cierre Compacta -->
+    <div class="p-4 sm:p-5 rounded-2xl bg-cream/70 border border-mustard/30 text-center max-w-2xl mx-auto shadow-xs" data-aos="fade-up">
+        <p class="text-xs sm:text-sm font-semibold text-text-heading italic font-serif">
             “Más productos no siempre significan más progreso. La guía correcta, aplicada en el momento correcto, sí puede marcar una diferencia.”
         </p>
     </div>
 </div>
 </section>
 
-<!-- 5. QUÉ HACE DIFERENTE A VETIS (De la duda a la acción) -->
-<section class="py-16 sm:py-24 bg-gradient-to-b from-[#07261a] via-[#0c3a27] to-[#082a1c] text-white relative overflow-hidden">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-12 relative z-10">
-    <div class="text-center space-y-4 max-w-3xl mx-auto" data-aos="fade-up">
-        <div class="floating-pill-emerald-dark float-slow">
-            <span class="material-symbols-outlined text-emerald-300 text-sm">verified</span>
-            <span class="text-xs uppercase tracking-widest font-bold">UNA BIBLIOTECA CREADA PARA SER UTILIZADA</span>
+<!-- 5. QUÉ HACE DIFERENTE A VETIS (Dark Luxury - Compactado un 15-20%) -->
+<section class="py-14 sm:py-20 relative overflow-hidden bg-gradient-to-b from-[#08241B] via-[#0C3528] to-[#08241B] text-white">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-10 relative z-10">
+    <div class="text-center space-y-3 max-w-3xl mx-auto" data-aos="fade-up">
+        <div class="editorial-badge-dark">
+            <span>UNA BIBLIOTECA CREADA PARA SER UTILIZADA</span>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Hecha para ayudarte a pasar de <span class="text-shimmer-gold italic">la duda a la acción</span>
+        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Hecha para ayudarte a pasar de <span class="font-serif italic text-mustard">la duda a la acción</span>
         </h2>
-        <p class="text-emerald-100/90 text-base sm:text-lg leading-relaxed font-normal">
+        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed font-normal">
             No queremos que termines solamente con más información. Queremos que sepas cuál puede ser tu siguiente paso.
         </p>
         <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
     </div>
 
-    <!-- 4 Tarjetas en Rejilla 2x2 / 4 Col -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
+    <!-- 4 Tarjetas Compactadas (~20% menos altura y padding más eficiente) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5" data-aos="fade-up">
         <!-- Tarjeta 1 -->
-        <div class="forest-glass-card p-8 space-y-4 text-center">
-            <div class="w-14 h-14 rounded-2xl bg-amber-400/20 border border-amber-400/50 flex items-center justify-center mx-auto text-amber-300 shadow-lg">
-                <span class="material-symbols-outlined text-3xl">auto_stories</span>
+        <div class="card-dark-luxury p-5 sm:p-6 space-y-2.5 text-center rounded-2xl group">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-mustard/30 via-amber-400/20 to-mustard/40 border border-mustard/60 flex items-center justify-center mx-auto text-mustard shadow-lg shadow-mustard/15 group-hover:scale-110 group-hover:border-mustard transition-all duration-300 relative">
+                <svg class="w-7 h-7 relative z-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="clarityGold" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FDE68A"/>
+                            <stop offset="0.5" stop-color="#F59E0B"/>
+                            <stop offset="1" stop-color="#D97706"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="12" cy="12" r="9.5" stroke="url(#clarityGold)" stroke-width="1.2" stroke-dasharray="2.5 2.5" opacity="0.6"/>
+                    <circle cx="12" cy="12" r="6" stroke="url(#clarityGold)" stroke-width="1.2" opacity="0.85"/>
+                    <path d="M12 2.5V5M12 19V21.5M2.5 12H5M19 12H21.5" stroke="url(#clarityGold)" stroke-width="1.6" stroke-linecap="round"/>
+                    <path d="M12 7L13.3 10.7L17 12L13.3 13.3L12 17L10.7 13.3L7 12L10.7 10.7L12 7Z" fill="url(#clarityGold)"/>
+                </svg>
             </div>
-            <h3 class="text-lg font-bold text-white">Claridad antes que saturación</h3>
-            <p class="text-xs sm:text-sm text-emerald-100/90 leading-relaxed font-normal">
-                Cada tema se organiza para que comprendas qué importa, qué puede esperar y qué deberías atender primero.
+            <h3 class="text-sm sm:text-base font-bold text-white">Claridad antes que saturación</h3>
+            <p class="text-xs text-slate-300 leading-relaxed font-normal">
+                Organizado para que comprendas qué importa, qué puede esperar y qué atender primero.
             </p>
         </div>
 
         <!-- Tarjeta 2 -->
-        <div class="forest-glass-card p-8 space-y-4 text-center">
-            <div class="w-14 h-14 rounded-2xl bg-emerald-400/20 border border-emerald-400/50 flex items-center justify-center mx-auto text-emerald-300 shadow-lg">
-                <span class="material-symbols-outlined text-3xl">task_alt</span>
+        <div class="card-dark-luxury p-5 sm:p-6 space-y-2.5 text-center rounded-2xl">
+            <div class="w-11 h-11 rounded-xl bg-emerald-400/20 border border-emerald-400/45 flex items-center justify-center mx-auto text-emerald-300 shadow-md">
+                <span class="material-symbols-outlined text-2xl">task_alt</span>
             </div>
-            <h3 class="text-lg font-bold text-white">Pasos que puedes aplicar</h3>
-            <p class="text-xs sm:text-sm text-emerald-100/90 leading-relaxed font-normal">
-                Encontrarás recomendaciones adaptables a la vida cotidiana, sin exigir rutinas imposibles de mantener.
+            <h3 class="text-sm sm:text-base font-bold text-white">Pasos que puedes aplicar</h3>
+            <p class="text-xs text-slate-300 leading-relaxed font-normal">
+                Recomendaciones adaptables al día a día, sin exigir rutinas imposibles de mantener.
             </p>
         </div>
 
         <!-- Tarjeta 3 -->
-        <div class="forest-glass-card p-8 space-y-4 text-center">
-            <div class="w-14 h-14 rounded-2xl bg-amber-400/20 border border-amber-400/50 flex items-center justify-center mx-auto text-amber-300 shadow-lg">
-                <span class="material-symbols-outlined text-3xl">construction</span>
+        <div class="card-dark-luxury p-5 sm:p-6 space-y-2.5 text-center rounded-2xl">
+            <div class="w-11 h-11 rounded-xl bg-mustard/20 border border-mustard/45 flex items-center justify-center mx-auto text-mustard shadow-md">
+                <span class="material-symbols-outlined text-2xl">construction</span>
             </div>
-            <h3 class="text-lg font-bold text-white">Herramientas que reducen esfuerzo</h3>
-            <p class="text-xs sm:text-sm text-emerald-100/90 leading-relaxed font-normal">
-                Según el producto, encontrarás checklists, ejercicios, registros, protocolos o materiales de apoyo.
+            <h3 class="text-sm sm:text-base font-bold text-white">Herramientas útiles</h3>
+            <p class="text-xs text-slate-300 leading-relaxed font-normal">
+                Incluye checklists, ejercicios, registros o protocolos de apoyo según el producto.
             </p>
         </div>
 
         <!-- Tarjeta 4 -->
-        <div class="forest-glass-card p-8 space-y-4 text-center">
-            <div class="w-14 h-14 rounded-2xl bg-emerald-400/20 border border-emerald-400/50 flex items-center justify-center mx-auto text-emerald-300 shadow-lg">
-                <span class="material-symbols-outlined text-3xl">health_and_safety</span>
+        <div class="card-dark-luxury p-5 sm:p-6 space-y-2.5 text-center rounded-2xl">
+            <div class="w-11 h-11 rounded-xl bg-emerald-400/20 border border-emerald-400/45 flex items-center justify-center mx-auto text-emerald-300 shadow-md">
+                <span class="material-symbols-outlined text-2xl">health_and_safety</span>
             </div>
-            <h3 class="text-lg font-bold text-white">Enfoque responsable</h3>
-            <p class="text-xs sm:text-sm text-emerald-100/90 leading-relaxed font-normal">
-                Los contenidos educativos explican sus límites y señalan cuándo corresponde solicitar ayuda profesional.
+            <h3 class="text-sm sm:text-base font-bold text-white">Enfoque responsable</h3>
+            <p class="text-xs text-slate-300 leading-relaxed font-normal">
+                Explica sus alcances y señala con claridad cuándo solicitar ayuda médica profesional.
             </p>
         </div>
     </div>
 
-    <div class="text-center pt-2" data-aos="fade-up">
-        <p class="text-sm sm:text-base font-bold text-amber-300 tracking-wide">
-            Menos consejos sueltos. Más contexto, estructura y criterio.
-        </p>
+    <div class="text-center pt-1" data-aos="fade-up">
+        <div class="editorial-badge-dark">
+            <span>Menos consejos sueltos. Más contexto, estructura y criterio.</span>
+        </div>
     </div>
 </div>
 </section>
 
-<!-- 6. QUÉ RECIBE EL COMPRADOR (Una experiencia digital completa) -->
-<section class="py-16 sm:py-24 bg-gradient-to-b from-[#082a1c] via-[#0d3f2b] to-[#082a1c] text-white relative overflow-hidden">
-<div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-12 relative z-10">
-    <div class="text-center space-y-4 max-w-3xl mx-auto" data-aos="fade-up">
-        <div class="floating-pill-gold-dark float-slow">
-            <span class="material-symbols-outlined text-amber-300 text-sm">inventory_2</span>
-            <span class="text-xs uppercase tracking-widest font-bold">UNA EXPERIENCIA DIGITAL COMPLETA</span>
+<!-- 6. QUÉ RECIBE EL COMPRADOR (Cálido Cream - Convertido en Filas Simples con Separadores Finos) -->
+<section class="py-14 sm:py-20 relative overflow-hidden bg-cream text-text-primary border-t border-slate-200/60">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10 relative z-10">
+    <div class="text-center space-y-3 max-w-2xl mx-auto" data-aos="fade-up">
+        <div class="editorial-badge">
+            <span>UNA EXPERIENCIA DIGITAL COMPLETA</span>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Más que leer: <span class="text-shimmer-gold italic">comprender, aplicar y volver a consultar</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-text-heading tracking-tight leading-tight">
+            Más que leer: <span class="font-serif italic text-mustard">comprender, aplicar y volver a consultar</span>
         </h2>
-        <p class="text-emerald-100/90 text-base sm:text-lg leading-relaxed font-normal">
-            Cada producto está diseñado para acompañarte durante una situación o etapa concreta, no para ser leído una sola vez y olvidado.
+        <p class="text-text-secondary text-xs sm:text-sm leading-relaxed font-normal">
+            Cada producto está diseñado para acompañarte durante una situación concreta, no para ser leído una sola vez y olvidado.
         </p>
         <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
     </div>
 
-    <!-- 4 Elementos -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
-        <div class="forest-glass-card p-6 sm:p-7 space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-amber-400/20 text-amber-300 font-extrabold flex items-center justify-center text-sm border border-amber-400/50 shadow-md">
-                01
+    <!-- Lista Editorial en Filas Elegantes con Elementos Gráficos Pro y Separadores Finos -->
+    <div class="card-warm rounded-3xl p-6 sm:p-8 divide-y divide-slate-200/70 border border-mustard/20 shadow-sm" data-aos="fade-up">
+        <!-- Fila 1: Contenido Organizado -->
+        <div class="py-5 first:pt-0 last:pb-0 flex items-start sm:items-center gap-4 sm:gap-6 group">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-mustard/25 via-amber-300/15 to-mustard/35 text-vetis-dark flex items-center justify-center shrink-0 border border-mustard/50 shadow-xs group-hover:scale-110 group-hover:border-mustard transition-all duration-300">
+                <span class="material-symbols-outlined text-xl">auto_stories</span>
             </div>
-            <h3 class="text-base font-bold text-white">Contenido organizado</h3>
-            <p class="text-xs text-emerald-100/80 leading-relaxed font-normal">
-                Capítulos y secciones construidos para avanzar desde la comprensión inicial hasta la aplicación.
-            </p>
+            <div class="flex-1 grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4 items-center">
+                <h3 class="sm:col-span-4 text-sm sm:text-base font-bold text-text-heading group-hover:text-olive transition-colors">Contenido organizado</h3>
+                <p class="sm:col-span-8 text-xs text-text-secondary leading-relaxed font-normal">
+                    Capítulos y secciones construidos para avanzar desde la comprensión inicial hasta la aplicación práctica.
+                </p>
+            </div>
         </div>
 
-        <div class="forest-glass-card p-6 sm:p-7 space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-emerald-400/20 text-emerald-300 font-extrabold flex items-center justify-center text-sm border border-emerald-400/50 shadow-md">
-                02
+        <!-- Fila 2: Ejemplos y Acciones -->
+        <div class="py-5 first:pt-0 last:pb-0 flex items-start sm:items-center gap-4 sm:gap-6 group">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-800/15 via-emerald-700/10 to-[#0C3528]/20 text-[#0C3528] flex items-center justify-center shrink-0 border border-emerald-700/30 shadow-xs group-hover:scale-110 group-hover:border-emerald-700/50 transition-all duration-300">
+                <span class="material-symbols-outlined text-xl">checklist_rtl</span>
             </div>
-            <h3 class="text-base font-bold text-white">Ejemplos y acciones concretas</h3>
-            <p class="text-xs text-emerald-100/80 leading-relaxed font-normal">
-                Situaciones cotidianas, errores frecuentes y próximos pasos fáciles de reconocer.
-            </p>
+            <div class="flex-1 grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4 items-center">
+                <h3 class="sm:col-span-4 text-sm sm:text-base font-bold text-text-heading group-hover:text-olive transition-colors">Ejemplos y acciones</h3>
+                <p class="sm:col-span-8 text-xs text-text-secondary leading-relaxed font-normal">
+                    Situaciones cotidianas, errores frecuentes y próximos pasos fáciles de reconocer y ejecutar en casa.
+                </p>
+            </div>
         </div>
 
-        <div class="forest-glass-card p-6 sm:p-7 space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-amber-400/20 text-amber-300 font-extrabold flex items-center justify-center text-sm border border-amber-400/50 shadow-md">
-                03
+        <!-- Fila 3: Materiales de Apoyo -->
+        <div class="py-5 first:pt-0 last:pb-0 flex items-start sm:items-center gap-4 sm:gap-6 group">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-mustard/25 via-amber-300/15 to-mustard/35 text-vetis-dark flex items-center justify-center shrink-0 border border-mustard/50 shadow-xs group-hover:scale-110 group-hover:border-mustard transition-all duration-300">
+                <span class="material-symbols-outlined text-xl">folder_special</span>
             </div>
-            <h3 class="text-base font-bold text-white">Materiales complementarios</h3>
-            <p class="text-xs text-emerald-100/80 leading-relaxed font-normal">
-                Algunos productos incluyen bonos, plantillas o herramientas adicionales. Cada página indica exactamente qué contiene.
-            </p>
+            <div class="flex-1 grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4 items-center">
+                <h3 class="sm:col-span-4 text-sm sm:text-base font-bold text-text-heading group-hover:text-olive transition-colors">Materiales de apoyo</h3>
+                <p class="sm:col-span-8 text-xs text-text-secondary leading-relaxed font-normal">
+                    Plantillas, bonos o herramientas de registro. Cada página indica con exactitud qué contiene su compra.
+                </p>
+            </div>
         </div>
 
-        <div class="forest-glass-card p-6 sm:p-7 space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-emerald-400/20 text-emerald-300 font-extrabold flex items-center justify-center text-sm border border-emerald-400/50 shadow-md">
-                04
+        <!-- Fila 4: Acceso Digital -->
+        <div class="py-5 first:pt-0 last:pb-0 flex items-start sm:items-center gap-4 sm:gap-6 group">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-800/15 via-emerald-700/10 to-[#0C3528]/20 text-[#0C3528] flex items-center justify-center shrink-0 border border-emerald-700/30 shadow-xs group-hover:scale-110 group-hover:border-emerald-700/50 transition-all duration-300">
+                <span class="material-symbols-outlined text-xl">devices</span>
             </div>
-            <h3 class="text-base font-bold text-white">Acceso digital</h3>
-            <p class="text-xs text-emerald-100/80 leading-relaxed font-normal">
-                Consulta el contenido desde teléfono, tablet o computador según las condiciones informadas en cada producto.
-            </p>
+            <div class="flex-1 grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4 items-center">
+                <h3 class="sm:col-span-4 text-sm sm:text-base font-bold text-text-heading group-hover:text-olive transition-colors">Acceso digital</h3>
+                <p class="sm:col-span-8 text-xs text-text-secondary leading-relaxed font-normal">
+                    Consulta el contenido desde teléfono, tablet o computador según las indicaciones del producto.
+                </p>
+            </div>
         </div>
     </div>
 
     <!-- Cierre / Aviso -->
-    <div class="text-center p-4 rounded-2xl bg-white/5 border border-amber-400/30 max-w-3xl mx-auto" data-aos="fade-up">
-        <p class="text-xs text-emerald-200 leading-relaxed">
-            <span class="font-bold text-amber-300">Nota:</span> Revisa la página de cada guía para conocer su contenido, público recomendado, formato y materiales incluidos antes de comprar.
+    <div class="text-center p-3.5 rounded-xl bg-warm-white border border-mustard/30 max-w-2xl mx-auto shadow-2xs" data-aos="fade-up">
+        <p class="text-xs text-text-secondary leading-relaxed">
+            <span class="font-bold text-text-heading">Nota:</span> Revisa la página de cada guía para conocer su contenido, público recomendado, formato y materiales incluidos antes de comprar.
         </p>
     </div>
 </div>
 </section>
 
-<!-- 7. RECURSOS GRATUITOS (Prueba el enfoque Vetis sin costo) -->
-<section class="py-16 sm:py-24 bg-gradient-to-b from-[#082a1c] via-[#0b3826] to-[#082a1c] text-white relative overflow-hidden">
-<div class="absolute top-1/3 left-10 w-96 h-96 bg-emerald-400/15 rounded-full blur-[130px] pointer-events-none float-slow"></div>
-<div class="absolute bottom-10 right-10 w-96 h-96 bg-accent-gold/15 rounded-full blur-[130px] pointer-events-none float-medium"></div>
+<!-- 7. RECURSOS GRATUITOS (Banner Editorial con Imagen de Fondo y Texto Directo sin Caja Interior) -->
+<section class="py-12 sm:py-16 relative overflow-hidden bg-warm-white text-white border-t border-slate-200/60">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10" data-aos="fade-up">
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-mustard/40 min-h-[480px] sm:min-h-[520px] flex items-center">
+        <!-- Imagen de Fondo Completa -->
+        <img src="../assets/bloque recursos inicio.webp" alt="Recursos Gratuitos de Vetis Digital" class="absolute inset-0 w-full h-full object-cover object-right md:object-center transition-transform duration-700" />
+        
+        <!-- Overlay Gradiente Suave para Legibilidad Directa sin Ocultar la Imagen -->
+        <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[#08241B]/95 via-[#08241B]/75 via-45% to-transparent"></div>
 
-<div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-    <div class="grid lg:grid-cols-12 gap-12 items-center">
-        <!-- Columna de Texto & Beneficios -->
-        <div class="lg:col-span-7 space-y-6" data-aos="fade-right">
-            <div class="floating-pill-gold-dark float-slow">
-                <span class="material-symbols-outlined text-amber-300 text-sm">redeem</span>
-                <span class="text-xs uppercase tracking-widest font-bold">TODAVÍA NO SABES POR DÓNDE EMPEZAR</span>
+        <!-- Contenido Directo por Encima (Sin caja ni bordes interiores) -->
+        <div class="relative z-10 p-6 sm:p-10 lg:p-14 max-w-xl lg:max-w-[530px] space-y-4 sm:space-y-5 text-left text-white">
+            <div class="editorial-badge-dark">
+                <span>TODAVÍA NO SABES POR DÓNDE EMPEZAR</span>
             </div>
             
-            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-                Prueba el enfoque Vetis <span class="text-shimmer-gold italic">sin costo</span>
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight drop-shadow-md">
+                Prueba el enfoque Vetis <span class="font-serif italic text-mustard">sin costo</span>
             </h2>
             
-            <p class="text-emerald-100/90 text-base sm:text-lg leading-relaxed font-normal">
+            <p class="text-slate-200 text-xs sm:text-sm md:text-base leading-relaxed font-normal drop-shadow-sm">
                 Descarga una herramienta breve y práctica para resolver una primera necesidad, conocer cómo explicamos cada tema y comenzar a aplicar pequeños cambios desde hoy.
             </p>
 
             <!-- 3 Beneficios Clave -->
-            <div class="space-y-3.5 pt-2">
-                <div class="flex items-center gap-3 text-sm sm:text-base text-emerald-100 font-semibold">
-                    <span class="w-8 h-8 rounded-xl bg-amber-400/20 border border-amber-400/50 flex items-center justify-center text-amber-300 shrink-0 shadow-md">
-                        <span class="material-symbols-outlined text-lg">check_circle</span>
+            <div class="space-y-2.5 pt-1">
+                <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-100 font-semibold drop-shadow-sm">
+                    <span class="w-6 h-6 rounded-lg bg-mustard/25 border border-mustard/50 flex items-center justify-center text-mustard shrink-0 shadow-xs">
+                        <span class="material-symbols-outlined text-sm">check_circle</span>
                     </span>
                     <span>Checklists, mini guías y retos prácticos.</span>
                 </div>
-                <div class="flex items-center gap-3 text-sm sm:text-base text-emerald-100 font-semibold">
-                    <span class="w-8 h-8 rounded-xl bg-amber-400/20 border border-amber-400/50 flex items-center justify-center text-amber-300 shrink-0 shadow-md">
-                        <span class="material-symbols-outlined text-lg">pets</span>
+                <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-100 font-semibold drop-shadow-sm">
+                    <span class="w-6 h-6 rounded-lg bg-mustard/25 border border-mustard/50 flex items-center justify-center text-mustard shrink-0 shadow-xs">
+                        <span class="material-symbols-outlined text-sm">pets</span>
                     </span>
                     <span>Recursos especializados para perros y gatos.</span>
                 </div>
-                <div class="flex items-center gap-3 text-sm sm:text-base text-emerald-100 font-semibold">
-                    <span class="w-8 h-8 rounded-xl bg-amber-400/20 border border-amber-400/50 flex items-center justify-center text-amber-300 shrink-0 shadow-md">
-                        <span class="material-symbols-outlined text-lg">devices</span>
+                <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-100 font-semibold drop-shadow-sm">
+                    <span class="w-6 h-6 rounded-lg bg-mustard/25 border border-mustard/50 flex items-center justify-center text-mustard shrink-0 shadow-xs">
+                        <span class="material-symbols-outlined text-sm">devices</span>
                     </span>
                     <span>Contenido digital fácil de utilizar desde cualquier pantalla.</span>
                 </div>
             </div>
 
-            <div class="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <a href="https://vetisdigital.com/recursos-gratis/" class="btn-tactile-gold px-9 py-4 rounded-2xl text-base font-extrabold shadow-2xl">
-                    <span class="material-symbols-outlined mr-2">download</span>
+            <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <a href="https://vetisdigital.com/recursos-gratis/" class="btn-primary-warm px-8 sm:px-9 py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-bold shadow-lg">
+                    <span class="material-symbols-outlined mr-2 text-lg">download</span>
                     Elegir un recurso gratuito
                 </a>
             </div>
 
-            <p class="text-xs text-emerald-300/80 font-medium">
+            <p class="text-xs text-slate-300 font-medium pt-0.5 drop-shadow-sm">
                 Sin necesidad de comprar una guía para comenzar.
             </p>
-        </div>
-
-        <!-- Columna de Mockup Real -->
-        <div class="lg:col-span-5" data-aos="fade-left">
-            <div class="forest-glass-card p-4 rounded-3xl shadow-2xl relative group overflow-hidden border-2 border-accent-gold/40">
-                <img src="../assets/bloque recursos inicio.webp" alt="Recursos Gratuitos de Vetis Digital" class="w-full h-auto object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105" />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#05180f]/80 via-transparent to-transparent pointer-events-none rounded-2xl"></div>
-            </div>
         </div>
     </div>
 </div>
 </section>
 
-<!-- 8. PREGUNTAS FRECUENTES DE LA BIBLIOTECA (FAQ) -->
-<section class="py-16 sm:py-24 bg-gradient-to-b from-[#082a1c] via-[#0C3528] to-[#082a1c] text-white relative overflow-hidden">
-<div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 space-y-12">
-    <div class="text-center space-y-4 max-w-3xl mx-auto" data-aos="fade-up">
-        <div class="floating-pill-gold-dark float-slow">
-            <span class="material-symbols-outlined text-amber-300 text-sm">help</span>
-            <span class="text-xs uppercase tracking-widest font-bold">ANTES DE ELEGIR</span>
+<!-- 8. PREGUNTAS FRECUENTES DE LA BIBLIOTECA (Dark Luxury FAQ - Altura Reducida de Acordeones) -->
+<section class="py-14 sm:py-20 bg-gradient-to-b from-[#08241B] via-[#0C3528] to-[#08241B] text-white relative overflow-hidden">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 space-y-10">
+    <div class="text-center space-y-3 max-w-3xl mx-auto" data-aos="fade-up">
+        <div class="editorial-badge-dark">
+            <span>ANTES DE ELEGIR</span>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Preguntas frecuentes sobre la <span class="text-shimmer-gold italic">Biblioteca Vetis</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+            Preguntas frecuentes sobre la <span class="font-serif italic text-mustard">Biblioteca Vetis</span>
         </h2>
     </div>
 
-    <!-- 8 Acordeones de Cristal -->
-    <div class="space-y-4" data-aos="fade-up">
+    <!-- 8 Acordeones de Cristal Compactos -->
+    <div class="space-y-3" data-aos="fade-up">
         <!-- FAQ 1 -->
-        <details class="faq-glass-card p-6 rounded-2xl group cursor-pointer">
-            <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
+        <details class="card-dark-luxury p-4 sm:p-5 rounded-2xl group cursor-pointer border border-white/10 hover:border-mustard/40 transition-all">
+            <summary class="flex justify-between items-center font-bold text-base sm:text-lg text-white list-none">
                 <span>¿Los productos son digitales?</span>
-                <span class="material-symbols-outlined text-amber-400 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                <span class="material-symbols-outlined text-mustard transition-transform duration-300 group-open:rotate-180 text-xl">expand_more</span>
             </summary>
-            <p class="mt-4 text-sm sm:text-base text-emerald-100/90 leading-relaxed border-t border-white/10 pt-4 font-normal">
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 pt-3 font-normal">
                 Sí. Los productos de la biblioteca se entregan en formato digital. En cada página podrás revisar el formato específico y las condiciones de acceso antes de comprar.
             </p>
         </details>
 
         <!-- FAQ 2 -->
-        <details class="faq-glass-card p-6 rounded-2xl group cursor-pointer">
-            <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
+        <details class="card-dark-luxury p-4 sm:p-5 rounded-2xl group cursor-pointer border border-white/10 hover:border-mustard/40 transition-all">
+            <summary class="flex justify-between items-center font-bold text-base sm:text-lg text-white list-none">
                 <span>¿Puedo leerlos desde mi teléfono?</span>
-                <span class="material-symbols-outlined text-amber-400 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                <span class="material-symbols-outlined text-mustard transition-transform duration-300 group-open:rotate-180 text-xl">expand_more</span>
             </summary>
-            <p class="mt-4 text-sm sm:text-base text-emerald-100/90 leading-relaxed border-t border-white/10 pt-4 font-normal">
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 pt-3 font-normal">
                 Los formatos digitales pueden consultarse desde dispositivos compatibles como teléfono, tablet o computador. Revisa las indicaciones de cada producto para conocer la mejor forma de utilizarlo.
             </p>
         </details>
 
         <!-- FAQ 3 -->
-        <details class="faq-glass-card p-6 rounded-2xl group cursor-pointer">
-            <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
+        <details class="card-dark-luxury p-4 sm:p-5 rounded-2xl group cursor-pointer border border-white/10 hover:border-mustard/40 transition-all">
+            <summary class="flex justify-between items-center font-bold text-base sm:text-lg text-white list-none">
                 <span>¿Cómo sé qué guía elegir?</span>
-                <span class="material-symbols-outlined text-amber-400 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                <span class="material-symbols-outlined text-mustard transition-transform duration-300 group-open:rotate-180 text-xl">expand_more</span>
             </summary>
-            <p class="mt-4 text-sm sm:text-base text-emerald-100/90 leading-relaxed border-t border-white/10 pt-4 font-normal">
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 pt-3 font-normal">
                 Comienza por la situación que hoy genera más dudas o dificultades. Revisa la sección “Ideal para” de cada producto en la biblioteca canina o felina.
             </p>
         </details>
 
         <!-- FAQ 4 -->
-        <details class="faq-glass-card p-6 rounded-2xl group cursor-pointer">
-            <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
+        <details class="card-dark-luxury p-4 sm:p-5 rounded-2xl group cursor-pointer border border-white/10 hover:border-mustard/40 transition-all">
+            <summary class="flex justify-between items-center font-bold text-base sm:text-lg text-white list-none">
                 <span>¿Necesito conocimientos previos?</span>
-                <span class="material-symbols-outlined text-amber-400 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                <span class="material-symbols-outlined text-mustard transition-transform duration-300 group-open:rotate-180 text-xl">expand_more</span>
             </summary>
-            <p class="mt-4 text-sm sm:text-base text-emerald-100/90 leading-relaxed border-t border-white/10 pt-4 font-normal">
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 pt-3 font-normal">
                 No. Los recursos están creados para tutores y explican los temas con lenguaje claro, contexto y ejemplos aplicables.
             </p>
         </details>
 
         <!-- FAQ 5 -->
-        <details class="faq-glass-card p-6 rounded-2xl group cursor-pointer">
-            <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
+        <details class="card-dark-luxury p-4 sm:p-5 rounded-2xl group cursor-pointer border border-white/10 hover:border-mustard/40 transition-all">
+            <summary class="flex justify-between items-center font-bold text-base sm:text-lg text-white list-none">
                 <span>¿Las guías reemplazan una consulta veterinaria?</span>
-                <span class="material-symbols-outlined text-amber-400 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                <span class="material-symbols-outlined text-mustard transition-transform duration-300 group-open:rotate-180 text-xl">expand_more</span>
             </summary>
-            <p class="mt-4 text-sm sm:text-base text-emerald-100/90 leading-relaxed border-t border-white/10 pt-4 font-normal">
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 pt-3 font-normal">
                 No. Los contenidos son educativos y no reemplazan evaluaciones clínicas, diagnósticos, tratamientos ni atención de urgencia.
             </p>
         </details>
 
         <!-- FAQ 6 -->
-        <details class="faq-glass-card p-6 rounded-2xl group cursor-pointer">
-            <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
+        <details class="card-dark-luxury p-4 sm:p-5 rounded-2xl group cursor-pointer border border-white/10 hover:border-mustard/40 transition-all">
+            <summary class="flex justify-between items-center font-bold text-base sm:text-lg text-white list-none">
                 <span>¿Puedo comprar desde fuera de Chile?</span>
-                <span class="material-symbols-outlined text-amber-400 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                <span class="material-symbols-outlined text-mustard transition-transform duration-300 group-open:rotate-180 text-xl">expand_more</span>
             </summary>
-            <p class="mt-4 text-sm sm:text-base text-emerald-100/90 leading-relaxed border-t border-white/10 pt-4 font-normal">
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 pt-3 font-normal">
                 Los productos digitales pueden estar disponibles para compradores de distintos países. Los medios de pago, moneda y condiciones finales aparecerán antes de completar la compra.
             </p>
         </details>
 
         <!-- FAQ 7 -->
-        <details class="faq-glass-card p-6 rounded-2xl group cursor-pointer">
-            <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
+        <details class="card-dark-luxury p-4 sm:p-5 rounded-2xl group cursor-pointer border border-white/10 hover:border-mustard/40 transition-all">
+            <summary class="flex justify-between items-center font-bold text-base sm:text-lg text-white list-none">
                 <span>¿Todos los productos incluyen bonos?</span>
-                <span class="material-symbols-outlined text-amber-400 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                <span class="material-symbols-outlined text-mustard transition-transform duration-300 group-open:rotate-180 text-xl">expand_more</span>
             </summary>
-            <p class="mt-4 text-sm sm:text-base text-emerald-100/90 leading-relaxed border-t border-white/10 pt-4 font-normal">
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 pt-3 font-normal">
                 Los materiales incluidos pueden variar. La página de cada producto muestra claramente qué recibes con tu compra y qué recursos adicionales están disponibles.
             </p>
         </details>
 
         <!-- FAQ 8 -->
-        <details class="faq-glass-card p-6 rounded-2xl group cursor-pointer">
-            <summary class="flex justify-between items-center font-bold text-lg text-white list-none">
+        <details class="card-dark-luxury p-4 sm:p-5 rounded-2xl group cursor-pointer border border-white/10 hover:border-mustard/40 transition-all">
+            <summary class="flex justify-between items-center font-bold text-base sm:text-lg text-white list-none">
                 <span>¿Qué hago si tengo problemas con el acceso?</span>
-                <span class="material-symbols-outlined text-amber-400 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                <span class="material-symbols-outlined text-mustard transition-transform duration-300 group-open:rotate-180 text-xl">expand_more</span>
             </summary>
-            <p class="mt-4 text-sm sm:text-base text-emerald-100/90 leading-relaxed border-t border-white/10 pt-4 font-normal">
+            <p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 pt-3 font-normal">
                 Puedes contactar al equipo de Vetis desde la página de contacto, indicando el correo utilizado durante la compra y el producto adquirido.
             </p>
         </details>
@@ -1050,41 +1077,50 @@
 </div>
 </section>
 
-<!-- 9. CTA FINAL -->
-<section class="py-20 sm:py-28 relative overflow-hidden bg-gradient-to-b from-[#082a1c] via-[#0d3f2b] to-[#05180f] text-white text-center">
-<div class="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-emerald-400/15 rounded-full blur-[140px] pointer-events-none float-slow"></div>
-<div class="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-accent-gold/15 rounded-full blur-[140px] pointer-events-none float-medium"></div>
+<!-- 9. CTA FINAL (Dark Luxury - Sistema de Botones de Inicio Mantenido) -->
+<section class="py-16 sm:py-24 relative overflow-hidden bg-gradient-to-b from-[#0C3528] via-[#0A2D22] to-[#08241B] text-white text-center">
+<div class="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-emerald-400/10 rounded-full blur-[140px] pointer-events-none float-slow"></div>
+<div class="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-mustard/10 rounded-full blur-[140px] pointer-events-none float-medium"></div>
 
-<div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 space-y-8" data-aos="fade-up">
-    <div class="floating-pill-gold-dark float-slow">
-        <span class="material-symbols-outlined text-amber-300 text-sm">rocket_launch</span>
-        <span class="text-xs uppercase tracking-widest font-bold">EMPIEZA POR UNA NECESIDAD CONCRETA</span>
+<div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 space-y-7" data-aos="fade-up">
+    <div class="editorial-badge-dark">
+        <span>EMPIEZA POR UNA NECESIDAD CONCRETA</span>
     </div>
     
     <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto">
-        No necesitas aprenderlo todo hoy. <span class="text-shimmer-gold italic">Solo encontrar el siguiente paso correcto</span>.
+        No necesitas aprenderlo todo hoy. <span class="font-serif italic text-mustard">Solo encontrar el siguiente paso correcto</span>.
     </h2>
     
-    <p class="text-base sm:text-xl text-emerald-100/90 leading-relaxed max-w-3xl mx-auto font-normal">
+    <p class="text-sm sm:text-lg text-slate-200 leading-relaxed max-w-3xl mx-auto font-normal">
         Elige la colección que corresponde a tu mascota y encuentra una guía creada para la etapa o dificultad que estás viviendo.
     </p>
 
-    <!-- Botones Principales -->
-    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-4">
-        <a href="biblioteca-perros.html" class="btn-tactile-gold inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl text-base sm:text-lg w-full sm:w-auto shadow-2xl">
-            <span class="material-symbols-outlined">pets</span>
-            Explorar colección canina
+    <!-- Botones Principales con Sistema Exacto de Inicio (Amarillo Principal + Verde Oscuro Secundario) -->
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-3">
+        <a href="biblioteca-perros.html" class="btn-hero-primary-mustard">
+            <span class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-[1.3rem]">pets</span>
+                <span>Explorar colección canina</span>
+            </span>
+            <span class="w-8 h-8 rounded-full bg-[#0A261D]/15 flex items-center justify-center">
+                <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+            </span>
         </a>
-        <a href="biblioteca-gatos.html" class="btn-tactile-outline-dark inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl text-base sm:text-lg w-full sm:w-auto shadow-2xl">
-            <span class="material-symbols-outlined text-emerald-300">pets</span>
-            Explorar colección felina
+        <a href="biblioteca-gatos.html" class="btn-hero-secondary-darkglass">
+            <span class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-[1.3rem] text-mustard">pets</span>
+                <span>Explorar colección felina</span>
+            </span>
+            <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+            </span>
         </a>
     </div>
 
     <!-- Enlace Inferior -->
-    <div class="pt-2">
-        <p class="text-sm text-emerald-200/90">
-            ¿Todavía no estás seguro? <a href="https://vetisdigital.com/recursos-gratis/" class="text-amber-300 underline font-bold hover:text-white transition-colors ml-1">Comienza con un recurso gratuito</a>.
+    <div class="pt-1">
+        <p class="text-xs sm:text-sm text-slate-300">
+            ¿Todavía no estás seguro? <a href="https://vetisdigital.com/recursos-gratis/" class="text-mustard underline font-bold hover:text-white transition-colors ml-1">Comienza con un recurso gratuito</a>.
         </p>
     </div>
 </div>
@@ -1092,8 +1128,8 @@
 
 </main>
 
-<!-- 10. FOOTER (Verde Nocturno & Sello de Alta Gama) -->
-<footer class="bg-[#05180f] text-slate-300 border-t border-emerald-500/25 relative overflow-hidden pt-16 pb-12">
+<!-- 10. FOOTER (Verde Nocturno & Sello Editorial de Alta Gama) -->
+<footer class="bg-[#061B13] text-slate-300 border-t border-emerald-500/25 relative overflow-hidden pt-16 pb-12">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 space-y-12">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
         <!-- Columna Marca -->
@@ -1101,10 +1137,10 @@
             <a href="https://vetisdigital.com/" class="inline-block">
                 <img src="../assets/logo-transparent.webp" alt="Vetis Digital Logo" class="h-12 w-auto object-contain" style="filter: brightness(1.25);" />
             </a>
-            <p class="text-sm text-emerald-100/80 leading-relaxed max-w-sm">
+            <p class="text-sm text-slate-300 leading-relaxed max-w-sm">
                 Educación práctica para tutores de perros y gatos.
             </p>
-            <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 text-xs text-amber-300 font-bold max-w-sm">
+            <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 text-xs text-mustard font-bold max-w-sm">
                 “Entiende mejor. Cuida mejor. Vive mejor junto a tu mascota.”
             </div>
         </div>
@@ -1113,10 +1149,10 @@
         <div class="space-y-3">
             <h4 class="text-sm font-bold uppercase tracking-wider text-white">Explorar</h4>
             <ul class="space-y-2 text-sm">
-                <li><a href="https://vetisdigital.com/biblioteca/" class="text-amber-300 font-bold hover:text-white transition-colors">Biblioteca Vetis</a></li>
-                <li><a href="biblioteca-perros.html" class="hover:text-amber-300 transition-colors">Colección Canina</a></li>
-                <li><a href="biblioteca-gatos.html" class="hover:text-amber-300 transition-colors">Colección Felina</a></li>
-                <li><a href="https://vetisdigital.com/recursos-gratis/" class="hover:text-amber-300 transition-colors">Recursos Gratis</a></li>
+                <li><a href="https://vetisdigital.com/biblioteca/" class="text-mustard font-bold hover:text-white transition-colors">Biblioteca Vetis</a></li>
+                <li><a href="biblioteca-perros.html" class="hover:text-mustard transition-colors">Colección Canina</a></li>
+                <li><a href="biblioteca-gatos.html" class="hover:text-mustard transition-colors">Colección Felina</a></li>
+                <li><a href="https://vetisdigital.com/recursos-gratis/" class="hover:text-mustard transition-colors">Recursos Gratis</a></li>
             </ul>
         </div>
 
@@ -1124,10 +1160,10 @@
         <div class="space-y-3">
             <h4 class="text-sm font-bold uppercase tracking-wider text-white">Sobre Vetis</h4>
             <ul class="space-y-2 text-sm">
-                <li><a href="https://vetisdigital.com/nosotros/" class="hover:text-amber-300 transition-colors">Sobre Nosotros</a></li>
-                <li><a href="https://vetisdigital.com/blog-vetis/" class="hover:text-amber-300 transition-colors">Blog Educativo</a></li>
-                <li><a href="https://vetisdigital.com/afiliados/" class="hover:text-amber-300 transition-colors">Programa de Afiliados</a></li>
-                <li><a href="https://vetisdigital.com/contacto/" class="hover:text-amber-300 transition-colors">Contacto</a></li>
+                <li><a href="https://vetisdigital.com/nosotros/" class="hover:text-mustard transition-colors">Sobre Nosotros</a></li>
+                <li><a href="https://vetisdigital.com/blog-vetis/" class="hover:text-mustard transition-colors">Blog Educativo</a></li>
+                <li><a href="https://vetisdigital.com/afiliados/" class="hover:text-mustard transition-colors">Programa de Afiliados</a></li>
+                <li><a href="https://vetisdigital.com/contacto/" class="hover:text-mustard transition-colors">Contacto</a></li>
             </ul>
         </div>
 
@@ -1135,20 +1171,20 @@
         <div class="space-y-3">
             <h4 class="text-sm font-bold uppercase tracking-wider text-white">Legal & Políticas</h4>
             <ul class="space-y-2 text-xs text-slate-400">
-                <li><a href="https://vetisdigital.com/aviso-legal/" class="hover:text-amber-300 transition-colors">Aviso Legal</a></li>
-                <li><a href="https://vetisdigital.com/terminos-y-condiciones/" class="hover:text-amber-300 transition-colors">Términos y Condiciones</a></li>
-                <li><a href="https://vetisdigital.com/politica-de-privacidad/" class="hover:text-amber-300 transition-colors">Política de Privacidad</a></li>
-                <li><a href="https://vetisdigital.com/politica-de-cookies/" class="hover:text-amber-300 transition-colors">Política de Cookies</a></li>
-                <li><a href="https://vetisdigital.com/politica-de-reembolsos/" class="hover:text-amber-300 transition-colors">Política de Reembolsos</a></li>
-                <li><a href="https://vetisdigital.com/disclaimer/" class="hover:text-amber-300 transition-colors">Descargo de Responsabilidad</a></li>
-                <li><a href="https://vetisdigital.com/licencia-de-uso/" class="hover:text-amber-300 transition-colors">Licencia de Uso</a></li>
+                <li><a href="https://vetisdigital.com/aviso-legal/" class="hover:text-mustard transition-colors">Aviso Legal</a></li>
+                <li><a href="https://vetisdigital.com/terminos-y-condiciones/" class="hover:text-mustard transition-colors">Términos y Condiciones</a></li>
+                <li><a href="https://vetisdigital.com/politica-de-privacidad/" class="hover:text-mustard transition-colors">Política de Privacidad</a></li>
+                <li><a href="https://vetisdigital.com/politica-de-cookies/" class="hover:text-mustard transition-colors">Política de Cookies</a></li>
+                <li><a href="https://vetisdigital.com/politica-de-reembolsos/" class="hover:text-mustard transition-colors">Política de Reembolsos</a></li>
+                <li><a href="https://vetisdigital.com/disclaimer/" class="hover:text-mustard transition-colors">Descargo de Responsabilidad</a></li>
+                <li><a href="https://vetisdigital.com/licencia-de-uso/" class="hover:text-mustard transition-colors">Licencia de Uso</a></li>
             </ul>
         </div>
     </div>
 
     <!-- Aviso Legal Breve & Copyright -->
     <div class="pt-8 border-t border-emerald-500/20 text-center space-y-3">
-        <p class="text-xs text-emerald-200/70 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-xs text-slate-400 max-w-3xl mx-auto leading-relaxed">
             El contenido de Vetis Digital es educativo y no sustituye la atención, evaluación o tratamiento de un médico veterinario.
         </p>
         <p class="text-xs text-slate-500 font-medium">
@@ -1178,7 +1214,7 @@
             duration: 800,
             easing: 'ease-out-cubic',
             once: true,
-            offset: 40
+            offset: 35
         });
     });
 

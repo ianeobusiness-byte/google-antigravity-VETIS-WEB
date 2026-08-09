@@ -167,6 +167,74 @@
         backdrop-filter: blur(8px);
     }
 
+    /* ============================================
+       BOTONES HERO DE ALTA GAMA (Editorial Luxury)
+    ============================================ */
+    .btn-hero-primary-mustard {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.875rem;
+        background: linear-gradient(180deg, #FAD058 0%, #E5A62E 100%);
+        color: #0A261D !important;
+        font-weight: 800;
+        letter-spacing: 0.01em;
+        padding: 0.65rem 0.85rem 0.65rem 1.1rem;
+        border-radius: 9999px;
+        box-shadow: 0 4px 14px rgba(229, 166, 46, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        text-decoration: none;
+        width: 100%;
+        max-width: 360px;
+    }
+    .btn-hero-primary-mustard:hover {
+        background: linear-gradient(180deg, #FFE07D 0%, #F5B83D 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 22px rgba(229, 166, 46, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+        color: #0A261D !important;
+    }
+
+    .btn-hero-secondary-darkglass {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.875rem;
+        background: linear-gradient(180deg, #102E22 0%, #071F17 100%);
+        color: #FFFFFF !important;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        padding: 0.65rem 0.85rem 0.65rem 1.1rem;
+        border-radius: 9999px;
+        border: 1.5px solid rgba(230, 169, 51, 0.7);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        text-decoration: none;
+        width: 100%;
+        max-width: 360px;
+    }
+    .btn-hero-secondary-darkglass:hover {
+        background: linear-gradient(180deg, #163B2C 0%, #0A261D 100%);
+        border-color: #FAD058;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 15px rgba(230, 169, 51, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+        color: #FFFFFF !important;
+    }
+
+    .card-dark-luxury {
+        background: linear-gradient(145deg, rgba(16, 46, 34, 0.95) 0%, rgba(7, 31, 23, 0.98) 100%);
+        border: 1px solid rgba(246, 207, 47, 0.25);
+        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .heartbeat-slow {
+        animation: heartbeat 3s ease-in-out infinite;
+    }
+    @keyframes heartbeat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.06); }
+    }
+
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
         width: 10px;
@@ -359,10 +427,10 @@
 
 <main>
 
-<!-- Hero Section: Orientación Online -->
-<section class="relative min-h-[580px] lg:min-h-[70vh] w-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0C3528] to-[#08241B] text-warm-white pt-28 pb-16">
+<!-- Hero Section: Orientación Online (Dark Luxury Forest) -->
+<section class="relative min-h-[580px] lg:min-h-[72vh] w-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0C3528] to-[#08241B] text-warm-white pt-28 pb-16">
     <div class="absolute inset-0 opacity-15 pointer-events-none mix-blend-overlay">
-        <div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-mustard/20 via-transparent to-transparent"></div>
+        <div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-mustard/25 via-transparent to-transparent"></div>
     </div>
 
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6" data-aos="fade-up">
@@ -372,19 +440,38 @@
         </div>
         
         <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
-            Orientación online para cuidar mejor a tu <span class="font-serif italic text-mustard">perro o gato</span>
+            Resuelve tus dudas y toma mejores decisiones para cuidar a tu <span class="font-serif italic text-mustard">perro o gato</span>
         </h1>
         
         <p class="text-base sm:text-xl text-slate-200 font-normal leading-relaxed max-w-2xl mx-auto">
-            Sesiones educativas y preventivas personalizadas con una Médica Veterinaria, pensadas para resolver dudas cotidianas, optimizar rutinas y acompañarte en el bienestar de tu mascota.
+            Recibe orientación profesional desde casa para entender mejor lo que ocurre y saber qué pasos seguir.
         </p>
 
-        <div class="pt-2 flex flex-wrap justify-center gap-4">
-            <a href="#planes" class="btn-primary-warm px-8 py-4 text-base font-bold shadow-xl">
-                Agendar orientación online <span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+        <!-- Botones Hero de Alta Gama (Primario Dorado y Secundario Verde) -->
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4 w-full px-2" data-aos="fade-up" data-aos-delay="100">
+            <!-- Botón Primario: Agendar Orientación (Dorado) -->
+            <a href="#planes" class="btn-hero-primary-mustard group">
+                <svg class="w-8 h-8 shrink-0 text-[#0A261D] transition-transform duration-200 group-hover:scale-105" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="22" height="20" rx="4"></rect>
+                    <path d="M8 2v4M20 2v4M3 10h22"></path>
+                    <circle cx="14" cy="16" r="2" fill="currentColor"></circle>
+                </svg>
+                <span class="flex-1 text-center font-bold text-[16px] sm:text-[17px] text-[#0A261D] leading-tight">Agendar orientación online</span>
+                <span class="w-9 h-9 rounded-full bg-black/10 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:translate-y-0.5">
+                    <span class="material-symbols-outlined text-[1.25rem] text-[#0A261D]">arrow_downward</span>
+                </span>
             </a>
-            <a href="#profesional" class="btn-secondary-light px-8 py-4 text-base font-bold shadow-xl">
-                Conocer a la Especialista
+
+            <!-- Botón Secundario: Conocer a la Especialista (Verde con Borde Dorado) -->
+            <a href="#profesional" class="btn-hero-secondary-darkglass group">
+                <svg class="w-8 h-8 shrink-0 text-[#E5A62E] transition-transform duration-200 group-hover:scale-105" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"></path>
+                    <path d="M4 24a10 10 0 0 1 20 0"></path>
+                </svg>
+                <span class="flex-1 text-center font-bold text-[16px] sm:text-[17px] text-white leading-tight">Conocer a la Especialista</span>
+                <span class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:translate-x-1">
+                    <span class="material-symbols-outlined text-[1.25rem] text-[#E5A62E]">arrow_forward</span>
+                </span>
             </a>
         </div>
     </div>
@@ -396,10 +483,10 @@
         <div class="grid lg:grid-cols-12 gap-12 items-center">
             <!-- Foto de la Veterinaria -->
             <div class="lg:col-span-5 relative" data-aos="fade-right">
-                <div class="card-warm p-4 rounded-3xl bg-cream border-2 border-mustard/30 overflow-hidden shadow-xl">
-                    <img src="../assets/miki%202.0.webp" alt="Dra. Micaela Callejas — Médica Veterinaria" class="w-full h-auto object-cover rounded-2xl aspect-[4/5]" />
+                <div class="card-warm p-3 rounded-3xl bg-cream border-2 border-mustard/30 overflow-hidden shadow-2xl group">
+                    <img src="../assets/miki%202.0.webp" alt="Dra. Micaela Callejas — Médica Veterinaria" class="w-full h-auto object-cover rounded-2xl aspect-[4/5] group-hover:scale-[1.02] transition-transform duration-500" />
                 </div>
-                <div class="absolute -bottom-4 -right-2 sm:right-4 bg-[#0C3528] text-white px-5 py-3 rounded-2xl shadow-xl border border-mustard/40 flex items-center gap-2">
+                <div class="absolute -bottom-4 -right-2 sm:right-4 bg-[#0C3528] text-white px-5 py-3 rounded-2xl shadow-xl border border-mustard/40 flex items-center gap-2.5">
                     <span class="material-symbols-outlined text-mustard text-xl" style="font-variation-settings: 'FILL' 1;">verified</span>
                     <span class="text-xs sm:text-sm font-bold tracking-wide">Médica Veterinaria Titulada</span>
                 </div>
@@ -416,27 +503,38 @@
                     Dra. Micaela Callejas, <span class="font-serif italic text-mustard">Médica Veterinaria</span>
                 </h2>
                 
-                <p class="text-mustard font-bold text-base sm:text-lg">
+                <div class="inline-block bg-[#0C3528]/10 border border-mustard/30 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-vetis-dark">
                     Especialista en Bienestar Animal &amp; Medicina Preventiva
-                </p>
-
-                <div class="space-y-4 text-text-secondary text-base sm:text-lg leading-relaxed font-normal">
-                    <p>Micaela es la profesional detrás de las orientaciones online de Vetis Digital. Con sólida formación clínica veterinaria y un enfoque centrado en la salud integral y el respeto animal, acompaña a tutores de perros y gatos que buscan comprender a fondo las necesidades de sus compañeros.</p>
-                    <p>A través de sesiones educativas 1 a 1, entrega herramientas prácticas para mejorar la convivencia en el hogar, resolver dudas frecuentes de nutrición e higiene y consolidar hábitos saludables para toda la vida.</p>
                 </div>
 
-                <div class="grid grid-cols-2 gap-3 pt-2">
-                    <div class="flex items-center gap-2 text-text-primary text-sm font-semibold">
-                        <span class="material-symbols-outlined text-mustard text-base">school</span> Titulada en Medicina Veterinaria
+                <div class="space-y-4 text-text-secondary text-base sm:text-lg leading-relaxed font-normal">
+                    <p>Médica Veterinaria con enfoque en salud integral, bienestar y prevención animal. En sesiones 1 a 1, te entrega herramientas prácticas y claras para resolver dudas cotidianas de nutrición, conducta y cuidados, ayudándote a tomar mejores decisiones para tu compañero de hogar.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                    <div class="flex items-center gap-3 p-3 rounded-2xl bg-cream border border-mustard/20 text-text-primary text-sm font-semibold">
+                        <span class="w-8 h-8 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shrink-0">
+                            <span class="material-symbols-outlined text-base">school</span>
+                        </span>
+                        <span>Titulada en Medicina Veterinaria</span>
                     </div>
-                    <div class="flex items-center gap-2 text-text-primary text-sm font-semibold">
-                        <span class="material-symbols-outlined text-mustard text-base">favorite</span> Enfoque en Bienestar Real
+                    <div class="flex items-center gap-3 p-3 rounded-2xl bg-cream border border-mustard/20 text-text-primary text-sm font-semibold">
+                        <span class="w-8 h-8 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shrink-0">
+                            <span class="material-symbols-outlined text-base">favorite</span>
+                        </span>
+                        <span>Enfoque en Bienestar Real</span>
                     </div>
-                    <div class="flex items-center gap-2 text-text-primary text-sm font-semibold">
-                        <span class="material-symbols-outlined text-mustard text-base">pets</span> Perros y Gatos de Hogar
+                    <div class="flex items-center gap-3 p-3 rounded-2xl bg-cream border border-mustard/20 text-text-primary text-sm font-semibold">
+                        <span class="w-8 h-8 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shrink-0">
+                            <span class="material-symbols-outlined text-base">pets</span>
+                        </span>
+                        <span>Perros y Gatos de Hogar</span>
                     </div>
-                    <div class="flex items-center gap-2 text-text-primary text-sm font-semibold">
-                        <span class="material-symbols-outlined text-mustard text-base">health_and_safety</span> Orientación Preventiva
+                    <div class="flex items-center gap-3 p-3 rounded-2xl bg-cream border border-mustard/20 text-text-primary text-sm font-semibold">
+                        <span class="w-8 h-8 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shrink-0">
+                            <span class="material-symbols-outlined text-base">health_and_safety</span>
+                        </span>
+                        <span>Orientación Preventiva</span>
                     </div>
                 </div>
             </div>
@@ -444,7 +542,7 @@
     </div>
 </section>
 
-<!-- Sección: Esta orientación es para ti si... (Fondo Crema) -->
+<!-- Sección: Esta orientación es para ti si... (4 Bloques Máximo) -->
 <section class="py-16 sm:py-24 bg-cream text-text-primary">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12 sm:mb-16 space-y-4" data-aos="fade-up">
@@ -458,66 +556,273 @@
             <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Card 1 -->
-            <div class="card-warm p-8 rounded-3xl bg-warm-white space-y-4" data-aos="fade-up" data-aos-delay="50">
-                <div class="w-12 h-12 rounded-2xl bg-cream border border-mustard/20 flex items-center justify-center text-mustard">
-                    <span class="material-symbols-outlined text-2xl">help_center</span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Bloque 1: Conducta y convivencia -->
+            <div class="card-warm p-7 rounded-3xl bg-warm-white space-y-4 border border-mustard/25 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="50">
+                <div class="space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard">
+                        <span class="material-symbols-outlined text-2xl">psychology</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-heading">Conducta y convivencia</h3>
+                    <p class="text-text-secondary text-sm leading-relaxed font-normal">Manejo de cambios de comportamiento, inquietud, ladridos, socialización o adaptación en el hogar.</p>
                 </div>
-                <h3 class="text-xl font-bold text-text-heading">Dudas del día a día</h3>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Tienes preguntas sobre la alimentación adecuada, higiene o el cuidado cotidiano de tu perro o gato.</p>
             </div>
 
-            <!-- Card 2 -->
-            <div class="card-warm p-8 rounded-3xl bg-warm-white space-y-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-12 h-12 rounded-2xl bg-cream border border-mustard/20 flex items-center justify-center text-mustard">
-                    <span class="material-symbols-outlined text-2xl">pets</span>
+            <!-- Bloque 2: Alimentación y rutinas -->
+            <div class="card-warm p-7 rounded-3xl bg-warm-white space-y-4 border border-mustard/25 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard">
+                        <span class="material-symbols-outlined text-2xl">restaurant</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-heading">Alimentación y rutinas</h3>
+                    <p class="text-text-secondary text-sm leading-relaxed font-normal">Estructuración de hábitos sanos, tipos de dietas, porciones adecuadas y horarios óptimos para su bienestar.</p>
                 </div>
-                <h3 class="text-xl font-bold text-text-heading">Nueva mascota en casa</h3>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Acabas de adoptar o recibir un cachorro o un animal adulto y necesitas estructurar su llegada sin estrés.</p>
             </div>
 
-            <!-- Card 3 -->
-            <div class="card-warm p-8 rounded-3xl bg-warm-white space-y-4" data-aos="fade-up" data-aos-delay="150">
-                <div class="w-12 h-12 rounded-2xl bg-cream border border-mustard/20 flex items-center justify-center text-mustard">
-                    <span class="material-symbols-outlined text-2xl">psychology</span>
+            <!-- Bloque 3: Bienestar y cuidados diarios -->
+            <div class="card-warm p-7 rounded-3xl bg-warm-white space-y-4 border border-mustard/25 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="150">
+                <div class="space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard">
+                        <span class="material-symbols-outlined text-2xl">spa</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-heading">Bienestar y cuidados diarios</h3>
+                    <p class="text-text-secondary text-sm leading-relaxed font-normal">Preguntas frecuentes sobre higiene, cepillado, enriquecimiento ambiental y cuidados preventivos en el hogar.</p>
                 </div>
-                <h3 class="text-xl font-bold text-text-heading">Cambios de conducta</h3>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Notas comportamientos inusuales o inquietud y buscas entender cómo interpretarlos adecuadamente.</p>
             </div>
 
-            <!-- Card 4 -->
-            <div class="card-warm p-8 rounded-3xl bg-warm-white space-y-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-12 h-12 rounded-2xl bg-cream border border-mustard/20 flex items-center justify-center text-mustard">
-                    <span class="material-symbols-outlined text-2xl">spa</span>
+            <!-- Bloque 4: Dudas sobre cambios que estás observando -->
+            <div class="card-warm p-7 rounded-3xl bg-warm-white space-y-4 border border-mustard/25 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard">
+                        <span class="material-symbols-outlined text-2xl">help_center</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-heading">Dudas sobre cambios que estás observando</h3>
+                    <p class="text-text-secondary text-sm leading-relaxed font-normal">Observas signos inusuales y necesitas orientación profesional clara para saber qué pasos seguir y cuándo acudir a consulta.</p>
                 </div>
-                <h3 class="text-xl font-bold text-text-heading">Rutinas saludables</h3>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Quieres establecer hábitos sanos de descanso, juegos interactivos, actividad física y paseos armoniosos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección: Qué logras durante la sesión (Dark Luxury Forest #08241B) -->
+<section class="py-20 sm:py-28 relative overflow-hidden bg-gradient-to-b from-[#08241B] via-[#0C3528] to-[#08241B] text-white border-y border-mustard/20">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 space-y-12">
+    <div class="text-center space-y-4 max-w-3xl mx-auto" data-aos="fade-up">
+        <div class="editorial-badge-dark">
+            <span class="material-symbols-outlined text-mustard text-sm">support_agent</span>
+            <span>SESIONES 1 A 1 CON CRITERIO VETERINARIO</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            No todas las dudas se resuelven con <span class="font-serif italic text-mustard">contenido general</span>
+        </h2>
+        <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
+            En una orientación online puedes explicar lo que está ocurriendo, ordenar la información importante y recibir una guía clara, precisa y adaptada a tu hogar.
+        </p>
+    </div>
+
+    <!-- Tarjeta Principal de Orientación -->
+    <div class="card-dark-luxury p-8 sm:p-12 max-w-4xl mx-auto space-y-8 rounded-3xl" data-aos="fade-up">
+        <h3 class="text-xl sm:text-2xl font-bold text-mustard text-center">Durante la orientación podrás:</h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Ticket 1 -->
+            <div class="group flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-mustard/50 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-mustard/5">
+                <div class="w-12 h-12 rounded-xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard flex-shrink-0 heartbeat-slow group-hover:bg-mustard group-hover:text-vetis-dark transition-colors">
+                    <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">visibility</span>
+                </div>
+                <div>
+                    <p class="text-sm sm:text-base text-slate-200 font-medium leading-snug">
+                        Explicar el contexto y los cambios que has observado en tu mascota.
+                    </p>
+                </div>
             </div>
 
-            <!-- Card 5 -->
-            <div class="card-warm p-8 rounded-3xl bg-warm-white space-y-4" data-aos="fade-up" data-aos-delay="250">
-                <div class="w-12 h-12 rounded-2xl bg-cream border border-mustard/20 flex items-center justify-center text-mustard">
-                    <span class="material-symbols-outlined text-2xl">medical_services</span>
+            <!-- Ticket 2 -->
+            <div class="group flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-mustard/50 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-mustard/5">
+                <div class="w-12 h-12 rounded-xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard flex-shrink-0 heartbeat-slow group-hover:bg-mustard group-hover:text-vetis-dark transition-colors" style="animation-delay: 0.4s;">
+                    <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">tune</span>
                 </div>
-                <h3 class="text-xl font-bold text-text-heading">Señales de alerta</h3>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Necesitas aprender a reconocer a tiempo cuándo un síntoma o señal amerita acudir a consulta presencial.</p>
+                <div>
+                    <p class="text-sm sm:text-base text-slate-200 font-medium leading-snug">
+                        Identificar prioridades, factores de riesgo y puntos clave de mejora.
+                    </p>
+                </div>
             </div>
 
-            <!-- Card 6 -->
-            <div class="card-warm p-8 rounded-3xl bg-warm-white space-y-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-12 h-12 rounded-2xl bg-cream border border-mustard/20 flex items-center justify-center text-mustard">
-                    <span class="material-symbols-outlined text-2xl">verified</span>
+            <!-- Ticket 3 -->
+            <div class="group flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-mustard/50 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-mustard/5">
+                <div class="w-12 h-12 rounded-xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard flex-shrink-0 heartbeat-slow group-hover:bg-mustard group-hover:text-vetis-dark transition-colors" style="animation-delay: 0.8s;">
+                    <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">alt_route</span>
                 </div>
-                <h3 class="text-xl font-bold text-text-heading">Cuidado informado</h3>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Deseas cuidar mejor a tu compañero sin depender de mitos o consejos contradictorios de internet.</p>
+                <div>
+                    <p class="text-sm sm:text-base text-slate-200 font-medium leading-snug">
+                        Recibir recomendaciones prácticas estructuradas para el día a día.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Ticket 4 -->
+            <div class="group flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-mustard/50 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-mustard/5">
+                <div class="w-12 h-12 rounded-xl bg-mustard/15 border border-mustard/30 flex items-center justify-center text-mustard flex-shrink-0 heartbeat-slow group-hover:bg-mustard group-hover:text-vetis-dark transition-colors" style="animation-delay: 1.2s;">
+                    <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+                </div>
+                <div>
+                    <p class="text-sm sm:text-base text-slate-200 font-medium leading-snug">
+                        Saber cuándo y por qué corresponde acudir a una consulta presencial.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center pt-2 space-y-6">
+            <p class="text-lg sm:text-xl font-serif font-bold text-white italic">
+                “A veces no necesitas más información. Necesitas ayuda profesional para interpretar tu situación.”
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Sección: Cómo funciona (4 Pasos) -->
+<section class="py-16 sm:py-24 bg-warm-white text-text-primary border-b border-mustard/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12 sm:mb-16 space-y-4" data-aos="fade-up">
+            <div class="editorial-badge inline-flex">
+                <span class="material-symbols-outlined text-mustard text-sm">timeline</span>
+                <span>Paso a Paso</span>
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-bold text-text-heading">
+                Cómo funciona la <span class="font-serif italic text-mustard">orientación</span>
+            </h2>
+            <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Paso 1 -->
+            <div class="card-warm p-7 rounded-3xl bg-cream text-center space-y-3 border border-mustard/25 hover:shadow-xl hover:-translate-y-1.5 transition-all" data-aos="fade-up" data-aos-delay="50">
+                <div class="w-12 h-12 rounded-2xl bg-mustard text-vetis-dark font-extrabold text-lg flex items-center justify-center mx-auto shadow-md">
+                    1
+                </div>
+                <h3 class="font-bold text-base text-text-heading">Elige tu orientación</h3>
+                <p class="text-text-secondary text-xs leading-relaxed font-normal">Selecciona la sesión individual o el pack de acompañamiento según tu necesidad.</p>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="card-warm p-7 rounded-3xl bg-cream text-center space-y-3 border border-mustard/25 hover:shadow-xl hover:-translate-y-1.5 transition-all" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-12 h-12 rounded-2xl bg-mustard text-vetis-dark font-extrabold text-lg flex items-center justify-center mx-auto shadow-md">
+                    2
+                </div>
+                <h3 class="font-bold text-base text-text-heading">Agenda tu hora</h3>
+                <p class="text-text-secondary text-xs leading-relaxed font-normal">Elige en el calendario el día y la hora más conveniente para ti.</p>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="card-warm p-7 rounded-3xl bg-cream text-center space-y-3 border border-mustard/25 hover:shadow-xl hover:-translate-y-1.5 transition-all" data-aos="fade-up" data-aos-delay="150">
+                <div class="w-12 h-12 rounded-2xl bg-mustard text-vetis-dark font-extrabold text-lg flex items-center justify-center mx-auto shadow-md">
+                    3
+                </div>
+                <h3 class="font-bold text-base text-text-heading">Cuéntanos tu caso</h3>
+                <p class="text-text-secondary text-xs leading-relaxed font-normal">Completa una breve ficha previa con los datos y dudas de tu mascota.</p>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="card-warm p-7 rounded-3xl bg-cream text-center space-y-3 border border-mustard/25 hover:shadow-xl hover:-translate-y-1.5 transition-all" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-12 h-12 rounded-2xl bg-mustard text-vetis-dark font-extrabold text-lg flex items-center justify-center mx-auto shadow-md">
+                    4
+                </div>
+                <h3 class="font-bold text-base text-text-heading">Conéctate por videollamada</h3>
+                <p class="text-text-secondary text-xs leading-relaxed font-normal">Nos reunimos en vivo para revisar tus dudas y entregarte pautas claras.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección: Temas que puedes consultar (6 Topics Principales) -->
+<section class="py-16 sm:py-24 bg-cream text-text-primary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12 sm:mb-16 space-y-4" data-aos="fade-up">
+            <div class="editorial-badge inline-flex">
+                <span class="material-symbols-outlined text-mustard text-sm">category</span>
+                <span>Áreas de Asesoría</span>
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-bold text-text-heading">
+                Temas que puedes <span class="font-serif italic text-mustard">consultar</span>
+            </h2>
+            <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Topic 1: Conducta y convivencia -->
+            <div class="card-warm p-6 rounded-2xl bg-warm-white space-y-3 border border-mustard/20 hover:border-mustard/45 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="50">
+                <div class="flex items-center gap-3 text-vetis-forest">
+                    <span class="w-10 h-10 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shrink-0">
+                        <span class="material-symbols-outlined text-xl">psychology</span>
+                    </span>
+                    <h3 class="font-bold text-lg text-text-heading">Conducta y convivencia</h3>
+                </div>
+                <p class="text-text-secondary text-sm leading-relaxed font-normal">Manejo de estrés, ansiedad por separación, ladridos y socialización armoniosa.</p>
+            </div>
+
+            <!-- Topic 2: Alimentación general -->
+            <div class="card-warm p-6 rounded-2xl bg-warm-white space-y-3 border border-mustard/20 hover:border-mustard/45 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center gap-3 text-vetis-forest">
+                    <span class="w-10 h-10 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shrink-0">
+                        <span class="material-symbols-outlined text-xl">restaurant</span>
+                    </span>
+                    <h3 class="font-bold text-lg text-text-heading">Alimentación general</h3>
+                </div>
+                <p class="text-text-secondary text-sm leading-relaxed font-normal">Tipos de dietas, porciones adecuadas, hábitos sanos y prevención de sobrepeso.</p>
+            </div>
+
+            <!-- Topic 3: Cuidados e higiene básica -->
+            <div class="card-warm p-6 rounded-2xl bg-warm-white space-y-3 border border-mustard/20 hover:border-mustard/45 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="150">
+                <div class="flex items-center gap-3 text-vetis-forest">
+                    <span class="w-10 h-10 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shrink-0">
+                        <span class="material-symbols-outlined text-xl">health_and_safety</span>
+                    </span>
+                    <h3 class="font-bold text-lg text-text-heading">Cuidados e higiene básica</h3>
+                </div>
+                <p class="text-text-secondary text-sm leading-relaxed font-normal">Higiene general, corte de uñas, limpieza de oídos, baño y cepillado preventivo.</p>
+            </div>
+
+            <!-- Topic 4: Adaptación al hogar -->
+            <div class="card-warm p-6 rounded-2xl bg-warm-white space-y-3 border border-mustard/20 hover:border-mustard/45 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center gap-3 text-vetis-forest">
+                    <span class="w-10 h-10 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shrink-0">
+                        <span class="material-symbols-outlined text-xl">home</span>
+                    </span>
+                    <h3 class="font-bold text-lg text-text-heading">Adaptación al hogar</h3>
+                </div>
+                <p class="text-text-secondary text-sm leading-relaxed font-normal">Preparación del espacio y rutinas para cachorros, adopciones o mudanzas.</p>
+            </div>
+
+            <!-- Topic 5: Rutinas y bienestar integral -->
+            <div class="card-warm p-6 rounded-2xl bg-warm-white space-y-3 border border-mustard/20 hover:border-mustard/45 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="250">
+                <div class="flex items-center gap-3 text-vetis-forest">
+                    <span class="w-10 h-10 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shrink-0">
+                        <span class="material-symbols-outlined text-xl">favorite</span>
+                    </span>
+                    <h3 class="font-bold text-lg text-text-heading">Rutinas y bienestar integral</h3>
+                </div>
+                <p class="text-text-secondary text-sm leading-relaxed font-normal">Estructuración del día, paseos, enriquecimiento ambiental, juegos y descanso.</p>
+            </div>
+
+            <!-- Topic 6: Señales de alerta y prevención -->
+            <div class="card-warm p-6 rounded-2xl bg-warm-white space-y-3 border border-mustard/20 hover:border-mustard/45 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center gap-3 text-vetis-forest">
+                    <span class="w-10 h-10 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shrink-0">
+                        <span class="material-symbols-outlined text-xl">warning</span>
+                    </span>
+                    <h3 class="font-bold text-lg text-text-heading">Señales de alerta y prevención</h3>
+                </div>
+                <p class="text-text-secondary text-sm leading-relaxed font-normal">Reconocimiento temprano de síntomas y cuándo corresponde consulta presencial.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Sección: Planes y Precios (#planes) -->
-<section id="planes" class="py-16 sm:py-24 bg-warm-white text-text-primary border-y border-mustard/20">
+<section id="planes" class="py-16 sm:py-24 bg-warm-white text-text-primary border-t border-mustard/20">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12 sm:mb-16 space-y-4" data-aos="fade-up">
             <div class="editorial-badge inline-flex">
@@ -535,7 +840,7 @@
 
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Card 1: Orientación Completa -->
-            <div class="card-warm p-8 sm:p-10 rounded-3xl bg-cream flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-warm p-8 sm:p-10 rounded-3xl bg-cream flex flex-col justify-between border border-mustard/30 shadow-lg" data-aos="fade-up" data-aos-delay="100">
                 <div class="space-y-6">
                     <div class="w-14 h-14 rounded-2xl bg-warm-white border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
                         <span class="material-symbols-outlined text-3xl">videocam</span>
@@ -553,7 +858,7 @@
                             <span class="text-4xl font-extrabold text-text-heading">$30</span>
                             <span class="text-text-secondary text-base font-semibold">USD</span>
                         </div>
-                        <span class="text-xs text-text-muted font-normal">Aprox. $29.990 CLP (convertible al pagar)</span>
+                        <span class="text-xs text-text-muted font-normal">El precio se mostrará automáticamente en tu moneda local al momento de pagar según tu país</span>
                     </div>
 
                     <ul class="space-y-3 text-sm text-text-secondary font-normal">
@@ -565,7 +870,7 @@
                 </div>
 
                 <div class="pt-8">
-                    <a href="https://vetisdigital.com/contacto/" class="btn-secondary-light w-full py-4 text-sm font-bold">
+                    <a href="https://vetisdigital.com/contacto/" class="btn-secondary-light w-full py-4 text-sm font-bold shadow-md">
                         Agendar Orientación
                     </a>
                 </div>
@@ -573,13 +878,13 @@
 
             <!-- Card 2: Pack Acompañamiento (Destacado) -->
             <div class="card-warm p-8 sm:p-10 rounded-3xl bg-[#0C3528] text-white flex flex-col justify-between border-2 border-mustard shadow-2xl relative" data-aos="fade-up" data-aos-delay="200">
-                <div class="absolute -top-3.5 right-6 bg-mustard text-vetis-dark font-extrabold text-xs uppercase px-4 py-1 rounded-full shadow-md">
-                    ★ Más Recomendado
+                <div class="absolute -top-3.5 right-6 bg-mustard text-vetis-dark font-extrabold text-xs uppercase px-4 py-1 rounded-full shadow-md tracking-wider">
+                    MÁS RECOMENDADO
                 </div>
 
                 <div class="space-y-6">
                     <div class="w-14 h-14 rounded-2xl bg-white/10 border border-mustard/30 flex items-center justify-center text-mustard shadow-sm">
-                        <span class="material-symbols-outlined text-3xl">diversity_1</span>
+                        <span class="material-symbols-outlined text-3xl">people</span>
                     </div>
                     <div>
                         <h3 class="text-2xl font-bold text-white mb-1">Pack Acompañamiento</h3>
@@ -595,7 +900,7 @@
                             <span class="text-slate-300 text-base font-semibold">USD</span>
                             <span class="text-xs font-bold bg-mustard/20 text-mustard px-2 py-0.5 rounded ml-2">Ahorras $10 USD</span>
                         </div>
-                        <span class="text-xs text-slate-400 font-normal">Aprox. $49.990 CLP (convertible al pagar)</span>
+                        <span class="text-xs text-slate-400 font-normal">El precio se mostrará automáticamente en tu moneda local al momento de pagar según tu país</span>
                     </div>
 
                     <ul class="space-y-3 text-sm text-slate-200 font-normal">
@@ -616,201 +921,41 @@
     </div>
 </section>
 
-<!-- Sección: Cómo funciona (Paso a Paso 1-5) -->
-<section class="py-16 sm:py-24 bg-cream text-text-primary">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12 sm:mb-16 space-y-4" data-aos="fade-up">
-            <div class="editorial-badge inline-flex">
-                <span class="material-symbols-outlined text-mustard text-sm">timeline</span>
-                <span>Paso a Paso</span>
-            </div>
-            <h2 class="text-3xl sm:text-5xl font-bold text-text-heading">
-                Cómo funciona la <span class="font-serif italic text-mustard">orientación</span>
-            </h2>
-            <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            <!-- Paso 1 -->
-            <div class="card-warm p-6 rounded-3xl bg-warm-white text-center space-y-3" data-aos="fade-up" data-aos-delay="50">
-                <div class="w-12 h-12 rounded-full bg-cream border-2 border-mustard flex items-center justify-center font-bold text-vetis-dark mx-auto">
-                    1
-                </div>
-                <h3 class="font-bold text-base text-text-heading">Elige tu sesión</h3>
-                <p class="text-text-secondary text-xs leading-relaxed font-normal">Selecciona la sesión individual o el pack de acompañamiento.</p>
-            </div>
-
-            <!-- Paso 2 -->
-            <div class="card-warm p-6 rounded-3xl bg-warm-white text-center space-y-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-12 h-12 rounded-full bg-cream border-2 border-mustard flex items-center justify-center font-bold text-vetis-dark mx-auto">
-                    2
-                </div>
-                <h3 class="font-bold text-base text-text-heading">Agenda el horario</h3>
-                <p class="text-text-secondary text-xs leading-relaxed font-normal">Elige en el calendario el día y la hora más conveniente para ti.</p>
-            </div>
-
-            <!-- Paso 3 -->
-            <div class="card-warm p-6 rounded-3xl bg-warm-white text-center space-y-3" data-aos="fade-up" data-aos-delay="150">
-                <div class="w-12 h-12 rounded-full bg-cream border-2 border-mustard flex items-center justify-center font-bold text-vetis-dark mx-auto">
-                    3
-                </div>
-                <h3 class="font-bold text-base text-text-heading">Ficha previa</h3>
-                <p class="text-text-secondary text-xs leading-relaxed font-normal">Cuéntanos brevemente sobre tu mascota antes de conectarnos.</p>
-            </div>
-
-            <!-- Paso 4 -->
-            <div class="card-warm p-6 rounded-3xl bg-warm-white text-center space-y-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-12 h-12 rounded-full bg-cream border-2 border-mustard flex items-center justify-center font-bold text-vetis-dark mx-auto">
-                    4
-                </div>
-                <h3 class="font-bold text-base text-text-heading">Videollamada</h3>
-                <p class="text-text-secondary text-xs leading-relaxed font-normal">Nos reunimos en vivo para revisar tus dudas con calma y detalle.</p>
-            </div>
-
-            <!-- Paso 5 -->
-            <div class="card-warm p-6 rounded-3xl bg-warm-white text-center space-y-3" data-aos="fade-up" data-aos-delay="250">
-                <div class="w-12 h-12 rounded-full bg-cream border-2 border-mustard flex items-center justify-center font-bold text-vetis-dark mx-auto">
-                    5
-                </div>
-                <h3 class="font-bold text-base text-text-heading">Aplica en casa</h3>
-                <p class="text-text-secondary text-xs leading-relaxed font-normal">Recibe pautas claras y prácticas para poner en marcha de inmediato.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Sección: Temas que podemos abordar (9 Topics) -->
-<section class="py-16 sm:py-24 bg-warm-white text-text-primary border-t border-mustard/20">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12 sm:mb-16 space-y-4" data-aos="fade-up">
-            <div class="editorial-badge inline-flex">
-                <span class="material-symbols-outlined text-mustard text-sm">category</span>
-                <span>Áreas de Asesoría</span>
-            </div>
-            <h2 class="text-3xl sm:text-5xl font-bold text-text-heading">
-                Temas que podemos <span class="font-serif italic text-mustard">abordar</span>
-            </h2>
-            <div class="luxury-hairline"><span class="luxury-diamond"></span></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Topic 1 -->
-            <div class="card-warm p-6 rounded-2xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="50">
-                <div class="flex items-center gap-3 text-vetis-forest">
-                    <span class="material-symbols-outlined text-mustard text-2xl">health_and_safety</span>
-                    <h3 class="font-bold text-lg text-text-heading">Cuidados básicos</h3>
-                </div>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Higiene general, corte de uñas, limpieza de oídos y cepillado preventivo.</p>
-            </div>
-
-            <!-- Topic 2 -->
-            <div class="card-warm p-6 rounded-2xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex items-center gap-3 text-vetis-forest">
-                    <span class="material-symbols-outlined text-mustard text-2xl">restaurant</span>
-                    <h3 class="font-bold text-lg text-text-heading">Alimentación general</h3>
-                </div>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Tipos de dietas, porciones adecuadas, hábitos y prevención del sobrepeso.</p>
-            </div>
-
-            <!-- Topic 3 -->
-            <div class="card-warm p-6 rounded-2xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="150">
-                <div class="flex items-center gap-3 text-vetis-forest">
-                    <span class="material-symbols-outlined text-mustard text-2xl">psychology</span>
-                    <h3 class="font-bold text-lg text-text-heading">Conducta y convivencia</h3>
-                </div>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Manejo de estrés, ansiedad por separación, ladridos y socialización.</p>
-            </div>
-
-            <!-- Topic 4 -->
-            <div class="card-warm p-6 rounded-2xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="flex items-center gap-3 text-vetis-forest">
-                    <span class="material-symbols-outlined text-mustard text-2xl">home</span>
-                    <h3 class="font-bold text-lg text-text-heading">Adaptación al hogar</h3>
-                </div>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Preparación del espacio para cachorros, adopciones o mudanzas.</p>
-            </div>
-
-            <!-- Topic 5 -->
-            <div class="card-warm p-6 rounded-2xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="250">
-                <div class="flex items-center gap-3 text-vetis-forest">
-                    <span class="material-symbols-outlined text-mustard text-2xl">cleaning_services</span>
-                    <h3 class="font-bold text-lg text-text-heading">Higiene y baño</h3>
-                </div>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Frecuencia y productos adecuados para el baño, cuidado dental y pelaje.</p>
-            </div>
-
-            <!-- Topic 6 -->
-            <div class="card-warm p-6 rounded-2xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="flex items-center gap-3 text-vetis-forest">
-                    <span class="material-symbols-outlined text-mustard text-2xl">favorite</span>
-                    <h3 class="font-bold text-lg text-text-heading">Bienestar integral</h3>
-                </div>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Evaluación de la calidad de vida, bienestar emocional y etapas de desarrollo.</p>
-            </div>
-
-            <!-- Topic 7 -->
-            <div class="card-warm p-6 rounded-2xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="350">
-                <div class="flex items-center gap-3 text-vetis-forest">
-                    <span class="material-symbols-outlined text-mustard text-2xl">schedule</span>
-                    <h3 class="font-bold text-lg text-text-heading">Rutinas y horarios</h3>
-                </div>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Estructuración óptima del día: paseos, horas de comida, juego y descanso.</p>
-            </div>
-
-            <!-- Topic 8 -->
-            <div class="card-warm p-6 rounded-2xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="400">
-                <div class="flex items-center gap-3 text-vetis-forest">
-                    <span class="material-symbols-outlined text-mustard text-2xl">warning</span>
-                    <h3 class="font-bold text-lg text-text-heading">Señales de alerta</h3>
-                </div>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Reconocimiento temprano de síntomas que requieren atención veterinaria urgente.</p>
-            </div>
-
-            <!-- Topic 9 -->
-            <div class="card-warm p-6 rounded-2xl bg-cream space-y-3" data-aos="fade-up" data-aos-delay="450">
-                <div class="flex items-center gap-3 text-vetis-forest">
-                    <span class="material-symbols-outlined text-mustard text-2xl">park</span>
-                    <h3 class="font-bold text-lg text-text-heading">Juegos y estimulación</h3>
-                </div>
-                <p class="text-text-secondary text-sm leading-relaxed font-normal">Técnicas de enriquecimiento ambiental y actividad física para prevenir el aburrimiento.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Protocolo de Seguridad / Disclaimer -->
+<!-- Protocolo de Seguridad / Marco Profesional (Sin Colores Rojos - Armonía Vetis) -->
 <section class="py-16 sm:py-20 bg-cream text-text-primary">
     <div class="max-w-4xl mx-auto px-4 sm:px-6" data-aos="fade-up">
-        <div class="card-warm p-8 sm:p-10 rounded-3xl bg-warm-white border border-terracotta/30 space-y-6">
-            <div class="flex items-center gap-3 border-b border-mustard/20 pb-4">
-                <span class="material-symbols-outlined text-terracotta text-2xl">security</span>
-                <h3 class="text-xl font-bold text-text-heading">Información importante sobre el servicio</h3>
+        <div class="card-warm p-8 sm:p-10 rounded-3xl bg-warm-white border border-mustard/35 shadow-xl space-y-6">
+            <div class="flex items-center gap-3.5 border-b border-mustard/20 pb-4">
+                <div class="w-10 h-10 rounded-xl bg-mustard/20 border border-mustard/40 flex items-center justify-center text-mustard shrink-0">
+                    <span class="material-symbols-outlined text-2xl">verified_user</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-text-heading">Marco y alcance de la orientación profesional</h3>
             </div>
             
-            <div class="grid sm:grid-cols-2 gap-6 text-sm text-text-secondary leading-relaxed font-normal">
-                <div class="space-y-2">
-                    <h4 class="font-bold text-text-heading flex items-center gap-2">
-                        <span class="material-symbols-outlined text-mustard text-base">school</span> Ámbito Educativo
+            <div class="grid sm:grid-cols-2 gap-6 text-sm leading-relaxed font-normal">
+                <div class="p-5 rounded-2xl bg-cream border border-mustard/25 space-y-2">
+                    <h4 class="font-bold text-text-heading flex items-center gap-2 text-base">
+                        <span class="material-symbols-outlined text-mustard text-lg">school</span> Ámbito Educativo y Preventivo
                     </h4>
-                    <p>La Orientación Online Vetis es un recurso educativo y preventivo. <strong class="text-text-primary">No reemplaza una consulta veterinaria presencial</strong>, no emite diagnósticos patológicos ni receta fármacos sujetos a receta médica.</p>
+                    <p class="text-text-secondary">La Orientación Online Vetis es un recurso educativo y de acompañamiento. <strong class="text-text-heading font-semibold">No reemplaza una consulta veterinaria presencial</strong>, no emite diagnósticos patológicos ni receta fármacos sujetos a receta médica.</p>
                 </div>
-                <div class="space-y-2">
-                    <h4 class="font-bold text-terracotta flex items-center gap-2">
-                        <span class="material-symbols-outlined text-terracotta text-base">emergency</span> Ante Emergencias
+                <div class="p-5 rounded-2xl bg-[#0C3528]/5 border border-[#0C3528]/20 space-y-2">
+                    <h4 class="font-bold text-vetis-dark flex items-center gap-2 text-base">
+                        <span class="material-symbols-outlined text-mustard text-lg">local_hospital</span> Criterio Clínico y Urgencias
                     </h4>
-                    <p>Si tu mascota presenta sangrado activo, traumatismo severo, dificultad respiratoria o dolor agudo, <strong class="text-terracotta">acude de inmediato al hospital o clínica veterinaria de urgencia más cercana</strong>.</p>
+                    <p class="text-text-secondary">Si tu mascota presenta sangrado activo, traumatismo severo, dificultad respiratoria o dolor agudo, <strong class="text-vetis-dark font-semibold">acude de inmediato al hospital o clínica veterinaria de urgencia más cercana</strong>.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CTA Final -->
+<!-- CTA Final: Da el siguiente paso -->
 <section class="py-16 sm:py-24 bg-gradient-to-b from-[#0C3528] to-[#08241B] text-warm-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6" data-aos="fade-up">
         <div class="editorial-badge-dark inline-flex">
             <span class="material-symbols-outlined text-mustard text-sm">verified_user</span>
-            <span>Reserva Segura</span>
+            <span>Reserva Segura y Directa</span>
         </div>
         <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
             ¿Listo para darle la mejor calidad de vida a <span class="font-serif italic text-mustard">tu mascota?</span>
@@ -818,9 +963,17 @@
         <p class="text-slate-200 text-base sm:text-lg max-w-xl mx-auto font-normal">
             Agenda hoy una sesión con la Dra. Micaela Callejas y resuelve todas tus dudas con el respaldo de una especialista titulada.
         </p>
-        <div class="pt-4">
-            <a href="#planes" class="btn-primary-warm px-10 py-4 text-base font-bold shadow-2xl">
-                Agendar Mi Sesión Ahora
+        <div class="pt-4 flex justify-center">
+            <a href="#planes" class="btn-hero-primary-mustard group">
+                <svg class="w-8 h-8 shrink-0 text-[#0A261D] transition-transform duration-200 group-hover:scale-105" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="22" height="20" rx="4"></rect>
+                    <path d="M8 2v4M20 2v4M3 10h22"></path>
+                    <circle cx="14" cy="16" r="2" fill="currentColor"></circle>
+                </svg>
+                <span class="flex-1 text-center font-bold text-[16px] sm:text-[17px] text-[#0A261D] leading-tight">Agendar mi orientación</span>
+                <span class="w-9 h-9 rounded-full bg-black/10 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:translate-x-1">
+                    <span class="material-symbols-outlined text-[1.25rem] text-[#0A261D]">arrow_forward</span>
+                </span>
             </a>
         </div>
     </div>
